@@ -1,6 +1,9 @@
 {
   "name": "lilliputten-11ty-site",
   "version": "0.0.0",
+  "timetag": "240504-2156",
+  "timestamp": "2024.05.04 21:56 +0500",
+  "changed": "2024.05.04, 22:01",
   "homepage": "/",
   "private": false,
   "lint-staged": {
@@ -30,6 +33,7 @@
   "devDependencies": {
     "@biomejs/biome": "1.7.1",
     "@hirusi/eleventy-plugin-safe-external-links": "^0.14.3",
+    "cross-env": "^7.0.3",
     "datauri": "^4.1.0",
     "date-fns": "^3.6.0",
     "del": "^6.0.0",
@@ -51,6 +55,7 @@
     "postcss": "^8.4.38",
     "postcss-import": "^16.1.0",
     "postcss-lightningcss": "^1.0.0",
+    "rimraf": "^5.0.5",
     "sanitize-html": "^2.13.0",
     "sharp": "^0.33.3",
     "simple-git-hooks": "^2.11.1",
@@ -60,10 +65,10 @@
     "workbox-build": "^7.1.0"
   },
   "scripts": {
-    "start": "ELEVENTY_ENV=development eleventy --serve --quiet",
+    "start": "cross-env ELEVENTY_ENV=development eleventy --serve --quiet",
     "prod": "npm run build:prod && npx live-server _public",
-    "build": "rm -rf _public && eleventy && gulp build",
-    "build:prod": "ELEVENTY_ENV=production npm run build",
+    "build": "rimraf _public && eleventy && gulp build",
+    "build:prod": "cross-env ELEVENTY_ENV=production npm run build",
     "fix": "biome lint --apply . && stylelint --fix \"src/styles/**/*.css\"",
     "lint:css": "stylelint \"src/styles/**/*.css\"",
     "lint:editorconfig": "editorconfig-checker",
