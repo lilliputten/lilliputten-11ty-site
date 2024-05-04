@@ -1,8 +1,23 @@
 {
-  "name": "mefody.dev",
-  "version": "0.0.1",
+  "name": "lilliputten-11ty-site",
+  "version": "0.0.0",
   "homepage": "/",
-  "private": true,
+  "private": false,
+  "lint-staged": {
+    "*": [
+      "editorconfig-checker"
+    ],
+    "*.js": [
+      "biome lint --apply"
+    ],
+    "*.css": [
+      "stylelint --fix"
+    ]
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged",
+    "pre-push": "npm run lint"
+  },
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-fetch": "^4.0.1",
@@ -11,19 +26,6 @@
     "html-minifier": "^4.0.0",
     "hyphen": "^1.10.4",
     "netlify-plugin-cache": "^1.0.3"
-  },
-  "scripts": {
-    "start": "ELEVENTY_ENV=development eleventy --serve --quiet",
-    "prod": "npm run build:prod && npx live-server _public",
-    "build": "rm -rf _public && eleventy && gulp build",
-    "build:prod": "ELEVENTY_ENV=production npm run build",
-    "fix": "biome lint --apply . && stylelint --fix \"src/styles/**/*.css\"",
-    "lint:css": "stylelint \"src/styles/**/*.css\"",
-    "lint:editorconfig": "editorconfig-checker",
-    "lint:js": "biome lint .",
-    "lint": "npm run lint:editorconfig && npm run lint:css && npm run lint:js",
-    "prepare": "npx simple-git-hooks",
-    "generate-weekly-links": "node _11ty/scripts/weekly-links.js"
   },
   "devDependencies": {
     "@biomejs/biome": "1.7.1",
@@ -45,6 +47,7 @@
     "minify-xml": "^4.4.1",
     "netlify-plugin-webmentions": "^1.1.1",
     "node-fetch": "^2.0.0",
+    "npm-run-all": "^4.1.5",
     "postcss": "^8.4.38",
     "postcss-import": "^16.1.0",
     "postcss-lightningcss": "^1.0.0",
@@ -56,19 +59,17 @@
     "vinyl-paths": "^3.0.1",
     "workbox-build": "^7.1.0"
   },
-  "lint-staged": {
-    "*": [
-      "editorconfig-checker"
-    ],
-    "*.js": [
-      "biome lint --apply"
-    ],
-    "*.css": [
-      "stylelint --fix"
-    ]
-  },
-  "simple-git-hooks": {
-    "pre-commit": "npx lint-staged",
-    "pre-push": "npm run lint"
+  "scripts": {
+    "start": "ELEVENTY_ENV=development eleventy --serve --quiet",
+    "prod": "npm run build:prod && npx live-server _public",
+    "build": "rm -rf _public && eleventy && gulp build",
+    "build:prod": "ELEVENTY_ENV=production npm run build",
+    "fix": "biome lint --apply . && stylelint --fix \"src/styles/**/*.css\"",
+    "lint:css": "stylelint \"src/styles/**/*.css\"",
+    "lint:editorconfig": "editorconfig-checker",
+    "lint:js": "biome lint .",
+    "lint": "npm-run-all lint:editorconfig lint:css lint:js",
+    "prepare": "npx simple-git-hooks",
+    "generate-weekly-links": "node _11ty/scripts/weekly-links.js"
   }
 }
