@@ -2,7 +2,7 @@ module.exports = {
     title: 'Lilliputten and Noble',
     author: 'Igor Lilliputten',
     description:
-        'Hello, my name is Igor and I am a front-end developer. Here are life hacks and tips related to my daily work.',
+        'Hello, my name is Igor and I\'m a front-end developer.',
     // twitter: 'lilliputten',
     // mastodon: 'lilliputten',
     paths: {

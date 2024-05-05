@@ -7,9 +7,15 @@
     "homepage": "/",
     "private": false,
     "lint-staged": {
-        "*": ["editorconfig-checker"],
-        "*.js": ["biome lint --apply"],
-        "*.css": ["stylelint --fix"]
+        "*": [
+            "editorconfig-checker"
+        ],
+        "*.js": [
+            "biome lint --apply"
+        ],
+        "*.css": [
+            "stylelint --fix"
+        ]
     },
     "simple-git-hooks": {
         "pre-commit": "npx lint-staged",
@@ -21,7 +27,9 @@
         "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
         "eleventy-plugin-reading-time": "0.0.1",
         "html-minifier": "^4.0.0",
+        "html-prettify": "^1.0.7",
         "hyphen": "^1.10.4",
+        "prettify-xml": "^1.2.0",
         "netlify-plugin-cache": "^1.0.3"
     },
     "devDependencies": {

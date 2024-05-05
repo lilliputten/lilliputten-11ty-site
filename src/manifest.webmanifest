@@ -1,0 +1,30 @@
+{
+    "short_name": "Lilliputten & Noble",
+    "name": "Personal portfolio for @lilliputten",
+    "lang": "en",
+    "start_url": "/",
+    "scope": "/",
+    "display": "minimal-ui",
+    "orientation": "any",
+    "description": "Small presonal portfolio and projects for @lilliputten",
+    "theme_color": "#ffcc00",
+    "background_color": "#ffffff",
+    "icons": [
+        {
+            "src": "images/favicon/logo-tips-192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "images/favicon/logo-tips-512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        },
+        {
+            "src": "images/favicon/logo-tips-512.png",
+            "type": "image/png",
+            "sizes": "512x512",
+            "purpose": "maskable"
+        }
+    ]
+}
