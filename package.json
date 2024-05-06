@@ -26,11 +26,12 @@
         "@11ty/eleventy-fetch": "^4.0.1",
         "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
         "eleventy-plugin-reading-time": "0.0.1",
+        "gulp-swc": "^2.1.0",
         "html-minifier": "^4.0.0",
         "html-prettify": "^1.0.7",
         "hyphen": "^1.10.4",
-        "prettify-xml": "^1.2.0",
-        "netlify-plugin-cache": "^1.0.3"
+        "netlify-plugin-cache": "^1.0.3",
+        "prettify-xml": "^1.2.0"
     },
     "devDependencies": {
         "@biomejs/biome": "1.7.1",

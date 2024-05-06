@@ -7,8 +7,8 @@
     "display": "minimal-ui",
     "orientation": "any",
     "description": "Small presonal portfolio and projects for @lilliputten",
-    "theme_color": "#cc2222",
-    "background_color": "#cc2222",
+    "theme_color": "#fff",
+    "background_color": "#c22",
     "icons": [
         {
             "src": "images/favicon/logo-192.png",
