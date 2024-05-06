@@ -1,0 +1,17 @@
+/* Global styles */
+:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 4px var(--color-outline);
+}
+
+::selection {
+    color: var(--color-text);
+    background: var(--color-accent);
+}
+
+@media (max-width: 600px) {
+    :root {
+        --font-size: 18px;
+    }
+}
+
