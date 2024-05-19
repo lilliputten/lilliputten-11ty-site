@@ -1,0 +1,25 @@
+<footer class="footer">
+    <div class="footer__info">
+        <dl class="footer__about">
+            <dt>{{ site.author }}</dt>
+        </dl>
+        <ul class="footer__social-list social-list">
+            <li class="social-list__item">
+                <a href="https://github.com/lilliputten" rel="noopener me" class="social-list__link social-list__link--github">GitHub</a>
+            </li>
+            <li class="social-list__item">
+                <a href="https://linkedin.com/in/lilliputten" rel="noopener" class="social-list__link social-list__link--linkedin">LinkedIn</a>
+            </li>
+            <li class="social-list__item">
+                <a href="/feed/rss.xml" class="social-list__link social-list__link--rss">RSS</a>
+            </li>
+        </ul>
+    </div>
+    <div class="footer__technologies">
+        This site is built with <a href="https://www.11ty.dev/" rel="noopener">11ty</a> and hosted on <a href="https://www.netlify.com/" rel="noopener">Netlify</a>. The source code is hosted on <a href="{{ site.paths.github }}" rel="noopener">GitHub</a>.
+    </div>
+    <div class="footer__copyright">
+        &copy;
+        {{ helpers.currentYear() }} / {{ site.author }}
+    </div>
+</footer>
