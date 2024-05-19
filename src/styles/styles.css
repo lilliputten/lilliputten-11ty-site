@@ -3,3 +3,5 @@
 @import './variables.css';
 @import './global.css';
 
+@import './blocks/page.css';
+@import './blocks/page-main.css';

@@ -1,6 +1,6 @@
 ---
 title: Lilliputten & Noble
-layout: list.njk
+layout: main.njk
 permalink: /
 tag: false
 isIndex: true

@@ -14,7 +14,7 @@
     --color-link-visited: #000000;
 
     --line-height: 1.42;
-    --font-size: 20px;
+    --font-size: 18px;
     --line-space: calc(var(--line-height) * 1em);
     --main-column-width: 700px;
     --max-column-width: 1000px;

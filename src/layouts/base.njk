@@ -28,11 +28,13 @@
         <link rel="stylesheet" href="/styles/styles.css">
         {# <link rel="stylesheet" href="/styles/dark.css" media="(prefers-color-scheme: dark)"> #}
     </head>
-    <body class="page__body {% if not isIndex %}page__body-regular{% else %}page__body-main{% endif %}">
+    <body class="page__body {% if not isIndex %}page__body_regular{% else %}page__body--main{% endif %}" id="{% if not isIndex %}regular{% else %}main{% endif %}">
 
         {{ content | safe }}
 
         <script type="text/javascript" src="/scripts/scripts.js"></script>
+
         {# {% include 'sw.njk' %} #}
+
     </body>
 </html>
