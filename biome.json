@@ -77,7 +77,7 @@
                 "useValidTypeof": "error"
             }
         },
-        "ignore": ["_public", "!.eleventy.js"]
+        "ignore": ["*_", ".lvimrc", "_public", ".vscode", "!.eleventy.js"]
     },
     "javascript": {
         "formatter": {
