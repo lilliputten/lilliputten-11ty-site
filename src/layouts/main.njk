@@ -4,14 +4,12 @@ layout: base.njk
 
 <div class="page__main">
 
-{# {% include 'header.njk' %} #}
+{# {% include "header.njk" %} #}
 
 <main class="page__content page__content-main">
-    <h1>main</h1>
-    <p>Main content</p>
     {{ content | safe }}
 </main>
 
-{% include 'footer.njk' %}
+{% include "footer.njk" %}
 
 </div>

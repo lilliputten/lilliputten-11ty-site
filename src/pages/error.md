@@ -6,5 +6,5 @@ permalink: 404.html
 <div class="error-page">
     <h1>Ouch!</h1>
 
-    <p>These Are Not the Droids You Are Looking For.</p>
+    <p>Requested page has not found.</p>
 </div>
