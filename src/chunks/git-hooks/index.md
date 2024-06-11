@@ -5,17 +5,17 @@ cover: images/cover.jpg
 date: 2021-07-27
 dateUpdated: Last Modified
 tags:
-    - git
-    - npm
-    - bash
-    - chunk
+  - git
+  - npm
+  - bash
+  - chunk
 ---
 
 I wanna live in a world where every commit is a project state in which everything is fine: linters are green, dependencies are up-to-date, git history is clear, etc. Fortunately, I can configure my projects to use git hooks to help contributors to avoid mistakes.
 
 ## Git hooks basics
 
-Git hook is a snippet triggered when the git executes something. For example, if you have a strict rule *"No tabs for indentation"*, you can create a hook that checks all the changed files to satisfy the rule. Git will run this check and stop the action (push, commit), if the rule has been ignored by some impudent contributor.
+Git hook is a snippet triggered when the git executes something. For example, if you have a strict rule _"No tabs for indentation"_, you can create a hook that checks all the changed files to satisfy the rule. Git will run this check and stop the action (push, commit), if the rule has been ignored by some impudent contributor.
 
 There are many git actions you can interfere with:
 
@@ -157,24 +157,18 @@ Then add a configuration to your `package.json`.
 
 ```json
 {
-    "scripts": {
-        "lint": "npm run lint:editorconfig && npm run lint:css && npm run lint:js"
-    },
-    "lint-staged": {
-        "*": [
-            "editorconfig-checker"
-        ],
-        "*.js": [
-            "eslint --fix"
-        ],
-        "*.css": [
-            "stylelint --fix"
-        ]
-    },
-    "simple-git-hooks": {
-        "pre-commit": "npx lint-staged",
-        "pre-push": "npm run lint"
-    }
+  "scripts": {
+    "lint": "npm run lint:editorconfig && npm run lint:css && npm run lint:js"
+  },
+  "lint-staged": {
+    "*": ["editorconfig-checker"],
+    "*.js": ["eslint --fix"],
+    "*.css": ["stylelint --fix"]
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged",
+    "pre-push": "npm run lint"
+  }
 }
 ```
 
