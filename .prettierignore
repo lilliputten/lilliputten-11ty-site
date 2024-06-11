@@ -30,3 +30,6 @@ package-lock.*
 /.github/
 /.pre-commit-config.yaml
 /*.md
+
+# Ignore spewcific files
+src/includes/sw.njk

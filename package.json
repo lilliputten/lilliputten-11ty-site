@@ -1,8 +1,8 @@
 {
   "name": "lilliputten-11ty-site",
   "version": "0.0.1",
-  "timetag": "240612-0201",
-  "timestamp": "2024.06.12 02:01 +0500",
+  "timetag": "240612-0228",
+  "timestamp": "2024.06.12 02:28 +0500",
   "changed": "2024.06.12, 02:08",
   "homepage": "/",
   "private": false,
@@ -73,6 +73,7 @@
     "postcss-import": "^16.1.0",
     "postcss-lightningcss": "^1.0.0",
     "prettier": "^3.2.5",
+    "prettier-plugin-jinja-template": "^1.4.0",
     "rimraf": "^5.0.5",
     "sanitize-html": "^2.13.0",
     "sharp": "^0.33.3",

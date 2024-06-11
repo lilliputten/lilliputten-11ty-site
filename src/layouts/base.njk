@@ -1,40 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html class="page" lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>
-            {{ renderData.title or title }}{% if not isIndex %} — {{ site.title }}{% endif %}
-        </title>
+  <head>
+    <meta
+      name="version"
+      content="
+    @changed 2024.06.07, 20:26
+    Version: 0.0.1
+    Last changes timestamp: 2024.06.12 02:28 +0500
+    "
+    />
 
-        {# <meta name="color-scheme" content="dark light"> #}
-        {# <meta name="theme-color" content="#cc2222" media="(prefers-color-scheme: light)"> #}
-        {# <meta name="theme-color" content="#880088" media="(prefers-color-scheme: dark)"> #}
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ renderData.title or title }}{% if not isIndex %}— {{ site.title }}{% endif %}</title>
 
-        <meta name="description" content="{{ description or site.description }}">
+    {# <meta name="color-scheme" content="dark light"> #}
+    {# <meta name="theme-color" content="#cc2222" media="(prefers-color-scheme: light)"> #}
+    {# <meta name="theme-color" content="#880088" media="(prefers-color-scheme: dark)"> #}
 
-        <meta name="generator" content="Eleventy">
+    <meta name="description" content="{{ description or site.description }}" />
 
-        {% include 'favicon.njk' %}
+    <meta name="generator" content="Eleventy" />
 
-        {% include 'fonts.njk' %}
+    {% include 'favicon.njk' %}
+    {% include 'fonts.njk' %}
+    {% include 'meta-open-graph.njk' %}
+    {% include 'meta-rss.njk' %}
+    {% include 'meta-webmentions.njk' %}
 
-        {% include 'meta-open-graph.njk' %}
-        {% include 'meta-rss.njk' %}
-        {% include 'meta-webmentions.njk' %}
+    <link rel="author" href="{{ site.paths.site }}/humans.txt" />
 
-        <link rel="author" href="{{ site.paths.site }}/humans.txt">
+    <link rel="stylesheet" href="/styles/styles.css" />
+    {# <link rel="stylesheet" href="/styles/dark.css" media="(prefers-color-scheme: dark)"> #}
+  </head>
+  <body
+    class="page__body {% if not isIndex %}page__body_regular{% else %}page__body--main{% endif %}"
+    id="{% if not isIndex %}regular{% else %}main{% endif %}"
+  >
+    {{ content | safe }}
 
-        <link rel="stylesheet" href="/styles/styles.css">
-        {# <link rel="stylesheet" href="/styles/dark.css" media="(prefers-color-scheme: dark)"> #}
-    </head>
-    <body class="page__body {% if not isIndex %}page__body_regular{% else %}page__body--main{% endif %}" id="{% if not isIndex %}regular{% else %}main{% endif %}">
+    <script type="text/javascript" src="/scripts/scripts.js"></script>
 
-        {{ content | safe }}
-
-        <script type="text/javascript" src="/scripts/scripts.js"></script>
-
-        {# {% include 'sw.njk' %} #}
-
-    </body>
+    {# {% include 'sw.njk' %} #}
+  </body>
 </html>
