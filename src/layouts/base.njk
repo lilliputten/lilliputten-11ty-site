@@ -1,15 +1,11 @@
 <!doctype html>
+<!--
+@changed 2024.06.07, 20:26
+Version: 0.0.1
+Last changes timestamp: 2024.06.12 02:28 +0500
+-->
 <html class="page" lang="en">
   <head>
-    <meta
-      name="version"
-      content="
-    @changed 2024.06.07, 20:26
-    Version: 0.0.1
-    Last changes timestamp: 2024.06.12 02:28 +0500
-    "
-    />
-
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ renderData.title or title }}{% if not isIndex %}— {{ site.title }}{% endif %}</title>
@@ -34,12 +30,26 @@
     {# <link rel="stylesheet" href="/styles/dark.css" media="(prefers-color-scheme: dark)"> #}
   </head>
   <body
-    class="page__body {% if not isIndex %}page__body_regular{% else %}page__body--main{% endif %}"
+    class="page__body {% if not isIndex %}page__body--regular{% else %}page__body--main{% endif %}"
     id="{% if not isIndex %}regular{% else %}main{% endif %}"
   >
     {{ content | safe }}
 
-    <script type="text/javascript" src="/scripts/scripts.js"></script>
+    <script
+      src="{% if isdevelopment %}/static/vendor/requirejs-2.3.6/require.min.js{% else %}https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js{% endif %}"
+      type="text/javascript"
+    ></script>
+
+    <script type="text/javascript" src="/assets/scripts.js"></script>
+
+    <script>
+      // Initialize AMD/RequireJS modules system...
+      if (typeof window.requirejs !== 'undefined') {
+        window.requirejs(['scripts']);
+      } else {
+        console.error('Not found AMD/RequireJS modules support');
+      }
+    </script>
 
     {# {% include 'sw.njk' %} #}
   </body>

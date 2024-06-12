@@ -78,7 +78,7 @@
       "program": "${workspaceRoot}/node_modules/gulp/bin/gulp.js",
       "console": "integratedTerminal",
       "args": [
-        "compileScripts"
+        "build"
       ]
     }
   ]

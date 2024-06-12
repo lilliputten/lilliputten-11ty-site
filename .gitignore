@@ -24,3 +24,5 @@ yarn-error.log*
 *.zip
 *.tgz
 
+# 11ty
+/assets
