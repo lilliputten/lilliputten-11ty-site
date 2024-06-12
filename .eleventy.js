@@ -7,9 +7,9 @@ module.exports = function (config) {
   });
   config.addPassthroughCopy('src/manifest.webmanifest');
   config.addPassthroughCopy('src/fonts/*.woff2');
-  config.addPassthroughCopy('src/styles');
   config.addPassthroughCopy('static');
   config.addPassthroughCopy('assets');
+  // config.addPassthroughCopy('src/styles');
   // config.addPassthroughCopy('src/scripts');
   config.addPassthroughCopy('src/**/*.(html|jpg|png|webp|avif|ico|svg|mp4|xml)');
   config.addPassthroughCopy('src/(robots|humans).txt');
@@ -249,7 +249,7 @@ module.exports = function (config) {
     callbacks: {
       ready: function (_err, bs) {
         bs.addMiddleware('*', (_req, res) => {
-          const content_404 = fs.readFileSync('_public/404.html');
+          const content_404 = fs.readFileSync('build/404.html');
           res.writeHead(404, {
             'Content-Type': 'text/html; charset=UTF-8',
           });
@@ -285,7 +285,7 @@ module.exports = function (config) {
   return {
     dir: {
       input: 'src',
-      output: '_public',
+      output: 'build',
       includes: 'includes',
       layouts: 'layouts',
       data: 'data',

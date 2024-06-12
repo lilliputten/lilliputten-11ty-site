@@ -27,7 +27,7 @@ const { execSync } = childProcess;
 
 dotenv.config();
 
-const DEST_PATH = '_public';
+const DEST_PATH = 'build';
 const SRC_PATH = 'src';
 
 const isWin = process.platform === 'win32';
@@ -140,7 +140,7 @@ gulp.task('cache:hash', () => {
         `${DEST_PATH}/fonts/*.woff2`,
         `${DEST_PATH}/images/**/*.{svg,png,jpg,avif}`,
         `${DEST_PATH}/assets/*.{js,css}`,
-        `${DEST_PATH}/styles/*.css`,
+        // `${DEST_PATH}/styles/*.css`,
         `${DEST_PATH}/manifest.webmanifest`,
       ],
       {

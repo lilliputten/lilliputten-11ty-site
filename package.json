@@ -88,10 +88,10 @@
   },
   "scripts": {
     "start": "cross-env ELEVENTY_ENV=development eleventy --serve --quiet",
-    "serve": "live-server _public",
+    "serve": "live-server build",
     "prod": "npm run build:prod && npm run serve",
     "build-all": "echo --Build eleventy and all artifacts-- && eleventy && gulp build",
-    "build": "rimraf _public && npm run build-all",
+    "build": "rimraf build && npm run build-all",
     "build:prod": "cross-env ELEVENTY_ENV=production npm run build",
     "prepare": "npx simple-git-hooks",
     "generate-weekly-links": "node _11ty/scripts/weekly-links.js",

@@ -1,5 +1,5 @@
 node_modules
-_public
+build
 _cache
 .cache
 
@@ -12,7 +12,7 @@ yarn-error.log*
 
 .netlify
 
-.env
+.env.*
 
 # Temporariy, swap & ignored files
 /config-local.*

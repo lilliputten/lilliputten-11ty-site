@@ -93,7 +93,7 @@ function getBitmapDimensions_(imgWidth, imgHeight) {
 }
 
 module.exports = async function (src) {
-  const filename = '_public/' + src;
+  const filename = 'build/' + src;
   const cachedName = filename + '.blurred';
   if (await exists(cachedName)) {
     return readFile(cachedName, {

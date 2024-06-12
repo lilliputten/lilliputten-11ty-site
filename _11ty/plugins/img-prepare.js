@@ -9,7 +9,7 @@ const exists = promisify(require('fs').exists);
  * Sets width and height on each <img>
  */
 
-const SITE_PATH = '_public';
+const SITE_PATH = 'build';
 
 const processImage = async (img, outputPath) => {
   const originalSrc = img.getAttribute('src');

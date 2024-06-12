@@ -1,7 +1,7 @@
 ---
 title: About me
 layout: main.njk
-permalink: /about
+permalink: /about.html
 tag: false
 eleventyExcludeFromCollections: true
 description: About page.
