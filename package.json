@@ -3,21 +3,21 @@
   "version": "0.0.1",
   "timetag": "240612-0228",
   "timestamp": "2024.06.12 02:28 +0500",
-  "changed": "2024.06.12, 02:08",
+  "changed": "2024.06.12, 20:55",
   "homepage": "/",
   "private": false,
   "lint-staged": {
     "*": [
       "editorconfig-checker"
     ],
-    "**/*.{yml,yaml,json,jsonc,js,ts,jsx,tsx}": [
+    "src/scripts/**/*.{yml,yaml,json,jsonc,js,ts,jsx,tsx}": [
       "eslint"
+    ],
+    "src/styles/**/*.{scss,sass,less,css}": [
+      "stylelint"
     ]
   },
   "lint-staged-UNUSED": {
-    "**/*.{scss,sass,less,css}": [
-      "stylelint"
-    ]
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged",
@@ -89,10 +89,12 @@
     "workbox-build": "^7.1.0"
   },
   "scripts": {
-    "start": "cross-env ELEVENTY_ENV=development eleventy --serve --quiet",
+    "compile-assets": "echo --Update all assets-- && gulp compileAssets",
+    "watch-assets": "echo --Watch all assets-- && gulp watchAssets",
+    "start": "echo --Start eleventy dev server-- && gulp compileAssets && cross-env ELEVENTY_ENV=development eleventy --serve --quiet",
     "serve": "live-server build",
     "prod": "npm run build:prod && npm run serve",
-    "build-all": "echo --Build eleventy and all artifacts-- && eleventy && gulp build",
+    "build-all": "echo --Build eleventy and all artifacts-- && gulp compileAssets && eleventy && gulp build",
     "build": "rimraf build && npm run build-all",
     "build:prod": "cross-env ELEVENTY_ENV=production npm run build",
     "prepare": "npx simple-git-hooks",

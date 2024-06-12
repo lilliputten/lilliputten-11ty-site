@@ -286,3 +286,17 @@ gulp.task(
     ),
   ),
 );
+
+const compileAssetsTasks = [
+  // Watch all tasks...
+  'compileStyles',
+  'compileScripts',
+].filter(Boolean);
+gulp.task('compileAssets', gulp.parallel.apply(gulp, compileAssetsTasks));
+
+const watchAssetsTasks = [
+  // Watch all tasks...
+  'compileStylesWatch',
+  'compileScriptsWatch',
+].filter(Boolean);
+gulp.task('watchAssets', gulp.parallel.apply(gulp, watchAssetsTasks));

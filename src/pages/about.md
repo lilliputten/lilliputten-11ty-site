@@ -41,12 +41,6 @@ description: About page.
 
     __Interests__: Music (blues harp, CBG), painting, skateboarding, running, biking, hiking, programming, IT, science.
 
-    <!--
-    ## See also
-
-    - Old personal portfolio site (2000-2016, in Russian, is no longer updated): <a href="https://lilliputten.ru" target="_blank">lilliputten.ru</a>.
-    -->
-
     ## Info for HR/potential employers
 
     I'm really looking for an interesting new job right now. At the moment, I'm only considering options with remote work or relocation.
