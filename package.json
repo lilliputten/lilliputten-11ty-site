@@ -12,7 +12,9 @@
     ],
     "**/*.{yml,yaml,json,jsonc,js,ts,jsx,tsx}": [
       "eslint"
-    ],
+    ]
+  },
+  "lint-staged-UNUSED": {
     "**/*.{scss,sass,less,css}": [
       "stylelint"
     ]
