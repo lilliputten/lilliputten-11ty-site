@@ -13,6 +13,13 @@ indent_style = space
 indent_size = 2
 
 # Ignore paths
+[/assets/**]
+charset = unset
+end_of_line = unset
+insert_final_newline = unset
+trim_trailing_whitespace = unset
+indent_style = unset
+indent_size = unset
 [/static/**]
 charset = unset
 end_of_line = unset
@@ -20,7 +27,7 @@ insert_final_newline = unset
 trim_trailing_whitespace = unset
 indent_style = unset
 indent_size = unset
-[src/data/contributors.json]
+[{/src/data/contributors.json,.vscode/launch.json}]
 charset = unset
 end_of_line = unset
 insert_final_newline = unset

@@ -18,6 +18,8 @@
 /types
 /utils
 
+/*.egg-info
+
 # This project...
 /static/
-/*.egg-info
+/assets/

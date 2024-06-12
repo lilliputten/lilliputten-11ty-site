@@ -248,7 +248,6 @@ gulp.task('contributors:get', () => {
 
   return new Promise((resolve) => {
     fs.writeFileSync(`${SRC_PATH}/data/contributors.json`, JSON.stringify(contributorsNames));
-
     resolve(undefined);
   });
 });

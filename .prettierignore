@@ -31,5 +31,9 @@ package-lock.*
 /.pre-commit-config.yaml
 /*.md
 
-# Ignore spewcific files
-src/includes/sw.njk
+# This project...
+/static/
+/assets/
+
+# Ignore specific files
+/src/includes/sw.njk

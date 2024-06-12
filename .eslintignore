@@ -40,7 +40,8 @@ yarn-error.log*
 package-lock.*
 .DS_Store
 
-# This project...
-/src/vendor
-/static/
 /*.egg-info
+
+# This project...
+/static/
+/assets/
