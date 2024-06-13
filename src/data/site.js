@@ -5,11 +5,11 @@ module.exports = {
   // twitter: 'lilliputten',
   // mastodon: 'lilliputten',
   paths: {
-    domain: 'lilliputten.github.io',
-    site: 'https://lilliputten.github.io',
-    feed: 'https://lilliputten.github.io/feed/rss.xml',
-    social: 'https://lilliputten.github.io/images/og.jpg',
-    github: 'https://github.com/lilliputten/lilliputten.github.io',
+    domain: 'lilliputten.com',
+    site: 'https://lilliputten.com',
+    feed: 'https://lilliputten.com/feed/rss.xml',
+    social: 'https://lilliputten.com/images/og.jpg',
+    github: 'https://github.com/lilliputten/lilliputten.com',
   },
   buildYear: new Date().getFullYear(),
 };

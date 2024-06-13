@@ -1,0 +1,6 @@
+@font-face {
+  font-family: Fira Code;
+  src: url(/static/vendor/webfonts/fira/FiraCode-Regular-subset.woff2) format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}

@@ -6,8 +6,6 @@ import fs from 'fs';
 import path from 'path';
 
 import gulp from 'gulp';
-import postcss from 'gulp-postcss';
-import swc from 'gulp-swc';
 import del from 'del';
 import rev from 'gulp-rev';
 import revRewrite from 'gulp-rev-rewrite';
@@ -27,20 +25,16 @@ const { execSync } = childProcess;
 
 dotenv.config();
 
-const DEST_PATH = 'build';
 const SRC_PATH = 'src';
+const DEST_PATH = 'build';
 
 const isWin = process.platform === 'win32';
 const tty = isWin ? 'CON' : '/dev/tty';
 
 // Working paths...
-// const srcPath = 'src/';
-// const publicPath = posixPath.join(SRC_PATH, DEST_PATH);
 const sourceScriptsPath = posixPath.join(SRC_PATH, 'scripts');
 const sourceStylesPath = posixPath.join(SRC_PATH, 'styles');
-// const srcAssetsPath = posixPath.join(SRC_PATH, 'assets');
-const destAssetsPath = 'assets';
-// const targetScriptsPath = posixPath.join(DEST_PATH, 'scripts');
+const destAssetsPath = 'compiled-assets';
 
 // Construct sass runner...
 const sassRunner = gulpSass(sass);
@@ -59,31 +53,6 @@ const watchOptions = {
   // `livereload-assets-server`: it takes only previous state, needs to make
   // one extra update
 };
-
-/* // OLD assets config...
- *
- * // Styles
- *
- * gulp.task('styles', () => {
- *   return gulp
- *     .src(`${DEST_PATH}/styles/{styles,dark}.css`)
- *     .pipe(postcss([require('postcss-import'), require('postcss-lightningcss')]))
- *     .pipe(gulp.dest(`${DEST_PATH}/styles`));
- * });
- *
- * // Scripts
- *
- * gulp.task('scripts', () => {
- *   return gulp
- *     .src(`${DEST_PATH}/scripts/*.js`)
- *     .pipe(
- *       swc({
- *         minify: true,
- *       }),
- *     )
- *     .pipe(gulp.dest(`${DEST_PATH}/scriptsjs`));
- * });
- */
 
 // Styles...
 const stylesSrcAll = [posixPath.resolve(sourceStylesPath, '**/*.scss')];
@@ -133,13 +102,15 @@ gulp.task('clean', () => {
 
 // Cache
 
-gulp.task('cache:hash', () => {
+gulp.task('cacheHash', () => {
   return gulp
     .src(
       [
-        `${DEST_PATH}/fonts/*.woff2`,
-        `${DEST_PATH}/images/**/*.{svg,png,jpg,avif}`,
-        `${DEST_PATH}/assets/*.{js,css}`,
+        // `${DEST_PATH}/fonts/*.woff2`,
+        // `${DEST_PATH}/images/**/*.{svg,png,jpg,avif}`,
+        `${DEST_PATH}/assets/**/*.{js,css}`,
+        `${DEST_PATH}/sw.js`,
+        // `${destAssetsPath}/*.{js,css}`,
         // `${DEST_PATH}/styles/*.css`,
         `${DEST_PATH}/manifest.webmanifest`,
       ],
@@ -155,21 +126,13 @@ gulp.task('cache:hash', () => {
     .pipe(gulp.dest(DEST_PATH));
 });
 
-/* gulp.task('cache:combine', () => {
- *   return gulp
- *     .src([
- *       // prettier-ignore
- *       `${DEST_PATH}/rev-misc.json`,
- *       `${DEST_PATH}/rev-scripts.json`,
- *     ])
- *     .pipe(mergeJson({ fileName: 'rev.json' }))
- *     .pipe(gulp.dest(DEST_PATH));
- * });
- */
-
-gulp.task('cache:replace', () => {
+gulp.task('cacheReplace', () => {
   return gulp
-    .src([`${DEST_PATH}/**/*.{html,css}`, `${DEST_PATH}/manifest-*.webmanifest`])
+    .src([
+      `${DEST_PATH}/**/*.{html,css}`,
+      `${DEST_PATH}/manifest-*.webmanifest`,
+      // `${DEST_PATH}/assets/compiled/**/*.{js,css}`,
+    ])
     .pipe(
       revRewrite({
         // manifest: combinedManifest,
@@ -179,7 +142,7 @@ gulp.task('cache:replace', () => {
     .pipe(gulp.dest(DEST_PATH));
 });
 
-gulp.task('service-worker', () => {
+gulp.task('serviceWorker', () => {
   return workboxBuild.generateSW({
     globDirectory: DEST_PATH,
     globPatterns: ['**/*.{js,css,webmanifest,ico,woff2}', '**/404.html'],
@@ -217,13 +180,12 @@ gulp.task(
   'cache',
   gulp.series(
     // prettier-ignore
-    'cache:hash',
-    // 'cache:combine',
-    'cache:replace',
+    'cacheHash',
+    'cacheReplace',
   ),
 );
 
-gulp.task('contributors:get', () => {
+gulp.task('contributorsGet', () => {
   // Get new contributors only on local build
   if (process.env.ELEVENTY_ENV === 'production') {
     return new Promise((resolve) => resolve(undefined));
@@ -252,7 +214,7 @@ gulp.task('contributors:get', () => {
   });
 });
 
-gulp.task('humans:generate', () => {
+gulp.task('humansGenerate', () => {
   const contributors = JSON.parse(fs.readFileSync(`${SRC_PATH}/data/contributors.json`).toString());
   const date = new Date();
 
@@ -269,20 +231,20 @@ gulp.task(
   'build',
   gulp.parallel(
     gulp.series(
-      gulp.parallel(
-        // 'scripts',
-        // 'styles',
-        'compileScripts',
-        'compileStyles',
-      ),
+      // gulp.parallel(
+      //   // 'scripts',
+      //   // 'styles',
+      //   'compileScripts',
+      //   'compileStyles',
+      // ),
       'cache',
       'clean',
-      'service-worker',
+      'serviceWorker',
     ),
     gulp.series(
       // prettier-ignore
-      'contributors:get',
-      'humans:generate',
+      'contributorsGet',
+      'humansGenerate',
     ),
   ),
 );

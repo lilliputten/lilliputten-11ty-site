@@ -45,3 +45,4 @@ package-lock.*
 # This project...
 /static/
 /assets/
+/compiled-assets/

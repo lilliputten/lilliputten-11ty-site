@@ -26,3 +26,4 @@ yarn-error.log*
 
 # 11ty
 /assets
+# /compiled-assets

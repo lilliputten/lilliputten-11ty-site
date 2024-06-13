@@ -1,0 +1,26 @@
+/**
+ * @module styles
+ * @changed 2024.06.12, 20:43
+ */
+/**
+ * @module bootstrap-theme-fixes
+ * @changed 2024.06.12, 05:27
+ */
+:root {
+  --bs-primary-rgb: 204, 34, 0;
+  --bs-link-color-rgb: var(--bs-primary-rgb);
+  --bs-link-color: #c20;
+  --bs-link-hover-color: #661100;
+  --bs-link-hover-color-rgb: var(--bs-link-hover-color);
+}
+
+/**
+ * @module Page
+ * @changed 2024.06.14, 00:03
+ */
+body.Page {
+  border: 2px solid red;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  background-color: #fff;
+}
+/*# sourceMappingURL=styles.css.map */

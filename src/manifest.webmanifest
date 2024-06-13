@@ -11,17 +11,17 @@
   "background_color": "#c22",
   "icons": [
     {
-      "src": "images/favicon/logo-192.png",
+      "src": "static/images/favicon/logo-192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "images/favicon/logo-512.png",
+      "src": "static/images/favicon/logo-512.png",
       "type": "image/png",
       "sizes": "512x512"
     },
     {
-      "src": "images/favicon/logo-512.png",
+      "src": "static/images/favicon/logo-512.png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "maskable"

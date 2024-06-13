@@ -1,18 +1,25 @@
+// @ts-check
+
 const fs = require('fs');
 const sanitizeHTML = require('sanitize-html');
 
 module.exports = function (config) {
   config.addPassthroughCopy({
-    'src/images/favicon/favicon.ico': 'favicon.ico',
+    'static/images/favicon/favicon.ico': 'favicon.ico',
   });
   config.addPassthroughCopy('src/manifest.webmanifest');
   config.addPassthroughCopy('src/fonts/*.woff2');
   config.addPassthroughCopy('static');
-  config.addPassthroughCopy('assets');
+  config.addPassthroughCopy('src/assets');
+  config.addPassthroughCopy({
+    'compiled-assets': 'assets/compiled',
+  });
   // config.addPassthroughCopy('src/styles');
   // config.addPassthroughCopy('src/scripts');
   config.addPassthroughCopy('src/**/*.(html|jpg|png|webp|avif|ico|svg|mp4|xml)');
   config.addPassthroughCopy('src/(robots|humans).txt');
+
+  config.addWatchTarget('compiled-assets');
 
   // Collections
 
@@ -129,7 +136,7 @@ module.exports = function (config) {
   config.addFilter('prepareRSS', (content) => {
     const reg =
       /(src="\.\/)|(src="[^(https://)])|(src="\/)|(href="\.\/)|(href="[^(https://)])|(href="\/)/g;
-    const prefix = 'https://lilliputten.github.io' + content.url;
+    const prefix = 'https://lilliputten.com' + content.url;
     return content.templateContent.replace(reg, (match) => {
       if (match === 'src="/' || match === 'href="/') {
         match = match.slice(0, -1);
@@ -158,8 +165,8 @@ module.exports = function (config) {
   // SOURCE: https://github.com/maxboeck/mxb
   config.addFilter('isOwnWebmention', function (webmention) {
     const urls = [
-      'https://lilliputten.github.io',
       'https://lilliputten.com',
+      'https://lilliputten.github.io',
       'https://lilliputten.ru',
     ];
     const authorUrl = webmention.author ? webmention.author.url : false;
@@ -189,6 +196,8 @@ module.exports = function (config) {
       },
     };
 
+    // TODO?
+    // @ts-ignore
     const orderByDate = (a, b) => new Date(a.published) - new Date(b.published);
 
     const checkRequiredFields = (entry) => {

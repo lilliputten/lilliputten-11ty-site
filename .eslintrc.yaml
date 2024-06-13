@@ -225,7 +225,7 @@ overrides:
         - 'always'
 
   - # Raw js project files...
-    files: 'src/scripts/**/*.js'
+    files: 'src/**/*.js'
     # parser: '@babel/eslint-parser'
     parser: null
     env:
