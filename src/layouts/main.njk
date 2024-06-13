@@ -2,10 +2,18 @@
 layout: base.njk
 ---
 
-<div class="page__main">
+<div class="MainPageWrapper">
   {# {% include "header.njk" %} #}
 
-  <main class="page__content page__content-main">{{ content | safe }}</main>
+  <main class="MainPageContent">
+    {# {{ content | safe }} #}
+
+    <div class="MainPageMenu">
+      <li><a href="/about">About</a></li>
+      <li><a href="/projects">Projects</a></li>
+      <li><a href="/contacts">Contacts</a></li>
+    </div>
+  </main>
 
   {# {% include "footer.njk" %} #}
 </div>

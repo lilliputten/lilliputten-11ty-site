@@ -17,8 +17,7 @@
       "stylelint"
     ]
   },
-  "lint-staged-UNUSED": {
-  },
+  "lint-staged-UNUSED": {},
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged",
     "pre-push": "npm run lint"

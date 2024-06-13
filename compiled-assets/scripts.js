@@ -12,6 +12,25 @@ var __createBinding = (this && this.__createBinding) || (Object.create ? (functi
 var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
+define("sw/sw", ["require", "exports"], function (require, exports) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", { value: true });
+    if ('serviceWorker' in navigator) {
+        if (window.isDev) {
+            navigator.serviceWorker.getRegistrations().then(function (registrations) {
+                for (var _i = 0, registrations_1 = registrations; _i < registrations_1.length; _i++) {
+                    var registration = registrations_1[_i];
+                    registration.unregister();
+                }
+            });
+        }
+        else {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    }
+});
 /**
  * @module test.ts
  * @changed 2024.06.12, 02:11
@@ -26,17 +45,12 @@ define("test/test", ["require", "exports"], function (require, exports) {
     }
     exports.test = test;
 });
-define("test/index", ["require", "exports", "test/test"], function (require, exports, test_1) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
-    __exportStar(test_1, exports);
-});
 /**
  * @desc Main js entry point module (scripts)
  * @module src/assets/scripts.ts
  * @changed 2024.06.12, 02:11
  */
-define("scripts", ["require", "exports", "test/index"], function (require, exports, test_2) {
+define("scripts", ["require", "exports", "test/test", "sw/sw"], function (require, exports, test_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     /* // NOTE: These modules are unused. Used only
@@ -49,11 +63,16 @@ define("scripts", ["require", "exports", "test/index"], function (require, expor
      *   startStripeElementsForm,
      * });
      */
-    var testResult = (0, test_2.test)();
+    var testResult = (0, test_1.test)();
     console.log('[scripts] Main client code entry point', {
-        test: test_2.test,
+        test: test_1.test,
         testResult: testResult,
     });
+});
+define("test/index", ["require", "exports", "test/test"], function (require, exports, test_2) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", { value: true });
+    __exportStar(test_2, exports);
 });
 
 //# sourceMappingURL=scripts.js.map

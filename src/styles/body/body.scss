@@ -1,15 +1,13 @@
 /**
- * @module Page
- * @changed 2024.06.14, 00:03
+ * @module body
+ * @changed 2024.06.14, 01:49
  */
 
 @import '../shared';
 
-body.Page {
-  border: 2px solid red;
+body {
   font-family: $defaultFontFamily;
   background-color: $backgroundColor;
   // Add space for fixed navar (see `static/assets/page-header-navbar/page-header-navbar.django`)
   // margin-top: $headerNavbarHeight + 20px;
 }
-

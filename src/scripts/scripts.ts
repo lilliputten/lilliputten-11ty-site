@@ -4,7 +4,8 @@
  * @changed 2024.06.12, 02:11
  */
 
-import { test } from './test';
+import './sw/sw';
+import { test } from './test/test';
 
 /* // NOTE: These modules are unused. Used only
  * // `src/assets/stripe-init/stripe_payment_intents_support.ts`, via requirejs,

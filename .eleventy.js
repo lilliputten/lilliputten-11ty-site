@@ -11,11 +11,11 @@ module.exports = function (config) {
   config.addPassthroughCopy('src/fonts/*.woff2');
   config.addPassthroughCopy('static');
   config.addPassthroughCopy('src/assets');
-  config.addPassthroughCopy({
-    'compiled-assets': 'assets/compiled',
-  });
-  // config.addPassthroughCopy('src/styles');
-  // config.addPassthroughCopy('src/scripts');
+  config.addPassthroughCopy('src/scripts');
+  config.addPassthroughCopy('compiled-assets');
+  // config.addPassthroughCopy({
+  //   'compiled-assets': 'assets/compiled',
+  // });
   config.addPassthroughCopy('src/**/*.(html|jpg|png|webp|avif|ico|svg|mp4|xml)');
   config.addPassthroughCopy('src/(robots|humans).txt');
 

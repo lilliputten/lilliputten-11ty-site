@@ -55,8 +55,8 @@ const watchOptions = {
 };
 
 // Styles...
-const stylesSrcAll = [posixPath.resolve(sourceStylesPath, '**/*.scss')];
-const stylesSrcEntry = posixPath.resolve(sourceStylesPath, 'styles.scss');
+const stylesSrcAll = [posixPath.join(sourceStylesPath, '**/*.scss')];
+const stylesSrcEntry = posixPath.join(sourceStylesPath, 'styles.scss');
 function compileStyles() {
   return gulp
     .src(stylesSrcEntry)
@@ -67,12 +67,12 @@ function compileStyles() {
     .pipe(gulp.dest(destAssetsPath));
 }
 gulp.task('compileStyles', compileStyles);
-gulp.task('compileStylesWatch', () => {
+gulp.task('watchStyles', () => {
   return gulp.watch(stylesSrcAll.concat(stylesSrcEntry), watchOptions, compileStyles);
 });
 
 // Scripts...
-const scriptsSrcAll = [sourceScriptsPath + '**/*.{ts,js}'];
+const scriptsSrcAll = [posixPath.join(sourceScriptsPath, '**/*.{ts,js}')];
 // const scriptsTargetFile = 'scripts.js';
 function compileScripts() {
   return gulp
@@ -84,7 +84,7 @@ function compileScripts() {
     .pipe(gulp.dest(destAssetsPath));
 }
 gulp.task('compileScripts', compileScripts);
-gulp.task('compileScriptsWatch', () => {
+gulp.task('watchScripts', () => {
   return gulp.watch(scriptsSrcAll, watchOptions, compileScripts);
 });
 
@@ -109,7 +109,8 @@ gulp.task('cacheHash', () => {
         // `${DEST_PATH}/fonts/*.woff2`,
         // `${DEST_PATH}/images/**/*.{svg,png,jpg,avif}`,
         `${DEST_PATH}/assets/**/*.{js,css}`,
-        `${DEST_PATH}/sw.js`,
+        `${DEST_PATH}/compiled-assets/**/*.{js,css}`,
+        // `${DEST_PATH}/sw.js`,
         // `${destAssetsPath}/*.{js,css}`,
         // `${DEST_PATH}/styles/*.css`,
         `${DEST_PATH}/manifest.webmanifest`,
@@ -258,7 +259,7 @@ gulp.task('compileAssets', gulp.parallel.apply(gulp, compileAssetsTasks));
 
 const watchAssetsTasks = [
   // Watch all tasks...
-  'compileStylesWatch',
-  'compileScriptsWatch',
+  'watchStyles',
+  'watchScripts',
 ].filter(Boolean);
 gulp.task('watchAssets', gulp.parallel.apply(gulp, watchAssetsTasks));

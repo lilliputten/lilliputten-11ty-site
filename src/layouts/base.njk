@@ -41,10 +41,10 @@ Last changes timestamp: 2024.06.12 02:28 +0500
 
     <!-- Webfonts -->
     {% include "fonts.njk" %}
-    <link rel="stylesheet" href="/assets/compiled/styles.css" />
+    <link rel="stylesheet" href="/compiled-assets/styles.css" />
   </head>
   <body
-    class="Page {%- if not isIndex -%}PageRegular{%- else -%}PageMain{%- endif -%}"
+    class="Page {%- if not isIndex -%}PageRegular{%- else -%}MainPage{%- endif -%}"
     id="{%- if not isIndex -%}regular{%- else -%}main{%- endif -%}"
   >
     {{ content | safe }}
@@ -65,10 +65,14 @@ Last changes timestamp: 2024.06.12 02:28 +0500
       type="text/javascript"
     ></script>
 
-    <script type="text/javascript" src="/assets/compiled/scripts.js"></script>
+    <script type="text/javascript" src="/compiled-assets/scripts.js"></script>
 
+    {% if isdevelopment %}
+      <script>
+        window.isDev = true;
+      </script>
+    {% endif %}
     <script>
-      window.isDev = {% if isdevelopment %}true{% else %}false{% endif %};
       if (typeof window.requirejs !== 'undefined') {
         window.requirejs(['scripts']);
       } else {
@@ -76,6 +80,6 @@ Last changes timestamp: 2024.06.12 02:28 +0500
       }
     </script>
 
-    {% include "sw.njk" %}
+    {# {% include "sw.njk" %} #}
   </body>
 </html>
