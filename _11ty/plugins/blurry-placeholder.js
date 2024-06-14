@@ -34,75 +34,75 @@ const exists = promisify(require('fs').exists);
 const PIXEL_TARGET = 60;
 
 const ESCAPE_TABLE = {
-    '#': '%23',
-    '%': '%25',
-    ':': '%3A',
-    '<': '%3C',
-    '>': '%3E',
-    '"': '\'',
+  '#': '%23',
+  '%': '%25',
+  ':': '%3A',
+  '<': '%3C',
+  '>': '%3E',
+  '"': "'",
 };
 const ESCAPE_REGEX = new RegExp(Object.keys(ESCAPE_TABLE).join('|'), 'g');
 function escaper(match) {
-    return ESCAPE_TABLE[match];
+  return ESCAPE_TABLE[match];
 }
 
 const cache = {};
 
 function getCachedDataURI(src) {
-    if (!cache[src]) {
-        cache[src] = getDataURI(src)
-    }
+  if (!cache[src]) {
+    cache[src] = getDataURI(src);
+  }
 
-    return cache[src];
+  return cache[src];
 }
 
 async function getDataURI(src) {
-    const info = await imageSize(src);
-    const imgDimension = getBitmapDimensions_(info.width, info.height);
-    const buffer = await sharp(src)
-        .rotate() // Manifest rotation from metadata
-        .resize(imgDimension.width, imgDimension.height)
-        .png()
-        .toBuffer();
-    const result = {
-        src: parser.format('.png', buffer).content,
-        width: info.width,
-        height: info.height,
-    };
-    return result;
+  const info = await imageSize(src);
+  const imgDimension = getBitmapDimensions_(info.width, info.height);
+  const buffer = await sharp(src)
+    .rotate() // Manifest rotation from metadata
+    .resize(imgDimension.width, imgDimension.height)
+    .png()
+    .toBuffer();
+  const result = {
+    src: parser.format('.png', buffer).content,
+    width: info.width,
+    height: info.height,
+  };
+  return result;
 }
 
 function getBitmapDimensions_(imgWidth, imgHeight) {
-    // Aims for a bitmap of ~P pixels (w * h = ~P).
-    // Gets the ratio of the width to the height. (r = w0 / h0 = w / h)
-    const ratioWH = imgWidth / imgHeight;
-    // Express the width in terms of height by multiply the ratio by the
-    // height. (h * r = (w / h) * h)
-    // Plug this representation of the width into the original equation.
-    // (h * r * h = ~P).
-    // Divide the bitmap size by the ratio to get the all expressions using
-    // height on one side. (h * h = ~P / r)
-    let bitmapHeight = PIXEL_TARGET / ratioWH;
-    // Take the square root of the height instances to find the singular value
-    // for the height. (h = sqrt(~P / r))
-    bitmapHeight = Math.sqrt(bitmapHeight);
-    // Divide the goal total pixel amount by the height to get the width.
-    // (w = ~P / h).
-    const bitmapWidth = PIXEL_TARGET / bitmapHeight;
-    return { width: Math.round(bitmapWidth), height: Math.round(bitmapHeight) };
+  // Aims for a bitmap of ~P pixels (w * h = ~P).
+  // Gets the ratio of the width to the height. (r = w0 / h0 = w / h)
+  const ratioWH = imgWidth / imgHeight;
+  // Express the width in terms of height by multiply the ratio by the
+  // height. (h * r = (w / h) * h)
+  // Plug this representation of the width into the original equation.
+  // (h * r * h = ~P).
+  // Divide the bitmap size by the ratio to get the all expressions using
+  // height on one side. (h * h = ~P / r)
+  let bitmapHeight = PIXEL_TARGET / ratioWH;
+  // Take the square root of the height instances to find the singular value
+  // for the height. (h = sqrt(~P / r))
+  bitmapHeight = Math.sqrt(bitmapHeight);
+  // Divide the goal total pixel amount by the height to get the width.
+  // (w = ~P / h).
+  const bitmapWidth = PIXEL_TARGET / bitmapHeight;
+  return { width: Math.round(bitmapWidth), height: Math.round(bitmapHeight) };
 }
 
 module.exports = async function (src) {
-    const filename = '_public/' + src;
-    const cachedName = filename + '.blurred';
-    if (await exists(cachedName)) {
-        return readFile(cachedName, {
-            encoding: 'utf-8',
-        });
-    }
-    // We wrap the blurred image in a SVG to avoid rasterizing the filter on each layout.
-    const dataURI = await getCachedDataURI(filename);
-    let svg = `<svg xmlns="http://www.w3.org/2000/svg"
+  const filename = 'build/' + src;
+  const cachedName = filename + '.blurred';
+  if (await exists(cachedName)) {
+    return readFile(cachedName, {
+      encoding: 'utf-8',
+    });
+  }
+  // We wrap the blurred image in a SVG to avoid rasterizing the filter on each layout.
+  const dataURI = await getCachedDataURI(filename);
+  let svg = `<svg xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     viewBox="0 0 ${dataURI.width} ${dataURI.height}">
     <filter id="b" color-interpolation-filters="sRGB">
@@ -117,14 +117,14 @@ module.exports = async function (src) {
     </image>
 </svg>`;
 
-    // Optimizes dataURI length by deleting line breaks, and
-    // removing unnecessary spaces.
-    svg = svg.replace(/\s+/g, ' ');
-    svg = svg.replace(/> </g, '><');
-    svg = svg.replace(ESCAPE_REGEX, escaper);
+  // Optimizes dataURI length by deleting line breaks, and
+  // removing unnecessary spaces.
+  svg = svg.replace(/\s+/g, ' ');
+  svg = svg.replace(/> </g, '><');
+  svg = svg.replace(ESCAPE_REGEX, escaper);
 
-    // console.log(src, '[SUCCESS]');
-    const URI = `data:image/svg+xml;charset=utf-8,${svg}`;
-    await writeFile(cachedName, URI);
-    return URI;
+  // console.log(src, '[SUCCESS]');
+  const URI = `data:image/svg+xml;charset=utf-8,${svg}`;
+  await writeFile(cachedName, URI);
+  return URI;
 };

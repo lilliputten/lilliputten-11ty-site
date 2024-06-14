@@ -1,0 +1,26 @@
+# ex: set ft=conf :
+
+/.dependencygraph
+/.git
+/.history
+/.husky
+/.next
+/.storybook
+/.vscode
+/__mocks__
+/build
+/coverage
+/idea
+/i18n
+/node_modules
+/public
+/publish
+/types
+/utils
+
+/*.egg-info
+
+# This project...
+/static/
+/assets/
+/compiled-assets/

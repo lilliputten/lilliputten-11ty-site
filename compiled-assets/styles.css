@@ -1,0 +1,70 @@
+/**
+ * @module styles
+ * @changed 2024.06.12, 20:43
+ */
+@font-face {
+  font-family: Fira Code;
+  src: url(/static/vendor/webfonts/fira/FiraCode-Regular-subset.woff2) format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+/**
+ * @module body
+ * @changed 2024.06.14, 01:49
+ */
+body {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  background-color: #fff;
+}
+
+/**
+ * @module bootstrap-theme-fixes
+ * @changed 2024.06.12, 05:27
+ */
+:root {
+  --bs-primary-rgb: 204, 34, 0;
+  --bs-link-color-rgb: var(--bs-primary-rgb);
+  --bs-link-color: #c20;
+  --bs-link-hover-color: #661100;
+  --bs-link-hover-color-rgb: var(--bs-link-hover-color);
+}
+
+/**
+ * @module MainPage
+ * @changed 2024.06.14, 02:08
+ */
+.MainPageWrapper,
+.MainPageContent,
+.MainPage {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+/**
+ * @module MainPageMenu
+ * @changed 2024.06.14, 02:15
+ */
+.MainPageMenu {
+  display: flex;
+  gap: 1em;
+}
+.MainPageMenu li {
+  display: inline-block;
+}
+.MainPageMenu a {
+  text-decoration: none;
+}
+.MainPageMenu a:hover {
+  text-decoration: underline;
+}
+/*# sourceMappingURL=styles.css.map */

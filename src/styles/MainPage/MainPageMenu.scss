@@ -1,0 +1,20 @@
+/**
+ * @module MainPageMenu
+ * @changed 2024.06.14, 02:15
+ */
+
+@import '../shared';
+
+.MainPageMenu {
+  display: flex;
+  gap: 1em;
+  li {
+    display: inline-block;
+  }
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+}

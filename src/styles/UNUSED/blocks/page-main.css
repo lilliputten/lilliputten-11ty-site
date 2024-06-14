@@ -1,0 +1,17 @@
+html,
+.page__body--main {
+  border: 3px solid blue;
+  height: 100%;
+  position: relative;
+}
+
+.page__main {
+  border: 3px solid red;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

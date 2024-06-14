@@ -1,0 +1,24 @@
+/**
+ * @module test
+ * @changed 2024.06.12, 05:26
+ */
+
+@use 'sass:map';
+@use 'sass:color';
+
+@import './shared';
+
+$fontStack: Helvetica, sans-serif;
+$testColor: color.adjust(#333, $alpha: -0.7);
+
+/** Test */
+body {
+  // DEBUG: Test if scss processing works
+  font: 100% $fontStack;
+  color: $testColor;
+  background-color: $primaryColorRgb;
+  // background-color: $primaryColorRgbTest;
+  // background-color: #{toRGBValues($primaryColor)};
+  border: 3px solid red;
+  width: map.get($grid-breakpoints, 'sm') - 0.1;
+}
