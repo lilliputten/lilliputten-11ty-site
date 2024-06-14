@@ -4,53 +4,22 @@
  */
 
 import {
-  // Camera,
   Mesh,
   PerspectiveCamera,
-  // Object3D,
   PointLight,
   Scene,
   WebGLRenderer,
+  // Camera,
+  // Object3D,
 } from 'three';
 
-interface TConf {
-  el: string;
-  fov: number;
-  cameraZ: number;
-  xyCoef: number;
-  zCoef: number;
-  lightIntensity: number;
-  ambientColor: number | string;
+// import { createNoise4D } from 'simplex-noise';
 
-  // Basic colors
-  light1Color: number | string;
-  light2Color: number | string;
-  light3Color: number | string;
-  light4Color: number | string;
-}
+// import SimplexNoise from 'simplex-noise';
+// import { SimplexNoise } from 'simplex-noise';
 
-const conf: TConf = {
-  el: 'visualAnimation',
-  fov: 75,
-  cameraZ: 75,
-  xyCoef: 50,
-  zCoef: 10,
-  lightIntensity: 0.9,
-  ambientColor: 0x000000,
-
-  /*
-   * // Default colors (convert from hex color string: s/'#\(.*\)'/0x\1/)
-   * light1Color: '#0e09dc',
-   * light2Color: '#1cd1e1',
-   * light3Color: '#18c02c',
-   * light4Color: '#ee3bcf',
-   */
-  // Set 1
-  light1Color: '#4b9e89',
-  light2Color: '#5c75a1',
-  light3Color: '#1418cd',
-  light4Color: '#b9caec',
-};
+import { TConf, TColor } from './TConf';
+import { conf } from './conf';
 
 function App(conf: TConf) {
   const THREE = window.THREE;
@@ -69,7 +38,11 @@ function App(conf: TConf) {
   // const TMath = THREE.Math;
 
   let plane: Mesh; // : Object3D;
+
+  // const SimplexNoiseClass = window.SimplexNoise as SimplexNoise;
+  // @ts-ignore: Wrong type definitions for simplex noise
   const simplex = new window.SimplexNoise();
+  // const noise4D = createNoise4D();
 
   const mouse = new THREE.Vector2();
   const mousePlane = new THREE.Plane(new THREE.Vector3(0, 0, 1), 0);
@@ -104,20 +77,22 @@ function App(conf: TConf) {
     updateSize();
     window.addEventListener('resize', updateSize, false);
 
-    document.addEventListener('mousemove', (e: MouseEvent) => {
-      const v = new THREE.Vector3();
-      camera.getWorldDirection(v);
-      v.normalize();
-      mousePlane.normal = v;
-      mouse.x = (e.clientX / width) * 2 - 1;
-      mouse.y = -(e.clientY / height) * 2 + 1;
-      // raycaster.setFromCamera(mouse, camera);
-      // raycaster.ray.intersectPlane(mousePlane, mousePosition);
-    });
+    // document.addEventListener('mousemove', mouseHandler);
 
     initScene();
     // initGui();
     animate();
+  }
+
+  function mouseHandler(e: MouseEvent) {
+    const v = new THREE.Vector3();
+    camera.getWorldDirection(v);
+    v.normalize();
+    mousePlane.normal = v;
+    mouse.x = (e.clientX / width) * 2 - 1;
+    mouse.y = -(e.clientY / height) * 2 + 1;
+    // raycaster.setFromCamera(mouse, camera);
+    // raycaster.ray.intersectPlane(mousePlane, mousePosition);
   }
 
   /* // UNUSED: Input controls
@@ -139,6 +114,28 @@ function App(conf: TConf) {
    * }
    */
 
+  function numericColor(s: TColor): number {
+    if (typeof s === 'string') {
+      if (s.startsWith('#')) {
+        s = s.replace('#', '0x');
+      }
+      s = Number(s);
+    }
+    return s;
+  }
+
+  function addLight(color: TColor, lightDistance: number, x: number, y: number, z: number) {
+    const light = new THREE.PointLight(
+      // prettier-ignore
+      numericColor(color),
+      conf.lightIntensity,
+      lightDistance,
+    );
+    light.position.set(x, y, z);
+    scene.add(light);
+    return light;
+  }
+
   function initScene() {
     scene = new THREE.Scene();
     initLights();
@@ -150,8 +147,8 @@ function App(conf: TConf) {
     plane = new THREE.Mesh(geo, mat);
     scene.add(plane);
 
-    const planeRotationX = -Math.PI / 2 + 0.2; // -Math.PI / 2 - 0.2;
-    const planePositionY = 15; // -25;
+    const planeRotationX = -Math.PI / 2 - 0.2; // -Math.PI / 2 - 0.2;
+    const planePositionY = -25; // -25;
     const cameraPositionZ = 60; // 60;
     plane.rotation.x = planeRotationX;
     plane.position.y = planePositionY;
@@ -163,60 +160,64 @@ function App(conf: TConf) {
     });
   }
 
-  function numericColor(s: number | string): number {
-    if (typeof s === 'string') {
-      if (s.startsWith('#')) {
-        s = s.replace('#', '0x');
-      }
-      s = Number(s);
-    }
-    return s;
-  }
-
   function initLights() {
-    const r = 30;
-    const y = 10;
-    const lightDistance = 500;
+    const r = 30; // 30;
+    const y = 10; // 10;
+    const lightDistance = 800; // 500;
 
     const light = new THREE.AmbientLight(numericColor(conf.ambientColor));
     scene.add(light);
 
-    light1 = new THREE.PointLight(
-      numericColor(conf.light1Color),
-      conf.lightIntensity,
-      lightDistance,
-    );
-    light1.position.set(0, y, r);
-    scene.add(light1);
-    light2 = new THREE.PointLight(
-      numericColor(conf.light2Color),
-      conf.lightIntensity,
-      lightDistance,
-    );
-    light2.position.set(0, -y, -r);
-    scene.add(light2);
-    light3 = new THREE.PointLight(
-      numericColor(conf.light3Color),
-      conf.lightIntensity,
-      lightDistance,
-    );
-    light3.position.set(r, y, 0);
-    scene.add(light3);
-    light4 = new THREE.PointLight(
-      numericColor(conf.light4Color),
-      conf.lightIntensity,
-      lightDistance,
-    );
-    light4.position.set(-r, y, 0);
-    scene.add(light4);
+    /* // UNUSED: Original light adding code...
+     * // light1
+     * light1 = new THREE.PointLight(
+     *   numericColor(conf.light1Color),
+     *   conf.lightIntensity,
+     *   lightDistance,
+     * );
+     * light1.position.set(0, y, r);
+     * scene.add(light1);
+     *
+     * // light2
+     * light2 = new THREE.PointLight(
+     *   numericColor(conf.light2Color),
+     *   conf.lightIntensity,
+     *   lightDistance,
+     * );
+     * light2.position.set(0, -y, -r);
+     * scene.add(light2);
+     *
+     * // light3
+     * light3 = new THREE.PointLight(
+     *   numericColor(conf.light3Color),
+     *   conf.lightIntensity,
+     *   lightDistance,
+     * );
+     * light3.position.set(r, y, 0);
+     * scene.add(light3);
+     *
+     * // light4
+     * light4 = new THREE.PointLight(
+     *   numericColor(conf.light4Color),
+     *   conf.lightIntensity,
+     *   lightDistance,
+     * );
+     * light4.position.set(-r, y, 0);
+     * scene.add(light4);
+     */
+
+    // light1 = addLight(conf.light1Color, lightDistance, 0, y, r);
+    // light2 = addLight(conf.light2Color, lightDistance, 0, -y, -r);
+    light3 = addLight(conf.light3Color, lightDistance, r, y, 0);
+    light4 = addLight(conf.light4Color, lightDistance, -r, y, 0);
   }
 
   function animate() {
-    console.log('[visualAnimation:animate]');
+    // console.log('[visualAnimation:animate]');
     requestAnimationFrame(animate);
 
     animatePlane();
-    animateLights();
+    // animateLights();
 
     renderer.render(scene, camera);
   }
@@ -224,9 +225,14 @@ function App(conf: TConf) {
   function animatePlane() {
     const gArray = plane.geometry.attributes.position.array as number[];
     const time = Date.now() * 0.0002;
+    console.log('[visualAnimation:animatePlane]', {
+      gArray,
+      time,
+    });
     for (let i = 0; i < gArray.length; i += 3) {
       gArray[i + 2] =
         simplex.noise4D(
+          // prettier-ignore
           gArray[i] / conf.xyCoef,
           gArray[i + 1] / conf.xyCoef,
           time,
@@ -240,14 +246,22 @@ function App(conf: TConf) {
   function animateLights() {
     const time = Date.now() * 0.001;
     const d = 50;
-    light1.position.x = Math.sin(time * 0.1) * d;
-    light1.position.z = Math.cos(time * 0.2) * d;
-    light2.position.x = Math.cos(time * 0.3) * d;
-    light2.position.z = Math.sin(time * 0.4) * d;
-    light3.position.x = Math.sin(time * 0.5) * d;
-    light3.position.z = Math.sin(time * 0.6) * d;
-    light4.position.x = Math.sin(time * 0.7) * d;
-    light4.position.z = Math.cos(time * 0.8) * d;
+    if (light1) {
+      light1.position.x = Math.sin(time * 0.1) * d;
+      light1.position.z = Math.cos(time * 0.2) * d;
+    }
+    if (light2) {
+      light2.position.x = Math.cos(time * 0.3) * d;
+      light2.position.z = Math.sin(time * 0.4) * d;
+    }
+    if (light3) {
+      light3.position.x = Math.sin(time * 0.5) * d;
+      light3.position.z = Math.sin(time * 0.6) * d;
+    }
+    if (light4) {
+      light4.position.x = Math.sin(time * 0.7) * d;
+      light4.position.z = Math.cos(time * 0.8) * d;
+    }
   }
 
   /** Create random colors */

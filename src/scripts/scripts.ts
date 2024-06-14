@@ -23,6 +23,8 @@ const testResult = test();
 console.log('[scripts] Main client code entry point', {
   test,
   testResult,
+  // 'window.SimplexNoise': window.SimplexNoise,
+  // 'window.createNoise4D': window.createNoise4D,
 });
 
 if (window.isIndex) {

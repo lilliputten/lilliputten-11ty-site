@@ -15,6 +15,10 @@ import replace from 'gulp-replace';
 import childProcess from 'child_process';
 
 import gulpTypescript from 'gulp-typescript'; // @see https://www.npmjs.com/package/gulp-typescript
+// import tsPipeline from 'gulp-webpack-typescript-pipeline';
+// import browserify from 'gulp-browserify';
+// import merge from 'merge2';
+import concat from 'gulp-concat';
 import sourcemaps from 'gulp-sourcemaps';
 import gulpSass from 'gulp-sass';
 import * as sass from 'sass';
@@ -75,19 +79,22 @@ gulp.task('watchStyles', () => {
 const scriptsSrcAll = [posixPath.join(sourceScriptsPath, '**/*.{ts,js}')];
 // const scriptsTargetFile = 'scripts.js';
 function compileScripts() {
-  return gulp
-    .src(scriptsSrcAll)
-    .pipe(sourcemaps.init())
-    .pipe(tsProject(gulpTypescript.reporter.fullReporter()))
-    .on('error', (error) => {
-      // NOTE: Prevent gulp process to halt (continue execution after an error).
-      const errorMessage = 'Typescript error: task failed. ' + error.name + ': ' + error.message;
-      // eslint-disable-next-line no-console
-      console.error(errorMessage);
-    })
-    .js // prettier-ignore
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(destAssetsPath));
+  return (
+    gulp
+      .src(scriptsSrcAll)
+      .pipe(sourcemaps.init())
+      .pipe(tsProject(gulpTypescript.reporter.fullReporter()))
+      .on('error', (error) => {
+        // NOTE: Prevent gulp process to halt (continue execution after an error).
+        const errorMessage = 'Typescript error: task failed. ' + error.name + ': ' + error.message;
+        // eslint-disable-next-line no-console
+        console.error(errorMessage);
+      })
+      .js // prettier-ignore
+      // .pipe(concat('all.js'))
+      .pipe(sourcemaps.write('.'))
+      .pipe(gulp.dest(destAssetsPath))
+  );
 }
 gulp.task('compileScripts', compileScripts);
 gulp.task('watchScripts', () => {
