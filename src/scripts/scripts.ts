@@ -1,12 +1,12 @@
 /**
  * @desc Main js entry point module (scripts)
  * @module src/assets/scripts.ts
- * @changed 2024.06.12, 02:11
+ * @changed 2024.06.14, 21:58
  */
 
-import 'src/sw/sw';
-import { test } from 'src/test/test';
-import { visualAnimation } from 'src/visualAnimation/visualAnimation';
+import './sw/sw';
+// import { test } from './test/test';
+import { visualAnimation } from './visualAnimation/visualAnimation';
 
 /* // NOTE: These modules are unused. Used only
  * // `src/assets/stripe-init/stripe_payment_intents_support.ts`, via requirejs,
@@ -19,14 +19,17 @@ import { visualAnimation } from 'src/visualAnimation/visualAnimation';
  * });
  */
 
-const testResult = test();
-console.log('[scripts] Main client code entry point', {
-  test,
-  testResult,
-  // 'window.SimplexNoise': window.SimplexNoise,
-  // 'window.createNoise4D': window.createNoise4D,
-});
+/*
+ * const testResult = test();
+ * console.log('[scripts] Main client code entry point', {
+ *   test,
+ *   testResult,
+ *   // 'window.SimplexNoise': window.SimplexNoise,
+ *   // 'window.createNoise4D': window.createNoise4D,
+ * });
+ */
 
+// Start animation only on main window?
 if (window.isIndex) {
   visualAnimation();
 }

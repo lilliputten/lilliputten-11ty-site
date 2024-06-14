@@ -44,7 +44,10 @@ const destAssetsPath = 'compiled-assets';
 const sassRunner = gulpSass(sass);
 
 // Construct ts runner (see `tsconfig.json`...
-const tsProject = gulpTypescript.createProject('tsconfig.json');
+const tsProject = gulpTypescript.createProject('tsconfig.json', {
+  module: 'amd',
+  outFile: 'scripts.js',
+});
 
 // Watch...
 const watchOptions = {

@@ -6,7 +6,7 @@
 @use 'sass:map';
 @use 'sass:color';
 
-@import './shared';
+@import '../shared';
 
 $fontStack: Helvetica, sans-serif;
 $testColor: color.adjust(#333, $alpha: -0.7);

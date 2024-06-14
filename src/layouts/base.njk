@@ -39,8 +39,10 @@ Last changes timestamp: 2024.06.12 02:28 +0500
       type="text/css"
     />
 
-    <!-- Webfonts -->
+    {# Webfonts #}
     {% include "fonts.njk" %}
+
+    {# Compiled styles #}
     <link rel="stylesheet" href="/compiled-assets/styles.css" />
   </head>
   <body
@@ -61,7 +63,7 @@ Last changes timestamp: 2024.06.12 02:28 +0500
 
     {% include "main/assets.njk" %}
 
-    {# AMD/RequireJS (Used after bootstrap due to conflicts) #}
+    {# AMD/RequireJS (Used after bootstrap due to conflicts)
     <script
       data-main="scripts"
       data-require="require.js@2.3.6"
@@ -69,6 +71,8 @@ Last changes timestamp: 2024.06.12 02:28 +0500
       src="{% if isdevelopment %}/static/vendor/requirejs-2.3.6/require.js{% else %}https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js{% endif %}"
       type="text/javascript"
     ></script>
+    <script type="text/javascript" src="assets/scrips/require.js"></script>
+    #}
 
     {% if isdevelopment %}
       <script>
@@ -82,22 +86,8 @@ Last changes timestamp: 2024.06.12 02:28 +0500
       </script>
     {% endif %}
 
-    <script type="text/javascript" src="assets/scripts/require.js"></script>
-
+    {# Compiled scripts #}
     <script type="text/javascript" src="/compiled-assets/scripts.js"></script>
-
-    {# // UNUSED: Old requirejs entry point
-    <script>
-      function onLoad() {
-        if (typeof window.requirejs !== 'undefined') {
-          window.requirejs(['scripts']);
-        } else {
-          console.error('Not found AMD/RequireJS modules support');
-        }
-      }
-      window.addEventListener('load', onLoad);
-    </script>
-    #}
 
     {# {% include "sw.njk" %} #}
   </body>

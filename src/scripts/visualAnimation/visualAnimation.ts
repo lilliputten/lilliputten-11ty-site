@@ -225,10 +225,11 @@ function App(conf: TConf) {
   function animatePlane() {
     const gArray = plane.geometry.attributes.position.array as number[];
     const time = Date.now() * 0.0002;
-    console.log('[visualAnimation:animatePlane]', {
-      gArray,
-      time,
-    });
+    /* console.log('[visualAnimation:animatePlane]', {
+     *   gArray,
+     *   time,
+     * });
+     */
     for (let i = 0; i < gArray.length; i += 3) {
       gArray[i + 2] =
         simplex.noise4D(

@@ -1,4 +1,5 @@
-if ('serviceWorker' in navigator) {
+const useSW = false;
+if (useSW && 'serviceWorker' in navigator) {
   if (window.isDev) {
     navigator.serviceWorker.getRegistrations().then((registrations) => {
       for (const registration of registrations) {
