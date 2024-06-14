@@ -4,8 +4,9 @@
  * @changed 2024.06.12, 02:11
  */
 
-import './sw/sw';
-import { test } from './test/test';
+import 'src/sw/sw';
+import { test } from 'src/test/test';
+import { mainPage } from 'src/mainPage/mainPage';
 
 /* // NOTE: These modules are unused. Used only
  * // `src/assets/stripe-init/stripe_payment_intents_support.ts`, via requirejs,
@@ -23,6 +24,10 @@ console.log('[scripts] Main client code entry point', {
   test,
   testResult,
 });
+
+if (window.isIndex) {
+  mainPage();
+}
 
 // Empty root module
 export {};

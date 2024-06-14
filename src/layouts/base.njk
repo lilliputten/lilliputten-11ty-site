@@ -42,6 +42,8 @@ Last changes timestamp: 2024.06.12 02:28 +0500
     <!-- Webfonts -->
     {% include "fonts.njk" %}
     <link rel="stylesheet" href="/compiled-assets/styles.css" />
+
+    {% include "main/assets.njk" %}
   </head>
   <body
     class="Page {%- if not isIndex -%}PageRegular{%- else -%}MainPage{%- endif -%}"
@@ -61,24 +63,41 @@ Last changes timestamp: 2024.06.12 02:28 +0500
 
     {# AMD/RequireJS (Used after bootstrap due to conflicts) #}
     <script
-      src="{% if isdevelopment %}/static/vendor/requirejs-2.3.6/require.min.js{% else %}https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js{% endif %}"
+      data-main="scripts"
+      data-require="require.js@2.3.6"
+      data-semver="2.3.6"
+      src="{% if isdevelopment %}/static/vendor/requirejs-2.3.6/require.js{% else %}https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js{% endif %}"
       type="text/javascript"
     ></script>
-
-    <script type="text/javascript" src="/compiled-assets/scripts.js"></script>
 
     {% if isdevelopment %}
       <script>
         window.isDev = true;
       </script>
     {% endif %}
+
+    {% if isIndex %}
+      <script>
+        window.isIndex = true;
+      </script>
+    {% endif %}
+
+    <script type="text/javascript" src="assets/scripts/require.js"></script>
+
+    <script type="text/javascript" src="/compiled-assets/scripts.js"></script>
+
+    {# // UNUSED: Old requirejs entry point
     <script>
-      if (typeof window.requirejs !== 'undefined') {
-        window.requirejs(['scripts']);
-      } else {
-        console.error('Not found AMD/RequireJS modules support');
+      function onLoad() {
+        if (typeof window.requirejs !== 'undefined') {
+          window.requirejs(['scripts']);
+        } else {
+          console.error('Not found AMD/RequireJS modules support');
+        }
       }
+      window.addEventListener('load', onLoad);
     </script>
+    #}
 
     {# {% include "sw.njk" %} #}
   </body>

@@ -3,6 +3,7 @@
     "target": "es5",
     "module": "amd",
     "moduleResolution": "node",
+    "skipLibCheck": true,
     "allowJs": true,
     "baseUrl": ".",
     "paths": {

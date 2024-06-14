@@ -37,6 +37,8 @@
     "@babel/eslint-parser": "^7.24.7",
     "@biomejs/biome": "1.7.1",
     "@hirusi/eleventy-plugin-safe-external-links": "^0.14.3",
+    "@types/requirejs": "^2.1.37",
+    "@types/three": "^0.128.0",
     "cross-env": "^7.0.3",
     "datauri": "^4.1.0",
     "date-fns": "^3.6.0",
@@ -62,7 +64,6 @@
     "jsdom": "^24.0.0",
     "lint-staged": "^15.2.2",
     "live-server": "^1.2.2",
-    "lodash": "^4.17.21",
     "minify-xml": "^4.4.1",
     "netlify-plugin-webmentions": "^1.1.1",
     "node-fetch": "^2.0.0",
@@ -83,6 +84,9 @@
     "typescript-eslint": "^7.5.0",
     "vinyl-paths": "^3.0.1",
     "workbox-build": "^7.1.0"
+  },
+  "unused-dependencies": {
+    "lodash": "^4.17.21"
   },
   "scripts": {
     "compile-assets": "echo --Update all assets-- && gulp compileAssets",

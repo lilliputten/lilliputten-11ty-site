@@ -1,4 +1,4 @@
-# @changed 2024.06.12, 04:45
+# @changed 2024.06.14, 14:03
 # @see https://eslint.org/docs/rules/
 root: true
 extends:
@@ -61,7 +61,7 @@ overrides:
           ignoreArrayIndexes: true
           ignoreDefaultValues: true
       prettier/prettier: # prettier: Slighly slower (+0.3s)
-        - 'error' # Can we to use warn if we still use `eslint --max-warnings=0` in `package.json`?
+        - 'warn' # Can we to use warn if we still use `eslint --max-warnings=0` in `package.json`?
         - endOfLine: 'auto'
       import/no-namespace: 'off'
       no-unused-vars: 'off'

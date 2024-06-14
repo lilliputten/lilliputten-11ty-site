@@ -1,17 +1,3 @@
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() { return m[k]; } };
-    }
-    Object.defineProperty(o, k2, desc);
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __exportStar = (this && this.__exportStar) || function(m, exports) {
-    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
-};
 define("sw/sw", ["require", "exports"], function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
@@ -32,8 +18,8 @@ define("sw/sw", ["require", "exports"], function (require, exports) {
     }
 });
 /**
- * @module test.ts
- * @changed 2024.06.12, 02:11
+ * @module test
+ * @changed 2024.06.14, 13:12
  */
 define("test/test", ["require", "exports"], function (require, exports) {
     "use strict";
@@ -46,11 +32,31 @@ define("test/test", ["require", "exports"], function (require, exports) {
     exports.test = test;
 });
 /**
+ * @module mainPage
+ * @changed 2024.06.14, 13:06
+ */
+define("mainPage/mainPage", ["require", "exports"], function (require, exports) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", { value: true });
+    exports.mainPage = void 0;
+    // import * as THREE from 'three';
+    function mainPage() {
+        var canvas = document.getElementById('background');
+        console.log('mainPage', {
+            canvas: canvas,
+            isDev: window.isDev,
+            THREE: window.THREE,
+            // THREE,
+        });
+    }
+    exports.mainPage = mainPage;
+});
+/**
  * @desc Main js entry point module (scripts)
  * @module src/assets/scripts.ts
  * @changed 2024.06.12, 02:11
  */
-define("scripts", ["require", "exports", "test/test", "sw/sw"], function (require, exports, test_1) {
+define("scripts", ["require", "exports", "test/test", "mainPage/mainPage", "sw/sw"], function (require, exports, test_1, mainPage_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     /* // NOTE: These modules are unused. Used only
@@ -68,11 +74,9 @@ define("scripts", ["require", "exports", "test/test", "sw/sw"], function (requir
         test: test_1.test,
         testResult: testResult,
     });
-});
-define("test/index", ["require", "exports", "test/test"], function (require, exports, test_2) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
-    __exportStar(test_2, exports);
+    if (window.isIndex) {
+        (0, mainPage_1.mainPage)();
+    }
 });
 
 //# sourceMappingURL=scripts.js.map
