@@ -6,10 +6,37 @@
 @import '../shared';
 
 .MainPageWrapper,
-.MainPageContent,
+.MainPageContentWrapper,
 .MainPage {
   @include FullSizeContainer;
+  align-items: stretch;
   border: 0;
   padding: 0;
   margin: 0;
+}
+
+.MainPageVisual,
+.MainPageContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.backgroundVisual .MainPageVisual {
+  &,
+  & .visualAnimation {
+    @include FullSizeContainer;
+  }
+}
+
+.MainPageVisual {
+  // flex: 1;
+  // border: 3px solid blue;
+  overflow: hidden;
+}
+.MainPageContent {
+  // border: 1px solid purple;
+  // flex: 1;
+  // justify-content: center;
 }

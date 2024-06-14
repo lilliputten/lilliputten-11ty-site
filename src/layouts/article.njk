@@ -41,14 +41,16 @@ layout: page.njk
     {% set previousPost = collections.chunk | getPreviousCollectionItem(page) %}
     {% set nextPost = collections.chunk | getNextCollectionItem(page) %}
     <div class="article__nav">
-      {% if previousPost %}<a
-        href="{{ previousPost.url }}"
-        class="article__nav-button article__prev"
-        >{{ previousPost.data.title }}</a
-      >{% endif %}
-      {% if nextPost %}<a href="{{ nextPost.url }}" class="article__nav-button article__next"
-        >{{ nextPost.data.title }}</a
-      >{% endif %}
+      {% if previousPost %}
+        <a href="{{ previousPost.url }}" class="article__nav-button article__prev"
+          >{{ previousPost.data.title }}</a
+        >
+      {% endif %}
+      {% if nextPost %}
+        <a href="{{ nextPost.url }}" class="article__nav-button article__next"
+          >{{ nextPost.data.title }}</a
+        >
+      {% endif %}
     </div>
   </div>
   {# <div class="article__webmentions">

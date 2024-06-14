@@ -6,7 +6,7 @@
 
 import 'src/sw/sw';
 import { test } from 'src/test/test';
-import { mainPage } from 'src/mainPage/mainPage';
+import { visualAnimation } from 'src/visualAnimation/visualAnimation';
 
 /* // NOTE: These modules are unused. Used only
  * // `src/assets/stripe-init/stripe_payment_intents_support.ts`, via requirejs,
@@ -26,7 +26,7 @@ console.log('[scripts] Main client code entry point', {
 });
 
 if (window.isIndex) {
-  mainPage();
+  visualAnimation();
 }
 
 // Empty root module

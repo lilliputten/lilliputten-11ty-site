@@ -1,15 +1,18 @@
-// import { Require } from 'requirejs';
-import * as THREE from 'three';
+// import * as THREE from 'three';
 
 declare global {
-  /** Is it in the development mode? */
-  const isDev: boolean;
+  // const isDev: boolean;
   interface Window {
+    // Used libraries...
     requirejs: Require;
+    THREE: typeof THREE;
+    SimplexNoise: SimplexNoise;
+    chroma: chroma;
+
+    /** Is it in the development mode? */
     isDev: boolean;
     /** Is it the main page? */
     isIndex?: boolean;
-    THREE: typeof THREE;
   }
 }
 

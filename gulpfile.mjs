@@ -47,7 +47,7 @@ const watchOptions = {
   // @see: https://gulpjs.com/docs/en/getting-started/watching-files/
   events: 'all',
   /** Omit initial action for watch cycles */
-  ignoreInitial: true,
+  ignoreInitial: false,
   delay: 500,
   // NOTE: There is a bug with styles compiling watching by
   // `livereload-assets-server`: it takes only previous state, needs to make
@@ -78,7 +78,13 @@ function compileScripts() {
   return gulp
     .src(scriptsSrcAll)
     .pipe(sourcemaps.init())
-    .pipe(tsProject())
+    .pipe(tsProject(gulpTypescript.reporter.fullReporter()))
+    .on('error', (error) => {
+      // NOTE: Prevent gulp process to halt (continue execution after an error).
+      const errorMessage = 'Typescript error: task failed. ' + error.name + ': ' + error.message;
+      // eslint-disable-next-line no-console
+      console.error(errorMessage);
+    })
     .js // prettier-ignore
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(destAssetsPath));
