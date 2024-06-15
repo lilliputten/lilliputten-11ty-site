@@ -6,9 +6,9 @@
 
 import './sw/sw';
 
-// import { test } from './test/test';
-
 import { VisualAnimation } from './VisualAnimation/VisualAnimation';
+
+// import { test } from './test/test';
 
 /*
  * const testResult = test();
@@ -21,9 +21,8 @@ import { VisualAnimation } from './VisualAnimation/VisualAnimation';
  */
 
 // Start animation only on main window?
-if (window.isIndex) {
-  VisualAnimation();
-}
+// if (window.isIndex) {}
+VisualAnimation();
 
 // Empty root module
 export {};

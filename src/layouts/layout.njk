@@ -1,0 +1,23 @@
+---
+layout: base.njk
+---
+
+<div class="PageLayout">
+  <div class="PageVisual" id="PageVisual">
+    <canvas class="VisualAnimation" id="VisualAnimation"></canvas>
+    <div class="PageVisualOver"></div>
+  </div>
+  <div class="PageHeader">
+    <div class="PageMenu">
+      <li>Test text</li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/projects">Projects</a></li>
+      <li><a href="/contacts">Contacts</a></li>
+    </div>
+  </div>
+  <div class="PageContentLayout">
+    <div class="PageContentWrapper">{{ content | safe }}</div>
+  </div>
+  <div class="PageFooter">PageFooter</div>
+</div>

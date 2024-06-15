@@ -1,6 +1,6 @@
 ---
 title: About me
-layout: main.njk
+layout: page.njk
 permalink: /about.html
 tag: false
 eleventyExcludeFromCollections: true

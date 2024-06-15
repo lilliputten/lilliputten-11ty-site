@@ -1,0 +1,36 @@
+/**
+ * @module bodyThemes
+ * @changed 2024.06.15, 21:46
+ */
+
+@use 'sass:color';
+
+@import '../shared';
+
+// Themes...
+
+body,
+body.themeLight {
+  background-color: $backgroundColor;
+}
+.onLight,
+body,
+body.themeLight {
+  color: $defaultTextColor;
+}
+
+body.themeDark {
+  background-color: $backgroundDarkColor;
+}
+.onDark,
+body.themeDark {
+  color: $defaultTextOnDarkColor;
+  a {
+    $color: #fff;
+    color: $color;
+    // transition: color $$transitionTimeMs;
+    &:hover {
+      color: color.adjust($color, $alpha: -0.2);
+    }
+  }
+}

@@ -6,7 +6,7 @@ export const conf: TConf = {
 
   fov: 70, // 75,
   cameraZ: 100, // 75,
-  xyCoef: 120, // 50,
+  xyCoef: 250, // 50,
   zCoef: 15, // 10,
   lightIntensity: 1, // 0.9,
 

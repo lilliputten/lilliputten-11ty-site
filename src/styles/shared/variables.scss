@@ -61,7 +61,7 @@ $moodBlueColor: #6ac;
 $extralightBlueColor: #def;
 
 $defaultTextColor: #333;
-$defaultTextOnDarkColor: #ddd;
+$defaultTextOnDarkColor: #ccc;
 
 $backgroundColor: #fff;
 $backgroundDarkColor: #333;
@@ -72,8 +72,9 @@ $navbarMainHeight: 60px;
 $navbarPlusHeight: 50px;
 
 // Timeouts...
+// RegEx: (moment|transition|animation|effect)Time\b
 
-$momentTime: 150ms;
-$transitionTime: 250ms;
-$animationTime: 500ms;
-$effectTime: 1000ms;
+$momentTimeMs: 150ms;
+$transitionTimeMs: 250ms;
+$animationTimeMs: 500ms;
+$effectTimeMs: 1000ms;

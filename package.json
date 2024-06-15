@@ -118,6 +118,7 @@
     "eslint": "echo --Lint sources-- && eslint src/scripts",
     "lint": "echo --Run all pre-commit check-ups-- && npm-run-all stylelint eslint type-check && echo --All check-ups passed--",
     "check-all": "echo --Run all pre-commit check-ups-- && npm-run-all check-editorconfig prettier lint && echo --All check-ups passed--",
+    "clear-cache": "echo --Clear caches-- && rimraf node_modules/.cache && echo Cleared webpack cache",
     "help": "echo --List all available script commands-- && npm-package-user-scripts-list"
   }
 }

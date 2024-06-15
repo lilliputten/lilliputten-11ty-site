@@ -16,8 +16,7 @@ import {
 import { TConf, TColor } from './TConf';
 import { conf } from './conf';
 
-// const maxHeight = 400;
-// const minHeight = 200;
+const useInteractve = false;
 
 function startVisualAnimation(conf: TConf) {
   const THREE = window.THREE;
@@ -70,7 +69,9 @@ function startVisualAnimation(conf: TConf) {
     updateSize();
     window.addEventListener('resize', updateSize, false);
 
-    document.addEventListener('mousemove', mouseHandler);
+    if (useInteractve) {
+      document.addEventListener('mousemove', mouseHandler);
+    }
 
     initScene();
     // initGui();
