@@ -13,11 +13,6 @@ import {
   // Object3D,
 } from 'three';
 
-// import { createNoise4D } from 'simplex-noise';
-
-// import SimplexNoise from 'simplex-noise';
-// import { SimplexNoise } from 'simplex-noise';
-
 import { TConf, TColor } from './TConf';
 import { conf } from './conf';
 

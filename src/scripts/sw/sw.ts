@@ -1,4 +1,5 @@
 const useSW = false;
+
 if (useSW && 'serviceWorker' in navigator) {
   if (window.isDev) {
     navigator.serviceWorker.getRegistrations().then((registrations) => {

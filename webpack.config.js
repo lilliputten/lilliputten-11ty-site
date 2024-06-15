@@ -1,23 +1,20 @@
 // @ts-check
 
 const path = require('path');
-const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const prodMode = 'production';
-const defaultMode = prodMode;
-const mode = process.env.NODE_ENV || defaultMode;
-const isDev = mode !== prodMode;
-
 module.exports = {
+  mode: 'production',
   // @see https://webpack.js.org/configuration/devtool/#devtool
-  mode: mode,
-  devtool: isDev ? 'eval-cheap-module-source-map' : 'source-map',
+  devtool: 'source-map',
   entry: [
     // prettier-ignore
     './src/scripts/scripts.ts',
     './src/styles/styles.scss',
   ],
+  resolve: {
+    extensions: ['.scss', '.sass', '.css', '.tsx', '.ts', '.js'],
+  },
   module: {
     rules: [
       {
@@ -56,20 +53,9 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'styles.css',
     }),
-    new webpack.DefinePlugin({
-      'process.env': {
-        // NODE_ENV: mode,
-        // ...variablesFromEnvironmentJsonConfig
-      },
-    }),
-    // ...
   ],
-  resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
-  },
   output: {
     filename: 'scripts.js',
     path: path.resolve(__dirname, 'compiled-assets'),
-    // sourceMapFilename: '[file].map',
   },
 };
