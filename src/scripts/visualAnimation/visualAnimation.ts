@@ -1,5 +1,5 @@
 /**
- * @module visualAnimation
+ * @module VisualAnimation
  * @changed 2024.06.14, 13:06
  */
 
@@ -16,7 +16,10 @@ import {
 import { TConf, TColor } from './TConf';
 import { conf } from './conf';
 
-function App(conf: TConf) {
+// const maxHeight = 400;
+// const minHeight = 200;
+
+function startVisualAnimation(conf: TConf) {
   const THREE = window.THREE;
 
   let renderer: WebGLRenderer;
@@ -30,7 +33,7 @@ function App(conf: TConf) {
   let wWidth: number;
   let wHeight: number;
 
-  // const TMath = THREE.Math;
+  // const ThreeMath = THREE.Math;
 
   let plane: Mesh; // : Object3D;
 
@@ -41,26 +44,21 @@ function App(conf: TConf) {
 
   const mouse = new THREE.Vector2();
   const mousePlane = new THREE.Plane(new THREE.Vector3(0, 0, 1), 0);
-  const mousePosition = new THREE.Vector3();
-  const raycaster = new THREE.Raycaster();
-
-  /* // UNUSED: Input controls
-   * //  <input type="range" min="1" max="100" class="custom-range" id="noiseInput">
-   * const noiseInput = document.getElementById('noiseInput');
-   * // <input type="range" min="1" max="100" class="custom-range" id="heightInput">
-   * const heightInput = document.getElementById('heightInput');
-   */
+  // const mousePosition = new THREE.Vector3();
+  // const raycaster = new THREE.Raycaster();
 
   let light1: PointLight;
   let light2: PointLight;
   let light3: PointLight;
   let light4: PointLight;
 
+  const canvas = document.getElementById(conf.el) as HTMLCanvasElement;
+  const wrapper = document.getElementById(conf.wrapperEl) as HTMLDivElement;
+
   init();
 
   function init() {
-    console.log('[visualAnimation:init]');
-    const canvas = document.getElementById(conf.el) as HTMLCanvasElement;
+    // console.log('[VisualAnimation:init]');
     renderer = new THREE.WebGLRenderer({
       canvas,
       antialias: true,
@@ -72,7 +70,7 @@ function App(conf: TConf) {
     updateSize();
     window.addEventListener('resize', updateSize, false);
 
-    // document.addEventListener('mousemove', mouseHandler);
+    document.addEventListener('mousemove', mouseHandler);
 
     initScene();
     // initGui();
@@ -104,7 +102,7 @@ function App(conf: TConf) {
    *   });
    *   // Random colors
    *   document.getElementById('trigger').addEventListener('click', (e) => {
-   *     updateLightsColors();
+   *     setRandomLightsColors();
    *   });
    * }
    */
@@ -142,13 +140,13 @@ function App(conf: TConf) {
     plane = new THREE.Mesh(geo, mat);
     scene.add(plane);
 
-    const planeRotationX = -Math.PI / 2 - 0.2; // -Math.PI / 2 - 0.2;
-    const planePositionY = -25; // -25;
-    const cameraPositionZ = 60; // 60;
+    const planeRotationX = -Math.PI / 2 - 0.1; // -Math.PI / 2 - 0.2;
+    const planePositionY = 20; // -25;
+    const cameraPositionZ = 30; // 60;
     plane.rotation.x = planeRotationX;
     plane.position.y = planePositionY;
     camera.position.z = cameraPositionZ;
-    console.log('[visualAnimation:initScene]', {
+    console.log('[VisualAnimation:initScene]', {
       planeRotationX,
       planePositionY,
       cameraPositionZ,
@@ -158,69 +156,33 @@ function App(conf: TConf) {
   function initLights() {
     const r = 30; // 30;
     const y = 10; // 10;
-    const lightDistance = 800; // 500;
+    const lightDistance = 300; // 500;
 
     const light = new THREE.AmbientLight(numericColor(conf.ambientColor));
     scene.add(light);
 
-    /* // UNUSED: Original light adding code...
-     * // light1
-     * light1 = new THREE.PointLight(
-     *   numericColor(conf.light1Color),
-     *   conf.lightIntensity,
-     *   lightDistance,
-     * );
-     * light1.position.set(0, y, r);
-     * scene.add(light1);
-     *
-     * // light2
-     * light2 = new THREE.PointLight(
-     *   numericColor(conf.light2Color),
-     *   conf.lightIntensity,
-     *   lightDistance,
-     * );
-     * light2.position.set(0, -y, -r);
-     * scene.add(light2);
-     *
-     * // light3
-     * light3 = new THREE.PointLight(
-     *   numericColor(conf.light3Color),
-     *   conf.lightIntensity,
-     *   lightDistance,
-     * );
-     * light3.position.set(r, y, 0);
-     * scene.add(light3);
-     *
-     * // light4
-     * light4 = new THREE.PointLight(
-     *   numericColor(conf.light4Color),
-     *   conf.lightIntensity,
-     *   lightDistance,
-     * );
-     * light4.position.set(-r, y, 0);
-     * scene.add(light4);
-     */
-
-    // light1 = addLight(conf.light1Color, lightDistance, 0, y, r);
+    light1 = addLight(conf.light1Color, lightDistance, 0, y, r); // Set 1
     // light2 = addLight(conf.light2Color, lightDistance, 0, -y, -r);
-    light3 = addLight(conf.light3Color, lightDistance, r, y, 0);
-    light4 = addLight(conf.light4Color, lightDistance, -r, y, 0);
+    light3 = addLight(conf.light3Color, lightDistance, r, y, 0); // Set 1
+    // light4 = addLight(conf.light4Color, lightDistance, -r, y, 0);
   }
 
   function animate() {
-    // console.log('[visualAnimation:animate]');
-    requestAnimationFrame(animate);
+    // console.log('[VisualAnimation:animate]');
 
     animatePlane();
-    // animateLights();
+    animateLights();
 
     renderer.render(scene, camera);
+
+    setTimeout(() => requestAnimationFrame(animate), 10);
+    // requestAnimationFrame(animate);
   }
 
   function animatePlane() {
     const gArray = plane.geometry.attributes.position.array as number[];
     const time = Date.now() * 0.0002;
-    /* console.log('[visualAnimation:animatePlane]', {
+    /* console.log('[VisualAnimation:animatePlane]', {
      *   gArray,
      *   time,
      * });
@@ -260,24 +222,25 @@ function App(conf: TConf) {
     }
   }
 
-  /** Create random colors */
-  function updateLightsColors() {
-    conf.light1Color = window.chroma.random().hex();
-    conf.light2Color = window.chroma.random().hex();
-    conf.light3Color = window.chroma.random().hex();
-    conf.light4Color = window.chroma.random().hex();
-    light1.color = new THREE.Color(conf.light1Color);
-    light2.color = new THREE.Color(conf.light2Color);
-    light3.color = new THREE.Color(conf.light3Color);
-    light4.color = new THREE.Color(conf.light4Color);
-    // console.log(conf);
-  }
+  /* [>* Create random colors <]
+   * function setRandomLightsColors() {
+   *   conf.light1Color = window.chroma.random().hex();
+   *   conf.light2Color = window.chroma.random().hex();
+   *   conf.light3Color = window.chroma.random().hex();
+   *   conf.light4Color = window.chroma.random().hex();
+   *   light1.color = new THREE.Color(conf.light1Color);
+   *   light2.color = new THREE.Color(conf.light2Color);
+   *   light3.color = new THREE.Color(conf.light3Color);
+   *   light4.color = new THREE.Color(conf.light4Color);
+   *   // console.log(conf);
+   * }
+   */
 
   function updateSize() {
-    width = window.innerWidth;
-    // cx = width / 2;
-    height = window.innerHeight;
-    // cy = height / 2;
+    const elWidth = wrapper.clientWidth;
+    const elHeight = wrapper.clientHeight;
+    width = elWidth;
+    height = elHeight; // Math.min(Math.max(elHeight, minHeight), maxHeight);
     if (renderer && camera) {
       renderer.setSize(width, height);
       camera.aspect = width / height;
@@ -297,15 +260,6 @@ function App(conf: TConf) {
   }
 }
 
-export function visualAnimation() {
-  /* console.log('[visualAnimation]', {
-   *   isDev: window.isDev,
-   *   THREE: window.THREE,
-   *   SimplexNoise: window.SimplexNoise,
-   *   chroma: window.chroma,
-   *   App,
-   *   conf,
-   * });
-   */
-  App(conf);
+export function VisualAnimation() {
+  startVisualAnimation(conf);
 }

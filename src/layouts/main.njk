@@ -2,20 +2,29 @@
 layout: base.njk
 ---
 
-<div class="MainPageWrapper">
+<div class="PageLayout">
   {# {% include "header.njk" %} #}
 
-  <main class="MainPageContentWrapper backgroundVisual">
-    <div class="MainPageVisual">
-      <canvas class="visualAnimation" id="visualAnimation"></canvas>
+  <main class="PageWrapper backgroundVisual">
+    <div class="PageVisual" id="PageVisual">
+      <canvas class="VisualAnimation" id="VisualAnimation"></canvas>
+      <div class="PageVisualOver"></div>
     </div>
 
-    <div class="MainPageContent">
-      {# {{ content | safe }} #}
-      <div class="MainPageMenu">
-        <li><a href="/about">About</a></li>
-        <li><a href="/projects">Projects</a></li>
-        <li><a href="/contacts">Contacts</a></li>
+    <div class="PageContentLayout">
+      <div class="PageContentWrapper">
+        {# {{ content | safe }} #}
+        <div class="PageMenu">
+          <li>Test</li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="/contacts">Contacts</a></li>
+        </div>
+        <div class="stub">
+          {% for i in range(0,3) %}
+            <p>xxxx {{ i + 1 }}</p>
+          {% endfor %}
+        </div>
       </div>
     </div>
   </main>

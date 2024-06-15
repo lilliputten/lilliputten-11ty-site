@@ -8,7 +8,7 @@ import './sw/sw';
 
 // import { test } from './test/test';
 
-import { visualAnimation } from './visualAnimation/visualAnimation';
+import { VisualAnimation } from './VisualAnimation/VisualAnimation';
 
 /*
  * const testResult = test();
@@ -22,7 +22,7 @@ import { visualAnimation } from './visualAnimation/visualAnimation';
 
 // Start animation only on main window?
 if (window.isIndex) {
-  visualAnimation();
+  VisualAnimation();
 }
 
 // Empty root module

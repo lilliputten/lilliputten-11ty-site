@@ -1,6 +1,6 @@
 /**
- * @module visualAnimation
- * @changed 2024.06.12, 05:26
+ * @module VisualAnimation
+ * @changed 2024.06.15, 20:27
  */
 
 @use 'sass:map';
@@ -8,8 +8,11 @@
 
 @import '../shared';
 
-.visualAnimation {
-  // border: 3px solid red;
+.VisualAnimation {
+  border: 2px solid blue; // DEBUG
   width: 100%;
-  flex-grow: 0;
+  height: 100%;
+  // flex-grow: 0;
+  opacity: .6;
+  flex: 1;
 }

@@ -2,6 +2,8 @@ export type TColor = number | string;
 
 export interface TConf {
   el: string;
+  wrapperEl: string;
+
   fov: number;
   cameraZ: number;
   xyCoef: number;

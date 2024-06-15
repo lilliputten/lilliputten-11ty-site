@@ -102,7 +102,7 @@
     "watch-assets-gulp": "echo --Watch all assets (gulp)-- && gulp watchAssets",
     "compile-assets": "echo --Update all assets (webpack)-- && webpack",
     "watch-assets": "echo --Watch all assets (webpack)-- && webpack --watch",
-    "start": "echo --Start eleventy dev server-- && npm run compile-assets && cross-env ELEVENTY_ENV=development eleventy --serve --quiet",
+    "start": "echo --Start eleventy dev server-- && cross-env ELEVENTY_ENV=development eleventy --serve --quiet",
     "serve": "live-server build",
     "prod": "npm run build:prod && npm run serve",
     "build-all": "echo --Build eleventy and all artifacts-- && npm run compile-assets && eleventy && gulp build",

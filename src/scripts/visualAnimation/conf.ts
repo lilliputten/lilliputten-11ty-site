@@ -1,13 +1,14 @@
-import { TConf, TColor } from './TConf';
+import { TConf } from './TConf';
 
 export const conf: TConf = {
-  el: 'visualAnimation',
+  el: 'VisualAnimation',
+  wrapperEl: 'PageVisual',
 
-  fov: 75, // 5,
-  cameraZ: 75, // 5,
-  xyCoef: 50, // 0,
-  zCoef: 10, // 0,
-  lightIntensity: 0.9, // 9,
+  fov: 70, // 75,
+  cameraZ: 100, // 75,
+  xyCoef: 120, // 50,
+  zCoef: 15, // 10,
+  lightIntensity: 1, // 0.9,
 
   ambientColor: '#cc2200', // '#00ff00', // 0x000000,
 
