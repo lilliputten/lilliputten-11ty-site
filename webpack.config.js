@@ -1,6 +1,8 @@
 // @ts-check
 
 const path = require('path');
+// const webpack = require('webpack');
+const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
@@ -19,6 +21,7 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
+        // @see https://github.com/TypeStrong/ts-loader
         use: 'ts-loader',
         exclude: /node_modules/,
       },
@@ -54,6 +57,23 @@ module.exports = {
       filename: 'styles.css',
     }),
   ],
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new TerserPlugin({
+        terserOptions: {
+          compress: {
+            drop_debugger: false,
+            // global_defs: {
+            //   '@console.log': 'alert',
+            // },
+            // passes: 2,
+            // html5_comments: true,
+          },
+        },
+      }),
+    ],
+  },
   output: {
     filename: 'scripts.js',
     path: path.resolve(__dirname, 'compiled-assets'),

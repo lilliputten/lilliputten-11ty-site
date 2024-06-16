@@ -1,0 +1,55 @@
+/**
+ * @module PageHeaderToolbar
+ * @changed 2024.06.16, 23:31
+ */
+
+@use 'sass:color';
+
+@import '../shared';
+
+.PageHeaderToolbar {
+  display: flex;
+  gap: 0.5em;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  $itemSize: 2em;
+
+  html:not([data-theme]) & .theme-dark,
+  [data-theme='light'] & .theme-dark,
+  [data-theme='dark'] & .theme-light {
+    display: none;
+  }
+
+  a {
+    width: $itemSize;
+    height: $itemSize;
+    border-radius: 50%;
+    text-decoration: none;
+    &,
+    & i {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    background-color: transparent;
+    border: 1px solid transparent;
+    // border: 1px solid color.change(#fff, $alpha: 0.5);
+    // & {
+    //   transition: all $transitionTimeMs;
+    // }
+    &,
+    & i {
+      transition: all 100ms;
+    }
+    &:hover {
+      background-color: color.change(#fff, $alpha: 0.1);
+      // border: 1px solid color.change(#fff, $alpha: 0.5);
+      i {
+        transform: scale(1.2);
+        // font-size: 110%;
+      }
+    }
+  }
+}

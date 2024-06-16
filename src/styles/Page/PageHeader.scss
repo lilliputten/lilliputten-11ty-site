@@ -1,23 +1,6 @@
 /**
  * @module PageHeader
- * @changed 2024.06.15, 21:58
+ * @changed 2024.06.16, 23:08
  */
 
 @import '../shared';
-
-.PageHeader {
-  // border: 1px solid blue; // DEBUG
-  position: relative;
-  width: 100%;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  // Adjust main height
-  height: 130px;
-  padding: 1em;
-  .PageMain & {
-    min-height: 100px;
-    height: 45%;
-  }
-}

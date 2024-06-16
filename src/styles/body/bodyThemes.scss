@@ -9,31 +9,58 @@
 
 // Themes...
 
-[theme='light'] body {
+body,
+[data-theme='light'],
+[data-theme='light'] body {
   background-color: $backgroundColor;
 }
+
 .onLight,
 body,
-[theme='light'] body {
+[data-theme='light'],
+[data-theme='light'] body {
   color: $defaultTextColor;
+  a {
+    transition: color $transitionTimeMs;
+    &:hover {
+      color: $primaryLightenColor;
+    }
+  }
 }
 
-[theme='dark'] body {
+[data-theme='dark'],
+[data-theme='dark'] body {
   background-color: $backgroundDarkColor;
 }
+
 .onRed,
 .onDark,
-[theme='dark'] body {
+[data-theme='dark'],
+[data-theme='dark'] body {
   color: $defaultTextOnDarkColor;
   a {
     $color: #fff;
     color: $color;
-    // transition: color $$transitionTimeMs;
+    transition: opacity $transitionTimeMs;
+    opacity: 0.8;
     &:hover {
-      color: color.adjust($color, $alpha: -0.2);
+      color: $color;
+      opacity: 1;
+      // color: color.adjust($color, $alpha: -0.2);
     }
   }
 }
+
+body .onRed,
 .onRed {
-  color: color.mix($primaryColor, #fff, 20%);
+  // color: color.mix($primaryColor, #fff, 25%);
+  // color: color.change(#fff, $alpha: .6); // dark
+  $color: #fff;
+  color: color.change($color, $alpha: 0.8);
+  a {
+    opacity: 0.9;
+    &:hover {
+      color: $color;
+    }
+  }
 }

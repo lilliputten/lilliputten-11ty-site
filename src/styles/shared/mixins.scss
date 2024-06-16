@@ -1,3 +1,14 @@
+@mixin PageWrapper {
+  position: relative;
+  // position: absolute;
+  // overflow: hidden;
+  width: 100%;
+  // height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // justify-content: center;
+}
 @mixin FullSizeContainer {
   // position: relative;
   position: absolute;

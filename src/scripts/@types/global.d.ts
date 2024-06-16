@@ -13,6 +13,10 @@ declare global {
     isDev: boolean;
     /** Is it the main page? */
     isIndex?: boolean;
+
+    // Exported handlers...
+
+    toggleTheme: () => void;
   }
 }
 

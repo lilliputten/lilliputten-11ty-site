@@ -1,15 +1,11 @@
 ---
 title: About me
-layout: page.njk
+layout: article.njk
 permalink: /about.html
 tag: false
 eleventyExcludeFromCollections: true
 description: About page.
 ---
-
-# {{ title }}
-
-<p>{{description}}</p>
 
 **Name:** Igor.
 

@@ -43,7 +43,9 @@ $midbarCollapse: $collapseWidth;
 // Primary color...
 
 $primaryColor: #c20;
-$primaryLightColor: #f20;
+// $primaryLightColor: #f20;
+$primaryLightColor: color.adjust($primaryColor, $lightness: 10%);
+$primaryLightenColor: color.adjust($primaryLightColor, $lightness: 10%);
 $primaryDarkColor: color.adjust($primaryColor, $lightness: -10%);
 $primaryDarkenColor: color.adjust($primaryDarkColor, $lightness: -10%);
 $primaryColorRgb: #{toRGBValues($primaryColor)};

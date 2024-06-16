@@ -7,6 +7,7 @@
 import './sw/sw';
 
 import { VisualAnimation } from './VisualAnimation/VisualAnimation';
+import { toggleTheme } from './toggleTheme/toggleTheme';
 
 // import { test } from './test/test';
 
@@ -23,6 +24,10 @@ import { VisualAnimation } from './VisualAnimation/VisualAnimation';
 // Start animation only on main window?
 // if (window.isIndex) {}
 VisualAnimation();
+
+window.toggleTheme = toggleTheme;
+
+// updateTheme();
 
 // Empty root module
 export {};

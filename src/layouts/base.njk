@@ -4,7 +4,12 @@
 Version: 0.0.1
 Last changes timestamp: 2024.06.12 02:28 +0500
 -->
-<html lang="en" page="{% if not isIndex %}regular{% else %}main{% endif %}" theme="dark">
+<html
+  lang="en"
+  id="page-{%- if not isIndex -%}regular{%- else -%}main{%- endif -%}"
+  data-page="{% if not isIndex %}regular{% else %}main{% endif %}"
+  data-theme="light"
+>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -31,10 +36,14 @@ Last changes timestamp: 2024.06.12 02:28 +0500
   <body
     class="Page {% if not isIndex %}PageRegular{% else %}PageMain{% endif %}"
     id="{%- if not isIndex -%}regular{%- else -%}main{%- endif -%}"
+    xxx-page="{% if not isIndex %}regular{% else %}main{% endif %}"
+    xxx-theme="light"
   >
     {# Base content #}
 
     {{ content | safe }}
+
+    <script src="/assets/scripts/update-theme.js"></script>
     {% include "base-scripts.njk" %}
   </body>
 </html>
