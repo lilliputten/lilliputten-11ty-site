@@ -1,0 +1,52 @@
+.PageFooter {
+  [page='regular'] {
+    border-top: 1px solid $primaryColor;
+  }
+  margin-top: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+
+  .FooterInfo {
+    // max-width: $mainColumnWidth;
+    // margin: 0 auto;
+    // margin-bottom: 0px;
+    // margin-bottom: calc(2 * $lineSpace);
+    justify-content: space-between;
+    align-items: flex-start;
+    display: flex;
+  }
+
+  .SocialList {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    min-width: max-content;
+    display: flex;
+    gap: 0.75em;
+  }
+  .SocialListLink {
+    align-items: center;
+    gap: 0.25em;
+    display: inline-flex;
+    &::before {
+      width: 1em;
+      height: 1em;
+      content: '';
+      background-position: 50%;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &#Github::before {
+      background-image: url('/static/images/icons/github-logo.svg');
+      [theme='dark'] & {
+        background-image: url('/static/images/icons/github-logo-light.svg');
+      }
+    }
+    &#Linkedin::before {
+      background-image: url('/static/images/icons/linkedin-logo.svg');
+    }
+    &#RSS::before {
+      background-image: url('/static/images/icons/rss-logo.svg');
+    }
+  }
+}

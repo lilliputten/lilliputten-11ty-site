@@ -1,0 +1,24 @@
+/**
+ * @module headings
+ * @changed 2024.06.15, 21:46
+ */
+
+@use 'sass:color';
+
+@import '../shared';
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /*!KEEP*/
+}
+
+h1,
+h2,
+h3 {
+  color: $primaryColor;
+  font-weight: 300;
+}

@@ -9,21 +9,21 @@
 
 // Themes...
 
-body,
-body.themeLight {
+[theme='light'] body {
   background-color: $backgroundColor;
 }
 .onLight,
 body,
-body.themeLight {
+[theme='light'] body {
   color: $defaultTextColor;
 }
 
-body.themeDark {
+[theme='dark'] body {
   background-color: $backgroundDarkColor;
 }
+.onRed,
 .onDark,
-body.themeDark {
+[theme='dark'] body {
   color: $defaultTextOnDarkColor;
   a {
     $color: #fff;
@@ -33,4 +33,7 @@ body.themeDark {
       color: color.adjust($color, $alpha: -0.2);
     }
   }
+}
+.onRed {
+  color: color.mix($primaryColor, #fff, 20%);
 }

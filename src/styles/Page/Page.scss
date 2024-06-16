@@ -25,13 +25,19 @@
   overflow: auto;
 }
 
-.PageContentWrapper {
+.PageContentWrapper,
+.PageContent {
   // width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   flex: 1;
   justify-content: center;
+}
+.PageContentWrapper {
+  padding-top: 2em;
+  align-items: center;
+}
+.PageContent {
 }
 
 .PageVisual,
@@ -42,7 +48,7 @@
 
 .PageVisual {
   position: fixed;
-  border: 1px dotted green; // DEBUG
+  // border: 1px dotted green; // DEBUG
   overflow: hidden;
   bottom: auto;
   // Adjust main height
@@ -59,13 +65,4 @@
   // background: linear-gradient(180deg, $primaryColor 0%, rgba(255,255,255,0) 25%, rgba(255,255,255,0) 100%);
   opacity: 0.5;
   display: none;
-}
-
-.PageContentWrapper {
-  // border: 1px solid purple; // DEBUG
-}
-
-.PageFooter {
-  padding: 20px;
-  border: 1px solid green;
 }

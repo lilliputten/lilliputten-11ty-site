@@ -6,7 +6,7 @@
 @import '../shared';
 
 .PageHeader {
-  border: 1px solid blue;
+  // border: 1px solid blue; // DEBUG
   position: relative;
   width: 100%;
   flex-shrink: 0;
@@ -15,6 +15,7 @@
   justify-content: center;
   // Adjust main height
   height: 130px;
+  padding: 1em;
   .PageMain & {
     min-height: 100px;
     height: 45%;

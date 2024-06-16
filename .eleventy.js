@@ -277,11 +277,18 @@ module.exports = function (config) {
   // Markdown config
 
   const markdownIt = require('markdown-it');
-  const options = {
+  const markdownItAnchor = require('markdown-it-anchor');
+  // @see https://markdown-it.github.io/markdown-it/
+  const mdOptions = {
     html: true,
+    linkify: true,
     typographer: true,
+    quotes: '“”‘’',
   };
-  config.setLibrary('md', markdownIt(options).disable('code'));
+
+  // @ts-ignore: Wrong typings?
+  const md = markdownIt(mdOptions).use(markdownItAnchor, {}).disable('code');
+  config.setLibrary('md', md);
 
   // Plugins
 

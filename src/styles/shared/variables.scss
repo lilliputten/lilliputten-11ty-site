@@ -9,6 +9,10 @@
 
 $defaultFontSize: 14px;
 
+$lineHeight: 1.42;
+$fontSize: 20px;
+$lineSpace: calc($lineHeight * 1em);
+
 $defaultFontFamily: 'Roboto', 'Helvetica', 'Arial', sans-serif;
 
 // Breakpoints:...
@@ -25,6 +29,9 @@ $screenSmMax: map.get($grid-breakpoints, 'md'); // 768px
 $screenMdMax: map.get($grid-breakpoints, 'lg'); // 992px
 $screenLgMax: map.get($grid-breakpoints, 'xl'); // 1200px
 $screenXlMax: map.get($grid-breakpoints, 'xxl'); // 1400px
+
+$mainColumnWidth: $screenMdMin; // 700px;
+$maxColumnWidth: $screenLgMin; // 1000px;
 
 // Collapsable widths...
 

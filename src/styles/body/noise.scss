@@ -1,0 +1,64 @@
+/**
+ * @module noise
+ * @changed 2024.06.16, 20:49
+ */
+
+@use 'sass:color';
+
+@import '../shared';
+
+.noise {
+  position: fixed;
+  z-index: 9999;
+  overflow: hidden;
+  content: '';
+  top: -300%;
+  left: -150%;
+  height: 600%;
+  width: 600%;
+  &.animated {
+    animation: grain 20s steps(10) infinite;
+  }
+  background-image: url('/static/images/background/noise.png');
+  background-size: 200px;
+  background-repeat: repeat;
+  pointer-events: none;
+  opacity: 0.25;
+  [theme='dark'] & {
+    opacity: 0.2;
+  }
+}
+
+@keyframes grain {
+  0%,
+  to {
+    transform: translate(0);
+  }
+  10% {
+    transform: translate(-5%, -10%);
+  }
+  20% {
+    transform: translate(-15%, 5%);
+  }
+  30% {
+    transform: translate(7%, -25%);
+  }
+  40% {
+    transform: translate(-5%, 25%);
+  }
+  50% {
+    transform: translate(-15%, 10%);
+  }
+  60% {
+    transform: translate(15%);
+  }
+  70% {
+    transform: translateY(15%);
+  }
+  80% {
+    transform: translate(3%, 35%);
+  }
+  90% {
+    transform: translate(-10%, 10%);
+  }
+}
