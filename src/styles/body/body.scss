@@ -1,13 +1,12 @@
 /**
  * @module body
- * @changed 2024.06.14, 01:49
+ * @changed 2024.06.16, 20:49
  */
+
+@use 'sass:color';
 
 @import '../shared';
 
 body {
   font-family: $defaultFontFamily;
-  background-color: $backgroundColor;
-  // Add space for fixed navar (see `static/assets/page-header-navbar/page-header-navbar.django`)
-  // margin-top: $headerNavbarHeight + 20px;
 }

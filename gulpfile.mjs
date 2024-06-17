@@ -15,6 +15,10 @@ import replace from 'gulp-replace';
 import childProcess from 'child_process';
 
 import gulpTypescript from 'gulp-typescript'; // @see https://www.npmjs.com/package/gulp-typescript
+// import tsPipeline from 'gulp-webpack-typescript-pipeline';
+// import browserify from 'gulp-browserify';
+// import merge from 'merge2';
+import concat from 'gulp-concat';
 import sourcemaps from 'gulp-sourcemaps';
 import gulpSass from 'gulp-sass';
 import * as sass from 'sass';
@@ -40,14 +44,17 @@ const destAssetsPath = 'compiled-assets';
 const sassRunner = gulpSass(sass);
 
 // Construct ts runner (see `tsconfig.json`...
-const tsProject = gulpTypescript.createProject('tsconfig.json');
+const tsProject = gulpTypescript.createProject('tsconfig.json', {
+  module: 'amd',
+  outFile: 'scripts.js',
+});
 
 // Watch...
 const watchOptions = {
   // @see: https://gulpjs.com/docs/en/getting-started/watching-files/
   events: 'all',
   /** Omit initial action for watch cycles */
-  ignoreInitial: true,
+  ignoreInitial: false,
   delay: 500,
   // NOTE: There is a bug with styles compiling watching by
   // `livereload-assets-server`: it takes only previous state, needs to make
@@ -75,13 +82,22 @@ gulp.task('watchStyles', () => {
 const scriptsSrcAll = [posixPath.join(sourceScriptsPath, '**/*.{ts,js}')];
 // const scriptsTargetFile = 'scripts.js';
 function compileScripts() {
-  return gulp
-    .src(scriptsSrcAll)
-    .pipe(sourcemaps.init())
-    .pipe(tsProject())
-    .js // prettier-ignore
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(destAssetsPath));
+  return (
+    gulp
+      .src(scriptsSrcAll)
+      .pipe(sourcemaps.init())
+      .pipe(tsProject(gulpTypescript.reporter.fullReporter()))
+      .on('error', (error) => {
+        // NOTE: Prevent gulp process to halt (continue execution after an error).
+        const errorMessage = 'Typescript error: task failed. ' + error.name + ': ' + error.message;
+        // eslint-disable-next-line no-console
+        console.error(errorMessage);
+      })
+      .js // prettier-ignore
+      // .pipe(concat('all.js'))
+      .pipe(sourcemaps.write('.'))
+      .pipe(gulp.dest(destAssetsPath))
+  );
 }
 gulp.task('compileScripts', compileScripts);
 gulp.task('watchScripts', () => {

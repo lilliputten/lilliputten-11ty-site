@@ -1,14 +1,26 @@
+/*
+vim: ft=jsonc
+@desc Typescript compiler configuration
+@changed 2024.06.16, 23:59
+@see https://www.typescriptlang.org/it/tsconfig/
+*/
 {
   "compilerOptions": {
     "target": "es5",
-    "module": "amd",
+    "module": "es6",
+    "sourceMap": true,
     "moduleResolution": "node",
+    "noImplicitAny": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
     "allowJs": true,
+    "jsx": "react",
+    // "no-debugger": false,
     "baseUrl": ".",
     "paths": {
       "src/*": ["src/scripts/*"]
     },
-    "outFile": "scripts.js"
+    "outDir": "./compiled-assets/"
   },
   "files": ["src/scripts/scripts.ts"],
   "typeRoots": ["src/scripts/@types/**/*"],

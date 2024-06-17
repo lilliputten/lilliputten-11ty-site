@@ -1,0 +1,21 @@
+---
+layout: base.njk
+---
+
+<div class="PageLayout fullPage">
+  <div class="PageVisual" id="PageVisual">
+    <canvas class="VisualAnimation" id="VisualAnimation"></canvas>
+    <div class="PageVisualOver"></div>
+  </div>
+  {% include "PageHeader.njk" %}
+  <div class="PageContentLayout">
+    <div class="PageContentWrapper container">
+      <main class="PageContent">
+        {# Main page content #}
+        {{ content | safe }}
+      </main>
+      {% include "PageFooter.njk" %}
+    </div>
+  </div>
+</div>
+<div class="noise animated"></div>

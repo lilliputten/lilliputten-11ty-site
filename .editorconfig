@@ -13,7 +13,7 @@ indent_style = space
 indent_size = 2
 
 # Ignore paths
-[{assets/**,static/**,src/data/contributors.json,.vscode/launch.json}]
+[{compiled-assets/**,static/**,src/data/contributors.json,.vscode/launch.json}]
 charset = unset
 end_of_line = unset
 insert_final_newline = unset

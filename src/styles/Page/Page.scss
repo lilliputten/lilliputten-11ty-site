@@ -1,0 +1,121 @@
+/**
+ * @module Page
+ * @changed 2024.06.14, 02:08
+ */
+
+@import '../shared';
+
+.Page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.PageLayout {
+  @include PageWrapper;
+  align-items: stretch;
+  flex: 1;
+}
+
+$headerHeight: 130px;
+$headerHeightMain: 45vh;
+$overContentZIndex: 100;
+
+.PageVisual,
+.PageVisualOver,
+.VisualAnimation {
+  z-index: $overContentZIndex;
+  @include FullSizeContainer;
+  [data-page='main'] & {
+    position: absolute;
+  }
+}
+
+.PageHeader {
+  z-index: $overContentZIndex;
+  // border: 1px solid blue; // DEBUG
+  position: fixed;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  // Adjust main height
+  padding-top: 1em;
+  padding-bottom: 2.5em;
+  height: $headerHeight;
+  [data-page='main'] & {
+    position: absolute;
+    min-height: 100px;
+    height: $headerHeightMain;
+    // padding-bottom: 5em;
+  }
+  .PageHeaderContent {
+    position: relative;
+    // flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    gap: 1em;
+  }
+}
+
+.PageContentLayout {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  overflow: auto;
+  margin-top: $headerHeight;
+  [data-page='main'] & {
+    margin-top: $headerHeightMain;
+  }
+}
+
+.PageContentWrapper,
+.PageContent {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+}
+.PageContentWrapper {
+  padding-top: 1em;
+  align-items: center;
+}
+.PageContent {
+  padding-top: 1em;
+  // padding-bottom: 1em;
+  [data-page='main'] & {
+    align-items: center;
+  }
+}
+
+.PageVisual {
+  position: fixed;
+  // border: 1px dotted green; // DEBUG
+  overflow: hidden;
+  bottom: auto;
+  // Adjust main height
+  height: 250px;
+  [data-page='main'] & {
+    height: 90%;
+  }
+  background: linear-gradient(180deg, $primaryColor 0%, rgba(255, 255, 255, 0) 70%);
+  pointer-events: none;
+}
+.PageVisualOver {
+  overflow: hidden;
+  // background: linear-gradient(180deg, $primaryColor 0%, rgba(255,255,255,0) 25%, rgba(255,255,255,0) 100%);
+  opacity: 0.5;
+  display: none;
+}

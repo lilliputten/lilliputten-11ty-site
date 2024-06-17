@@ -1,0 +1,76 @@
+/**
+ * @module PageFooter
+ * @changed 2024.06.15, 21:58
+ */
+
+@import '../shared';
+
+.PageFooter {
+  [data-page='regular'] & {
+    border-top: 1px solid $primaryColor;
+  }
+  width: 100%;
+  margin-top: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+
+  a:not(:hover) {
+    text-decoration: none;
+  }
+
+  .FooterInfo {
+    justify-content: space-between;
+    align-items: flex-start;
+    display: flex;
+  }
+
+  .FooterCopyright {
+    .delimiter {
+      opacity: 0.3;
+      padding: 0 0.25em;
+      display: inline-block;
+    }
+  }
+
+  .SocialList {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    min-width: max-content;
+    display: flex;
+    gap: 1em;
+  }
+  .SocialListLink {
+    align-items: center;
+    gap: 0.5em;
+    display: inline-flex;
+    // &:not(:hover) {
+    //   text-decoration: none;
+    // }
+    i {
+      opacity: 0.5;
+    }
+    /* // UNUSED: image icons (used bootstrap stock icons instead)
+    &::before {
+      width: 1em;
+      height: 1em;
+      content: '';
+      background-position: 50%;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &#Github::before {
+      background-image: url('/static/images/icons/github-logo.svg');
+      [data-theme='dark'] & {
+        background-image: url('/static/images/icons/github-logo-light.svg');
+      }
+    }
+    &#Linkedin::before {
+      background-image: url('/static/images/icons/linkedin-logo.svg');
+    }
+    &#RSS::before {
+      background-image: url('/static/images/icons/rss-logo.svg');
+    }
+    */
+  }
+}

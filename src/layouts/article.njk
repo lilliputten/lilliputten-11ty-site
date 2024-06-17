@@ -1,5 +1,11 @@
 ---
 layout: page.njk
+date: 2024-06-16
+dateUpdated: Last Modified
+tags:
+  - article
+  - about
+  - chunk
 ---
 
 <article class="article">
@@ -11,13 +17,15 @@ layout: page.njk
       >
       <div class="article__minutes-to-read">{{ content | readingTime({speed: 200}) }} to read</div>
       <a
-        href="https://github.com/MeFoDy/mefody.dev/blob/main/{{ page.inputPath }}"
+        href="https://github.com/lilliputten/lilliputten-11ty-site/blob/main/{{ page.inputPath }}"
         class="article__github"
         >Edit this page on GitHub</a
       >
     </div>
   </div>
+
   {{ content | safe }}
+
   <div class="article__footer">
     {% if tags %}
       <ul class="article__tags tags">
@@ -28,6 +36,7 @@ layout: page.njk
         {%- endfor -%}
       </ul>
     {% endif %}
+    {#
     <div class="article__share">
       If you like the article, you can
       <a
@@ -38,20 +47,25 @@ layout: page.njk
         >share it on Twitter</a
       >
     </div>
+    #}
     {% set previousPost = collections.chunk | getPreviousCollectionItem(page) %}
     {% set nextPost = collections.chunk | getNextCollectionItem(page) %}
     <div class="article__nav">
-      {% if previousPost %}<a
-        href="{{ previousPost.url }}"
-        class="article__nav-button article__prev"
-        >{{ previousPost.data.title }}</a
-      >{% endif %}
-      {% if nextPost %}<a href="{{ nextPost.url }}" class="article__nav-button article__next"
-        >{{ nextPost.data.title }}</a
-      >{% endif %}
+      {% if previousPost %}
+        <a href="{{ previousPost.url }}" class="article__nav-button article__prev"
+          >{{ previousPost.data.title }}</a
+        >
+      {% endif %}
+      {% if nextPost %}
+        <a href="{{ nextPost.url }}" class="article__nav-button article__next"
+          >{{ nextPost.data.title }}</a
+        >
+      {% endif %}
     </div>
   </div>
-  {# <div class="article__webmentions">
-        {% include 'webmentions.njk' %}
-    </div> #}
+  {#
+  <div class="article__webmentions">
+    {% include 'webmentions.njk' %}
+  </div>
+  #}
 </article>

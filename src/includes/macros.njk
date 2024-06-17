@@ -13,9 +13,6 @@
   </video>
 {% endmacro %}
 
-{% macro img(src, alt = '') %}<img
-  src="{{ src }}"
-  alt="{{ alt }}"
-  loading="lazy"
-  decoding="async"
-/>{% endmacro %}
+{% macro img(src, alt = '') %}
+  <img src="{{ src }}" alt="{{ alt }}" loading="lazy" decoding="async" />
+{% endmacro %}

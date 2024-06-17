@@ -1,0 +1,17 @@
+/**
+ * @module VisualAnimation
+ * @changed 2024.06.15, 20:27
+ */
+
+@use 'sass:map';
+@use 'sass:color';
+
+@import '../shared';
+
+.VisualAnimation {
+  // border: 2px solid blue; // DEBUG
+  width: 100%;
+  height: 100%;
+  opacity: 0.85;
+  flex: 1;
+}

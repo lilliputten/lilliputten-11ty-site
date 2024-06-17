@@ -1,4 +1,4 @@
-# @changed 2024.06.12, 04:45
+# @changed 2024.06.14, 14:03
 # @see https://eslint.org/docs/rules/
 root: true
 extends:
@@ -51,17 +51,17 @@ overrides:
       # eslint-comments/no-use: 'warn'
       no-debugger: 'warn'
       # no-console: 'warn' # TODO: To use if console debugging output is deprecated (44 warnings as on 2022.04.06).
-      no-magic-numbers:
-        # TODO: To determine which modules has false-positive warnings and turn them off per-module or per-line. (As on 2022.04.06 the linter issues 270 warnings in 49 modules.)
-        - 'warn'
-        - ignore:
-            - -1
-            - 0
-            - 1
-          ignoreArrayIndexes: true
-          ignoreDefaultValues: true
+      # no-magic-numbers:
+      #   # TODO: To determine which modules has false-positive warnings and turn them off per-module or per-line. (As on 2022.04.06 the linter issues 270 warnings in 49 modules.)
+      #   - 'warn'
+      #   - ignore:
+      #       - -1
+      #       - 0
+      #       - 1
+      #     ignoreArrayIndexes: true
+      #     ignoreDefaultValues: true
       prettier/prettier: # prettier: Slighly slower (+0.3s)
-        - 'error' # Can we to use warn if we still use `eslint --max-warnings=0` in `package.json`?
+        - 'warn' # Can we to use warn if we still use `eslint --max-warnings=0` in `package.json`?
         - endOfLine: 'auto'
       import/no-namespace: 'off'
       no-unused-vars: 'off'

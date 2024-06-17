@@ -1,12 +1,14 @@
 /**
  * @module styles
- * @changed 2024.06.12, 20:43
+ * @changed 2024.06.16, 20:39
  */
 
 // @import './test/test';
 
 @import './fonts/fira-font';
-@import './body/body';
+@import './common';
+@import './body';
 @import './theme/bootstrap-theme-fixes';
 
-@import './MainPage';
+@import './Page';
+@import './VisualAnimation/VisualAnimation';

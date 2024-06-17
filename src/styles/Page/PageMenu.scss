@@ -1,13 +1,18 @@
 /**
- * @module MainPageMenu
+ * @module PageMenu
  * @changed 2024.06.14, 02:15
  */
 
 @import '../shared';
 
-.MainPageMenu {
+.PageMenu {
   display: flex;
-  gap: 1em;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  gap: 0.2em 1em;
   li {
     display: inline-block;
   }

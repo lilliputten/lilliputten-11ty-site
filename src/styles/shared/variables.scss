@@ -9,6 +9,10 @@
 
 $defaultFontSize: 14px;
 
+$lineHeight: 1.42;
+$fontSize: 20px;
+$lineSpace: calc($lineHeight * 1em);
+
 $defaultFontFamily: 'Roboto', 'Helvetica', 'Arial', sans-serif;
 
 // Breakpoints:...
@@ -26,6 +30,9 @@ $screenMdMax: map.get($grid-breakpoints, 'lg'); // 992px
 $screenLgMax: map.get($grid-breakpoints, 'xl'); // 1200px
 $screenXlMax: map.get($grid-breakpoints, 'xxl'); // 1400px
 
+$mainColumnWidth: $screenMdMin; // 700px;
+$maxColumnWidth: $screenLgMin; // 1000px;
+
 // Collapsable widths...
 
 $collapseWidth: $screenMdMin; // $grid-float-breakpoint; // =@screen-sm-min=768px ? =@screen-md-min=992px
@@ -36,7 +43,9 @@ $midbarCollapse: $collapseWidth;
 // Primary color...
 
 $primaryColor: #c20;
-$primaryLightColor: #f20;
+// $primaryLightColor: #f20;
+$primaryLightColor: color.adjust($primaryColor, $lightness: 10%);
+$primaryLightenColor: color.adjust($primaryLightColor, $lightness: 10%);
 $primaryDarkColor: color.adjust($primaryColor, $lightness: -10%);
 $primaryDarkenColor: color.adjust($primaryDarkColor, $lightness: -10%);
 $primaryColorRgb: #{toRGBValues($primaryColor)};
@@ -61,8 +70,10 @@ $moodBlueColor: #6ac;
 $extralightBlueColor: #def;
 
 $defaultTextColor: #333;
+$defaultTextOnDarkColor: #ccc;
 
 $backgroundColor: #fff;
+$backgroundDarkColor: #333;
 
 // Navbar...
 
@@ -70,8 +81,9 @@ $navbarMainHeight: 60px;
 $navbarPlusHeight: 50px;
 
 // Timeouts...
+// RegEx: (moment|transition|animation|effect)Time\b
 
-$momentTime: 150ms;
-$transitionTime: 250ms;
-$animationTime: 500ms;
-$effectTime: 1000ms;
+$momentTimeMs: 150ms;
+$transitionTimeMs: 250ms;
+$animationTimeMs: 500ms;
+$effectTimeMs: 1000ms;

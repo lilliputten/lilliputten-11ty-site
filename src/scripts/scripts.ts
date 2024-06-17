@@ -1,28 +1,33 @@
 /**
  * @desc Main js entry point module (scripts)
  * @module src/assets/scripts.ts
- * @changed 2024.06.12, 02:11
+ * @changed 2024.06.15, 15:50
  */
 
 import './sw/sw';
-import { test } from './test/test';
 
-/* // NOTE: These modules are unused. Used only
- * // `src/assets/stripe-init/stripe_payment_intents_support.ts`, via requirejs,
- * // without exposing to global scope.
- *
- * import { startStripeElementsForm } from './stripe-init/stripe_payment_intents_support';
- *
+import { VisualAnimation } from './VisualAnimation/VisualAnimation';
+import { toggleTheme } from './toggleTheme/toggleTheme';
+
+// import { test } from './test/test';
+
+/*
+ * const testResult = test();
  * console.log('[scripts] Main client code entry point', {
- *   startStripeElementsForm,
+ *   test,
+ *   testResult,
+ *   // 'window.SimplexNoise': window.SimplexNoise,
+ *   // 'window.createNoise4D': window.createNoise4D,
  * });
  */
 
-const testResult = test();
-console.log('[scripts] Main client code entry point', {
-  test,
-  testResult,
-});
+// Start animation only on main window?
+// if (window.isIndex) {}
+VisualAnimation();
+
+window.toggleTheme = toggleTheme;
+
+// updateTheme();
 
 // Empty root module
 export {};

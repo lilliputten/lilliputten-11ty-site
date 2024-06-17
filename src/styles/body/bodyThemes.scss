@@ -1,0 +1,66 @@
+/**
+ * @module bodyThemes
+ * @changed 2024.06.15, 21:46
+ */
+
+@use 'sass:color';
+
+@import '../shared';
+
+// Themes...
+
+body,
+[data-theme='light'],
+[data-theme='light'] body {
+  background-color: $backgroundColor;
+}
+
+.onLight,
+body,
+[data-theme='light'],
+[data-theme='light'] body {
+  color: $defaultTextColor;
+  a {
+    transition: color $transitionTimeMs;
+    &:hover {
+      color: $primaryLightenColor;
+    }
+  }
+}
+
+[data-theme='dark'],
+[data-theme='dark'] body {
+  background-color: $backgroundDarkColor;
+}
+
+.onRed,
+.onDark,
+[data-theme='dark'],
+[data-theme='dark'] body {
+  color: $defaultTextOnDarkColor;
+  a {
+    $color: #fff;
+    color: $color;
+    transition: opacity $transitionTimeMs;
+    opacity: 0.8;
+    &:hover {
+      color: $color;
+      opacity: 1;
+      // color: color.adjust($color, $alpha: -0.2);
+    }
+  }
+}
+
+body .onRed,
+.onRed {
+  // color: color.mix($primaryColor, #fff, 25%);
+  // color: color.change(#fff, $alpha: .6); // dark
+  $color: #fff;
+  color: color.change($color, $alpha: 0.8);
+  a {
+    opacity: 0.9;
+    &:hover {
+      color: $color;
+    }
+  }
+}

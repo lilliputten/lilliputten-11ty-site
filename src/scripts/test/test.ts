@@ -1,9 +1,10 @@
 /**
- * @module test.ts
- * @changed 2024.06.12, 02:11
+ * @module test
+ * @changed 2024.06.14, 18:48
  */
 
 export function test() {
-  console.log('Test', window);
+  // // eslint-disable-next-line no-console
+  // console.log('Test', window);
   return 'Test';
 }

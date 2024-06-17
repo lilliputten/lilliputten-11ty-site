@@ -1,0 +1,9 @@
+{# AMD/RequireJS (Used after bootstrap due to conflicts) #}
+<script
+  data-main="scripts"
+  data-require="require.js@2.3.6"
+  data-semver="2.3.6"
+  src="{% if isdevelopment %}/static/vendor/requirejs-2.3.6/require.js{% else %}https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js{% endif %}"
+  type="text/javascript"
+></script>
+<script type="text/javascript" src="assets/scrips/require.js"></script>

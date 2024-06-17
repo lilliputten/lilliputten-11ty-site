@@ -8,7 +8,7 @@ module.exports = {
     domain: 'lilliputten.com',
     site: 'https://lilliputten.com',
     feed: 'https://lilliputten.com/feed/rss.xml',
-    social: 'https://lilliputten.com/images/og.jpg',
+    social: 'https://lilliputten.com/images/site/og.jpg',
     github: 'https://github.com/lilliputten/lilliputten.com',
   },
   buildYear: new Date().getFullYear(),
