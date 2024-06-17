@@ -1,6 +1,6 @@
 <!doctype html>
 <!--
-@changed 2024.06.16, 22:10
+@changed 2024.06.17, 20:47
 Version: 0.0.1
 Last changes timestamp: 2024.06.12 02:28 +0500
 -->
@@ -8,7 +8,7 @@ Last changes timestamp: 2024.06.12 02:28 +0500
   lang="en"
   id="page-{%- if not isIndex -%}regular{%- else -%}main{%- endif -%}"
   data-page="{% if not isIndex %}regular{% else %}main{% endif %}"
-  data-theme="light"
+  data-layout="{{ layout | replace('.njk', '') }}"
 >
   <head>
     <meta charset="utf-8" />
@@ -36,8 +36,6 @@ Last changes timestamp: 2024.06.12 02:28 +0500
   <body
     class="Page {% if not isIndex %}PageRegular{% else %}PageMain{% endif %}"
     id="{%- if not isIndex -%}regular{%- else -%}main{%- endif -%}"
-    xxx-page="{% if not isIndex %}regular{% else %}main{% endif %}"
-    xxx-theme="light"
   >
     {# Base content #}
 
