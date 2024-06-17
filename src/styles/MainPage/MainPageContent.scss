@@ -1,0 +1,36 @@
+.MainPageContent {
+  position: relative;
+  top: -4em;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2em;
+  // border: 1px solid green;
+  .MainPageLogo {
+    transition: all $transitionTimeMs;
+    opacity: 0.7;
+    width: 100%;
+    max-width: 40em;
+    /*
+    content: url('/static/images/logo/full/ll-logo.svg');
+    [data-theme='dark'] & {
+      content: url('/static/images/logo/full/ll-logo-w.svg');
+    }
+    */
+    .key {
+      fill: black;
+      [data-theme='dark'] & {
+        fill: white;
+      }
+    }
+    .red {
+      fill: $primaryColor;
+    }
+  }
+  .MainPageDescription {
+    position: relative;
+  }
+}
