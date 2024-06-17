@@ -14,6 +14,11 @@
   padding: 0;
   list-style: none;
 
+  @media (min-width: $screenMdMin) {
+    // border: 1px solid green;
+    // order: 99;
+  }
+
   $itemSize: 2em;
 
   html:not([data-theme]) & .theme-dark,

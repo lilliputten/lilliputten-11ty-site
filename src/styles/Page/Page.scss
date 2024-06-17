@@ -23,10 +23,6 @@
   flex: 1;
 }
 
-$headerHeight: 130px;
-$headerHeightMain: 45vh;
-$overContentZIndex: 100;
-
 .PageVisual,
 .PageVisualOver,
 .VisualAnimation {
@@ -34,37 +30,6 @@ $overContentZIndex: 100;
   @include FullSizeContainer;
   [data-page='main'] & {
     position: absolute;
-  }
-}
-
-.PageHeader {
-  z-index: $overContentZIndex;
-  // border: 1px solid blue; // DEBUG
-  position: fixed;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex: 1;
-  // Adjust main height
-  padding-top: 1em;
-  padding-bottom: 2.5em;
-  height: $headerHeight;
-  [data-page='main'] & {
-    position: absolute;
-    min-height: 100px;
-    height: $headerHeightMain;
-    // padding-bottom: 5em;
-  }
-  .PageHeaderContent {
-    position: relative;
-    // flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-content: space-between;
-    gap: 1em;
   }
 }
 
@@ -76,7 +41,8 @@ $overContentZIndex: 100;
   flex: 1;
   overflow: auto;
   margin-top: $headerHeight;
-  [data-page='main'] & {
+  .showNavigation &,
+  [data-page='main'] .wideView & {
     margin-top: $headerHeightMain;
   }
 }
@@ -107,7 +73,8 @@ $overContentZIndex: 100;
   bottom: auto;
   // Adjust main height
   height: 250px;
-  [data-page='main'] & {
+  .showNavigation &,
+  [data-page='main'] .wideView & {
     height: 90%;
   }
   background: linear-gradient(180deg, $primaryColor 0%, rgba(255, 255, 255, 0) 70%);

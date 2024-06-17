@@ -1,0 +1,22 @@
+/**
+ * @module PageHeaderLogo
+ * @changed 2024.06.17, 22:22
+ */
+
+@use 'sass:color';
+
+@import '../shared';
+
+.PageHeaderLogo {
+  .Logo {
+    display: inline-block;
+  }
+  [data-page='main'] & {
+    width: 1.75em;
+    opacity: 0;
+    pointer-events: none;
+    * {
+      display: none;
+    }
+  }
+}

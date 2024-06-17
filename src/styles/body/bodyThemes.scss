@@ -21,7 +21,7 @@ body,
 [data-theme='light'] body {
   color: $defaultTextColor;
   a {
-    transition: color $transitionTimeMs;
+    transition: all $transitionTimeMs;
     &:hover {
       color: $primaryLightenColor;
     }
@@ -41,7 +41,7 @@ body,
   a {
     $color: #fff;
     color: $color;
-    transition: opacity $transitionTimeMs;
+    // transition: opacity $transitionTimeMs;
     opacity: 0.8;
     &:hover {
       color: $color;
@@ -62,5 +62,12 @@ body .onRed,
     &:hover {
       color: $color;
     }
+  }
+}
+
+.linkAsText {
+  color: $defaultTextColor;
+  [data-theme='dark'] & {
+    color: $defaultTextOnDarkColor;
   }
 }

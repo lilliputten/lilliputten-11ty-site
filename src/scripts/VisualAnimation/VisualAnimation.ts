@@ -16,9 +16,15 @@ import {
 import { TConf, TColor } from './TConf';
 import { conf } from './conf';
 
+export interface TVisualAnimationParams {
+  setUpdateVisualizationCallback?: (updateVisualizationCallback: () => void) => void;
+}
+
 const useInteractve = false;
 
-function startVisualAnimation(conf: TConf) {
+function startVisualAnimation(conf: TConf, params: TVisualAnimationParams) {
+  const { setUpdateVisualizationCallback } = params;
+
   const THREE = window.THREE;
 
   let renderer: WebGLRenderer;
@@ -36,10 +42,8 @@ function startVisualAnimation(conf: TConf) {
 
   let plane: Mesh; // : Object3D;
 
-  // const SimplexNoiseClass = window.SimplexNoise as SimplexNoise;
   // @ts-ignore: Wrong type definitions for simplex noise
   const simplex = new window.SimplexNoise();
-  // const noise4D = createNoise4D();
 
   const mouse = new THREE.Vector2();
   const mousePlane = new THREE.Plane(new THREE.Vector3(0, 0, 1), 0);
@@ -68,6 +72,10 @@ function startVisualAnimation(conf: TConf) {
 
     updateSize();
     window.addEventListener('resize', updateSize, false);
+
+    if (setUpdateVisualizationCallback) {
+      setUpdateVisualizationCallback(updateSize);
+    }
 
     if (useInteractve) {
       document.addEventListener('mousemove', mouseHandler);
@@ -147,11 +155,12 @@ function startVisualAnimation(conf: TConf) {
     plane.rotation.x = planeRotationX;
     plane.position.y = planePositionY;
     camera.position.z = cameraPositionZ;
-    console.log('[VisualAnimation:initScene]', {
-      planeRotationX,
-      planePositionY,
-      cameraPositionZ,
-    });
+    /* console.log('[VisualAnimation:initScene]', {
+     *   planeRotationX,
+     *   planePositionY,
+     *   cameraPositionZ,
+     * });
+     */
   }
 
   function initLights() {
@@ -176,8 +185,8 @@ function startVisualAnimation(conf: TConf) {
 
     renderer.render(scene, camera);
 
-    setTimeout(() => requestAnimationFrame(animate), 10);
-    // requestAnimationFrame(animate);
+    // setTimeout(() => requestAnimationFrame(animate), 10);
+    requestAnimationFrame(animate);
   }
 
   function animatePlane() {
@@ -261,6 +270,6 @@ function startVisualAnimation(conf: TConf) {
   }
 }
 
-export function VisualAnimation() {
-  startVisualAnimation(conf);
+export function VisualAnimation(params: TVisualAnimationParams) {
+  startVisualAnimation(conf, params);
 }

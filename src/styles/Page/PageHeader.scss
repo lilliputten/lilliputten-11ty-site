@@ -4,3 +4,54 @@
  */
 
 @import '../shared';
+
+.PageHeader {
+  z-index: $overContentZIndex;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1;
+  // Adjust main height
+  padding-top: 1em;
+  padding-bottom: 2.5em;
+
+  // Adaptive sizes...
+  height: $headerHeight;
+  .showNavigation,
+  [data-page='main'] & {
+    position: absolute;
+    min-height: 100px;
+    height: $headerHeightMain;
+  }
+  [data-page='main'] body:not(.showNavigation) & {
+    // justify-content: center;
+    // top: -2rem;
+  }
+  [data-page='main'] .wideView & {
+    justify-content: center;
+    top: -2rem;
+  }
+  [data-page='main'] .mobileView & {
+    justify-content: flex-start;
+    top: 0;
+    .PageHeaderWrapper {
+      justify-content: center;
+      .PageHeaderLogo {
+        display: none;
+      }
+    }
+  }
+
+  .PageHeaderContent {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    gap: 1em;
+  }
+}

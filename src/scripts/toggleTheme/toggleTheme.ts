@@ -1,9 +1,3 @@
-type THTMLNode = HTMLElement & {
-  getAttribute: (id: string) => string;
-  setAttribute: (id: string, value: string) => void;
-  dataset: Record<string, string>;
-};
-
 export function toggleTheme() {
   const body = window.document.body;
   const html = body && (body.parentNode as THTMLNode);

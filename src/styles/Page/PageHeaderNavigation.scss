@@ -1,0 +1,20 @@
+/**
+ * @module PageHeaderNavigation
+ * @changed 2024.06.18, 01:08
+ */
+
+@use 'sass:color';
+
+@import '../shared';
+
+.PageHeaderNavigation {
+  // flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  // Mobile view
+  .showNavigation &.show {
+    flex-direction: column;
+    padding: 0.5em 0;
+  }
+}
