@@ -8,3 +8,10 @@
 .dimmed {
   opacity: 0.5;
 }
+
+.maxWidthContainer {
+  $widthTreshold: $screenMdMin;
+  @media (min-width: $widthTreshold) {
+    max-width: calc($widthTreshold - 64px);
+  }
+}

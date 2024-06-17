@@ -39,7 +39,6 @@
   flex-direction: column;
   align-items: center;
   flex: 1;
-  overflow: auto;
   margin-top: $headerHeight;
   .showNavigation &,
   [data-page='main'] .wideView & {
@@ -57,17 +56,6 @@
 .PageContentWrapper {
   padding-top: 1em;
   align-items: center;
-}
-.PageContent {
-  padding-top: 1em;
-  [data-page='main'] & {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
 }
 
 .PageVisual {

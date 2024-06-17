@@ -6,10 +6,12 @@
 // @import './test/test';
 
 @import './fonts/fira-font';
-@import './common';
 @import './body';
 @import './theme/bootstrap-theme-fixes';
 
 @import './VisualAnimation/VisualAnimation';
 @import './Page';
 @import './MainPage';
+@import './article';
+
+@import './common';

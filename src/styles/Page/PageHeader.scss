@@ -35,6 +35,18 @@
     justify-content: center;
     top: -2rem;
   }
+  [data-page='regular'] .wideView & {
+    // ATTENTION: Adjust header elements to fit main content column width
+    .PageHeaderWrapper {
+      padding: 0;
+    }
+    .PageHeaderBrand {
+      margin-left: -0.75em;
+    }
+    .PageHeaderNavigation {
+      margin-right: -0.25em;
+    }
+  }
   [data-page='main'] .mobileView & {
     justify-content: flex-start;
     top: 0;

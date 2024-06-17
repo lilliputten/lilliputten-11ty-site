@@ -27,7 +27,7 @@ module.exports = function (config) {
   config.watchIgnores.add('src/styles');
 
   // NOTE: It's better to update static folder manually (be restart the server), as it's too big
-  // config.watchIgnores.add('static');
+  config.watchIgnores.add('static');
 
   // Collections
 

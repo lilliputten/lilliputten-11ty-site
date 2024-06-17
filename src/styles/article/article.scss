@@ -1,0 +1,12 @@
+/**
+ * @module Page
+ * @changed 2024.06.18, 04:02
+ */
+
+@import '../shared';
+
+.article {
+  ::marker {
+    color: $primaryColor;
+  }
+}
