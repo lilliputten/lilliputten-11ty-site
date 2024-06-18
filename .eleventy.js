@@ -300,7 +300,7 @@ module.exports = function (config) {
       if (attrName !== 'href' || !href) {
         return;
       }
-      if (href.startsWith('https:') || href.startsWith('http:')) {
+      if (href.startsWith('https:') || href.startsWith('http:') || href.startsWith('mailto:')) {
         tokens[idx].attrPush(['class', 'external']);
         tokens[idx].attrPush(['title', 'External link: ' + href]);
       }
