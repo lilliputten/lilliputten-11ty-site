@@ -1,7 +1,7 @@
 // @ts-check
 /**
  * @module gulpfile.mjs
- * @changed 2024.06.18, 15:05
+ * @changed 2024.06.18, 15:21
  */
 
 import dotenv from 'dotenv';
