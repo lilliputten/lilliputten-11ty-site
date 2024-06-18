@@ -35,6 +35,9 @@ const DEST_PATH = 'build';
 const isWin = process.platform === 'win32';
 const tty = isWin ? 'CON' : '/dev/tty';
 
+const isProd = !isWin || process.env.ELEVENTY_ENV === 'production';
+const isDev = !isProd;
+
 // Working paths...
 const sourceScriptsPath = posixPath.join(SRC_PATH, 'scripts');
 const sourceStylesPath = posixPath.join(SRC_PATH, 'styles');
@@ -122,13 +125,8 @@ gulp.task('cacheHash', () => {
   return gulp
     .src(
       [
-        // `${DEST_PATH}/fonts/*.woff2`,
-        // `${DEST_PATH}/images/**/*.{svg,png,jpg,avif}`,
         `${DEST_PATH}/assets/**/*.{js,css}`,
         `${DEST_PATH}/compiled-assets/**/*.{js,css}`,
-        // `${DEST_PATH}/sw.js`,
-        // `${destAssetsPath}/*.{js,css}`,
-        // `${DEST_PATH}/styles/*.css`,
         `${DEST_PATH}/manifest.webmanifest`,
       ],
       {
@@ -204,10 +202,11 @@ gulp.task(
 
 gulp.task('contributorsGet', () => {
   // Get new contributors only on local build
-  if (process.env.ELEVENTY_ENV === 'production') {
+  if (isProd) {
     return new Promise((resolve) => resolve(undefined));
   }
 
+  // NOTE: Git command couldn't be run on server's mirrored repository
   const contributors = execSync('git shortlog -sne < ' + tty).toString();
   const myEmails = [
     'igor@lilliputten.com',
