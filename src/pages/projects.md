@@ -4,7 +4,7 @@ layout: article.njk
 permalink: /projects/
 # eleventyExcludeFromCollections: true
 description: Projects page
-date: 2024-02-20
+date: 2024-06-17
 # tag: false
 tags:
   - site
