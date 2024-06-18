@@ -38,4 +38,4 @@ I'm currently in GMT+5, but to move to GMT+2 (or GMT+3) soon. I'm mostly looking
 
 I'm really looking for an interesting new job right now. At the moment, I'm only considering options with remote work or relocation.
 
-- A <a class="external" href="https://raw.githubusercontent.com/lilliputten/lilliputten.github.io/master/site/cv-lilliputten-2023-v1-1-3.pdf" target="_blank">printable CV</a> is available (pdf, ~50K).
+- A <a class="external" href="https://raw.githubusercontent.com/lilliputten/lilliputten.github.io/master/site/cv-lilliputten-2023-v1-1-3.pdf" title="External PDF link (~50K)" target="_blank">printable CV</a> is available (pdf, ~50K).
