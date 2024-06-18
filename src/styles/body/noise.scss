@@ -23,9 +23,13 @@
   background-size: 200px;
   background-repeat: repeat;
   pointer-events: none;
-  opacity: 0.25;
-  [data-theme='dark'] & {
-    opacity: 0.2;
+  transition: opacity 2s;
+  opacity: 0;
+  &.show {
+    opacity: 0.25;
+    [data-theme='dark'] & {
+      opacity: 0.2;
+    }
   }
 }
 

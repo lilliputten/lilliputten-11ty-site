@@ -16,6 +16,13 @@
     }
   }
 
+  function showNoise() {
+    const noise = window.document.getElementById('noise');
+    if (noise) {
+      noise.classList.toggle('show', true);
+    }
+  }
+
   const body = window.document.body;
   const html = body && body.parentNode;
 
@@ -24,4 +31,6 @@
   } else {
     window.addEventListener('load', updateTheme);
   }
+
+  window.addEventListener('load', showNoise);
 })();
