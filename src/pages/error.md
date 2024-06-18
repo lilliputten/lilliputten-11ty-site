@@ -10,5 +10,4 @@ permalink: 404.html
   </div>
   <h1 class="mb-3">Ouch!</h1>
   <p>Requested page has not found.</p>
-  <a href="https://xxx">xxx</a>
 </div>
