@@ -1,7 +1,7 @@
 // @ts-check
 /**
  * @module gulpfile.mjs
- * @changed 2024.06.18, 14:46
+ * @changed 2024.06.18, 14:49
  */
 
 import dotenv from 'dotenv';
@@ -248,27 +248,25 @@ gulp.task('humansGenerate', () => {
     .pipe(gulp.dest(DEST_PATH));
 });
 
+// NOTE: This task could be run nly in dev environment
+gulp.task(
+  'contributors',
+  gulp.series(
+    // prettier-ignore
+    'contributorsGet',
+    'humansGenerate',
+  ),
+);
+
 // Build
 
 gulp.task(
   'build',
-  gulp.parallel(
-    gulp.series(
-      // gulp.parallel(
-      //   // 'scripts',
-      //   // 'styles',
-      //   'compileScripts',
-      //   'compileStyles',
-      // ),
-      'cache',
-      'clean',
-      'serviceWorker',
-    ),
-    gulp.series(
-      // prettier-ignore
-      'contributorsGet',
-      'humansGenerate',
-    ),
+  gulp.series(
+    // prettier-ignore
+    'cache',
+    'clean',
+    'serviceWorker',
   ),
 );
 
