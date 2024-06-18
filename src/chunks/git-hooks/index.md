@@ -1,5 +1,5 @@
 ---
-title: 'Git Hooks: let the machine do all the routine'
+title: 'Sample article'
 description: I wanna live in a world where every commit is a project state in which everything is fine. Fortunately, I can configure my projects to use git hooks to help contributors to avoid mistakes.
 cover: images/cover.jpg
 date: 2021-07-27

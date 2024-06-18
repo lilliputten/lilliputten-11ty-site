@@ -2,47 +2,40 @@
 title: About me
 layout: article.njk
 permalink: /about.html
-tag: false
-eleventyExcludeFromCollections: true
-description: About page.
+# eleventyExcludeFromCollections: true
+description: About page
+date: 2024-06-18
+# hideMeta: true
+# tag: false
+tags:
+  - site
+  - about
 ---
 
-**Name:** Igor.
+<!--
+@changed 2024.06.18, 05:41
+-->
 
-**Location:** Worldwide. Now (for the Summer/Autumn of 2024) I'm in Tashkent (Uzbekistan), but ready to move almost everywhere.
+My name is Igor and I'm a professional front-end developer with 8 years of experience, recently specializing mainly in React, NextJS, NodeJS and Python (with Flask and Django).
 
-**Birth date:** 1974.
+## Brief background
 
-**Brief:** Mid/senior programmer, web frontend (sometimes fullstack) developer and designer (both for the web and for printing). Last few years have been specializing mainly in JavaScript development (mostly using React).
+I've been involved in creating various types of web applications and sites: from complex dynamic web applications (sometimes with a backend) to static landing pages, developing applications for embedded browsers (below ES5) and vanilla JS, creating ui kits, reusable libraries, and optimizing performance across a variety of devices and browsers, always creating responsive and adaptive layouts by default (on the principle of "mobile first") -- as an independent developer, and as a part of various teams.
 
-**Current status:** Currently I'm working with my upwork clients and for our own startup project.
+## Techs
 
-## Skills
+My current stack for the frontend is React/NextJS (via MobX or Redux) with TypeScript (previously I used i-Bem/Bem-XJST/ENB/Borschik/jQuery stack, and still fond of it). For static pages/sites I use 11ty generator.
 
-**Development:** TypeScript, JavaScript (vanilla, ES5, ES6+), NodeJS, Python, Flask, React, NextJS, Express, Webpack, mobx, redux, i-bem, Eleventhy, bem-xjst (bem-html), jquery.
+For the backend, I use Python (with Flask or Django) or NodeJS (with Express, for a little simpler tasks), some time ago I used PHP (and still use it for inherited projects). (And once upon a time, at the very beginning of my career, I also used Perl.)
 
-**Prototyping:** Figma, Adobe XD, Photoshop, Illustrator, InDesign.
+I use SCSS, PostCSS (previously it was LESS and Stylus), mostly with MIU library (sometimes with ChakraUI, Tailwind CSS, or Bootstrap) for UI development. I also use Storybook for large complex projects.
 
-**Layouting/Styling:** HTML5, CSS3, Stylus, LESS, SCSS, PostCSS, Tailwind, MUI, Chakra UI, Bootstrap, Storybook, adaptive/responsive techniques, flexbox/grid.
+## Other info
 
-**Applied/Automation:** Python, JavaScript, PHP (in previous projects), Unix (bash) shell, Powershell.
+I'm currently in GMT+5, but to move to GMT+2 (or GMT+3) soon. I'm mostly looking for a remote job, but I'm also ready to move to switch to an on-site/hybrid job. My English language proficiency is Intermediate or Upper-Intermediate (approx. at B2 CEFR level).
 
-**Dev. tools:** Webpack, Gulp, npm, git, svn, other NodeJS and CLI utilities, Selenium, Jest, Jira.
-
-## Misc
-
-**Education:** None (incomplete higher education, Moscow State University, CS facility).
-
-**Languages:** English (intermediate/upper-intermediate, B1/B2 level for spoken, full professional command for technical usage), Russian (native).
-
-**Interests**: Music (blues harp, CBG), painting, skateboarding, running, biking, hiking, programming, IT, science.
-
-## Info for HR/potential employers
+## For HR/potential employers
 
 I'm really looking for an interesting new job right now. At the moment, I'm only considering options with remote work or relocation.
 
-- A <a href="https://raw.githubusercontent.com/lilliputten/lilliputten.github.io/master/site/cv-lilliputten-2023-v1-1-3.pdf" target="_blank">printable CV</a> (pdf, ~50K) is available.
-
-<!--
-@changed 2023.11.24, 04:50
--->
+- A <a href="https://raw.githubusercontent.com/lilliputten/lilliputten.github.io/master/site/cv-lilliputten-2023-v1-1-3.pdf" target="_blank">printable CV</a> is available (pdf, ~50K).

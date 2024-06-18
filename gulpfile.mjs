@@ -18,7 +18,7 @@ import gulpTypescript from 'gulp-typescript'; // @see https://www.npmjs.com/pack
 // import tsPipeline from 'gulp-webpack-typescript-pipeline';
 // import browserify from 'gulp-browserify';
 // import merge from 'merge2';
-import concat from 'gulp-concat';
+// import concat from 'gulp-concat';
 import sourcemaps from 'gulp-sourcemaps';
 import gulpSass from 'gulp-sass';
 import * as sass from 'sass';

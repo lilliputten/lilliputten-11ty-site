@@ -3,6 +3,8 @@
 const fs = require('fs');
 const sanitizeHTML = require('sanitize-html');
 
+const isDev = process.env.ELEVENTY_ENV === 'development';
+
 module.exports = function (config) {
   config.addPassthroughCopy({
     'static/images/favicon/favicon.ico': 'favicon.ico',
@@ -255,10 +257,12 @@ module.exports = function (config) {
 
   // Transforms
 
-  // config.addTransform('htmlmin', require('./_11ty/transforms/htmlmin'));
-  // config.addTransform('xmlmin', require('./_11ty/transforms/xmlmin'));
-  config.addTransform('html-prettify', require('./_11ty/transforms/html-prettify'));
-  config.addTransform('xml-prettify', require('./_11ty/transforms/xml-prettify'));
+  if (!isDev) {
+    config.addTransform('htmlmin', require('./_11ty/transforms/htmlmin'));
+    config.addTransform('xmlmin', require('./_11ty/transforms/xmlmin'));
+  }
+  // config.addTransform('html-prettify', require('./_11ty/transforms/html-prettify'));
+  // config.addTransform('xml-prettify', require('./_11ty/transforms/xml-prettify'));
 
   // BrowserSync config
 
@@ -286,7 +290,7 @@ module.exports = function (config) {
     html: true,
     linkify: true,
     typographer: true,
-    quotes: '“”‘’',
+    quotes: '«»“”‘’',
   };
 
   // @ts-ignore: Wrong typings?

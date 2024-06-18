@@ -1,10 +1,9 @@
 const prettifyXml = require('prettify-xml');
-const options = { indent: 2, newline: '\n' };
+const xmlOptions = { indent: 2, newline: '\n' };
 
 function xmlPrettify(content, outputPath) {
   if (outputPath && outputPath.endsWith('.xml')) {
-    const result = prettifyXml(content, options);
-    // TODO: Remove empty lines?
+    const result = prettifyXml(content, xmlOptions);
     return result;
   }
   return content;

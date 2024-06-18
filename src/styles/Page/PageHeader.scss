@@ -15,6 +15,7 @@
   align-items: center;
   justify-content: flex-start;
   flex: 1;
+
   // Adjust main height
   padding-top: 1em;
   padding-bottom: 2.5em;
@@ -23,13 +24,8 @@
   height: $headerHeight;
   .showNavigation &,
   [data-page='main'] .wideView & {
-    position: absolute;
     min-height: 100px;
     height: $headerHeightMain;
-  }
-  [data-page='main'] body:not(.showNavigation) & {
-    // justify-content: center;
-    // top: -2rem;
   }
   [data-page='main'] .wideView & {
     justify-content: center;
@@ -41,7 +37,7 @@
       padding: 0;
     }
     .PageHeaderBrand {
-      margin-left: -0.75em;
+      margin-left: -1em;
     }
     .PageHeaderNavigation {
       margin-right: -0.25em;
