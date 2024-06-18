@@ -14,6 +14,9 @@
   justify-content: stretch;
   // border: 1px solid blue; // DEBUG
   height: 4.5rem;
+  [data-page='main'] & {
+    display: none;
+  }
   .wideView & {
     width: 20vw;
     max-width: 20em;

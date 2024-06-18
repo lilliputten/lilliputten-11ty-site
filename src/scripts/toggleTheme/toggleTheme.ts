@@ -6,7 +6,7 @@ export function toggleTheme() {
     : html.getAttribute
       ? html.getAttribute('theme')
       : '';
-  const theme = currTheme === 'light' ? 'dark' : 'light';
+  const theme = !currTheme || currTheme === 'light' ? 'dark' : 'light';
   /* console.log('[themes:toggleTheme]', {
    *   currTheme,
    *   theme,

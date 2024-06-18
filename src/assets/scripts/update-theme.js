@@ -6,7 +6,7 @@
   function updateTheme() {
     const body = window.document.body;
     const html = /** @type THTMLNode | undefined */ (body && body.parentNode);
-    const theme = window.localStorage && window.localStorage.getItem('theme');
+    const theme = (window.localStorage && window.localStorage.getItem('theme')) || 'light';
     if (theme && html) {
       if (html.setAttribute) {
         html.setAttribute('data-theme', theme);

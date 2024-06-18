@@ -1,6 +1,6 @@
 /**
  * @module PageHeader
- * @changed 2024.06.18, 03:13
+ * @changed 2024.06.18, 15:35
  */
 
 @import '../shared';
@@ -65,12 +65,17 @@
   }
 
   .PageHeaderBrand {
-    flex: 1;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: stretch;
     // border: 1px solid green; // DEBUG
+    [data-page='main'] & {
+      width: 2.5em;
+    }
+    [data-page='regular'] & {
+      flex: 1;
+    }
     .navbar-toggler {
       // display: flex;
       align-items: center;
