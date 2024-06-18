@@ -22,27 +22,33 @@
 
   // Adaptive sizes...
   height: $headerHeight;
+
   .showNavigation &,
   [data-page='main'] .wideView & {
     min-height: 100px;
     height: $headerHeightMain;
   }
+
   [data-page='main'] .wideView & {
     justify-content: center;
     top: -2rem;
   }
+
   [data-page='regular'] .wideView & {
     // ATTENTION: Adjust header elements to fit main content column width
     .PageHeaderWrapper {
       padding: 0;
     }
+
     .PageHeaderBrand {
-      margin-left: -1em;
+      margin-left: -1.2vw;
     }
+
     .PageHeaderNavigation {
       margin-right: -0.25em;
     }
   }
+
   [data-page='main'] .mobileView & {
     justify-content: flex-start;
     top: 0;
@@ -51,6 +57,27 @@
       .PageHeaderLogo {
         display: none;
       }
+    }
+  }
+
+  .PageHeaderWrapper {
+    align-items: stretch;
+  }
+
+  .PageHeaderBrand {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    // border: 1px solid green; // DEBUG
+    .navbar-toggler {
+      // display: flex;
+      align-items: center;
+      justify-content: center;
+      $size: 2.75em;
+      height: $size;
+      width: $size;
     }
   }
 

@@ -1,7 +1,7 @@
 ---
 title: Contacts
 layout: article.njk
-permalink: /contacts.html
+permalink: /contacts/
 # eleventyExcludeFromCollections: true
 description: Contacts page
 date: 2024-06-18

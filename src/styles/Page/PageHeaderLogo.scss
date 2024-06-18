@@ -8,14 +8,27 @@
 @import '../shared';
 
 .PageHeaderLogo {
+  flex: 1;
   display: flex;
-  align-items: center;
+  align-items: stretch;
+  justify-content: stretch;
+  // border: 1px solid blue; // DEBUG
+  height: 4.5rem;
+  .wideView & {
+    width: 20vw;
+    max-width: 20em;
+  }
+
   .Logo {
     display: inline-block;
     width: 100%;
-    max-height: 4rem;
-    // @media (min-width: $screenSmMin) {
-    // }
+    background-image: url('/static/images/logo/full/ll-logo-wx.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    .wideView & {
+      background-position: left center;
+    }
   }
   [data-page='main'] & {
     width: 1.75em;

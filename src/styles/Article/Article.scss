@@ -1,5 +1,5 @@
 /**
- * @module Page
+ * @module article
  * @changed 2024.06.18, 05:01
  */
 
@@ -7,7 +7,7 @@
 
 @import '../shared';
 
-.article {
+.Article {
   ::marker {
     color: $primaryColor;
   }
@@ -17,17 +17,19 @@
     margin-top: 1em;
     margin-bottom: 1em;
   }
-  .articleHead {
+  .ArticleHead {
     margin-bottom: 2rem;
   }
-  .articleFooter {
+  .ArticleFooter {
     margin: 2rem 0;
     margin-top: 2.5rem;
   }
-  .articleTitle {
+  .ArticleTitle {
     // margin-bottom: 2rem;
   }
-  .articleMeta {
+  .ArticleDescription {
+  }
+  .ArticleMeta {
     display: flex;
     gap: 1em;
     opacity: 0.7;
@@ -37,10 +39,11 @@
       }
     }
   }
-  .articleTags {
+  .ArticleTags {
     list-style: none;
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
     gap: 0.2em;
     // font-size: 95%;
     li {

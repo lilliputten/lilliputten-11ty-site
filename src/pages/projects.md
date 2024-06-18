@@ -1,7 +1,7 @@
 ---
 title: Projects
 layout: article.njk
-permalink: /projects.html
+permalink: /projects/
 # eleventyExcludeFromCollections: true
 description: Projects page
 date: 2024-02-20

@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Lilliputten and Noble',
+  title: 'Lilliputten & Noble',
   author: 'Igor Lilliputten',
   description: "Hello, my name is Igor and I'm a front-end developer.",
   // twitter: 'lilliputten',

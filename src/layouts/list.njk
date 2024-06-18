@@ -2,28 +2,35 @@
 layout: page.njk
 ---
 
-<div class="collection">
-  <div class="collection__head">
-    <h1 class="collection__title">{{ title }}</h1>
-    <p class="collection__description">{{ description }}</p>
+<article class="Article Collection">
+  <div class="ArticleHead">
+    <h1 class="ArticleTitle">{{ title }}</h1>
+    {% if description %}
+      <p class="ArticleDescription">{{ description }}</p>
+    {% endif %}
   </div>
-  <ul class="collection__list">
+  <ul class="CollectionList">
     {%- for item in collections.withTags | filterCollection(tag) | sortByDate | reverse -%}
-      <li class="collection__item">
-        <a href="{{ item.url }}" class="collection__item-link">
-          <h2 class="collection__item-title">{{ item.data.title }}</h2>
-        </a>
-        <div class="collection__item-meta">
-          <time class="collection__item-datetime" datetime="{{ item.date.toISOString() }}"
-            >{{ item.date | readableDate }}</time
+      <li class="CollectionItem">
+        <h2 class="CollectionItemTitle">
+          <a href="{{ item.url }}" class="CollectionItemLink">
+            {# Item link #}
+            {{ item.data.title }}
+          </a>
+        </h2>
+        <div class="CollectionItemMeta">
+          <time class="CollectionItemDatetime" datetime="{{ item.date.toISOString() }}"
+            ><span class="Label">Date:</span> {{ item.date | readableDate }}</time
           >
-          <div class="collection__item-minutes-to-read">
-            {{ item.templateContent | readingTime({speed: 200}) }} to read
+          <div class="CollectionItemMinutesToRead">
+            <span class="Label">Time to read:</span>
+            {{ item.templateContent | readingTime({speed: 200}) }}
           </div>
-          <div class="collection__item-tags tags">
+          <div class="CollectionItemTags tags">
+            <span class="Label">Tags:</span>
             {%- for tag in item.data.tags | filterTags -%}
-              <span class="tags__item">
-                <a href="/tags/{{ tag }}/">#{{ tag }}</a>
+              <span class="tagsItem">
+                <a class="linkAsText" href="/tags/{{ tag }}/">{{ tag }}</a>
               </span>
             {%- endfor -%}
           </div>
@@ -31,4 +38,4 @@ layout: page.njk
       </li>
     {%- endfor -%}
   </ul>
-</div>
+</article>
