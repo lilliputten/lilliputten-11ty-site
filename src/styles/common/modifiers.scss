@@ -15,3 +15,54 @@
     max-width: calc($widthTreshold - 64px);
   }
 }
+
+.primaryColor {
+  color: $primaryColor;
+}
+.primaryBgColor {
+  background-color: $primaryColor;
+}
+
+.errorIcon {
+  font-size: 3rem;
+  opacity: 0.1;
+}
+
+a.mail,
+a.external {
+  &:after {
+    transition: all $transitionTimeMs;
+    @include LinkAsText;
+    opacity: 0.3;
+    margin-left: 0.3em;
+    display: inline-block;
+    font-size: 85%;
+    line-height: 1;
+  }
+  &:hover:after {
+    opacity: 0.7;
+  }
+}
+a.mail,
+a.external {
+  &:after {
+    // content: '\f1c5'; // Link with an arrow
+    // content: '\f141';
+    // content: '\f142';
+    content: '\f143';
+    font-family: bootstrap-icons, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-variant: normal;
+    text-transform: none;
+    vertical-align: -0.125em;
+  }
+}
+/* a.mail {
+ *   &:after {
+ *     // content: '@';
+ *     // vertical-align: 0.125em;
+ *     content: '\f32f';
+ *   }
+ * }
+ */
