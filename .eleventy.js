@@ -9,6 +9,7 @@ module.exports = function (config) {
   config.addPassthroughCopy({
     'static/images/favicon/favicon.ico': 'favicon.ico',
   });
+  config.addPassthroughCopy('src/app-info.json');
   config.addPassthroughCopy('src/manifest.webmanifest');
   config.addPassthroughCopy('src/fonts/*.woff2');
   config.addPassthroughCopy('static');
