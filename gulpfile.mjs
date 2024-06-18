@@ -133,7 +133,7 @@ gulp.task('cacheHash', () => {
     .src(
       [
         // `${DEST_PATH}/assets/**/*.{js,css}`,
-        // `${DEST_PATH}/compiled-assets/**/*.{js,css}`,
+        `${DEST_PATH}/compiled-assets/**/*.{js,css}`,
         `${DEST_PATH}/manifest.webmanifest`,
       ],
       {
