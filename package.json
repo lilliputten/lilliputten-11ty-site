@@ -3,7 +3,7 @@
   "version": "0.0.3",
   "timetag": "240618-1210",
   "timestamp": "2024.06.18 12:10 +0500",
-  "changed": "2024.06.18, 06:13",
+  "changed": "2024.06.18, 13:19",
   "homepage": "/",
   "private": false,
   "lint-staged": {
@@ -106,7 +106,7 @@
     "start": "echo --Start eleventy dev server-- && cross-env ELEVENTY_ENV=development eleventy --serve --quiet",
     "serve": "serve build",
     "prod": "npm run build-prod && npm run serve",
-    "build": "echo --Build eleventy and all artifacts-- && npm run compile-assets && rimraf build && eleventy && gulp build",
+    "build": "echo --Build eleventy and all artifacts-- && rimraf build && eleventy && gulp build",
     "build-prod": "cross-env ELEVENTY_ENV=production npm run build",
     "prepare": "npx simple-git-hooks",
     "generate-weekly-links": "node _11ty/scripts/weekly-links.js",
