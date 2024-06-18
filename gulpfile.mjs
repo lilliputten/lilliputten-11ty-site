@@ -1,7 +1,7 @@
 // @ts-check
 /**
  * @module gulpfile.mjs
- * @changed 2024.06.18, 14:49
+ * @changed 2024.06.18, 15:05
  */
 
 import dotenv from 'dotenv';
@@ -43,7 +43,7 @@ const isProd = !isWin || process.env.ELEVENTY_ENV === 'production';
 // const isDev = !isProd;
 
 // eslint-disable-next-line no-console
-console.log('Production:', isProd, process.env.ELEVENTY_ENV);
+// console.log('Production:', isProd, process.env.ELEVENTY_ENV);
 
 // Working paths...
 const sourceScriptsPath = posixPath.join(SRC_PATH, 'scripts');
@@ -203,7 +203,7 @@ gulp.task(
   gulp.series(
     // prettier-ignore
     'cacheHash',
-    // 'cacheReplace',
+    'cacheReplace',
   ),
 );
 
