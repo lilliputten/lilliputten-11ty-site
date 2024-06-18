@@ -8,6 +8,7 @@ import './sw/sw';
 
 import { VisualAnimation } from './VisualAnimation/VisualAnimation';
 import { toggleTheme } from './toggleTheme/toggleTheme';
+import { initNavigation, setUpdateVisualizationCallback } from './navigation';
 
 // import { test } from './test/test';
 
@@ -21,9 +22,9 @@ import { toggleTheme } from './toggleTheme/toggleTheme';
  * });
  */
 
-// Start animation only on main window?
-// if (window.isIndex) {}
-VisualAnimation();
+VisualAnimation({ setUpdateVisualizationCallback });
+
+initNavigation();
 
 window.toggleTheme = toggleTheme;
 

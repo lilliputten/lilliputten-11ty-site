@@ -1,7 +1,7 @@
-<footer class="PageFooter">
+<footer class="PageFooter maxWidthContainer">
   <div class="FooterInfo">
     <div class="FooterCopyright">
-      &copy; {{ helpers.currentYear() }} <span class="delimiter">/</span>
+      © {{ helpers.currentYear() }} <span class="delimiter">/</span>
       <a href="mailto:igor@lilliputten.com">{{ site.author }}</a>
     </div>
     {#
@@ -14,7 +14,7 @@
         <a
           href="https://github.com/lilliputten"
           rel="me"
-          class="SocialListLink"
+          class="SocialListLink linkAsText"
           id="Github"
           target="_blank"
           ><i class="bi bi-github"></i> GitHub</a
@@ -23,17 +23,19 @@
       <li class="SocialListItem">
         <a
           href="https://linkedin.com/in/lilliputten"
-          class="SocialListLink"
+          class="SocialListLink linkAsText"
           id="Linkedin"
           target="_blank"
           ><i class="bi bi-linkedin"></i> LinkedIn</a
         >
       </li>
+      {#
       <li class="SocialListItem">
-        <a href="/feed/rss.xml" class="SocialListLink" id="RSS"
+        <a href="/feed/rss.xml" class="SocialListLink linkAsText" id="RSS"
           ><i class="bi bi-rss-fill"></i> RSS</a
         >
       </li>
+      #}
     </ul>
   </div>
   {#

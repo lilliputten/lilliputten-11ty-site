@@ -1,0 +1,67 @@
+/**
+ * @module Page
+ * @changed 2024.06.18, 05:01
+ */
+
+@use 'sass:color';
+
+@import '../shared';
+
+.article {
+  ::marker {
+    color: $primaryColor;
+  }
+  h1,
+  h2,
+  h3 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  .articleHead {
+    margin-bottom: 2rem;
+  }
+  .articleFooter {
+    margin: 2rem 0;
+    margin-top: 2.5rem;
+  }
+  .articleTitle {
+    // margin-bottom: 2rem;
+  }
+  .articleMeta {
+    display: flex;
+    gap: 1em;
+    opacity: 0.7;
+    .metaItem {
+      span {
+        opacity: 0.7;
+      }
+    }
+  }
+  .articleTags {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 0.2em;
+    // font-size: 95%;
+    li {
+      display: inline-block;
+      &.tagsTitle {
+        opacity: 0.5;
+        margin-right: 0.2em;
+      }
+    }
+    a {
+      text-decoration: none;
+      opacity: 0.8;
+      padding: 0.2em 0.4em;
+      background-color: color.change(gray, $alpha: 0.15);
+      border-radius: 3px;
+      span {
+        opacity: 0.3;
+      }
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}

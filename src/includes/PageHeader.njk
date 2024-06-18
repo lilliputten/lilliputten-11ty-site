@@ -1,7 +1,64 @@
-<div class="PageHeader">
+{% set treshold = "md" %}
+
+<nav id="PageHeader" class="PageHeader navbar fixed-top navbar-dark navbar-expand-{{ treshold }}">
+  <div class="PageHeaderWrapper maxWidthContainer container onRed">
+    <div class="PageHeaderBrand d-flex gap-1">
+      <button
+        id="toggleNavigation"
+        aria-controls="navbarNavigation"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        class="navbar-toggler collapsed"
+        data-bs-target="#navbarNavigation"
+        data-bs-toggle="collapse"
+        type="button"
+      >
+        <span class="navbar-toggler-icon"> </span>
+      </button>
+      {% include "PageHeaderLogo.njk" %}
+    </div>
+    <div class="PageHeaderNavigation navbar-collapse collapse" id="navbarNavigation">
+      {% include "PageMenu.njk" %}
+      {#
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="/accounts/login/">Log in</a></li>
+        <li class="nav-item"><a class="nav-link" href="/accounts/register/">Sign up</a></li>
+      </ul>
+      #}
+      {% include "PageHeaderToolbar.njk" %}
+    </div>
+  </div>
+</nav>
+
+{#
+<nav class="PageHeader navbar navbar-expand-lg navbar-dark">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+  </div>
+
+  { #
   <div class="PageHeaderContent container onRed">
-    <div class="PageHeaderLogo"><a href="/">Logo</a></div>
+    {% include "PageHeaderLogo.njk" %}
     {% include "PageMenu.njk" %}
     {% include "PageHeaderToolbar.njk" %}
   </div>
-</div>
+  # }
+</nav>
+#}

@@ -1,7 +1,11 @@
+// @ts-check
+
+/// <reference path="../../scripts/@types/THTMLNode.d.ts" />
+
 (function updateThemeWrapper() {
   function updateTheme() {
     const body = window.document.body;
-    const html = body && body.parentNode;
+    const html = /** @type THTMLNode | undefined */ (body && body.parentNode);
     const theme = window.localStorage && window.localStorage.getItem('theme');
     if (theme && html) {
       if (html.setAttribute) {

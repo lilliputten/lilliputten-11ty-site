@@ -1,49 +1,38 @@
 <!doctype html>
-<!--
-@changed 2024.06.16, 22:10
-Version: 0.0.1
-Last changes timestamp: 2024.06.12 02:28 +0500
--->
 <html
   lang="en"
-  id="page-{%- if not isIndex -%}regular{%- else -%}main{%- endif -%}"
-  data-page="{% if not isIndex %}regular{% else %}main{% endif %}"
-  data-theme="light"
+  data-page="{%- if not isIndex -%}regular{%- else -%}main{%- endif -%}"
+  data-layout="{{ layout | replace('.njk', '') }}"
 >
   <head>
+    <meta
+      name="version"
+      content="
+@changed 2024.06.18, 05:59
+Version: 0.0.2
+Last changes timestamp: 2024.06.18 06:41 +0500
+"
+    />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ renderData.title or title }}{% if not isIndex %}— {{ site.title }}{% endif %}</title>
-
+    <title>
+      {{ renderData.title or title }}
+      {% if not isIndex %}— {{ site.title }}{% endif %}
+    </title>
     <meta name="color-scheme" content="dark light" />
-    {# <meta name="theme-color" content="#cc2222" media="(prefers-color-scheme: light)"> #}
-    {# <meta name="theme-color" content="#880088" media="(prefers-color-scheme: dark)"> #}
-
     <meta name="description" content="{{ description or site.description }}" />
     <meta name="keywords" content="lilliputten" />
-
     <meta name="generator" content="Eleventy" />
-
     {% include "favicon.njk" %}
     {% include "meta-open-graph.njk" %}
     {% include "meta-rss.njk" %}
     {% include "meta-webmentions.njk" %}
-
     <link rel="author" href="{{ site.paths.site }}/humans.txt" />
-
     {% include "base-styles.njk" %}
   </head>
-  <body
-    class="Page {% if not isIndex %}PageRegular{% else %}PageMain{% endif %}"
-    id="{%- if not isIndex -%}regular{%- else -%}main{%- endif -%}"
-    xxx-page="{% if not isIndex %}regular{% else %}main{% endif %}"
-    xxx-theme="light"
-  >
+  <body class="Page">
     {# Base content #}
-
     {{ content | safe }}
-
-    <script src="/assets/scripts/update-theme.js"></script>
     {% include "base-scripts.njk" %}
   </body>
 </html>

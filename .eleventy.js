@@ -3,10 +3,13 @@
 const fs = require('fs');
 const sanitizeHTML = require('sanitize-html');
 
+const isDev = process.env.ELEVENTY_ENV === 'development';
+
 module.exports = function (config) {
   config.addPassthroughCopy({
     'static/images/favicon/favicon.ico': 'favicon.ico',
   });
+  config.addPassthroughCopy('src/app-info.json');
   config.addPassthroughCopy('src/manifest.webmanifest');
   config.addPassthroughCopy('src/fonts/*.woff2');
   config.addPassthroughCopy('static');
@@ -25,6 +28,9 @@ module.exports = function (config) {
   // NOTE: Styles and scripts should be monitored and re-built by `gulp watchAssets`
   config.watchIgnores.add('src/scripts');
   config.watchIgnores.add('src/styles');
+
+  // NOTE: It's better to update static folder manually (be restart the server), as it's too big
+  config.watchIgnores.add('static');
 
   // Collections
 
@@ -252,10 +258,12 @@ module.exports = function (config) {
 
   // Transforms
 
-  // config.addTransform('htmlmin', require('./_11ty/transforms/htmlmin'));
-  // config.addTransform('xmlmin', require('./_11ty/transforms/xmlmin'));
-  config.addTransform('html-prettify', require('./_11ty/transforms/html-prettify'));
-  config.addTransform('xml-prettify', require('./_11ty/transforms/xml-prettify'));
+  if (!isDev) {
+    config.addTransform('htmlmin', require('./_11ty/transforms/htmlmin'));
+    config.addTransform('xmlmin', require('./_11ty/transforms/xmlmin'));
+  }
+  // config.addTransform('html-prettify', require('./_11ty/transforms/html-prettify'));
+  // config.addTransform('xml-prettify', require('./_11ty/transforms/xml-prettify'));
 
   // BrowserSync config
 
@@ -283,7 +291,7 @@ module.exports = function (config) {
     html: true,
     linkify: true,
     typographer: true,
-    quotes: '“”‘’',
+    quotes: '«»“”‘’',
   };
 
   // @ts-ignore: Wrong typings?

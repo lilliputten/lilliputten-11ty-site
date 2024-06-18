@@ -1,37 +1,40 @@
 ---
 layout: page.njk
-date: 2024-06-16
-dateUpdated: Last Modified
-tags:
-  - article
-  - about
-  - chunk
 ---
 
 <article class="article">
-  <div class="article__head">
-    <h1 class="article__title">{{ title }}</h1>
-    <div class="article__meta">
-      <time class="article__datetime" datetime="{{ page.date.toISOString() }}"
-        >{{ page.date | readableDate }}</time
-      >
-      <div class="article__minutes-to-read">{{ content | readingTime({speed: 200}) }} to read</div>
+  <div class="articleHead">
+    <h1 class="articleTitle">{{ title }}</h1>
+    {% if not hideMeta %}
+      <div class="articleMeta">
+        {% if page.date %}
+          <time class="metaItem articleDatetime" datetime="{{ page.date.toISOString() }}"
+            ><span>Last changes:</span> {{ page.date | readableDate }}</time
+          >
+        {% endif %}
+        <div class="metaItem articleMinutesToRead">
+          <span>Time to read:</span> {{ content | readingTime({speed: 200}) }}
+        </div>
+        {#
       <a
         href="https://github.com/lilliputten/lilliputten-11ty-site/blob/main/{{ page.inputPath }}"
         class="article__github"
         >Edit this page on GitHub</a
       >
-    </div>
+      #}
+      </div>
+    {% endif %}
   </div>
 
   {{ content | safe }}
 
-  <div class="article__footer">
+  <div class="articleFooter">
     {% if tags %}
-      <ul class="article__tags tags">
+      <ul class="articleTags tags">
+        <li class="tagsTitle">Tags:</li>
         {%- for tag in tags | filterTags -%}
-          <li class="tags__item">
-            <a href="/tags/{{ tag }}/">#{{ tag }}</a>
+          <li class="tagsItem">
+            <a class="linkAsText" href="/tags/{{ tag }}/">{{ tag }}</a>
           </li>
         {%- endfor -%}
       </ul>

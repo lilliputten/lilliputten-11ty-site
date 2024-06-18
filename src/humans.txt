@@ -1,6 +1,6 @@
 /* TEAM */
     Author: Igor Lilliputten
-    Contact: lilliputten [at] gmail.com
+    Contact: igor [at] lilliputten.com
 
 /* THANKS */
     {CONTRIBUTORS}
