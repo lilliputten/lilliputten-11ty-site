@@ -1,7 +1,6 @@
 // @ts-check
 
 const fs = require('fs');
-const sanitizeHTML = require('sanitize-html');
 
 const isDev = process.env.ELEVENTY_ENV === 'development';
 
@@ -16,9 +15,6 @@ module.exports = function (config) {
   config.addPassthroughCopy('src/assets');
   config.addPassthroughCopy('src/scripts');
   config.addPassthroughCopy('compiled-assets');
-  // config.addPassthroughCopy({
-  //   'compiled-assets': 'assets/compiled',
-  // });
   config.addPassthroughCopy('src/**/*.(html|jpg|png|webp|avif|ico|svg|mp4|xml)');
   config.addPassthroughCopy('src/(robots|humans).txt');
 
@@ -216,6 +212,7 @@ module.exports = function (config) {
       return !!author && !!author.name && !!published && !!content;
     };
 
+    const sanitizeHTML = require('sanitize-html');
     const clean = (entry) => {
       const { html, text } = entry.content;
 
@@ -285,17 +282,50 @@ module.exports = function (config) {
   // Markdown config
 
   const markdownIt = require('markdown-it');
-  const markdownItAnchor = require('markdown-it-anchor');
+  const anchor = require('markdown-it-anchor');
+  const mdIterator = require('markdown-it-for-inline');
+
   // @see https://markdown-it.github.io/markdown-it/
   const mdOptions = {
     html: true,
     linkify: true,
     typographer: true,
-    quotes: '«»“”‘’',
+    quotes: '«»‘’',
   };
 
   // @ts-ignore: Wrong typings?
-  const md = markdownIt(mdOptions).use(markdownItAnchor, {}).disable('code');
+  const md = markdownIt(mdOptions)
+    .use(mdIterator, 'url_new_win', 'link_open', (tokens, idx) => {
+      const [attrName, href] = tokens[idx].attrs.find((attr) => attr[0] === 'href');
+      if (attrName !== 'href' || !href) {
+        return;
+      }
+      if (href.startsWith('https:') || href.startsWith('http:')) {
+        tokens[idx].attrPush(['class', 'external']);
+      }
+      if (href.startsWith('mailto:')) {
+        tokens[idx].attrPush(['class', 'mail']);
+      }
+    })
+    // @ts-ignore: Wrong typings?
+    .use(anchor, {
+      // @ts-ignore: Wrong typings?
+      permalink: anchor.permalink.linkInsideHeader(
+        /* @type {anchor.LinkAfterHeaderPermalinkOptions} */ {
+          symbol: '<i class="bi bi-link-45deg"></i>', // '🔗',
+          slugify: (/** @type {string} */ text) => {
+            const newText = text
+              .replace(/([\W\s\r\n\t ]+)/g, ' ')
+              .toLowerCase()
+              .trim()
+              .replace(/\W/g, '-');
+            // console.log('[markdownIt:slugify]', text, '->', newText);
+            return newText;
+          },
+        },
+      ),
+    })
+    .disable('code');
   config.setLibrary('md', md);
 
   // Plugins

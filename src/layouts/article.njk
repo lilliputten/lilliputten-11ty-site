@@ -2,11 +2,11 @@
 layout: page.njk
 ---
 
-<article class="article">
-  <div class="articleHead">
-    <h1 class="articleTitle">{{ title }}</h1>
+<article class="Article">
+  <div class="ArticleHead">
+    <h1 class="ArticleTitle">{{ title }}</h1>
     {% if not hideMeta %}
-      <div class="articleMeta">
+      <div class="ArticleMeta">
         {% if page.date %}
           <time class="metaItem articleDatetime" datetime="{{ page.date.toISOString() }}"
             ><span>Last changes:</span> {{ page.date | readableDate }}</time
@@ -18,7 +18,7 @@ layout: page.njk
         {#
       <a
         href="https://github.com/lilliputten/lilliputten-11ty-site/blob/main/{{ page.inputPath }}"
-        class="article__github"
+        class="ArticleGithub"
         >Edit this page on GitHub</a
       >
       #}
@@ -28,9 +28,9 @@ layout: page.njk
 
   {{ content | safe }}
 
-  <div class="articleFooter">
+  <div class="ArticleFooter">
     {% if tags %}
-      <ul class="articleTags tags">
+      <ul class="ArticleTags tags">
         <li class="tagsTitle">Tags:</li>
         {%- for tag in tags | filterTags -%}
           <li class="tagsItem">
@@ -40,10 +40,10 @@ layout: page.njk
       </ul>
     {% endif %}
     {#
-    <div class="article__share">
+    <div class="ArticleShare">
       If you like the article, you can
       <a
-        class="article__share-button"
+        class="ArticleShareButton"
         href="https://twitter.com/intent/tweet?text={{ title }} by @{{ site.twitter }}&url={{ site.paths.site }}{{ page.url }}"
         target="_blank"
         rel="noopener"
@@ -53,21 +53,21 @@ layout: page.njk
     #}
     {% set previousPost = collections.chunk | getPreviousCollectionItem(page) %}
     {% set nextPost = collections.chunk | getNextCollectionItem(page) %}
-    <div class="article__nav">
+    <div class="ArticleNav">
       {% if previousPost %}
-        <a href="{{ previousPost.url }}" class="article__nav-button article__prev"
+        <a href="{{ previousPost.url }}" class="ArticleNavButton articlePrev"
           >{{ previousPost.data.title }}</a
         >
       {% endif %}
       {% if nextPost %}
-        <a href="{{ nextPost.url }}" class="article__nav-button article__next"
+        <a href="{{ nextPost.url }}" class="ArticleNavButton articleNext"
           >{{ nextPost.data.title }}</a
         >
       {% endif %}
     </div>
   </div>
   {#
-  <div class="article__webmentions">
+  <div class="ArticleWebmentions">
     {% include 'webmentions.njk' %}
   </div>
   #}

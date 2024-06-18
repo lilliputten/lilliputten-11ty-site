@@ -1,7 +1,7 @@
 ---
 title: About me
 layout: article.njk
-permalink: /about.html
+permalink: /about/
 # eleventyExcludeFromCollections: true
 description: About page
 date: 2024-06-18

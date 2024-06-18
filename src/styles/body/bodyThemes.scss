@@ -66,8 +66,9 @@ body .onRed,
 }
 
 .linkAsText {
-  color: $defaultTextColor;
-  [data-theme='dark'] & {
-    color: $defaultTextOnDarkColor;
-  }
+  @include LinkAsText;
+  // color: $defaultTextColor;
+  // [data-theme='dark'] & {
+  //   color: $defaultTextOnDarkColor;
+  // }
 }

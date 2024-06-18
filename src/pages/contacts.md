@@ -1,7 +1,7 @@
 ---
 title: Contacts
 layout: article.njk
-permalink: /contacts.html
+permalink: /contacts/
 # eleventyExcludeFromCollections: true
 description: Contacts page
 date: 2024-06-18
@@ -38,6 +38,6 @@ Use any of the following methods:
 
 ## Other
 
-- Old personal portfolio site (2000-2016, in Russian, external link): [lilliputten.ru](http://lilliputten.ru)
+- Old personal portfolio site (2000-2016, in Russian): [lilliputten.ru](http://lilliputten.ru)
 - Telegram: [lilliputten](https://t.me/lilliputten)
 - E-mail: [igor@lilliputten.com](mailto:igor@lilliputten.com?subject=Hi%20Igor!)

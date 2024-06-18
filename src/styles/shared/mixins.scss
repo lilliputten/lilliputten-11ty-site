@@ -20,3 +20,20 @@
   align-items: center;
   // justify-content: center;
 }
+@mixin LinkAsText {
+  &,
+  // [data-theme='light'] body &,
+  [data-theme='light'] & {
+    color: $defaultTextColor;
+  }
+  // [data-theme='dark'] body &,
+  [data-theme='dark'] & {
+    color: $defaultTextOnDarkColor;
+  }
+}
+@mixin LinkAsTextWithHover {
+  &,
+  &:hover {
+    @include LinkAsText;
+  }
+}

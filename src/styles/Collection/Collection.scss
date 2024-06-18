@@ -1,0 +1,57 @@
+/**
+ * @module Collection
+ * @changed 2024.06.18, 08:22
+ */
+
+@use 'sass:color';
+
+@import '../shared';
+
+.Collection {
+  .CollectionList {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: block;
+  }
+
+  .CollectionItemTitle {
+    margin-bottom: 0.2em;
+  }
+  .CollectionItemLink {
+    & {
+      text-decoration: none;
+    }
+  }
+  .CollectionItemMeta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.2em 0.7em;
+    .Label {
+      display: inline-block;
+      opacity: 0.5;
+    }
+    .CollectionItemTags {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.2em;
+      .Label {
+        margin-right: 0.2em;
+      }
+      .tagsItem {
+        a {
+          opacity: 0.8;
+          padding: 0.2em 0.4em;
+          background-color: color.change(gray, $alpha: 0.15);
+          border-radius: 3px;
+          text-decoration: none;
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
