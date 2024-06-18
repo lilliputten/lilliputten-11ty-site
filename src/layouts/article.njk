@@ -8,12 +8,18 @@ layout: page.njk
     {% if not hideMeta %}
       <div class="ArticleMeta">
         {% if page.date %}
-          <time class="metaItem articleDatetime" datetime="{{ page.date.toISOString() }}"
+          <time
+            class="metaItem articleDatetime"
+            datetime="{{ page.date.toISOString() }}"
+            title="Last document modification date"
             ><span>Last changes:</span> {{ page.date | readableDate }}</time
           >
         {% endif %}
-        <div class="metaItem articleMinutesToRead">
-          <span>Time to read:</span> {{ content | readingTime({speed: 200}) }}
+        <div
+          class="metaItem articleMinutesToRead"
+          title="With an average speed of 200 words per minute"
+        >
+          <span>Time to read:</span> {{ content | readingTime({"speed": 200}) }}
         </div>
         {#
       <a
@@ -25,9 +31,7 @@ layout: page.njk
       </div>
     {% endif %}
   </div>
-
   {{ content | safe }}
-
   <div class="ArticleFooter">
     {% if tags %}
       <ul class="ArticleTags tags">

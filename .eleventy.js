@@ -302,6 +302,7 @@ module.exports = function (config) {
       }
       if (href.startsWith('https:') || href.startsWith('http:')) {
         tokens[idx].attrPush(['class', 'external']);
+        tokens[idx].attrPush(['title', 'External link: ' + href]);
       }
       if (href.startsWith('mailto:')) {
         tokens[idx].attrPush(['class', 'mail']);
