@@ -313,17 +313,17 @@ module.exports = function (config) {
       permalink: anchor.permalink.linkInsideHeader(
         /* @type {anchor.LinkAfterHeaderPermalinkOptions} */ {
           symbol: '<i class="bi bi-link-45deg"></i>', // '🔗',
-          slugify: (/** @type {string} */ text) => {
-            const newText = text
-              .replace(/([\W\s\r\n\t ]+)/g, ' ')
-              .toLowerCase()
-              .trim()
-              .replace(/\W/g, '-');
-            // console.log('[markdownIt:slugify]', text, '->', newText);
-            return newText;
-          },
         },
       ),
+      slugify: (/** @type {string} */ text) => {
+        const newText = text
+          .replace(/([\W\s\r\n\t ]+)/g, ' ')
+          .toLowerCase()
+          .trim()
+          .replace(/\W/g, '-');
+        console.log('[markdownIt:slugify]', text, '->', newText);
+        return newText;
+      },
     })
     .disable('code');
   config.setLibrary('md', md);

@@ -32,15 +32,17 @@ a.mail,
 a.external {
   &:after {
     transition: all $transitionTimeMs;
-    @include LinkAsText;
-    opacity: 0.3;
+    opacity: 0.4;
     margin-left: 0.3em;
     display: inline-block;
-    font-size: 85%;
+    // font-size: 90%;
     line-height: 1;
   }
+  &:not(:hover):after {
+    @include LinkAsText;
+  }
   &:hover:after {
-    opacity: 0.7;
+    opacity: 1;
   }
 }
 a.mail,
@@ -52,10 +54,10 @@ a.external {
     content: '\f143';
     font-family: bootstrap-icons, sans-serif;
     font-style: normal;
-    font-weight: bold;
+    font-weight: normal;
     font-variant: normal;
     text-transform: none;
-    vertical-align: -0.125em;
+    vertical-align: -0.15em;
   }
 }
 /* a.mail {

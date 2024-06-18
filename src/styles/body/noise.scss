@@ -23,10 +23,10 @@
   background-size: 200px;
   background-repeat: repeat;
   pointer-events: none;
-  transition: opacity 1s;
+  transition: opacity 2s;
   opacity: 0;
   &.show {
-    opacity: 0.25;
+    opacity: 0.3;
     [data-theme='dark'] & {
       opacity: 0.2;
     }

@@ -70,7 +70,7 @@
     align-items: center;
     justify-content: stretch;
     // border: 1px solid green; // DEBUG
-    [data-page='main'] & {
+    [data-page='main'] body:not(.mobileView) & {
       width: 2.5em;
     }
     [data-page='regular'] & {
