@@ -1,4 +1,8 @@
 // @ts-check
+/**
+ * @module gulpfile.mjs
+ * @changed 2024.06.18, 14:46
+ */
 
 import dotenv from 'dotenv';
 
@@ -36,7 +40,10 @@ const isWin = process.platform === 'win32';
 const tty = isWin ? 'CON' : '/dev/tty';
 
 const isProd = !isWin || process.env.ELEVENTY_ENV === 'production';
-const isDev = !isProd;
+// const isDev = !isProd;
+
+// eslint-disable-next-line no-console
+console.log('Production:', isProd, process.env.ELEVENTY_ENV);
 
 // Working paths...
 const sourceScriptsPath = posixPath.join(SRC_PATH, 'scripts');
