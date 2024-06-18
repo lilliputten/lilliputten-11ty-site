@@ -264,7 +264,7 @@ gulp.task(
   'build',
   gulp.series(
     // prettier-ignore
-    'cache',
+    // 'cache',
     'clean',
     'serviceWorker',
   ),
