@@ -4,7 +4,7 @@ layout: article.njk
 permalink: /about/
 # eleventyExcludeFromCollections: true
 description: About page
-date: 2024-06-18
+date: 2024-06-19
 # hideMeta: true
 # tag: false
 tags:
@@ -13,7 +13,7 @@ tags:
 ---
 
 <!--
-@changed 2024.06.18, 05:41
+@changed 2024.06.19, 18:38
 -->
 
 My name is Igor and I'm a professional front-end developer with 8 years of experience, recently specializing mainly in React, NextJS, NodeJS and Python (with Flask and Django).
@@ -38,4 +38,4 @@ I'm currently in GMT+5, but to move to GMT+2 (or GMT+3) soon. I'm mostly looking
 
 I'm really looking for an interesting new job right now. At the moment, I'm only considering options with remote work or relocation.
 
-- A <a class="external" href="https://raw.githubusercontent.com/lilliputten/lilliputten.github.io/master/site/cv-lilliputten-2023-v1-1-3.pdf" title="External PDF link (~50K)" target="_blank">printable CV</a> is available (pdf, ~50K).
+- A <a class="external" href="/static/docs/cv-lilliputten-2024-v1-1-1.pdf" title="PDF document (~50K)" target="_blank">printable CV</a> is available (PDF, ~50K).
