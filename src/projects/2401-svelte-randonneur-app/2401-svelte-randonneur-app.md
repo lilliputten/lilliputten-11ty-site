@@ -8,7 +8,7 @@ eleventyNavigation:
   title: Randonneour Data Browser
 # permalink: /projects/
 # eleventyExcludeFromCollections: true
-date: 2024-06-20
+date: 2024-06-19
 # tag: false
 showNavigationBreadcrumbs: true
 tags:

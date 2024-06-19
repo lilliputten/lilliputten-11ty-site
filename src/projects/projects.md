@@ -7,7 +7,7 @@ eleventyNavigation:
   key: projects
   title: Projects
 # eleventyExcludeFromCollections: true
-date: 2024-05-17
+date: 2024-06-19
 # tag: false
 tags:
   - site
@@ -15,7 +15,7 @@ tags:
 ---
 
 <!--
-@changed 2024.06.18, 11:47
+@changed 2024.06.20, 01:01
 -->
 
 ## Selected projects
@@ -26,7 +26,7 @@ Below are a few ongoing or finished projects.
 
 ### Web applications and interfaces
 
-[Randonneour Data Browser](2401-svelte-randonneur-app/) was made as part of a set of data manipulating and visualizing tools for the [Cauldron Solutions](https://www.cauldron.ch/) company.
+The [Randonneour Data Browser](2401-svelte-randonneur-app/) was made as part of a set of data manipulating and visualizing tools for the [Cauldron Solutions](https://www.cauldron.ch/) company.
 
 ## Projects from the old portfolio page
 
