@@ -8,7 +8,8 @@ date: 2024-01-31
 # tag: false
 tags:
   - projects
-  - DdS
+  # - DdS
+  - cauldron
   - randonneur
   - application
   - data
@@ -36,84 +37,32 @@ The main purpose of the application is to edit data processing descriptions.
 
 ### The main screen
 
-<figure >
-  {{ macros.img('./images/main-page.png') }}
-  <figcaption>
-    The main page of the application with a selection of a demo dataset.
-  </figcaption>
-</figure>
+{{ macros.imgFigure('./images/main-page.png', 'The main page of the application with a selection of a demo dataset.') }}
 
-<figure>
-  {{ macros.img('images/main-page-in-a-dark-theme-with-a-loaded-data.png') }}
-  <figcaption>
-    The main page in a dark theme with an already loaded data.
-  </figcaption>
-</figure>
+{{ macros.imgFigure('./images/main-page-in-a-dark-theme-with-a-loaded-data.png', 'The main page in a dark theme with an already loaded data.') }}
 
 ### The data tables
 
 {#
-
-<figure>
-  {{ macros.img('images/dataset-update.png') }}
-  <figcaption>
-    Dataset update
-  </figcaption>
-</figure>
+{{ macros.imgFigure('./images/dataset-update.png', 'Dataset update') }}
 #}
 
-<figure>
-  {{ macros.img('images/dataset-in-a-dark-theme.png') }}
-  <figcaption>
-    Dataset table in a dark theme.
-  </figcaption>
-</figure>
+{{ macros.imgFigure('./images/dataset-in-a-dark-theme.png', 'Dataset table in a dark theme.') }}
 
-<figure>
-  {{ macros.img('images/edit-data-record.png') }}
-  <figcaption>
-    Editing data entry in a pop-up dialog box.
-  </figcaption>
-</figure>
+{{ macros.imgFigure('./images/edit-data-record.png', 'Editing data entry in a pop-up dialog box.') }}
 
 ### The data filters
 
-<figure>
-  {{ macros.img('images/filter-simple.png') }}
-  <figcaption>
-    The basic text filter for the column.
-  </figcaption>
-</figure>
+{{ macros.imgFigure('./images/filter-simple.png', 'The basic text filter for the column.') }}
 
 {#
-
-<figure>
-  {{ macros.img('images/filter-selection.png') }}
-  <figcaption>
-    Basic filter selection
-  </figcaption>
-</figure>
-<figure>
-  {{ macros.img('images/filter-selection-large.png') }}
-  <figcaption>
-    Filter selection large.
-  </figcaption>
-</figure>
+{{ macros.imgFigure('./images/filter-selection.png', 'Basic filter selection') }}
+{{ macros.imgFigure('./images/filter-selection-large.png', 'Filter selection large.') }}
 #}
 
-<figure>
-  {{ macros.img('images/filter-selection-unit.png') }}
-  <figcaption>
-    Filtering the column of units of measurement.
-  </figcaption>
-</figure>
+{{ macros.imgFigure('./images/filter-selection-unit.png', 'Filtering the column of units of measurement.') }}
 
-<figure>
-  {{ macros.img('images/miltiple-filters.png') }}
-  <figcaption>
-    Several filters have been applied to the data table.
-  </figcaption>
-</figure>
+{{ macros.imgFigure('./images/miltiple-filters.png', 'Several filters have been applied to the data table.') }}
 
 ## Used technologies
 

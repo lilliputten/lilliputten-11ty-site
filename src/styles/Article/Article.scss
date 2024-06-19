@@ -79,10 +79,12 @@
       max-width: 100%;
       height: auto;
       display: inline-block;
-      transition: filter $transitionTimeMs;
+      transition: all $transitionTimeMs;
       filter: grayscale(30%) brightness(0.95);
+      opacity: .95;
       &:hover {
         filter: grayscale(30%) brightness();
+        opacity: 1;
       }
     }
     figcaption {

@@ -67,7 +67,7 @@ const prepareImages = async (rawContent, outputPath) => {
 
   if (outputPath && outputPath.endsWith('.html')) {
     const dom = new JSDOM(content);
-    const images = [...dom.window.document.querySelectorAll('.article img')];
+    const images = [...dom.window.document.querySelectorAll('.Article img')];
 
     if (images.length > 0) {
       await Promise.all(images.map((i) => processImage(i, outputPath)));

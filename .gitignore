@@ -26,5 +26,4 @@ yarn-error.log*
 *.tgz
 
 # 11ty
-/assets
 # /compiled-assets

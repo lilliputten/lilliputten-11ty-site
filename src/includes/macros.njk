@@ -16,3 +16,10 @@
 {% macro img(src, alt = '') %}
   <img src="{{ src }}" alt="{{ alt }}" loading="lazy" decoding="async" />
 {% endmacro %}
+
+{% macro imgFigure(src, text = '', alt = '') %}
+  <figure >
+    {{ img(src, alt or text) }} <figcaption>{{ text }}</figcaption>
+  </figure>
+{% endmacro %}
+

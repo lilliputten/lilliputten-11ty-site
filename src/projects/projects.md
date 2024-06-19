@@ -23,7 +23,7 @@ Below are a few ongoing or finished projects.
 
 ### Web applications and interfaces
 
-- [Svelte Randonneur App](2401-svelte-randonneur-app/) was made as part of a set of data manipulating tools for [Départ de Sentier (DdS)](https://www.d-d-s.ch/) non profit organization.
+[Randonneour Data Browser](2401-svelte-randonneur-app/) was made as part of a set of data manipulating and visualizing tools for the [Cauldron Solutions](https://www.cauldron.ch/) company.
 
 ## Projects from the old portfolio page
 
