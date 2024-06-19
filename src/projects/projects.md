@@ -25,7 +25,6 @@ Below are a few ongoing or finished projects.
 
 - [Svelte Randonneur App](2401-svelte-randonneur-app/) was made as part of a set of data manipulating tools for [Départ de Sentier (DdS)](https://www.d-d-s.ch/) non profit organization.
 
-
 ## Projects from the old portfolio page
 
 - [360caster MVP web application](https://lilliputten.github.io/#/Projects/Web/2308-360caster-mvp). My partner and I made the MVP application for our last startup project 360caster. The application is designed for conducting virtual 3D excursions and tours of premises and objects previously filmed with high quality, mainly for museums and exhibition spaces. (2023)
