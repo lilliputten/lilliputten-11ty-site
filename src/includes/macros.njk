@@ -19,7 +19,6 @@
 
 {% macro imgFigure(src, text = '', alt = '') %}
   <figure>
-    {{ img(src, alt or text) }}
-    <figcaption>{{ text }}</figcaption>
+    {{ img(src, alt or text) }} <figcaption>{{ text }}</figcaption>
   </figure>
 {% endmacro %}

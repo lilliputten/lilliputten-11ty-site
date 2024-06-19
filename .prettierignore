@@ -38,3 +38,4 @@ package-lock.*
 
 # Ignore specific files
 /src/includes/sw.njk
+/src/includes/macros.njk

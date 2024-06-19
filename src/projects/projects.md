@@ -15,7 +15,7 @@ tags:
 ---
 
 <!--
-@changed 2024.06.20, 01:01
+@changed 2024.06.20, 01:08
 -->
 
 ## Selected projects
@@ -24,11 +24,15 @@ Currently I'm working for our own startup project, 360caster, for interactive mu
 
 Below are a few ongoing or finished projects.
 
+## Recent projects
+
+- The [Randonneour Data Browser](2401-svelte-randonneur-app/) was made as part of a set of data manipulating and visualizing tools for the [Cauldron Solutions](https://www.cauldron.ch/) company.
+
+## Archived projects
+
+These projects are from the old portfolio page and located on my gitpages site. {.comment}
+
 ### Web applications and interfaces
-
-The [Randonneour Data Browser](2401-svelte-randonneur-app/) was made as part of a set of data manipulating and visualizing tools for the [Cauldron Solutions](https://www.cauldron.ch/) company.
-
-## Projects from the old portfolio page
 
 - [360caster MVP web application](https://lilliputten.github.io/#/Projects/Web/2308-360caster-mvp). My partner and I made the MVP application for our last startup project 360caster. The application is designed for conducting virtual 3D excursions and tours of premises and objects previously filmed with high quality, mainly for museums and exhibition spaces. (2023)
 - [Online multi-user text quiz game](https://lilliputten.github.io/#/Projects/Web/2301-online-quiz) Online multiuser quiz game developed on Flask (Python) at server-side and NextJS application for my Russian clients. See [client](https://github.com/lilliputten/tournament-game-client) and [server](https://github.com/lilliputten/tournament-game-server) repositories, demo application will be available soon. (January 2023) _(NextJS, Flask, TinyDB)_

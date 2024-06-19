@@ -289,6 +289,8 @@ module.exports = function (config) {
   const anchor = require('markdown-it-anchor');
   const mdIterator = require('markdown-it-for-inline');
 
+  const markdownItAttrs = require('markdown-it-attrs');
+
   // @see https://markdown-it.github.io/markdown-it/
   const mdOptions = {
     html: true,
@@ -333,6 +335,12 @@ module.exports = function (config) {
         // console.log('[markdownIt:slugify]', text, '->', newText);
         return newText;
       },
+    })
+    .use(markdownItAttrs, {
+      // optional, these are default options
+      leftDelimiter: '{',
+      rightDelimiter: '}',
+      allowedAttributes: [], // empty array = all attributes are allowed
     })
     .disable('code');
   config.setLibrary('md', md);

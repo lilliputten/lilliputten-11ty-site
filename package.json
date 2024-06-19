@@ -69,6 +69,7 @@
     "lint-staged": "^15.2.2",
     "live-server": "^1.2.2",
     "markdown-it-anchor": "^9.0.1",
+    "markdown-it-attrs": "^4.1.6",
     "markdown-it-for-inline": "^2.0.1",
     "mini-css-extract-plugin": "^2.9.0",
     "minify-xml": "^4.4.1",
