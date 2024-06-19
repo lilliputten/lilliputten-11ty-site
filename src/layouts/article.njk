@@ -58,6 +58,7 @@ layout: page.njk
     {% set previousPost = collections.chunk | getPreviousCollectionItem(page) %}
     {% set nextPost = collections.chunk | getNextCollectionItem(page) %}
     <div class="ArticleNav">
+      {# TODO! #}
       {% if previousPost %}
         <a href="{{ previousPost.url }}" class="ArticleNavButton articlePrev"
           >{{ previousPost.data.title }}</a

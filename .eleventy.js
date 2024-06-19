@@ -1,4 +1,8 @@
 // @ts-check
+/**
+ * @module .eleventy.js
+ * @changed 2024.06.19, 21:04
+ */
 
 const fs = require('fs');
 
@@ -300,12 +304,16 @@ module.exports = function (config) {
       if (attrName !== 'href' || !href) {
         return;
       }
-      if (href.startsWith('https:') || href.startsWith('http:') || href.startsWith('mailto:')) {
-        tokens[idx].attrPush(['class', 'external']);
-        tokens[idx].attrPush(['title', 'External link: ' + href]);
-      }
-      if (href.startsWith('mailto:')) {
-        tokens[idx].attrPush(['class', 'mail']);
+      const isHttpLink = href.startsWith('https:') || href.startsWith('http:');
+      const isMailLink = href.startsWith('mailto:');
+      if (isHttpLink || isMailLink) {
+        const className = ['external', isMailLink && 'mail'].filter(Boolean).join(' ');
+        tokens[idx].attrPush('class', className);
+        tokens[idx].attrPush(['class', className]);
+        tokens[idx].attrPush([
+          'title',
+          (isMailLink ? 'Mail address' : 'External link') + ': ' + href,
+        ]);
       }
     })
     // @ts-ignore: Wrong typings?
@@ -322,7 +330,7 @@ module.exports = function (config) {
           .toLowerCase()
           .trim()
           .replace(/\W/g, '-');
-        console.log('[markdownIt:slugify]', text, '->', newText);
+        // console.log('[markdownIt:slugify]', text, '->', newText);
         return newText;
       },
     })
