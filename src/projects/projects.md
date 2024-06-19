@@ -1,9 +1,12 @@
 ---
-title: Projects
 layout: article.njk
 permalink: /projects/
-# eleventyExcludeFromCollections: true
+title: Projects
 description: Projects page
+eleventyNavigation:
+  key: projects
+  title: Projects
+# eleventyExcludeFromCollections: true
 date: 2024-05-17
 # tag: false
 tags:

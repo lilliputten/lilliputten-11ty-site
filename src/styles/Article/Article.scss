@@ -8,6 +8,7 @@
 @import '../shared';
 
 .Article {
+  margin-top: 1em;
   ::marker {
     color: $primaryColor;
   }
@@ -24,9 +25,10 @@
     margin: 2rem 0;
     margin-top: 2.5rem;
   }
-  // .ArticleTitle {
-  //   // margin-bottom: 2rem;
-  // }
+  .ArticleTitle {
+    margin-top: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
   // .ArticleDescription {
   // }
   .ArticleMeta {
@@ -68,6 +70,50 @@
       }
     }
   }
+  .ArticleBreadcrumbs {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    li {
+      display: flex;
+      align-items: center;
+      a {
+        display: inline-block;
+        transition: all $transitionTimeMs;
+        &:not(.home):not(:hover) {
+          @include LinkAsText;
+        }
+        &:not(:hover) {
+          text-decoration: none;
+          opacity: 0.5;
+        }
+        &.home {
+          text-decoration: none;
+          $size: 1em;
+          width: $size;
+          height: $size;
+          background-image: url('/static/images/logo/sq/ll-cir-tr-r.svg');
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          &:not(:hover) {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+    li + li.hasParent {
+      &:before {
+        display: inline-block;
+        content: '>';
+        opacity: 0.5;
+        margin-right: 0.4em;
+      }
+    }
+  }
   figure {
     margin: 0;
     display: flex;
@@ -81,7 +127,8 @@
       display: inline-block;
       transition: all $transitionTimeMs;
       filter: grayscale(30%) brightness(0.95);
-      opacity: .95;
+      border-radius: 4px;
+      opacity: 0.95;
       &:hover {
         filter: grayscale(30%) brightness();
         opacity: 1;

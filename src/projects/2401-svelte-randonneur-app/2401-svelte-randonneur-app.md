@@ -1,26 +1,31 @@
 ---
-title: Randonneour Data Browser
 layout: article.njk
+title: Randonneour Data Browser
+description: Dataflow editing application
+eleventyNavigation:
+  key: 2401-svelte-randonneur-app
+  parent: projects
+  title: Randonneour Data Browser
 # permalink: /projects/
 # eleventyExcludeFromCollections: true
-description: Dataflow editing application
-date: 2024-01-31
+date: 2024-06-20
 # tag: false
+showNavigationBreadcrumbs: true
 tags:
   - projects
   # - DdS
-  - cauldron
+  - Cauldron
   - randonneur
   - application
   - data
   - manipuation
   - svelte
   - svelte-headless-table
-  - svelteui.dev
+  - svelteui
 ---
 
 <!--
-@changed 2024.06.19, 20:53
+@changed 2024.06.20, 00:52
 -->
 
 {% import "macros.njk" as macros with context %}

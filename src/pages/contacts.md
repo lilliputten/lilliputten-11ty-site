@@ -6,6 +6,8 @@ permalink: /contacts/
 description: Contacts page
 date: 2024-06-18
 # tag: false
+eleventyNavigation:
+  key: contacts
 tags:
   - site
   - contacts

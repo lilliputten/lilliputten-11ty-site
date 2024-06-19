@@ -339,6 +339,10 @@ module.exports = function (config) {
 
   // Plugins
 
+  // @see https://www.11ty.dev/docs/plugins/navigation
+  const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
+  config.addPlugin(eleventyNavigationPlugin);
+
   config.addPlugin(require('eleventy-plugin-reading-time'));
 
   config.addPlugin(require('@11ty/eleventy-plugin-syntaxhighlight'), {
