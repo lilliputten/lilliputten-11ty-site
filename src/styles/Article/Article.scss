@@ -32,7 +32,7 @@
   .ArticleMeta {
     display: flex;
     flex-wrap: wrap;
-    gap: .2em 1em;
+    gap: 0.2em 1em;
     opacity: 0.7;
     .metaItem {
       span {
@@ -45,7 +45,7 @@
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 0.2em;
+    gap: 0.3em 0.2em;
     // font-size: 95%;
     li {
       display: inline-block;
@@ -66,6 +66,29 @@
       &:hover {
         opacity: 1;
       }
+    }
+  }
+  figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    margin-bottom: 1em;
+    img {
+      box-shadow: 0 0 1px 0 gray;
+      max-width: 100%;
+      height: auto;
+      display: inline-block;
+      transition: filter $transitionTimeMs;
+      filter: grayscale(30%) brightness(0.95);
+      &:hover {
+        filter: grayscale(30%) brightness();
+      }
+    }
+    figcaption {
+      // font-size: 95%;
+      opacity: 0.75;
+      font-weight: 300;
     }
   }
 }

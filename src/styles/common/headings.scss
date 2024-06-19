@@ -35,3 +35,9 @@ h6 {
     }
   }
 }
+h3,
+h4 {
+  @include ThemedText;
+  opacity: 0.75;
+  // font-size: 100%;
+}
