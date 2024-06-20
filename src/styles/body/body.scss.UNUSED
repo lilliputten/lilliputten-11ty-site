@@ -8,5 +8,4 @@
 @import '../shared';
 
 body {
-  font-family: $defaultFontFamily;
 }

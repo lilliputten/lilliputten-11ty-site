@@ -30,8 +30,12 @@ $screenMdMax: map.get($grid-breakpoints, 'lg'); // 992px
 $screenLgMax: map.get($grid-breakpoints, 'xl'); // 1200px
 $screenXlMax: map.get($grid-breakpoints, 'xxl'); // 1400px
 
-$mainColumnWidth: $screenMdMin; // 700px;
-$maxColumnWidth: $screenLgMin; // 1000px;
+// $mainColumnWidth: $screenMdMin; // 700px;
+// $maxColumnWidth: $screenLgMin; // 1000px;
+$mainColumnWidth: 700px;
+$mainColumnMaxWidth: calc($mainColumnWidth + 50px);
+$maxColumnWidth: 1000px;
+$mobileBorderWidth: 15px;
 
 // Collapsable widths...
 

@@ -1,18 +1,22 @@
 /**
  * @module PageFooter
- * @changed 2024.06.15, 21:58
+ * @changed 2024.06.21, 03:49
  */
 
 @import '../shared';
 
 .PageFooter {
-  [data-page='regular'] & {
-    border-top: 1px solid $primaryColor;
-  }
   width: 100%;
-  margin-top: 1em;
-  padding-top: 1em;
-  padding-bottom: 1em;
+  max-width: $mainColumnWidth;
+  padding: 1em;
+  margin: 0 auto;
+
+  @media (min-width: calc($mainColumnWidth + 2em)) {
+    padding: 1em 0;
+  }
+  @media (min-width: calc($mainColumnWidth + 2em)) {
+    padding: 1em 0;
+  }
 
   font-size: 95%;
 
@@ -20,7 +24,11 @@
     text-decoration: none;
   }
 
-  .FooterInfo {
+  .FooterContainer {
+    [data-page='regular'] & {
+      border-top: 1px solid $primaryColor;
+      padding-top: 1em;
+    }
     display: flex;
     gap: 0.2em 2em;
     justify-content: space-between;
@@ -29,9 +37,11 @@
     [data-page='main'] & {
       justify-content: center;
     }
-    @media (min-width: $screenSmMin) {
+    text-align: center;
+    @media (min-width: $mainColumnWidth) {
       flex-direction: row;
       align-items: flex-start;
+      text-align: left;
     }
   }
 
@@ -55,10 +65,6 @@
     align-items: center;
     gap: 0.5em;
     display: inline-flex;
-    // color: $defaultTextColor;
-    // [data-theme='dark'] & {
-    //     color: $defaultTextColor;
-    // }
     i {
       opacity: 0.5;
     }

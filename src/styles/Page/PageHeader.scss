@@ -1,20 +1,18 @@
 /**
  * @module PageHeader
- * @changed 2024.06.18, 15:35
+ * @changed 2024.06.21, 03:49
  */
 
 @import '../shared';
 
 .PageHeader {
-  z-index: $overContentZIndex;
-  position: fixed;
   width: 100%;
   display: flex;
   gap: 1em;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  flex: 1;
+  padding: 0 1em;
 
   // Adjust main height
   padding-top: 1em;
@@ -32,6 +30,16 @@
   [data-page='main'] .wideView & {
     justify-content: center;
     top: -2rem;
+  }
+
+  .PageHeaderWrapper {
+    display: flex;
+    // flex-direction: row;
+    justify-content: space-between;
+    // align-items: center;
+    align-items: stretch;
+    width: 100%;
+    max-width: 700px;
   }
 
   [data-page='regular'] .wideView & {
@@ -53,15 +61,13 @@
     justify-content: flex-start;
     top: 0;
     .PageHeaderWrapper {
+      flex-direction: column;
       justify-content: center;
+      align-items: center;
       .PageHeaderLogo {
         display: none;
       }
     }
-  }
-
-  .PageHeaderWrapper {
-    align-items: stretch;
   }
 
   .PageHeaderBrand {

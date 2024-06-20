@@ -12,8 +12,8 @@ layout: page.njk
           <time
             class="metaItem articleDatetime"
             datetime="{{ page.date.toISOString() }}"
-            title="Last document modification date"
-            ><span>Last changes:</span> {{ page.date | readableDate }}</time
+            title="Document date"
+            ><span>Date:</span> {{ page.date | readableDate }}</time
           >
         {% endif %}
         <div
