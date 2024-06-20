@@ -1,0 +1,102 @@
+The main application goal is to edit data processing descriptions
+The main purpose of the application is to edit data processing descriptions.
+
+Prompt:
+
+Please provide a description of the web application  for my portfolio page.
+I created recently the application recently for my partner and want to show its features and my skills.
+
+In total, ask me four to six distinct questions to gather information about the application and to learn about my strengths what I can to show on my page.
+
+---
+
+GPT: Absolutely, let's get started! Here are the first two questions:
+
+1. What is the primary purpose of the web application you created for your partner?
+
+2. What specific technologies and tools did you use to develop this application?
+
+---
+
+The application is designed to view and modify data describing the changes that will be applied to environmental sustainability processes. It should use graphical user-friendly interface to navigate and change different types of data.
+
+There allowed a few types of operations, which could be described by different tables:
+
+- Create datasets
+- Delete
+- Disaggregate
+- Mapping
+- Replace
+- Update
+
+The user could edit this data separately in the form of tables, where each row represented a data object.
+
+A set of editable metadata properties was also available.
+
+I used the following technologies:
+
+- Svelte -- Front-end software framework.
+- SvelteUI -- An UI kit library.
+- Svelte Headless Table -- Modified table manipulation library.
+
+---
+
+GPT: Great, let's continue with the next two questions:
+
+3. Can you describe any unique challenges you faced during the development of this application and how you overcame them?
+
+4. How does your application ensure data accuracy and integrity when users are modifying the environmental sustainability data?
+
+---
+
+It was necessary to create a user-friendly data editing interface that allows the user to work with various data objects and entities: nested objects, selectors (for categorical data such as units and categories) and plain data entries.
+
+We had to change the table manipulation library to support SSR mode, allow multi-level data identifiers (for rows representing nested objects) and provide more detailed information about the data through the API to implement more correct pagination.
+
+We have implemented various types of data filtering: raw text and categorical filters. It was possible to apply several filters at the same time.
+
+The user could upload both his own data and use predefined demo/test datasets.
+
+The user must be able to export the modified data in json format.
+
+---
+
+GPT: 5. How did you ensure the application is scalable and can handle a growing amount of data and users?
+
+To ensure the application is scalable, we focused on optimizing the front-end performance. Using Svelte, we created a highly efficient and responsive user interface. The application employs techniques like efficient pagination to manage large datasets smoothly. By modifying the Svelte Headless Table library, we could support multi-level data identifiers and provide a robust API, which allowed for more detailed and accurate pagination. These optimizations ensure the application can handle increasing amounts of data and users without compromising performance.
+
+GPT: 6. Can you describe any potential improvements or future features you plan to implement based on your initial development experience?
+
+Based on the initial development experience, we plan to implement several future improvements to enhance the application further. One of the key areas is the user interface; we aim to add more customization options and advanced filtering capabilities to make data manipulation even more intuitive.
+
+Additionally, we plan to incorporate different operation types, to allow data objects to be arrays.
+
+Another potential improvement is to improve mobile UX.
+
+These enhancements will ensure the application remains versatile and user-friendly as it evolves.
+
+---
+
+Final description:
+
+Web Application for Environmental Sustainability Data Management
+
+This web application is designed to view and modify data describing changes that will be applied to environmental sustainability processes. It features a graphical, user-friendly interface to navigate and change different types of data. Users can perform various operations, such as creating datasets, deleting entries, disaggregating data, mapping, replacing, and updating information.
+
+## Technologies Used:
+
+- Svelte: A front-end software framework that provides a highly efficient and responsive user interface.
+- SvelteUI: A UI kit library for a consistent and visually appealing design.
+- Svelte Headless Table: A modified table manipulation library supporting server-side rendering, multi-level data identifiers, and detailed data pagination.
+
+## Scalability:
+
+We focused on optimizing front-end performance to ensure scalability. The application employs efficient pagination techniques to manage large datasets smoothly. By modifying the Svelte Headless Table library, we supported multi-level data identifiers and provided a robust API for accurate pagination. These optimizations ensure the application can handle increasing amounts of data and users without compromising performance.
+
+## Future Improvements:
+
+Based on the initial development experience, we plan to implement several enhancements:
+
+- Adding more customization options and advanced filtering capabilities to make data manipulation more intuitive.
+- Incorporating different operation types to allow data objects to be arrays.
+- Improving the mobile user experience (UX) to ensure versatility and user-friendliness as the application evolves.

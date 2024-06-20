@@ -32,6 +32,12 @@
     .wideView & {
       background-position: left center;
     }
+    & {
+      opacity: 0.8;
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
   [data-page='main'] & {
     width: 1.75em;

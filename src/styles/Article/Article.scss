@@ -124,11 +124,11 @@
       height: auto;
       display: inline-block;
       transition: all $transitionTimeMs;
-      filter: grayscale(30%) brightness(0.95);
+      filter: grayscale(30%) brightness(0.9);
       border-radius: 4px;
-      opacity: 0.95;
+      opacity: 0.8;
       &:hover {
-        filter: grayscale(30%) brightness();
+        filter: grayscale(10%) brightness();
         opacity: 1;
       }
     }
@@ -145,6 +145,7 @@
     }
     .comment {
       opacity: 0.5;
+      font-style: italic;
       letter-spacing: 0.1rem;
     }
   }

@@ -17,6 +17,12 @@ function updateShowNavigation() {
   // Compare width (from css variables):
   const mobileView = docWidth < maxMobileWidth;
   const showNavigation = mobileView && showNavbarContent;
+  /* console.log('[navigation:updateShowNavigation]', {
+   *   showNavigation,
+   *   showNavbarContent,
+   *   mobileView,
+   * });
+   */
   // TODO: To use local variable if no `navbarContent` is available?
   body.classList.toggle('mobileView', mobileView);
   body.classList.toggle('wideView', !mobileView);
