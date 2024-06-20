@@ -43,7 +43,7 @@ module.exports = function (config) {
           tags = [tags];
         }
         for (const tag of tags) {
-          set.add(tag);
+          set.add(String(tag));
         }
       }
     }
@@ -166,7 +166,7 @@ module.exports = function (config) {
       return array;
     }
 
-    return array.filter((item) => 'tags' in item.data && item.data.tags.includes(tag));
+    return array.filter((item) => 'tags' in item.data && item.data.tags.map(String).includes(tag));
   });
 
   config.addFilter('isCyrillic', function (input) {

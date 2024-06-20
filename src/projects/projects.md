@@ -26,7 +26,7 @@ Below are a few ongoing or finished projects.
 
 ## Recent projects
 
-- The [Randonneour Data Browser](2401-svelte-randonneur-app/) was made as part of a set of data manipulating and visualizing tools for the [Cauldron Solutions](https://www.cauldron.ch/) company.
+- The [Randonneour Data Browser](2024/svelte-randonneur-app) was made as part of a set of data manipulating and visualizing tools for the [Cauldron Solutions](https://www.cauldron.ch/) company.
 
 ## Archived projects
 

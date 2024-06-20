@@ -73,7 +73,7 @@
     list-style: none;
     display: flex;
     align-items: center;
-    gap: 0.5em;
+    gap: 0.4em;
     li {
       display: flex;
       align-items: center;
@@ -89,6 +89,7 @@
         }
         &.home {
           text-decoration: none;
+          margin-right: 0.2em;
           $size: 1em;
           width: $size;
           height: $size;
@@ -105,9 +106,9 @@
     li + li.hasParent {
       &:before {
         display: inline-block;
-        content: '>';
-        opacity: 0.5;
-        margin-right: 0.4em;
+        content: '›';
+        opacity: 0.3;
+        margin-right: 0.3em;
       }
     }
   }

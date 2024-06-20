@@ -4,6 +4,7 @@ layout: page.njk
 
 <article class="Article Collection">
   <div class="ArticleHead">
+    {% include "navigationBreadcrumbs.njk" %}
     <h1 class="ArticleTitle">{{ title }}</h1>
     {% if description %}
       <p class="ArticleDescription">{{ description }}</p>
@@ -31,6 +32,7 @@ layout: page.njk
           </div>
           <div class="CollectionItemTags tags">
             <span class="Label">Tags:</span>
+            {# {{ item.data.tags | dump | safe }} #}
             {%- for tag in item.data.tags | filterTags -%}
               <span class="tagsItem">
                 <a class="linkAsText" href="/tags/{{ tag }}/">{{ tag }}</a>

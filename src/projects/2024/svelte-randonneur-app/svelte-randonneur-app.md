@@ -3,9 +3,9 @@ layout: article.njk
 title: Randonneour Data Browser
 description: Dataflow editing application
 eleventyNavigation:
-  key: 2401-svelte-randonneur-app
-  parent: projects
+  key: svelte-randonneur-app
   title: Randonneour Data Browser
+  parent: projects-2024
 # permalink: /projects/
 # eleventyExcludeFromCollections: true
 date: 2024-06-19
@@ -13,8 +13,9 @@ date: 2024-06-19
 showNavigationBreadcrumbs: true
 tags:
   - projects
-  # - DdS
-  - Cauldron
+  - '2024'
+  # - dds
+  - cauldron
   - randonneur
   - application
   - data
