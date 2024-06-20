@@ -1,6 +1,6 @@
 /**
  * @module bodyThemes
- * @changed 2024.06.15, 21:46
+ * @changed 2024.06.21, 03:59
  */
 
 @use 'sass:color';
@@ -41,21 +41,16 @@ body,
   a {
     $color: #fff;
     color: $color;
-    // transition: opacity $transitionTimeMs;
     opacity: 0.8;
     &:hover {
-      color: $primaryLightenColor;
-      // color: $color;
+      color: $primaryColor;
       opacity: 1;
-      // color: color.adjust($color, $alpha: -0.2);
     }
   }
 }
 
 body .onRed,
 .onRed {
-  // color: color.mix($primaryColor, #fff, 25%);
-  // color: color.change(#fff, $alpha: .6); // dark
   $color: #fff;
   color: color.change($color, $alpha: 0.8);
   a {
@@ -68,8 +63,4 @@ body .onRed,
 
 .linkAsText {
   @include LinkAsText;
-  // color: $defaultTextColor;
-  // [data-theme='dark'] & {
-  //   color: $defaultTextOnDarkColor;
-  // }
 }
