@@ -22,6 +22,7 @@
 // Adopted from
 // https://github.com/ampproject/amp-toolbox/blob/0c8755016ae825b11b63b98be83271fd14cc0486/packages/optimizer/lib/transformers/AddBlurryImagePlaceholders.js
 
+const path = require('path');
 const { promisify } = require('util');
 const sharp = require('sharp');
 const imageSize = promisify(require('image-size'));
