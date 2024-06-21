@@ -56,6 +56,7 @@ const processImage = async (img, outputPath) => {
      */
     dimensions = await imageSize(imageSrc);
   } catch (_e) {
+    // eslint-disable-next-line no-console
     console.warn('[img-prepare:processImage:imageSrc:error]', _e.message, {
       originalSrc,
       fullSrc,

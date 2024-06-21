@@ -2,9 +2,6 @@
 // @ts-check
 /// <reference path="../scripts/@types/THTMLNode.d.ts" />
 
-// NOTE: Prevent firefox FOUC...
-// var FF_FOUC_FI; // eslint-disable-line no-unused-vars
-
 (function updateThemeWrapper() {
   function updateTheme() {
     var body = window.document.body;

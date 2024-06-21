@@ -5,10 +5,8 @@ layout: layout.njk
 <article class="Article MainPageContent">
   {% include "MainPageLogo.njk" %}
   <div class="MainPageDescription">
-    <p>
-      Hello, my name is <a href="/about/">Igor</a> and I'm a front-end developer.<br />
-      Here is my small <a href="/projects/">portfolio and selected projects</a>.
-    </p>
+    {# Main page content #}
+    {{ content | safe }}
   </div>
 </article>
 

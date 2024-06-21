@@ -1,6 +1,6 @@
 /**
  * @module PageHeaderToolbar
- * @changed 2024.06.16, 23:31
+ * @changed 2024.06.22, 03:54
  */
 
 @use 'sass:color';
@@ -13,11 +13,6 @@
   margin: 0;
   padding: 0;
   list-style: none;
-
-  @media (min-width: $screenMdMin) {
-    // border: 1px solid green;
-    // order: 99;
-  }
 
   $itemSize: 2em;
 
@@ -32,6 +27,9 @@
     height: $itemSize;
     border-radius: 50%;
     text-decoration: none;
+    .onRed & {
+      opacity: 0.5;
+    }
     &,
     & i {
       display: flex;
@@ -40,21 +38,19 @@
     }
     background-color: transparent;
     border: 1px solid transparent;
-    // border: 1px solid color.change(#fff, $alpha: 0.5);
-    // & {
-    //   transition: all $transitionTimeMs;
-    // }
     &,
     & i {
       transition: all 100ms;
     }
     &:hover {
+      opacity: 1;
       background-color: color.change(#fff, $alpha: 0.1);
-      // border: 1px solid color.change(#fff, $alpha: 0.5);
       i {
         transform: scale(1.2);
-        // font-size: 110%;
       }
+    }
+    &:active {
+      background-color: color.change(#fff, $alpha: 0.5);
     }
   }
 }

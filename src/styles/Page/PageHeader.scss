@@ -34,14 +34,18 @@
 
   .PageHeaderWrapper {
     display: flex;
-    // flex-direction: row;
     justify-content: space-between;
-    // align-items: center;
     align-items: stretch;
     width: 100%;
     max-width: 700px;
   }
 
+  [data-page='regular'] :not(.wideView) & {
+    .PageHeaderWrapper {
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+  }
   [data-page='regular'] .wideView & {
     // ATTENTION: Adjust header elements to fit main content column width
     .PageHeaderWrapper {
@@ -75,7 +79,6 @@
     display: flex;
     align-items: center;
     justify-content: stretch;
-    // border: 1px solid green; // DEBUG
     [data-page='main'] body:not(.mobileView) & {
       width: 2.5em;
     }
@@ -83,7 +86,6 @@
       flex: 1;
     }
     .navbar-toggler {
-      // display: flex;
       align-items: center;
       justify-content: center;
       $size: 2.75em;
