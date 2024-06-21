@@ -36,12 +36,14 @@ const processImage = async (img, outputPath) => {
       fullSrc = fullSrc.replace(/\\/g, '/');
     }
   }
+  // eslint-disable-next-line no-console
+  console.log('[img-prepare:processImage:tagName]', img.tagName, fullSrc, originalSrc); // , dimensions);
   let dimensions;
   try {
     const fname = path.posix.join(SITE_PATH, fullSrc);
     dimensions = await imageSize(fname);
-  } catch (_e) {
-    // console.warn(_e.message, img, outputPath);
+  } catch (e) {
+    console.warn('[img-prepare:processImage:imageSize error]', e.message, img, outputPath);
     return;
   }
   if (!img.getAttribute('width')) {
@@ -51,8 +53,6 @@ const processImage = async (img, outputPath) => {
   if (dimensions.type === 'svg') {
     return;
   }
-  // eslint-disable-next-line no-console
-  console.log('[img-prepare:processImage:tagName]', img.tagName, fullSrc, originalSrc); // , dimensions);
   if (img.tagName === 'IMG') {
     img.setAttribute('decoding', 'async');
     img.setAttribute('loading', 'lazy');
