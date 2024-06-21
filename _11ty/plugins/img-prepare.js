@@ -68,14 +68,25 @@ const processImage = async (img, outputPath) => {
   if (dimensions.type === 'svg') {
     return;
   }
+  const rootSrc = path.posix.join(ROOT_PATH, fullSrc);
   // eslint-disable-next-line no-console
-  console.log('[img-prepare:processImage]', img.tagName, originalSrc); // , dimensions);
+  console.log('[img-prepare:processImage:ready]', img.tagName, {
+    rootSrc,
+    fullSrc,
+    originalSrc,
+  });
   if (img.tagName === 'IMG') {
     img.setAttribute('decoding', 'async');
     img.setAttribute('loading', 'lazy');
-    const url = await blurryPlaceholder(fullSrc);
+    const url = await blurryPlaceholder(rootSrc);
+    console.log('[img-prepare:processImage:url]', img.tagName, {
+      url,
+      rootSrc,
+      fullSrc,
+    });
     img.setAttribute('style', 'background-size:cover;' + `background-image:url("${url}")`);
 
+    // Check for avif sources...
     const avifSrc = originalSrc.replace(/\.\w+$/, '.avif');
     // const avifFullSrc = `${SITE_PATH}` + fullSrc.replace(/\.\w+$/, '.avif');
     const avifFullSrc = path.posix.join(SITE_PATH, fullSrc.replace(/\.\w+$/, '.avif'));
