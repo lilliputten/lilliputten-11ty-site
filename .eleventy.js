@@ -16,7 +16,7 @@ module.exports = function (config) {
   config.addPassthroughCopy('src/manifest.webmanifest');
   config.addPassthroughCopy('src/fonts/*.woff2');
   config.addPassthroughCopy('static');
-  config.addPassthroughCopy('src/assets');
+  // config.addPassthroughCopy('src/assets');
   config.addPassthroughCopy('src/scripts');
   config.addPassthroughCopy('compiled-assets');
   config.addPassthroughCopy('src/**/*.(html|jpg|png|webp|avif|ico|svg|mp4|xml)');
