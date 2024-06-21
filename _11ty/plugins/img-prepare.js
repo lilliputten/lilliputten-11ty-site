@@ -33,12 +33,13 @@ const processImage = async (img, outputPath) => {
     if (path.sep === '\\') {
       fullSrc = fullSrc.replace(/\\/g, '/');
     }
-    console.log('[img-prepare:processImage:fullSrc]', fullSrc, originalSrc);
+    // console.log('[img-prepare:processImage:fullSrc]', fullSrc, originalSrc);
   }
   let dimensions;
   try {
-    const imageSrc = path.posix.join(SITE_PATH, fullSrc);
-    console.log('[img-prepare:processImage:imageSrc]', imageSrc, originalSrc);
+    const imageSrc = `${SITE_PATH}/` + fullSrc;
+    const imageSrc2 = path.posix.join(SITE_PATH, fullSrc);
+    console.log('[img-prepare:processImage:imageSrc]', imageSrc, imageSrc2, originalSrc);
     dimensions = await imageSize(imageSrc);
   } catch (_e) {
     // console.warn(e.message, src);
