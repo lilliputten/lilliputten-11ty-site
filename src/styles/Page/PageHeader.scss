@@ -80,7 +80,7 @@
     align-items: center;
     justify-content: stretch;
     [data-page='main'] body:not(.mobileView) & {
-      width: 2.5em;
+      display: none;
     }
     [data-page='regular'] & {
       flex: 1;
