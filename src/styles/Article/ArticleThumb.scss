@@ -9,58 +9,57 @@
 
 .Article .ArticleThumb {
   margin-bottom: 1em;
-  // border: 1px solid red;
-  display: flex;
-  gap: 1em;
-  $thumbSize: 120px;
-  .ArticleThumbImg {
-    width: $thumbSize;
-    height: $thumbSize;
-    background-color: color.change(gray, $alpha: 0.5);
-    border-radius: 4px;
-    filter: grayscale(30%) brightness(0.9);
-    opacity: 0.7;
-  }
-  .ArticleThumbContent {
-    flex: 1;
+  a {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    // gap: 1em;
-    > *:first-child {
-      margin-top: 0;
-    }
-    > *:last-child {
-      margin-bottom: 0;
-    }
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      margin: 0.3em 0;
-    }
-  }
-  &,
-  * {
-    transition: all $transitionTimeMs;
-    text-decoration: none;
-  }
-  &:not(:hover) {
-    &,
-    * {
-      @include LinkAsText;
-    }
-  }
-  &:hover {
-    &,
-    * {
-      color: $primaryColor;
-    }
+    gap: 1em;
     .ArticleThumbImg {
-      filter: grayscale(10%) brightness();
-      opacity: 1;
+      width: $articleThumbSize;
+      height: $articleThumbSize;
+      background-color: color.change(gray, $alpha: 0.2);
+      border-radius: 4px;
+      filter: grayscale(30%) brightness(0.9);
+      opacity: 0.7;
+    }
+    .ArticleThumbContent {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      > *:first-child {
+        margin-top: 0;
+      }
+      > *:last-child {
+        margin-bottom: 0;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin: 0.3em 0;
+      }
+    }
+    &,
+    * {
+      transition: all $transitionTimeMs;
+      text-decoration: none;
+    }
+    &:not(:hover) {
+      &,
+      * {
+        @include LinkAsText;
+      }
+    }
+    &:hover {
+      &,
+      * {
+        color: $primaryColor;
+      }
+      .ArticleThumbImg {
+        filter: grayscale(10%) brightness();
+        opacity: 1;
+      }
     }
   }
 }

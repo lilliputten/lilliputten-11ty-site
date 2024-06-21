@@ -35,7 +35,12 @@ $screenXlMax: map.get($grid-breakpoints, 'xxl'); // 1400px
 $mainColumnWidth: 700px;
 $mainColumnMaxWidth: calc($mainColumnWidth + 50px);
 $maxColumnWidth: 1000px;
+$maxColumnWidthWithGap: calc($maxColumnWidth + 250px);
 $mobileBorderWidth: 15px;
+
+$maxSideColumnWidth: 240px;
+
+$articleThumbSize: 120px;
 
 // Collapsable widths...
 

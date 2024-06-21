@@ -15,8 +15,10 @@ tags:
 ---
 
 <!--
-@changed 2024.06.20, 01:08
+@changed 2024.06.21, 21:41
 -->
+
+{% import "macros.njk" as macros with context %}
 
 ## Selected projects
 
@@ -26,30 +28,11 @@ Below are a few ongoing or finished projects.
 
 ## Recent projects
 
-- The [Randonneour Data Browser](2024/svelte-randonneur-app) was made as part of a set of data manipulating and visualizing tools for the [Cauldron Solutions](https://www.cauldron.ch/) company.
-
-<a class="ArticleThumb" href="./2024/svelte-randonneur-app">
-  <img class="ArticleThumbImg" src="./2024/svelte-randonneur-app/thumb.png" />
-  <div class="ArticleThumbContent">
-    <h3 class="ArticleThumbTitle">The Randonneour Data Browser</h3>
-    <p class="ArticleThumbDescription">The Randonneour Data Browser was made as part of a set of data manipulating and visualizing tools for the Cauldron Solutions company.</p>
-  </div>
-</a>
-
-<a class="ArticleThumb" href="2024/svelte-randonneur-app">
-  <img class="ArticleThumbImg" src="./2024/svelte-randonneur-app/thumb.png" />
-  <div class="ArticleThumbContent">
-    <h3 class="ArticleThumbTitle">The Randonneour Data Browser</h3>
-    <p class="ArticleThumbDescription">The Randonneour Data Browser was made as part of a set of data manipulating and visualizing tools for the Cauldron Solutions company.
-The Randonneour Data Browser was made as part of a set of data manipulating and visualizing tools for the Cauldron Solutions company.
-The Randonneour Data Browser was made as part of a set of data manipulating and visualizing tools for the Cauldron Solutions company.
-    </p>
-  </div>
-</a>
+{{ macros.ArticleThumb('./2024/svelte-randonneur-app', 'The Randonneour Data Browser', 'The Randonneour Data Browser was made as part of a set of data manipulating and visualizing tools for the Cauldron Solutions company.') }}
 
 ## Archived projects
 
-These projects are from the old portfolio page and located on my gitpages site. {.comment}
+All the following projects are from the old portfolio page and located on my gitpages site. {.commentRight .commentPaddedTop}
 
 ### Web applications and interfaces
 

@@ -1,3 +1,8 @@
+<!--
+@desc Misc helper macros
+@changed 2024.06.20, 01:08
+-->
+
 {% macro video(src, width, height, muted = true, loop = false) %}
   <video
     width="{{ width }}"
@@ -22,3 +27,20 @@
     {{ img(src, alt or text) }} <figcaption>{{ text }}</figcaption>
   </figure>
 {% endmacro %}
+
+{% macro ArticleThumb(path, title = '', description = '', tag = 'h3') %}
+  <div class="ArticleThumb">
+    <a href="{{ path }}">
+      <img class="ArticleThumbImg" src="{{ path }}/thumb.png" />
+      <div class="ArticleThumbContent">
+        {%- if title -%}
+          <{{ tag }} class="ArticleThumbTitle">{{ title }}</{{ tag }}>
+        {%- endif -%}
+        {%- if description -%}
+          <p class="ArticleThumbDescription">{{ description }}</p>
+        {%- endif -%}
+      </div>
+    </a>
+  </div>
+{% endmacro %}
+

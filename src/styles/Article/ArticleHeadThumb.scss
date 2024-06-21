@@ -1,0 +1,17 @@
+/**
+ * @module ArticleHeadThumb
+ * @changed 2024.06.21, 21:43
+ */
+
+@use 'sass:color';
+
+@import '../shared';
+
+.Article .ArticleHeadThumb {
+  display: inline-block;
+  width: $articleThumbSize;
+  height: $articleThumbSize;
+  background-color: color.change(gray, $alpha: 0.5);
+  border-radius: 4px;
+  filter: grayscale(10%) brightness();
+}

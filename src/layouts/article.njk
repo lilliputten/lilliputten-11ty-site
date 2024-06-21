@@ -3,9 +3,16 @@ layout: page.njk
 ---
 
 <article class="Article">
+  {% if hasThumb %}
+  <div class="ArticleHeadWrapper">
+    <img class="ArticleHeadThumb" src="./thumb.png" alt="Article thumbnail" />
+  {% endif %}
   <div class="ArticleHead">
     {% include "navigationBreadcrumbs.njk" %}
     <h1 class="ArticleTitle">{{ title }}</h1>
+    {% if description %}
+      <p class="ArticleDescription">{{ description }}</p>
+    {% endif %}
     {% if not hideMeta %}
       <div class="ArticleMeta">
         {% if page.date %}
@@ -32,6 +39,9 @@ layout: page.njk
       </div>
     {% endif %}
   </div>
+  {% if hasThumb %}
+    </div>
+  {% endif %}
   {{ content | safe }}
   <div class="ArticleFooter">
     {% if tags %}

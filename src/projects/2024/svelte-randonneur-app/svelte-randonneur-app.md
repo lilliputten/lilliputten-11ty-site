@@ -1,7 +1,8 @@
 ---
 layout: article.njk
 title: Randonneour Data Browser
-description: A web application for managing environmental sustainability data flows
+# description: A web application for managing environmental sustainability data flows
+hasThumb: true
 eleventyNavigation:
   key: svelte-randonneur-app
   title: Randonneour Data Browser
@@ -22,7 +23,7 @@ tags:
 ---
 
 <!--
-@changed 2024.06.21, 04:01
+@changed 2024.06.21, 21:38
 -->
 
 {% import "macros.njk" as macros with context %}
