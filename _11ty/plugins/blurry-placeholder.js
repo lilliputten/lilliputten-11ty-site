@@ -32,7 +32,8 @@ const readFile = promisify(require('fs').readFile);
 const writeFile = promisify(require('fs').writeFile);
 const exists = promisify(require('fs').exists);
 
-const SITE_PATH = 'build';
+const DEST_PATH = 'build';
+const SRC_PATH = 'src';
 
 const PIXEL_TARGET = 60;
 
@@ -60,9 +61,10 @@ function getCachedDataURI(src) {
 }
 
 async function getDataURI(src) {
-  console.log('[blurry-placeholder:getDataURI]', {
-    src,
-  });
+  /* console.log('[blurry-placeholder:getDataURI]', {
+   *   src,
+   * });
+   */
   const info = await imageSize(src);
   const imgDimension = getBitmapDimensions_(info.width, info.height);
   const buffer = await sharp(src)
@@ -98,16 +100,22 @@ function getBitmapDimensions_(imgWidth, imgHeight) {
   return { width: Math.round(bitmapWidth), height: Math.round(bitmapHeight) };
 }
 
-module.exports = async function (src) {
-  const filename = path.posix.join(SITE_PATH, src);
-  const cachedName = filename + '.blurred_';
+module.exports = async function blurryPlaceholder(src) {
+  const srcFilename = path.posix.join(SRC_PATH, src);
+  const destFilename = path.posix.join(DEST_PATH, src);
+  const cachedName = destFilename + '.blurred_';
+  console.log('[blurry-placeholder:blurryPlaceholder]', {
+    srcFilename,
+    destFilename,
+    cachedName,
+  });
   if (await exists(cachedName)) {
     return readFile(cachedName, {
       encoding: 'utf-8',
     });
   }
   // We wrap the blurred image in a SVG to avoid rasterizing the filter on each layout.
-  const dataURI = await getCachedDataURI(filename);
+  const dataURI = await getCachedDataURI(srcFilename);
   let svg = `<svg xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     viewBox="0 0 ${dataURI.width} ${dataURI.height}">

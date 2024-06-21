@@ -18,14 +18,17 @@ const imageSize = promisify(require('image-size'));
  * Sets width and height on each <img>
  */
 
-const SITE_PATH = 'build';
+const DEST_PATH = 'build';
+const SRC_PATH = 'src';
 
-const CURR_PATH = __dirname;
-const ROOT_PATH = path.dirname(path.dirname(CURR_PATH));
-console.log('[img-prepare:PATHS]', {
-  CURR_PATH,
-  ROOT_PATH,
-});
+/* // UNUSED: Absolute paths
+ * const CURR_PATH = __dirname.replace(/\\/g, '/');
+ * const ROOT_PATH = path.posix.dirname(path.dirname(CURR_PATH));
+ * console.log('[img-prepare:PATHS]', {
+ *   CURR_PATH,
+ *   ROOT_PATH,
+ * });
+ */
 
 const processImage = async (img, outputPath) => {
   const originalSrc = img.getAttribute('src');
@@ -36,7 +39,7 @@ const processImage = async (img, outputPath) => {
   if (/^\.+\//.test(fullSrc)) {
     // resolve relative URL
     fullSrc =
-      '/' + path.relative(`./${SITE_PATH}/`, path.resolve(path.dirname(outputPath), fullSrc));
+      '/' + path.relative(`./${DEST_PATH}/`, path.resolve(path.dirname(outputPath), fullSrc));
     if (path.sep === '\\') {
       fullSrc = fullSrc.replace(/\\/g, '/');
     }
@@ -44,21 +47,21 @@ const processImage = async (img, outputPath) => {
   }
   let dimensions;
   try {
-    // const imageSrcOld = `${SITE_PATH}/` + fullSrc;
-    const imageSrc = path.posix.join(SITE_PATH, fullSrc);
-    /* console.log('[img-prepare:processImage:imageSrc]', {
-     *   // imageSrcOld,
-     *   imageSrc,
-     *   originalSrc,
-     *   fullSrc,
-     * });
-     */
+    // const imageSrcOld = `${DEST_PATH}/` + fullSrc;
+    const imageSrc = path.posix.join(SRC_PATH, fullSrc);
+    console.log('[img-prepare:processImage:imageSrc]', {
+      // imageSrcOld,
+      imageSrc,
+      originalSrc,
+      fullSrc,
+    });
     dimensions = await imageSize(imageSrc);
   } catch (e) {
     console.warn('[img-prepare:processImage:imageSrc:error]', e.message, {
       originalSrc,
       fullSrc,
     });
+    // throw(e);
     return;
   }
   if (!img.getAttribute('width')) {
@@ -68,28 +71,28 @@ const processImage = async (img, outputPath) => {
   if (dimensions.type === 'svg') {
     return;
   }
-  const rootSrc = path.posix.join(ROOT_PATH, fullSrc);
+  // const rootSrc = path.posix.join(ROOT_PATH, fullSrc);
   // eslint-disable-next-line no-console
   console.log('[img-prepare:processImage:ready]', img.tagName, {
-    rootSrc,
+    // rootSrc,
     fullSrc,
     originalSrc,
   });
   if (img.tagName === 'IMG') {
     img.setAttribute('decoding', 'async');
     img.setAttribute('loading', 'lazy');
-    const url = await blurryPlaceholder(rootSrc);
-    console.log('[img-prepare:processImage:url]', img.tagName, {
-      url,
-      rootSrc,
+    const urlData = await blurryPlaceholder(fullSrc);
+    console.log('[img-prepare:processImage:urlData]', img.tagName, {
+      urlData: urlData.substring(0, 30) + '...',
+      // rootSrc,
       fullSrc,
     });
-    img.setAttribute('style', 'background-size:cover;' + `background-image:url("${url}")`);
+    img.setAttribute('style', 'background-size:cover;' + `background-image:url("${urlData}")`);
 
     // Check for avif sources...
     const avifSrc = originalSrc.replace(/\.\w+$/, '.avif');
-    // const avifFullSrc = `${SITE_PATH}` + fullSrc.replace(/\.\w+$/, '.avif');
-    const avifFullSrc = path.posix.join(SITE_PATH, fullSrc.replace(/\.\w+$/, '.avif'));
+    // const avifFullSrc = `${DEST_PATH}` + fullSrc.replace(/\.\w+$/, '.avif');
+    const avifFullSrc = path.posix.join(DEST_PATH, fullSrc.replace(/\.\w+$/, '.avif'));
     if (await exists(avifFullSrc)) {
       const doc = img.ownerDocument;
       const picture = doc.createElement('picture');
