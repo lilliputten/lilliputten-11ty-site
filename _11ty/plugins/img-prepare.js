@@ -1,7 +1,7 @@
 // @ts-check
 /**
  * @module img-prepare.js
- * @changed 2024.06.19, 21:04
+ * @changed 2024.06.22, 02:21
  */
 
 const { JSDOM } = require('jsdom');
@@ -33,16 +33,24 @@ const processImage = async (img, outputPath) => {
     if (path.sep === '\\') {
       fullSrc = fullSrc.replace(/\\/g, '/');
     }
-    // console.log('[img-prepare:processImage:fullSrc]', fullSrc, originalSrc);
+    console.log('[img-prepare:processImage:fullSrc]', fullSrc, originalSrc);
   }
   let dimensions;
   try {
     const imageSrcOld = `${SITE_PATH}/` + fullSrc;
     const imageSrc = path.posix.join(SITE_PATH, fullSrc);
-    console.log('[img-prepare:processImage:imageSrc]', imageSrcOld, imageSrc, originalSrc);
+    console.log('[img-prepare:processImage:imageSrc]', {
+      imageSrcOld,
+      imageSrc,
+      originalSrc,
+      fullSrc,
+    });
     dimensions = await imageSize(imageSrc);
-  } catch (_e) {
-    // console.warn(e.message, src);
+  } catch (e) {
+    console.warn('[img-prepare:processImage:imageSrc:error]', e.message, {
+      originalSrc,
+      fullSrc,
+    });
     return;
   }
   if (!img.getAttribute('width')) {
