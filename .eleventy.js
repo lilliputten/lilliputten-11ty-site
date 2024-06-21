@@ -1,7 +1,7 @@
 // @ts-check
 /**
  * @module .eleventy.js
- * @changed 2024.06.19, 21:04
+ * @changed 2024.06.21, 19:04
  */
 
 const fs = require('fs');
@@ -161,11 +161,45 @@ module.exports = function (config) {
     });
   });
 
+  config.addFilter('listFilterTags', (array, tags) => {
+    if (!Array.isArray(tags)) {
+      return array;
+    }
+    const tagsList = tags.map(String);
+    /* console.log('[.eleventy:listFilterTags]', {
+     *   tagsList,
+     *   array,
+     * });
+     */
+    const result = array.filter((item) => {
+      if ('tags' in item.data && Array.isArray(item.data.tags)) {
+        const itemTags = /** @type {string[]} */ (item.data.tags.map(String));
+        /* const hasAtLeastOneTag = itemTags.find((tag) => {
+         *   return tagsList.includes(tag);
+         * });
+         */
+        const hasAllTags = tagsList.reduce((found, tag) => {
+          return found && itemTags.includes(tag);
+        }, true);
+        /* console.log('[.eleventy:listFilterTags]', item.fileSlug, {
+         *   hasAllTags,
+         *   // hasAtLeastOneTag,
+         *   tagsList,
+         *   itemTags,
+         *   item,
+         * });
+         */
+        return hasAllTags;
+      }
+    });
+    // console.log('[.eleventy:listFilterTags]', tagsList, result);
+    return result;
+  });
+
   config.addFilter('filterCollection', (array, tag) => {
     if (!tag) {
       return array;
     }
-
     return array.filter((item) => 'tags' in item.data && item.data.tags.map(String).includes(tag));
   });
 

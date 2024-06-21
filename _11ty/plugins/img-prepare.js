@@ -49,7 +49,7 @@ const processImage = async (img, outputPath) => {
     return;
   }
   // eslint-disable-next-line no-console
-  console.log('[img-prepare:processImage]', img.tagName, originalSrc, dimensions);
+  console.log('[img-prepare:processImage]', img.tagName, originalSrc); // , dimensions);
   if (img.tagName === 'IMG') {
     img.setAttribute('decoding', 'async');
     img.setAttribute('loading', 'lazy');

@@ -63,8 +63,11 @@
       "program": "${workspaceRoot}/node_modules/@11ty/eleventy/cmd.js",
       "args": [
         "--serve",
-        "--quiet",
+        "--quiet"
       ],
+      "env": {
+        "ELEVENTY_ENV": "development"
+      },
       "type": "node",
       "request": "launch",
       "runtimeExecutable": "node",
