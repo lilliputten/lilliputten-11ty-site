@@ -2,7 +2,7 @@
 layout: article.njk
 permalink: /projects/
 title: Projects
-description: Projects page
+# description: Projects page
 eleventyNavigation:
   key: projects
   title: Projects
