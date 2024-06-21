@@ -20,6 +20,13 @@ const imageSize = promisify(require('image-size'));
 
 const SITE_PATH = 'build';
 
+const CURR_PATH = __dirname;
+const ROOT_PATH = path.dirname(path.dirname(CURR_PATH));
+console.log('[img-prepare:PATHS]', {
+  CURR_PATH,
+  ROOT_PATH,
+});
+
 const processImage = async (img, outputPath) => {
   const originalSrc = img.getAttribute('src');
   let fullSrc = originalSrc;
@@ -66,13 +73,12 @@ const processImage = async (img, outputPath) => {
   if (img.tagName === 'IMG') {
     img.setAttribute('decoding', 'async');
     img.setAttribute('loading', 'lazy');
-    img.setAttribute(
-      'style',
-      'background-size:cover;' + `background-image:url("${await blurryPlaceholder(fullSrc)}")`,
-    );
+    const url = await blurryPlaceholder(fullSrc);
+    img.setAttribute('style', 'background-size:cover;' + `background-image:url("${url}")`);
 
     const avifSrc = originalSrc.replace(/\.\w+$/, '.avif');
-    const avifFullSrc = `${SITE_PATH}` + fullSrc.replace(/\.\w+$/, '.avif');
+    // const avifFullSrc = `${SITE_PATH}` + fullSrc.replace(/\.\w+$/, '.avif');
+    const avifFullSrc = path.posix.join(SITE_PATH, fullSrc.replace(/\.\w+$/, '.avif'));
     if (await exists(avifFullSrc)) {
       const doc = img.ownerDocument;
       const picture = doc.createElement('picture');
