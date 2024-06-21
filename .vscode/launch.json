@@ -62,7 +62,8 @@
       "name": "eleventy server",
       "program": "${workspaceRoot}/node_modules/@11ty/eleventy/cmd.js",
       "args": [
-        "--serve"
+        "--serve",
+        "--quiet",
       ],
       "type": "node",
       "request": "launch",

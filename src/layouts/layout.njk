@@ -11,4 +11,6 @@ layout: base.njk
   {{ content | safe }}
 </main>
 {% include "PageFooter.njk" %}
-<div id="noise" class="noise animated"></div>
+{% if not isdevelopment %}
+  <div id="noise" class="noise animated"></div>
+{% endif %}

@@ -22,7 +22,7 @@ tags:
 ---
 
 <!--
-@changed 2024.06.20, 23:42
+@changed 2024.06.21, 04:01
 -->
 
 {% import "macros.njk" as macros with context %}
@@ -92,7 +92,7 @@ We focused on optimizing front-end performance to ensure scalability. The applic
 
 ## Demo version
 
-The demo version of the application has been [published](https://matchbox.cauldron.ch/) (as of Summer 2024).
+The demo version of the application has been [published](https://matchbox.cauldron.ch/) on the Cauldron site (as of Summer 2024).
 
 ## Future Improvements
 

@@ -1,9 +1,18 @@
+// @ts-check
+/**
+ * @module img-prepare.js
+ * @changed 2024.06.19, 21:04
+ */
+
 const { JSDOM } = require('jsdom');
 const { promisify } = require('util');
-const imageSize = promisify(require('image-size'));
+
 const blurryPlaceholder = require('./blurry-placeholder');
 const path = require('path');
 const exists = promisify(require('fs').exists);
+
+// @ts-ignore: To clarify typings?
+const imageSize = promisify(require('image-size'));
 
 /**
  * Sets width and height on each <img>
@@ -39,6 +48,8 @@ const processImage = async (img, outputPath) => {
   if (dimensions.type === 'svg') {
     return;
   }
+  // eslint-disable-next-line no-console
+  console.log('[img-prepare:processImage]', img.tagName, originalSrc, dimensions);
   if (img.tagName === 'IMG') {
     img.setAttribute('decoding', 'async');
     img.setAttribute('loading', 'lazy');
@@ -62,6 +73,12 @@ const processImage = async (img, outputPath) => {
   }
 };
 
+const pause = (/** @type number */ delayMs = 1000) => {
+  return new Promise((resolve) => {
+    setTimeout(resolve, delayMs);
+  });
+};
+
 const prepareImages = async (rawContent, outputPath) => {
   let content = rawContent;
 
@@ -70,6 +87,8 @@ const prepareImages = async (rawContent, outputPath) => {
     const images = [...dom.window.document.querySelectorAll('.Article img')];
 
     if (images.length > 0) {
+      // NOTE: Waiting for image generation...
+      await pause();
       await Promise.all(images.map((i) => processImage(i, outputPath)));
       content = dom.serialize();
     }
