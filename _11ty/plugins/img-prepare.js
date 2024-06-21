@@ -47,21 +47,20 @@ const processImage = async (img, outputPath) => {
   }
   let dimensions;
   try {
-    // const imageSrcOld = `${DEST_PATH}/` + fullSrc;
     const imageSrc = path.posix.join(SRC_PATH, fullSrc);
-    console.log('[img-prepare:processImage:imageSrc]', {
-      // imageSrcOld,
-      imageSrc,
-      originalSrc,
-      fullSrc,
-    });
+    /* console.log('[img-prepare:processImage:imageSrc]', {
+     *   imageSrc,
+     *   originalSrc,
+     *   fullSrc,
+     * });
+     */
     dimensions = await imageSize(imageSrc);
-  } catch (e) {
-    console.warn('[img-prepare:processImage:imageSrc:error]', e.message, {
+  } catch (_e) {
+    console.warn('[img-prepare:processImage:imageSrc:error]', _e.message, {
       originalSrc,
       fullSrc,
     });
-    // throw(e);
+    // throw(_e);
     return;
   }
   if (!img.getAttribute('width')) {
@@ -71,22 +70,23 @@ const processImage = async (img, outputPath) => {
   if (dimensions.type === 'svg') {
     return;
   }
-  // const rootSrc = path.posix.join(ROOT_PATH, fullSrc);
   // eslint-disable-next-line no-console
-  console.log('[img-prepare:processImage:ready]', img.tagName, {
-    // rootSrc,
-    fullSrc,
-    originalSrc,
-  });
+  /* console.log('[img-prepare:processImage:ready]', img.tagName, {
+   *   // rootSrc,
+   *   fullSrc,
+   *   originalSrc,
+   * });
+   */
   if (img.tagName === 'IMG') {
     img.setAttribute('decoding', 'async');
     img.setAttribute('loading', 'lazy');
     const urlData = await blurryPlaceholder(fullSrc);
-    console.log('[img-prepare:processImage:urlData]', img.tagName, {
-      urlData: urlData.substring(0, 30) + '...',
-      // rootSrc,
-      fullSrc,
-    });
+    /* console.log('[img-prepare:processImage:urlData]', img.tagName, {
+     *   urlData: urlData.substring(0, 30) + '...',
+     *   // rootSrc,
+     *   fullSrc,
+     * });
+     */
     img.setAttribute('style', 'background-size:cover;' + `background-image:url("${urlData}")`);
 
     // Check for avif sources...

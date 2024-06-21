@@ -3,7 +3,7 @@
   "version": "0.0.5",
   "timetag": "240622-0018",
   "timestamp": "2024.06.22 00:18 +0500",
-  "changed": "2024.06.21, 17:51",
+  "changed": "2024.06.22, 03:05",
   "homepage": "/",
   "private": false,
   "lint-staged": {
@@ -109,6 +109,7 @@
     "serve": "serve build",
     "prod": "npm run build-prod && npm run serve",
     "clear-build": "echo --Clear build folder-- && rimraf -I -g build/* && echo Build folder has been cleaned",
+    "build-double": "echo --Build eleventy and all artifacts-- && npm run clear-build && eleventy --quiet && gulp build",
     "build": "echo --Build eleventy and all artifacts-- && npm run clear-build && eleventy --quiet && echo --NOTE: Calling eleventy twice to ensure img-prepare has been run for all the images-- && eleventy && gulp build",
     "build-prod": "cross-env ELEVENTY_ENV=production npm run build",
     "prepare": "npx simple-git-hooks",
