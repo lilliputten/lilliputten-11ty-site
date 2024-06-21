@@ -28,8 +28,8 @@ Below are a few ongoing or finished projects.
 
 ## Recent projects
 
-{{ macros.ArticleThumb('./2024/sankey-graph-app', 'Sankey Diagram Vizualizer', 'This application is designed to visualize data flows using sankey diagrams.') }}
-{{ macros.ArticleThumb('./2024/svelte-randonneur-app', 'Randonneour Data Browser', 'The application is designed to view and modify data describing changes that will be applied to environmental sustainability processes. It features a graphical, user-friendly interface to navigate and change different types of data.') }}
+{{ macros.ArticleThumb('./2024/sankey-graph-app/', 'Sankey Diagram Vizualizer', 'This application is designed to visualize data flows using sankey diagrams.') }}
+{{ macros.ArticleThumb('./2024/svelte-randonneur-app/', 'Randonneour Data Browser', 'The application is designed to view and modify data describing changes that will be applied to environmental sustainability processes. It features a graphical, user-friendly interface to navigate and change different types of data.') }}
 
 ## Archived projects
 

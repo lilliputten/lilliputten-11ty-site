@@ -31,7 +31,7 @@
 {% macro ArticleThumb(path, title = '', description = '', tag = 'h3') %}
   <div class="ArticleThumb">
     <a href="{{ path }}">
-      <img class="ArticleThumbImg" src="{{ path }}/thumb.png" />
+      <img class="ArticleThumbImg" src="{{ path }}thumb.png" />
       <div class="ArticleThumbContent">
         {%- if title -%}
           <{{ tag }} class="ArticleThumbTitle">{{ title }}</{{ tag }}>

@@ -30,6 +30,7 @@ Last changes timestamp: 2024.06.22 00:18 +0500
   <body class="Page page__body">
     {# Base content #}
     {{ content | safe }}
+    {% include "inline-root-scripts.njk" %}
     {% include "base-scripts.njk" %}
   </body>
 </html>

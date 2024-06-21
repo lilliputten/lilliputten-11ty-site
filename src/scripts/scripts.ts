@@ -10,6 +10,8 @@ import { VisualAnimation } from './VisualAnimation/VisualAnimation';
 import { toggleTheme } from './toggleTheme/toggleTheme';
 import { initNavigation, setUpdateVisualizationCallback } from './navigation';
 
+import './initDocument';
+
 // import { test } from './test/test';
 
 /*

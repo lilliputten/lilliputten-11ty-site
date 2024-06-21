@@ -36,6 +36,7 @@ package-lock.*
 /assets/
 /compiled-assets/
 
-# Ignore specific files
+# Ignore specific files (prettier can't deal with jinja iside script tags)
 /src/includes/sw.njk
 /src/includes/macros.njk
+/src/includes/inline-root-scripts.njk
