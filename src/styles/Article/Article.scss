@@ -145,14 +145,25 @@
 
     // Grid layout
     @media (min-width: $maxColumnWidthWithGap) {
-      grid-template-columns: $mainColumnWidth 1fr;
-      grid-column: 2 / -1;
+      /* // Caption at right...
+       * grid-template-columns: $mainColumnWidth 1fr;
+       * grid-column: 2 / -1;
+       */
+      // Caption at left...
+      grid-template-columns: 1fr $mainColumnWidth 1fr;
+      grid-column: 1 / -1;
       grid-gap: 0 1em;
       display: grid;
       figcaption {
         margin-top: 0;
-        padding-right: 1em;
         max-width: $maxSideColumnWidth;
+        /* // Caption at right...
+         * padding-right: 1em;
+         */
+        // Caption at left...
+        margin-left: auto;
+        padding-left: 1em;
+        text-align: right;
       }
     }
 
