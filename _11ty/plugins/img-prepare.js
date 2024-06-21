@@ -37,9 +37,9 @@ const processImage = async (img, outputPath) => {
   }
   let dimensions;
   try {
-    const imageSrc = `${SITE_PATH}/` + fullSrc;
-    const imageSrc2 = path.posix.join(SITE_PATH, fullSrc);
-    console.log('[img-prepare:processImage:imageSrc]', imageSrc, imageSrc2, originalSrc);
+    const imageSrcOld = `${SITE_PATH}/` + fullSrc;
+    const imageSrc = path.posix.join(SITE_PATH, fullSrc);
+    console.log('[img-prepare:processImage:imageSrc]', imageSrcOld, imageSrc, originalSrc);
     dimensions = await imageSize(imageSrc);
   } catch (_e) {
     // console.warn(e.message, src);
