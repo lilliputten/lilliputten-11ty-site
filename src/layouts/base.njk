@@ -26,6 +26,10 @@ Last changes timestamp: 2024.06.22 00:18 +0500
     {% include "meta-webmentions.njk" %}
     <link rel="author" href="{{ site.paths.site }}/humans.txt" />
     {% include "base-styles.njk" %}
+    <script>
+      // NOTE: Prevent firefox FOUC...
+      var FF_FOUC_FI;
+    </script>
   </head>
   <body class="Page page__body">
     {# Base content #}
