@@ -104,11 +104,12 @@ module.exports = async function blurryPlaceholder(src) {
   const srcFilename = path.posix.join(SRC_PATH, src);
   const destFilename = path.posix.join(DEST_PATH, src);
   const cachedName = destFilename + '.blurred_';
-  console.log('[blurry-placeholder:blurryPlaceholder]', {
-    srcFilename,
-    destFilename,
-    cachedName,
-  });
+  /* console.log('[blurry-placeholder:blurryPlaceholder]', {
+   *   srcFilename,
+   *   destFilename,
+   *   cachedName,
+   * });
+   */
   if (await exists(cachedName)) {
     return readFile(cachedName, {
       encoding: 'utf-8',

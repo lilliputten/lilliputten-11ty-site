@@ -92,5 +92,3 @@ This web application was made as part of a set of data manipulating and visualiz
 ## Links
 
 - The [github repository](https://github.com/lilliputten/sankey-graph-app) is available.
-
-## Future Improvements
