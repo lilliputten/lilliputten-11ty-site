@@ -29,21 +29,16 @@ const processImage = async (img, outputPath) => {
   if (/^\.+\//.test(fullSrc)) {
     // resolve relative URL
     fullSrc =
-      // '/' +
-      path.relative(`./${SITE_PATH}/`, path.resolve(path.dirname(outputPath), fullSrc));
-    // console.log('[img-prepare:processImage:fullSrc]', fullSrc);
+      '/' + path.relative(`./${SITE_PATH}/`, path.resolve(path.dirname(outputPath), fullSrc));
     if (path.sep === '\\') {
       fullSrc = fullSrc.replace(/\\/g, '/');
     }
   }
-  // eslint-disable-next-line no-console
-  console.log('[img-prepare:processImage:tagName]', img.tagName, fullSrc, originalSrc); // , dimensions);
   let dimensions;
   try {
-    const fname = path.posix.join(SITE_PATH, fullSrc);
-    dimensions = await imageSize(fname);
-  } catch (e) {
-    console.warn('[img-prepare:processImage:imageSize error]', e.message, img, outputPath);
+    dimensions = await imageSize(`${SITE_PATH}/` + fullSrc);
+  } catch (_e) {
+    // console.warn(e.message, src);
     return;
   }
   if (!img.getAttribute('width')) {
@@ -53,6 +48,8 @@ const processImage = async (img, outputPath) => {
   if (dimensions.type === 'svg') {
     return;
   }
+  // eslint-disable-next-line no-console
+  console.log('[img-prepare:processImage]', img.tagName, originalSrc); // , dimensions);
   if (img.tagName === 'IMG') {
     img.setAttribute('decoding', 'async');
     img.setAttribute('loading', 'lazy');
@@ -62,7 +59,7 @@ const processImage = async (img, outputPath) => {
     );
 
     const avifSrc = originalSrc.replace(/\.\w+$/, '.avif');
-    const avifFullSrc = path.posix.join(SITE_PATH, fullSrc.replace(/\.\w+$/, '.avif'));
+    const avifFullSrc = `${SITE_PATH}` + fullSrc.replace(/\.\w+$/, '.avif');
     if (await exists(avifFullSrc)) {
       const doc = img.ownerDocument;
       const picture = doc.createElement('picture');

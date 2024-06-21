@@ -22,7 +22,6 @@
 // Adopted from
 // https://github.com/ampproject/amp-toolbox/blob/0c8755016ae825b11b63b98be83271fd14cc0486/packages/optimizer/lib/transformers/AddBlurryImagePlaceholders.js
 
-const path = require('path');
 const { promisify } = require('util');
 const sharp = require('sharp');
 const imageSize = promisify(require('image-size'));
@@ -58,7 +57,6 @@ function getCachedDataURI(src) {
 }
 
 async function getDataURI(src) {
-  // console.log('[blurry-placeholder:getDataURI]', src);
   const info = await imageSize(src);
   const imgDimension = getBitmapDimensions_(info.width, info.height);
   const buffer = await sharp(src)
@@ -95,7 +93,7 @@ function getBitmapDimensions_(imgWidth, imgHeight) {
 }
 
 module.exports = async function (src) {
-  const filename = path.resolve('build', src);
+  const filename = 'build/' + src;
   const cachedName = filename + '.blurred_';
   if (await exists(cachedName)) {
     return readFile(cachedName, {
