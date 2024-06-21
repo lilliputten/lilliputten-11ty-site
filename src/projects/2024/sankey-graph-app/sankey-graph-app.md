@@ -12,7 +12,6 @@ tags:
   - projects
   - '2024'
   - cauldron
-  - randonneur
   - application
   - data
   - sankey
@@ -37,6 +36,8 @@ This web application was made as part of a set of data manipulating and visualiz
 
 ## Features
 
+Some of the application features:
+
 - Data load: (1) programmatically from url parameters, (2) from local drive, (3) from demo data set.
 - Drag and drop
 - Help reference
@@ -47,12 +48,15 @@ This web application was made as part of a set of data manipulating and visualiz
 - Different color modes: single color, random colors, gradient colors
 - Possibility to manual color selection for particular nodes
 
-- Plotly library patches (list)
+## Modifications
+
+- Plotly library patches (TODO: Provide the list of changes)
 
 ## Technologies Used
 
 - [React](https://react.dev/)
 - [Plotly javascript graphing library](https://plotly.com/javascript/)
+- [MUI](https://mui.com/)
 
 ## Application screenshots
 
