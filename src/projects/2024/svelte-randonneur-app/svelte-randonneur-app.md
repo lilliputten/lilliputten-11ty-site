@@ -94,7 +94,7 @@ We focused on optimizing front-end performance to ensure scalability. The applic
 {{ macros.imgFigure('./images/filter-selection-unit.png', 'Filtering the column of units of measurement.') }}
 {{ macros.imgFigure('./images/miltiple-filters.png', 'Several filters have been applied to the data table.') }}
 
-## Links version
+## Links
 
 - The demo version of the application has been [published](https://matchbox.cauldron.ch/) on the Cauldron site (as of Summer 2024).
 - The [github repository](https://github.com/lilliputten/svelte-randonneur-app) is available.
