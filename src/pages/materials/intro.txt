@@ -1,0 +1,16 @@
+
+I'm a professional front-end (and full-stack) developer. Having about 8 years of experience in web frontend development, I mainly specialize in React.js and related technologies.
+
+Prompt:
+
+Please create a small introduction (about a few phrases) for my portfolio site. I want to introduce myself as experienced front-end and full stack developer, having about 8 years of experience in web frontend development, and mainly specializing in React.js and related technologies.
+
+Also I want to seamless integrate links to may 'About', 'Contacts' and 'Projects' pages into this text.
+
+---
+
+Hello! I'm an experienced front-end and full-stack developer with about 8 years in web frontend development, primarily specializing in React.js and related technologies. Discover more about my journey on the About page, explore my work on the Projects page, or get in touch through the Contacts page.
+
+---
+
+Welcome! With nearly a decade of experience as a front-end and full-stack developer, I specialize in crafting dynamic web applications using React.js and related technologies. Dive into my story on the About page, explore the innovative projects I've brought to life on the Projects page, or reach out to me through the Contacts page. Let's build something amazing together!

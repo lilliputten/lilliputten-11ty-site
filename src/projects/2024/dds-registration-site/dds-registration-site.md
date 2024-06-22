@@ -13,14 +13,16 @@ tags:
   - projects
   - '2024'
   - dds
+  - registration
   - application
-  - data
-  - sankey
-  - diagram
-  - vizualizer
-  - react
-  - plotly
-  - mui
+  - python
+  - django
+  - bootstrap
+  - stripe
+  - django-registration
+  - fpdf2
+  - sendgrid
+  - gulp.js
 ---
 
 <!--
@@ -89,19 +91,6 @@ I terminated my participation in the project in early April 2024 due to some inc
 {{ macros.imgFigure('./images/ProfileSignupForm.png', 'Profile signup form.') }}
 {{ macros.imgFigure('./images/ProfilePasswordResetForm.png', 'Profile password reset form.') }}
 {{ macros.imgFigure('./images/MembershipApplyForm.png', 'Membership application form.') }}
-
-{#
-
-{{ macros.imgFigure('./images/MainPageFull.png', 'Main page full.') }}
-{{ macros.imgFigure('./images/MainPageFullCropped.png', 'Main page full cropped.') }}
-{{ macros.imgFigure('./images/MainPageWithAppliedRegistrationForRegisteredUser.png', 'Main page with applied registration for registered user.') }}
-
-{{ macros.imgFigure('./images/EventRegistrationEdit.png', 'Event registration edit.') }}
-{{ macros.imgFigure('./images/ProfilePasswordChangePage.png', 'Profile password change page.') }}
-{{ macros.imgFigure('./images/ProfilePageWithPaidRegistration.png', 'Profile page with paid registration.') }}
-{{ macros.imgFigure('./images/AdminRegistrationsList.png', 'Active registrations list (demo application).') }}
-
-#}
 
 ## Links
 

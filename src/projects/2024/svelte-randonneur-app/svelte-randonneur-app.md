@@ -19,8 +19,10 @@ tags:
   - data
   - manipuation
   - svelte
-  - svelte-headless-table
   - svelteui
+  - svelte-headless-table
+  - javascript
+  - typescript
 ---
 
 <!--
