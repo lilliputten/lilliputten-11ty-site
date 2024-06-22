@@ -20,6 +20,8 @@ tags:
   - react
   - plotly
   - mui
+  - javascript
+  - typescript
 ---
 
 <!--

@@ -3,7 +3,7 @@ title: Contacts
 layout: article.njk
 permalink: /contacts/
 # eleventyExcludeFromCollections: true
-description: Contacts page
+# description: Contacts page
 date: 2024-06-18
 # tag: false
 eleventyNavigation:
@@ -18,9 +18,7 @@ tags:
 -->
 
 If you want to have a chat about anything digital, UX, or collaborate, don't
-hesitate to connect with me.
-
-Use any of the following methods:
+hesitate to connect with me, unsing any of the following methods:
 
 ## Social networks
 

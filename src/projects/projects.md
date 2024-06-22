@@ -28,11 +28,12 @@ Below are a few ongoing or finished projects.
 
 ## Recent projects
 
-{{ macros.ArticleThumb('./2024/dds-registration-site/', 'DdS Events Site', 'A simple site designed to manage DdS membership and event registration. The application is purposed to simplify the conduction of seminars and other events held by the non-profit association Départ de Sentier.') }}
+{{ macros.ArticleThumb('./2024/svelte-randonneur-app/', 'Randonneour Data Browser', 'The application is designed to view and modify data describing changes that will be applied to environmental sustainability processes. It features a graphical, user-friendly interface to navigate and change different types of data.') }}
 
 {{ macros.ArticleThumb('./2024/sankey-graph-app/', 'Sankey Diagram Vizualizer', 'This application is designed to visualize data flows using sankey diagrams.') }}
 
-{{ macros.ArticleThumb('./2024/svelte-randonneur-app/', 'Randonneour Data Browser', 'The application is designed to view and modify data describing changes that will be applied to environmental sustainability processes. It features a graphical, user-friendly interface to navigate and change different types of data.') }}
+{{ macros.ArticleThumb('./2024/dds-registration-site/', 'DdS Events Site', 'A simple site designed to manage DdS membership and event registration. The application is purposed to simplify the conduction of seminars and other events held by the non-profit association Départ de Sentier.') }}
+
 
 ## Archived projects
 

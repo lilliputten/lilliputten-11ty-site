@@ -23,14 +23,16 @@
 // https://github.com/ampproject/amp-toolbox/blob/0c8755016ae825b11b63b98be83271fd14cc0486/packages/optimizer/lib/transformers/AddBlurryImagePlaceholders.js
 
 const path = require('path');
-const { promisify } = require('util');
+// const { promisify } = require('util');
 const sharp = require('sharp');
-const imageSize = promisify(require('image-size'));
+const imageSize = require('image-size');
+// const imageSizeAsync = promisify(imageSize);
 const DatauriParser = require('datauri/parser');
 const parser = new DatauriParser();
-const readFile = promisify(require('fs').readFile);
-const writeFile = promisify(require('fs').writeFile);
-const exists = promisify(require('fs').exists);
+const fs = require('fs');
+// const readFile = promisify(fs.readFile);
+// const writeFile = promisify(fs.writeFile);
+// const exists = promisify(fs.exists);
 
 const DEST_PATH = 'build';
 const SRC_PATH = 'src';
@@ -52,9 +54,9 @@ function escaper(match) {
 
 const cache = {};
 
-function getCachedDataURI(src) {
+async function getCachedDataURI(src) {
   if (!cache[src]) {
-    cache[src] = getDataURI(src);
+    cache[src] = await getDataURI(src);
   }
 
   return cache[src];
@@ -65,7 +67,8 @@ async function getDataURI(src) {
    *   src,
    * });
    */
-  const info = await imageSize(src);
+  // const info = await imageSizeAsync(src);
+  const info = imageSize(src);
   const imgDimension = getBitmapDimensions_(info.width, info.height);
   const buffer = await sharp(src)
     .rotate() // Manifest rotation from metadata
@@ -104,16 +107,22 @@ module.exports = async function blurryPlaceholder(src) {
   const srcFilename = path.posix.join(SRC_PATH, src);
   const destFilename = path.posix.join(DEST_PATH, src);
   const cachedName = destFilename + '.blurred_';
-  /* console.log('[blurry-placeholder:blurryPlaceholder]', {
+  /* console.log('[blurry-placeholder:blurryPlaceholder:START]', {
    *   srcFilename,
    *   destFilename,
    *   cachedName,
    * });
    */
-  if (await exists(cachedName)) {
-    return readFile(cachedName, {
-      encoding: 'utf-8',
-    });
+  if (fs.existsSync(cachedName)) {
+    try {
+      return fs.readFileSync(cachedName, { encoding: 'utf-8' });
+    } catch (e) {
+      // prettier-ignore
+      console.error('[blurry-placeholder:blurryPlaceholder:error] error reading cached data', e.message || e, { // eslint-disable-line no-console
+        cachedName,
+      });
+      // NOOP: Try to construct the data again. Probably it's generating right now by the parallel process?
+    }
   }
   // We wrap the blurred image in a SVG to avoid rasterizing the filter on each layout.
   const dataURI = await getCachedDataURI(srcFilename);
@@ -138,8 +147,35 @@ module.exports = async function blurryPlaceholder(src) {
   svg = svg.replace(/> </g, '><');
   svg = svg.replace(ESCAPE_REGEX, escaper);
 
-  // console.log(src, '[SUCCESS]');
+  // console.log('[blurry-placeholder:blurryPlaceholder:DONE]', src);
   const URI = `data:image/svg+xml;charset=utf-8,${svg}`;
-  await writeFile(cachedName, URI);
+  // await writeFile(cachedName, URI);
+  try {
+    const dirname = path.dirname(cachedName);
+    fs.mkdirSync(dirname, { recursive: true });
+    const isOk =
+      !fs.existsSync(cachedName) ||
+      fs.accessSync(cachedName, fs.constants.W_OK, (e) => {
+        // console.log('[blurry-placeholder:blurryPlaceholder:Check 1]', cachedName, e);
+        if (e) {
+          const message = e.message || String(e);
+          // prettier-ignore
+          console.error('[blurry-placeholder:blurryPlaceholder:error] File is inaccessible', message, cachedName); // eslint-disable-line no-console
+          // eslint-disable-next-line no-debugger
+          debugger;
+        }
+      });
+    // console.log('[blurry-placeholder:blurryPlaceholder:Check 2]', cachedName, isOk);
+    if (isOk) {
+      fs.writeFileSync(cachedName, URI /* , { flush: true } */);
+    }
+  } catch (e) {
+    const message = e.message || String(e);
+    // prettier-ignore
+    console.error('[blurry-placeholder:blurryPlaceholder:error] error writing cached data', message, cachedName); // eslint-disable-line no-console
+    // eslint-disable-next-line no-debugger
+    debugger;
+    // NOOP: Try to construct the data again. Probably it's generating right now by the parallel process?
+  }
   return URI;
 };

@@ -2,9 +2,9 @@
 title: About me
 layout: article.njk
 permalink: /about/
-# eleventyExcludeFromCollections: true
-description: About page
-date: 2024-06-19
+# 23: true
+# description: About page
+date: 2024-06-23
 # hideMeta: true
 # tag: false
 tags:
@@ -13,7 +13,7 @@ tags:
 ---
 
 <!--
-@changed 2024.06.19, 18:38
+@changed 2024.06.23, 02:38
 -->
 
 My name is Igor and I'm a professional front-end developer with 8 years of experience, recently specializing mainly in React, NextJS, NodeJS and Python (with Flask and Django).
@@ -24,18 +24,22 @@ I've been involved in creating various types of web applications and sites: from
 
 ## Techs
 
-My current stack for the frontend is React/NextJS (via MobX or Redux) with TypeScript (previously I used i-Bem/Bem-XJST/ENB/Borschik/jQuery stack, and still fond of it). For static pages/sites I use 11ty generator.
+My current stack for the frontend is React/NextJS (via MobX or Redux) with TypeScript. Previously (about 5-8 years ago) I used i-Bem/Bem-XJST/ENB/Borschik/jQuery stack, and still fond of it (I even once made my own implementation of i-bem/xjst framework for embedded browsers).
 
 For the backend, I use Python (with Flask or Django) or NodeJS (with Express, for a little simpler tasks), some time ago I used PHP (and still use it for inherited projects). (And once upon a time, at the very beginning of my career, I also used Perl.)
 
-I use SCSS, PostCSS (previously it was LESS and Stylus), mostly with MIU library (sometimes with ChakraUI, Tailwind CSS, or Bootstrap) for UI development. I also use Storybook for large complex projects.
+I use SCSS or PostCSS (previously it was LESS and Stylus) with MIU or Bootstrap libraries for UI development. I also worked with ChakraUI, Tailwind CSS and Prime React. I also use Storybook for large complex projects, and 11ty for static sites.
 
 ## Other info
 
-I'm currently in GMT+5, but to move to GMT+2 (or GMT+3) soon. I'm mostly looking for a remote job, but I'm also ready to move to switch to an on-site/hybrid job. My English language proficiency is Intermediate or Upper-Intermediate (approx. at B2 CEFR level).
+I'm currently in GMT+5, but to move to GMT+2.
 
-## For HR/potential employers
+My English language proficiency is Intermediate or Upper-Intermediate (approx. at B2 CEFR level).
 
-I'm really looking for an interesting new job right now. At the moment, I'm only considering options with remote work or relocation.
+## For potential employers and partners
+
+I'm really looking for an interesting new job right now.
+
+At the moment, I'm only considering options with remote work or relocation.
 
 - A <a class="external" href="/static/docs/cv-lilliputten-2024-v1-1-1.pdf" title="PDF document (~50K)" target="_blank">printable CV</a> is available (PDF, ~50K).

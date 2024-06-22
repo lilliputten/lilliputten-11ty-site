@@ -1,7 +1,7 @@
 // @ts-check
 /**
  * @module img-prepare.js
- * @changed 2024.06.22, 02:21
+ * @changed 2024.06.23, 02:20
  */
 
 const { JSDOM } = require('jsdom');
@@ -119,7 +119,7 @@ const prepareImages = async (rawContent, outputPath) => {
 
     if (images.length > 0) {
       // NOTE: Waiting for image generation...
-      await pause();
+      // await pause();
       await Promise.all(images.map((i) => processImage(i, outputPath)));
       content = dom.serialize();
     }

@@ -13,18 +13,20 @@ tags:
   - projects
   - '2024'
   - dds
+  - registration
   - application
-  - data
-  - sankey
-  - diagram
-  - vizualizer
-  - react
-  - plotly
-  - mui
+  - python
+  - django
+  - bootstrap
+  - stripe
+  - django-registration
+  - fpdf2
+  - sendgrid
+  - gulp.js
 ---
 
 <!--
-@changed 2024.06.22, 23:50
+@changed 2024.06.23, 02:58
 -->
 
 {% import "macros.njk" as macros with context %}
@@ -43,12 +45,13 @@ I developed the first versions of the Django application and participated in the
 
 Tasks that I participated in or completed on my own:
 
+- The design and general layout of the site.
 - The authorization system, including modification of embedded Django system to identify users by e-mails instead of identifiers ([django-registration](https://django-registration.readthedocs.io/) package has been used).
 - Accepting payments via [Stripe](https://stripe.com/) (using Payment Intent method).
 - On-the-fly generation of PDF documents for invoicing using [FPDF2](https://pypi.org/project/fpdf2/) library.
 - Sending messages to users by email using [Sendgrid](https://www.twilio.com/docs/sendgrid/for-developers/sending-email/django).
 
-I terminated my participation in the project in early April 2024 due to some incomprehensible misunderstandings with my partner.
+I finished my participation in the project in early April 2024 due to some incomprehensible misunderstandings with my partner.
 
 ## Technologies used
 
@@ -89,19 +92,6 @@ I terminated my participation in the project in early April 2024 due to some inc
 {{ macros.imgFigure('./images/ProfileSignupForm.png', 'Profile signup form.') }}
 {{ macros.imgFigure('./images/ProfilePasswordResetForm.png', 'Profile password reset form.') }}
 {{ macros.imgFigure('./images/MembershipApplyForm.png', 'Membership application form.') }}
-
-{#
-
-{{ macros.imgFigure('./images/MainPageFull.png', 'Main page full.') }}
-{{ macros.imgFigure('./images/MainPageFullCropped.png', 'Main page full cropped.') }}
-{{ macros.imgFigure('./images/MainPageWithAppliedRegistrationForRegisteredUser.png', 'Main page with applied registration for registered user.') }}
-
-{{ macros.imgFigure('./images/EventRegistrationEdit.png', 'Event registration edit.') }}
-{{ macros.imgFigure('./images/ProfilePasswordChangePage.png', 'Profile password change page.') }}
-{{ macros.imgFigure('./images/ProfilePageWithPaidRegistration.png', 'Profile page with paid registration.') }}
-{{ macros.imgFigure('./images/AdminRegistrationsList.png', 'Active registrations list (demo application).') }}
-
-#}
 
 ## Links
 
