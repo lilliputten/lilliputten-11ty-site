@@ -1,9 +1,7 @@
 {% if showNavigationBreadcrumbs and eleventyNavigation.key %}
   {# @see https://www.11ty.dev/docs/plugins/navigation #}
-  {# {% set navPages = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key, { includeSelf: true, allowMissing: true }) %} #}
   {% if collections %}
     {% set navPages = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key) %}
-    {# {{ navPages | dump | safe }} #}
     {% if navPages and navPages.length %}
       <ul class="ArticleBreadcrumbs">
         <li data-key="home">
