@@ -8,8 +8,10 @@
           <a class="home" href="/" title="Site root"> {# <i class="bi bi-house"></i> #} </a>
         </li>
         {% for item in navPages %}
-          <li data-key="{{ item.key }}"
-              {% if item.parent %}class="hasParent" data-parent="{{ item.parent }}"{% else %}class="noParent"{% endif %}>
+          <li
+            data-key="{{ item.key }}"
+            {% if item.parent %}class="hasParent" data-parent="{{ item.parent }}"{% else %}class="noParent"{% endif %}
+          >
             <a href="{{ item.url }}">{{ item.title }}</a>
           </li>
         {% endfor %}

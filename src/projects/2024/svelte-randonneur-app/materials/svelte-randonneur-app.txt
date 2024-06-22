@@ -82,7 +82,7 @@ Web Application for Environmental Sustainability Data Management
 
 This web application is designed to view and modify data describing changes that will be applied to environmental sustainability processes. It features a graphical, user-friendly interface to navigate and change different types of data. Users can perform various operations, such as creating datasets, deleting entries, disaggregating data, mapping, replacing, and updating information.
 
-## Technologies Used:
+## Technologies used:
 
 - Svelte: A front-end software framework that provides a highly efficient and responsive user interface.
 - SvelteUI: A UI kit library for a consistent and visually appealing design.

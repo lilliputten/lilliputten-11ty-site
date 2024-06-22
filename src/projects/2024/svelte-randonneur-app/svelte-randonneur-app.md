@@ -64,7 +64,7 @@ The user could upload both his own data and use predefined demo/test datasets.
 
 The user must be able to export the modified data in json format.
 
-## Technologies Used
+## Technologies used
 
 - [Svelte](https://svelte.dev/) -- A front-end software framework that provides a highly efficient and responsive user interface.
 - [SvelteUI](https://svelteui.dev/) -- A UI kit library for a consistent and visually appealing design.
