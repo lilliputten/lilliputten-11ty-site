@@ -28,7 +28,10 @@ Below are a few ongoing or finished projects.
 
 ## Recent projects
 
+{{ macros.ArticleThumb('./2024/dds-registration-site/', 'DdS Events Site', 'A simple site designed to manage DdS membership and event registration. The application is purposed to simplify the conduction of seminars and other events held by the non-profit association Départ de Sentier.') }}
+
 {{ macros.ArticleThumb('./2024/sankey-graph-app/', 'Sankey Diagram Vizualizer', 'This application is designed to visualize data flows using sankey diagrams.') }}
+
 {{ macros.ArticleThumb('./2024/svelte-randonneur-app/', 'Randonneour Data Browser', 'The application is designed to view and modify data describing changes that will be applied to environmental sustainability processes. It features a graphical, user-friendly interface to navigate and change different types of data.') }}
 
 ## Archived projects
@@ -37,7 +40,7 @@ All the following projects are from the old portfolio page and located on my git
 
 ### Web applications and interfaces
 
-- [360caster MVP web application](https://lilliputten.github.io/#/Projects/Web/2308-360caster-mvp). My partner and I made the MVP application for our last startup project 360caster. The application is designed for conducting virtual 3D excursions and tours of premises and objects previously filmed with high quality, mainly for museums and exhibition spaces. (2023)
+- [360caster MVP web application](https://lilliputten.github.io/#/Projects/Web/2308-360caster-mvp). My partner and I made an MVP application for our last startup project 360caster. The application is designed for conducting virtual 3D excursions and tours of premises and objects previously filmed with high quality, mainly for museums and exhibition spaces. (2023)
 - [Online multi-user text quiz game](https://lilliputten.github.io/#/Projects/Web/2301-online-quiz) Online multiuser quiz game developed on Flask (Python) at server-side and NextJS application for my Russian clients. See [client](https://github.com/lilliputten/tournament-game-client) and [server](https://github.com/lilliputten/tournament-game-server) repositories, demo application will be available soon. (January 2023) _(NextJS, Flask, TinyDB)_
 - Pet project for Seven Peaks group (news reader based on Guardian public API).
   See [repository](https://github.com/lilliputten/peaks-test-project), [demo build](https://peaks.lilliputten.ru/). (Winter 2023) _(NextJS, no extra libs used)_

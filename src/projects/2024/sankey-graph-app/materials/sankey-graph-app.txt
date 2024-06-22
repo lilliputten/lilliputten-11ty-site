@@ -1,0 +1,69 @@
+
+Prompt:
+
+Please provide a description of the web application for my portfolio page based on its features and purpose.
+
+The purpose:
+
+This application is designed to visualize data flows using sankey diagrams.
+
+The features are:
+
+- Various methods of data loading: (1) programmatically from external data files using URL parameters, (2) uploading user data from a local disk, (3) using a predefined demo dataset.
+- Relayout of diagram nodes (provided by the charting library from the box).
+- A help reference in a popup window.
+- A live visualization server (in python and node js implementations) that allows you to visualize data using external requests and redirects.
+- Side panels with applicaiton settings (at left) and selceted node properties (at right).
+- Inter-session settings save.
+- The settings include: choosing a dark/light theme, a horizontal/vertical layout.
+- Automatic/manual hiding of nodes.
+- Different node color modes: monochrome, random color, gradient (progressive) colors.
+- The ability to manually select colors for specific nodes.
+
+If it's required, feel free to ask me a few distinct questions to gather missed information about the application to make an impressive description.
+
+---
+
+
+Web Application for Data Flow Visualization
+
+Our web application is designed to offer a comprehensive and interactive way to visualize data flows using Sankey diagrams. This tool is perfect for data analysts, researchers, and professionals who need to understand and present complex data relationships in an intuitive format.
+
+Key Features:
+
+Flexible Data Loading:
+
+- Load data programmatically from external data files using URL parameters.
+- Upload data directly from your local disk.
+- Utilize a predefined demo dataset for quick visualization and testing.
+
+Interactive Diagram Layouts:
+
+- Easily relayout diagram nodes with built-in functionality from the charting library.
+
+In-Application Help:
+
+- Access a detailed help reference in a convenient popup window for guidance and troubleshooting.
+
+Live Visualization Server:
+
+- Leverage our live server, implemented in both Python and Node.js, to visualize data through external requests and redirects.
+
+Customizable Interface:
+
+- Adjust settings in side panels: application settings on the left and selected node properties on the right.
+- Save settings between sessions, ensuring a seamless user experience.
+
+Theming and Layout Options:
+
+- Choose between dark and light themes.
+- Select horizontal or vertical layouts for optimal data presentation.
+
+Node Management:
+
+- Automatically or manually hide nodes to simplify your diagram.
+- Apply different color modes to nodes: monochrome, random colors, or gradient (progressive) colors.
+- Manually select specific colors for individual nodes to highlight important data points.
+- This application provides a powerful yet user-friendly platform for visualizing complex data flows, enabling users to gain insights and make informed decisions quickly and effectively.
+- Edit node names.
+
