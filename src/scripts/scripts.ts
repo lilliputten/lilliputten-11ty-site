@@ -7,14 +7,13 @@
 import './sw/sw';
 
 import { VisualAnimation } from './VisualAnimation/VisualAnimation';
-import { toggleTheme } from './toggleTheme/toggleTheme';
+import { toggleTheme } from './toggleTheme';
 import { initNavigation, setUpdateVisualizationCallback } from './navigation';
 
 import './initDocument';
 
-// import { test } from './test/test';
-
-/*
+/* // Test
+ * import { test } from './test/test';
  * const testResult = test();
  * console.log('[scripts] Main client code entry point', {
  *   test,
@@ -30,7 +29,5 @@ initNavigation();
 
 window.toggleTheme = toggleTheme;
 
-// updateTheme();
-
-// Empty root module
+// Root module, no exports
 export {};

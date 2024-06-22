@@ -1,21 +1,21 @@
 {% if showNavigationBreadcrumbs and eleventyNavigation.key %}
   {# @see https://www.11ty.dev/docs/plugins/navigation #}
   {# {% set navPages = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key, { includeSelf: true, allowMissing: true }) %} #}
-  {% set navPages = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key) %}
-  {# {{ navPages | dump | safe }} #}
-  {% if navPages and navPages.length %}
-    <ul class="ArticleBreadcrumbs">
-      <li data-key="home">
-        <a class="home" href="/" title="Site root"> {# <i class="bi bi-house"></i> #} </a>
-      </li>
-      {% for item in navPages %}
-        <li
-          data-key="{{ item.key }}"
-          {% if item.parent %}class="hasParent" data-parent="{{ item.parent }}"{% else %}class="noParent"{% endif %}
-        >
-          <a href="{{ item.url }}"> {{ item.title }} </a>
+  {% if collections %}
+    {% set navPages = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key) %}
+    {# {{ navPages | dump | safe }} #}
+    {% if navPages and navPages.length %}
+      <ul class="ArticleBreadcrumbs">
+        <li data-key="home">
+          <a class="home" href="/" title="Site root"> {# <i class="bi bi-house"></i> #} </a>
         </li>
-      {% endfor %}
-    </ul>
+        {% for item in navPages %}
+          <li data-key="{{ item.key }}"
+              {% if item.parent %}class="hasParent" data-parent="{{ item.parent }}"{% else %}class="noParent"{% endif %}>
+            <a href="{{ item.url }}">{{ item.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
   {% endif %}
 {% endif %}
