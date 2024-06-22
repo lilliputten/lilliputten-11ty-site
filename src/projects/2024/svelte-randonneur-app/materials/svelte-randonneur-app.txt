@@ -1,4 +1,3 @@
-The main application goal is to edit data processing descriptions
 The main purpose of the application is to edit data processing descriptions.
 
 Prompt:

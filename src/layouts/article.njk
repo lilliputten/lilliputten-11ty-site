@@ -66,8 +66,10 @@ layout: page.njk
       >
     </div>
     #}
+    {#
     {% set previousPost = collections.chunk | getPreviousCollectionItem(page) %}
     {% set nextPost = collections.chunk | getNextCollectionItem(page) %}
+    #}
     <div class="ArticleNav">
       {# TODO! #}
       {% if previousPost %}
