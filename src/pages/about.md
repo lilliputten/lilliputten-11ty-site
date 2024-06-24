@@ -32,7 +32,7 @@ I use SCSS or PostCSS (previously it was LESS and Stylus) with MUI or Bootstrap 
 
 ## Other info
 
-I'm currently in GMT+5, but to move to GMT+2.
+I'm currently in GMT+5, but probably will move to GMT+2.
 
 My English language proficiency is Intermediate or Upper-Intermediate (approx. at B2 CEFR level).
 
