@@ -28,7 +28,7 @@ My current stack for the frontend is React/NextJS (via MobX or Redux) with TypeS
 
 For the backend, I use Python (with Flask or Django) or NodeJS (with Express, for a little simpler tasks), some time ago I used PHP (and still use it for inherited projects). (And once upon a time, at the very beginning of my career, I also used Perl.)
 
-I use SCSS or PostCSS (previously it was LESS and Stylus) with MIU or Bootstrap libraries for UI development. I also worked with ChakraUI, Tailwind CSS and Prime React. I also use Storybook for large complex projects, and 11ty for static sites.
+I use SCSS or PostCSS (previously it was LESS and Stylus) with MUI or Bootstrap libraries for UI development. I also worked with ChakraUI, Tailwind CSS and Prime React. I also use Storybook for large complex projects, and 11ty for static sites.
 
 ## Other info
 
