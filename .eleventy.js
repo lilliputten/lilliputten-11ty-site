@@ -107,7 +107,7 @@ module.exports = function (config) {
   });
 
   config.addFilter('filterTags', (array) => {
-    return array.filter((tag) => tag !== 'chunk');
+    return array.filter((tag) => tag !== 'article');
   });
 
   config.addFilter('prepareTalks', (data) => {

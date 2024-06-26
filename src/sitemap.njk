@@ -2,13 +2,12 @@
 permalink: /sitemap.xml
 excludeFromSitemap: true
 ---
-
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  {% if collections.chunk %}
+  {% if collections.article %}
     <url>
-      <loc>{{ site.paths.site }}/chunks/</loc>
-      <lastmod>{{ (collections.chunk | getLastArticle)["date"] | isoDate }}</lastmod>
+      <loc>{{ site.paths.site }}/articles/</loc>
+      <lastmod>{{ (collections.article | getLastArticle)["date"] | isoDate }}</lastmod>
       <changefreq>weekly</changefreq>
     </url>
   {% endif %}
