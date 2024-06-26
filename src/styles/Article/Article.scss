@@ -36,10 +36,18 @@
     margin-top: 1em;
     margin-bottom: 1em;
   }
-  pre {
+  > pre {
     // Stylize code blocks as regular elements...
     margin-top: 0;
     margin-bottom: 1em;
+    transition: all $transitionTimeMs;
+    filter: grayscale(30%) brightness(0.9);
+    border-radius: 4px;
+    opacity: 0.8;
+    &:hover {
+      filter: grayscale(10%) brightness();
+      opacity: 1;
+    }
   }
   p code {
     display: inline-block;

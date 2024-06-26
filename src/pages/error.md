@@ -4,7 +4,7 @@ layout: page.njk
 permalink: 404.html
 ---
 
-<article class="Article errorPage" align="center">
+<article class="Article errorPage">
   <div class="errorIcon mb-3">
     <i class="bi bi-emoji-frown-fill"></i>
   </div>

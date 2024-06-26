@@ -2,7 +2,7 @@
 layout: listFilterTags.njk
 filterTags:
   - article
-title: 2024
+title: Articles
 eleventyNavigation:
   key: articles
   title: Articles

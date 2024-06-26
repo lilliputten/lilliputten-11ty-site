@@ -17,6 +17,8 @@ tags:
   - toggle
   - windows
   - shortcut
+  - powershell
+  - script
 ---
 
 <!--
@@ -42,12 +44,12 @@ This is it, step by step.
 Allow MessageBox component (to show gui dialogs).
 
 ```powershell
-if ( $null -eq ('System.Windows.MessageBox' -as [type]) ) {
+if ($null -eq ('System.Windows.MessageBox' -as [type])) {
     Add-Type -AssemblyName PresentationFramework
 }
 ```
 
-Trying to find the MongoDB system service by name.
+Try to find the MongoDB system service by name.
 
 ```powershell
 $Service = Get-Service -Displayname '*MongoDB Server*'
@@ -59,7 +61,14 @@ if (!$Service) {
 }
 ```
 
-Trying to change the state (it's good to put this code within try...catch construction to process the errors).
+Detect the current status of the service.
+
+```powershell
+$PrevStatus = $Service.Status -eq 'Running'
+$NextStatus = -Not $PrevStatus
+```
+
+Try to change the state (it's good to put this code within try...catch construction to process the errors).
 
 ```powershell
 if ($NextStatus) {
@@ -70,7 +79,7 @@ else {
 }
 ```
 
-The most intriguing part is changing the shortcut icon to indicate the current status (`~/OneDrive/Desktop/MongoDB Service.lnk` is the shortcut link on the desktop).
+The most intriguing part is to change the shortcut icon to indicate the current status (`~/OneDrive/Desktop/MongoDB Service.lnk` is the shortcut link on the desktop).
 
 ```powershell
 $ShortcutPath = $HOME + '\OneDrive\Desktop\MongoDB Service.lnk';

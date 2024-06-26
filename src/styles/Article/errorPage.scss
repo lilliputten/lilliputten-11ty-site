@@ -1,0 +1,13 @@
+/**
+ * @module Article
+ * @changed 2024.06.26, 08:31
+ */
+
+@use 'sass:color';
+
+@import '../shared';
+
+.Article.errorPage {
+  text-align: center;
+}
+
