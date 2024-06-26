@@ -37,6 +37,9 @@ package-lock.*
 /compiled-assets/
 
 # Ignore specific files (prettier can't deal with jinja iside script tags)
+/src/sitemap.njk
 /src/includes/sw.njk
 /src/includes/macros.njk
 /src/includes/inline-root-scripts.njk
+# Ignore article, as it has conditional `<div...>` and `</div>`
+/src/layouts/article.njk

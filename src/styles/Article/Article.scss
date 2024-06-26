@@ -36,6 +36,21 @@
     margin-top: 1em;
     margin-bottom: 1em;
   }
+  pre {
+    // Stylize code blocks as regular elements...
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+  p code {
+    display: inline-block;
+    border: 1px solid color.change(gray, $alpha: 0.2);
+    border-radius: 3px;
+    $padding: 0.4em;
+    padding-left: $padding;
+    padding-right: $padding;
+    margin: 0 0.1em;
+    color: #888;
+  }
   .ArticleHead {
     margin-bottom: 2rem;
   }

@@ -34,7 +34,6 @@ Below are a few ongoing or finished projects.
 
 {{ macros.ArticleThumb('./2024/dds-registration-site/', 'DdS Events Site', 'A simple site designed to manage DdS membership and event registration. The application is purposed to simplify the conduction of seminars and other events held by the non-profit association Départ de Sentier.') }}
 
-
 ## Archived projects
 
 All the following projects are from the old portfolio page and located on my gitpages site. {.commentRight .commentPaddedTop}
