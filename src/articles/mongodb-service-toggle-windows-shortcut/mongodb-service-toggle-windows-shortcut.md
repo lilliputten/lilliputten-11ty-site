@@ -6,7 +6,7 @@ eleventyNavigation:
   key: mongodb-service-toggle-windows-shortcut
   title: Windows shortcut to toggle MongoDB service
   parent: articles
-date: 2024-06-26
+date: 2024-06-27
 showNavigationBreadcrumbs: true
 tags:
   - article
@@ -22,7 +22,7 @@ tags:
 ---
 
 <!--
-@changed 2024.06.26, 07:48
+@changed 2024.06.27, 14:35
 -->
 
 {% import "macros.njk" as macros with context %}
@@ -98,8 +98,8 @@ We've used two icons from default windows set (`.../System32/imageres.dll`):
 
 {{ macros.imgFigure('./images/available-icons.png', 'Available windows standard icons.') }}
 
-- #100: 'Disabled shield',
-- #101: 'Enabled shield'.
+- #100: 'Disabled: a red shield with a cross',
+- #101: 'Enabled: a green shield with a check mark'.
 
 And the final part is to display the operation status dialog.
 
@@ -145,3 +145,7 @@ And, finally, we could have different icons on the desktop for each status:
 - [Get-Service](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-service?view=powershell-7.4)
 - [Start-Service](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/start-service?view=powershell-7.4)
 - [Stop-Service](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/stop-service?view=powershell-7.4)
+
+## TODO
+
+It's required to add ability to update the service state on demand/on the system start, because at the moment it saves only the last state, what couldn't be always actual. But there is a solution, if the "manual" mode was set for the service, it will restore its last state.
