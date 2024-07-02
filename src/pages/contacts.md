@@ -5,12 +5,13 @@ permalink: /contacts/
 # eleventyExcludeFromCollections: true
 # description: Contacts page
 date: 2024-06-18
-# tag: false
 eleventyNavigation:
   key: contacts
-tags:
-  - site
-  - contacts
+hideMeta: true
+tag: false
+#tags:
+#  - site
+#  - contacts
 ---
 
 <!--

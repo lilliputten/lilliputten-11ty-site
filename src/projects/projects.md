@@ -7,15 +7,16 @@ eleventyNavigation:
   key: projects
   title: Projects
 # eleventyExcludeFromCollections: true
-date: 2024-06-19
-# tag: false
-tags:
-  - site
-  - projects
+date: 2024-07-02
+hideMeta: true
+tag: false
+#tags:
+#  - site
+#  - projects
 ---
 
 <!--
-@changed 2024.06.21, 21:41
+@changed 2024.07.02, 18:21
 -->
 
 {% import "macros.njk" as macros with context %}
@@ -27,6 +28,8 @@ Currently I'm working for our own startup project, 360caster, for interactive mu
 Below are a few ongoing or finished projects.
 
 ## Recent projects
+
+{{ macros.ArticleThumb('./2024/vanilla-tasks-manager/', 'Vanilla tasks list manager', 'The small vanilla javascript/css application designed to demonstrate the capabilities of native technologies in a browser environment.') }}
 
 {{ macros.ArticleThumb('./2024/svelte-randonneur-app/', 'Randonneour Data Browser', 'The application is designed to view and modify data describing changes that will be applied to environmental sustainability processes. It features a graphical, user-friendly interface to navigate and change different types of data.') }}
 

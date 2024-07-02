@@ -5,11 +5,11 @@ permalink: /about/
 # 23: true
 # description: About page
 date: 2024-06-23
-# hideMeta: true
-# tag: false
-tags:
-  - site
-  - about
+hideMeta: true
+tag: false
+#tags:
+#  - site
+#  - about
 ---
 
 <!--
