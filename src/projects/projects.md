@@ -7,7 +7,7 @@ eleventyNavigation:
   key: projects
   title: Projects
 # eleventyExcludeFromCollections: true
-date: 2024-07-02
+date: 2024-07-07
 hideMeta: true
 tag: false
 #tags:
@@ -16,14 +16,14 @@ tag: false
 ---
 
 <!--
-@changed 2024.07.02, 18:21
+@changed 2024.07.07, 21:28
 -->
 
 {% import "macros.njk" as macros with context %}
 
 ## Selected projects
 
-Currently I'm working for our own startup project, 360caster, for interactive museums’ 3D tours platform. _(Using NextJS, mobx, MUI, SCSS, Mediasoup for Video/Audio support, proprietary 3D tools, Eleventhy.)_
+Currently I'm working for our own startup project, 360caster, for interactive museums’ 3D tours platform _(using NextJS, mobx, MUI, SCSS, Mediasoup for Video/Audio support, proprietary 3D tools, Eleventhy)_, and for my upwork clients.
 
 Below are a few ongoing or finished projects.
 
