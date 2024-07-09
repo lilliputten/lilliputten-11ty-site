@@ -38,7 +38,7 @@ This is a small vanilla javascript/css application designed to demonstrate the c
 - Changing the order of project/task items by dragging (with mobile support).
 - Change the order of the project/task items by drag-and-drop (with support for mobile devices).
 - Data import/export from/to a local json file.
-- Basic PWA funcitonality (cache, ability to install on a mobile desktop; temporarily disabled, in progress)
+- ~~Basic PWA funcitonality (cache, ability to install on a mobile desktop).~~ (Temporarily disabled, in progress.)
 - Time tracking functionality.
 
 ## Resources
@@ -55,7 +55,11 @@ The actual version is deployed to:
 
 {{ macros.imgFigure('./images/layout-and-task-states.png', 'The main application layout, different task states and active time tracking (v.0.0.10).') }}
 
+{{ macros.imgFigure('./images/nodes-drag-and-drop.png', 'Drag-and-drop in action (v.0.0.9).') }}
+
 {{ macros.imgFigure('./images/dialog-popup.png', 'The dialog window popup (v.0.0.3).') }}
+
+{{ macros.imgFigure('./images/toasts.png', 'Simple toast popups (v.0.0.1).') }}
 
 ## Used technologies
 
@@ -88,4 +92,3 @@ Not entirely pure javascript is used here. Some exceptions include:
 I've used some of the technologies I used in my client's project.
 
 I've applied here some of the approaches and technologies that I'd developed for my client's [Brightway Matchbox](https://github.com/cauldron/bw_matchbox) project, where we used the lightweight vanilla front-end part.
-
