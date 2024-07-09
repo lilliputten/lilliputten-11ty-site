@@ -32,6 +32,16 @@ Last changes timestamp: 2024.06.23 00:19 +0500
     </script>
   </head>
   <body class="Page page__body">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z01LD05S3B"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-Z01LD05S3B');
+    </script>
     {# Base content #}
     {{ content | safe }}
     {% include "inline-root-scripts.njk" %}
