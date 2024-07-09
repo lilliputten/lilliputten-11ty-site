@@ -1,10 +1,10 @@
 ---
 layout: article.njk
-title: Vanilla tasks list manager
+title: Vanilla Tasks Tracker
 hasThumb: true
 eleventyNavigation:
-  key: vanilla-tasks-manager
-  title: Vanilla tasks list manager
+  key: vanilla-tasks-tracker
+  title: Vanilla Tasks Tracker
   parent: projects-2024
 date: 2024-07-09
 showNavigationBreadcrumbs: true
@@ -12,7 +12,7 @@ tags:
   - projects
   - '2024'
   - vanilla
-  - tasks manager
+  - tasks tracker
   - js
   - css
   - typescript

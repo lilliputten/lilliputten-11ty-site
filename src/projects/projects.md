@@ -29,7 +29,7 @@ Below are a few ongoing or finished projects.
 
 ## Recent projects
 
-{{ macros.ArticleThumb('./2024/vanilla-tasks-manager/', 'Vanilla tasks list manager', 'The small vanilla javascript/css application designed to demonstrate the capabilities of native technologies in a browser environment.') }}
+{{ macros.ArticleThumb('./2024/vanilla-tasks-tracker/', 'Vanilla Tasks Tracker', 'The small vanilla javascript/css application designed to demonstrate the capabilities of native technologies in a browser environment.') }}
 
 {{ macros.ArticleThumb('./2024/svelte-randonneur-app/', 'Randonneour Data Browser', 'The application is designed to view and modify data describing changes that will be applied to environmental sustainability processes. It features a graphical, user-friendly interface to navigate and change different types of data.') }}
 
