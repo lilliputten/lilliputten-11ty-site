@@ -1,6 +1,6 @@
 /**
  * @module Article
- * @changed 2024.06.21, 03:49
+ * @changed 2024.07.25, 19:33
  */
 
 @use 'sass:color';
@@ -30,11 +30,16 @@
     grid-column: 2 / span 1;
   }
 
-  h1,
-  h2,
-  h3 {
-    margin-top: 1em;
-    margin-bottom: 1em;
+  *:not(pre) code {
+    display: inline-block;
+    border: 1px solid color.change(gray, $alpha: 0.2);
+    border-radius: 3px;
+    $padding: 0.4em;
+    padding-left: $padding;
+    padding-right: $padding;
+    margin: 0 0.1em;
+    // color: #888;
+    color: $primaryColor;
   }
   > pre {
     // Stylize code blocks as regular elements...
@@ -49,16 +54,14 @@
       opacity: 1;
     }
   }
-  p code {
-    display: inline-block;
-    border: 1px solid color.change(gray, $alpha: 0.2);
-    border-radius: 3px;
-    $padding: 0.4em;
-    padding-left: $padding;
-    padding-right: $padding;
-    margin: 0 0.1em;
-    color: #888;
+
+  h1,
+  h2,
+  h3 {
+    margin-top: 1em;
+    margin-bottom: 1em;
   }
+
   .ArticleHead {
     margin-bottom: 2rem;
   }
