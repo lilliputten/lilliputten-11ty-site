@@ -6,7 +6,7 @@ eleventyNavigation:
   key: vanilla-tasks-tracker
   title: Vanilla Tasks Tracker
   parent: projects-2024
-date: 2024-07-09
+date: 2024-07-25
 showNavigationBreadcrumbs: true
 tags:
   - projects
@@ -21,7 +21,7 @@ tags:
 ---
 
 <!--
-@changed 2024.07.09, 16:41
+@changed 2024.07.25, 19:30
 -->
 
 {% import "macros.njk" as macros with context %}
@@ -30,28 +30,35 @@ This is a small vanilla javascript/css application designed to demonstrate the c
 
 ## Features
 
-- Inter-session data storing (in the `localStorage`).
+- Inter-session data storing: using the `localStorage` and firebase cloud database (for authorized users, see below).
+- User authorization (using Google OAUTH).
+- Caching service worker with abilities to automatically flush the cache on version change and installation of the PWA application.
+- Time tracking functionality (even when the apllication is not active).
 - Adaptive layout, adaptive main menu.
+- Data import/export from/to a local json file.
+- Minimal UI: Popup dialogs, toasts.
+- Change the order of the project/task items by drag-and-drop (with support for mobile devices).
 - ES6 JavaScript code.
 - ES6 browser modules.
 - Internal TypeScript support (via jsdoc tags).
-- Changing the order of project/task items by dragging (with mobile support).
-- Change the order of the project/task items by drag-and-drop (with support for mobile devices).
-- Data import/export from/to a local json file.
-- ~~Basic PWA funcitonality (cache, ability to install on a mobile desktop).~~ (Temporarily disabled, in progress.)
-- Time tracking functionality.
 
 ## Resources
-
-The source code is located in github repository:
-
-- https://github.com/lilliputten/vanilla-tasks
 
 The actual version is deployed to:
 
 - https://vanilla-tasks.lilliputten.com/
 
+The source code is located in github repository:
+
+- https://github.com/lilliputten/vanilla-tasks
+
 ## Screenshots
+
+{{ macros.imgFigure('./images/authorization-signin-button.png', 'The layout of the application with empty data, the main menu contains a sign-in button (v.0.0.13).') }}
+
+{{ macros.imgFigure('./images/authorized.png', 'The user is signed in, the data is loaded (if it was in the server database) (v.0.0.13).') }}
+
+{{ macros.imgFigure('./images/changed-version-notification.png', 'Notification of a version change (v.0.0.13).') }}
 
 {{ macros.imgFigure('./images/layout-and-task-states.png', 'The main application layout, different task states and active time tracking (v.0.0.10).') }}
 
