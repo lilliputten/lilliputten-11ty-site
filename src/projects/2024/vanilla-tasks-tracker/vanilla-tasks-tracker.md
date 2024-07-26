@@ -34,7 +34,7 @@ This is a small vanilla javascript/css application designed to demonstrate the c
 - User authorization (using Google OAUTH).
 - Caching service worker with abilities to automatically flush the cache on version change and installation of the PWA application.
 - Time tracking functionality (even when the apllication is not active).
-- Adaptive layout, adaptive main menu.
+- Adaptive layout (using native CSS variables), adaptive main menu.
 - Data import/export from/to a local json file.
 - Minimal UI: Popup dialogs, toasts.
 - Change the order of the project/task items by drag-and-drop (with support for mobile devices).
