@@ -7,7 +7,7 @@ eleventyNavigation:
   key: projects
   title: Projects
 # eleventyExcludeFromCollections: true
-date: 2024-07-07
+date: 2024-10-21
 hideMeta: true
 tag: false
 #tags:
@@ -16,7 +16,7 @@ tag: false
 ---
 
 <!--
-@changed 2024.07.07, 21:28
+@changed 2024.10.21, 21:41
 -->
 
 {% import "macros.njk" as macros with context %}
@@ -29,13 +29,17 @@ Below are a few ongoing or finished projects.
 
 ## Recent projects
 
-{{ macros.ArticleThumb('./2024/vanilla-tasks-tracker/', 'Vanilla Tasks Tracker', 'The small vanilla javascript/css application designed to demonstrate the capabilities of native technologies in a browser environment.') }}
+{{ macros.ArticleThumb('./2024/fsproperty-yupe-landing/', 'Design & coding of a custom landing page and a PHP server script for the existing website.', 'This page was conceived as a separate advertising campaign on an existing site. It was designed taking into account the already existing style of the site, it was not supposed to look like a separate attractive and stylish advertising page. It was developed using manually created markup and styles and scripts organized into SCSS and TypeScript modules, compiled via webpack.') }}
 
-{{ macros.ArticleThumb('./2024/svelte-randonneur-app/', 'Randonneour Data Browser', 'The application is designed to view and modify data describing changes that will be applied to environmental sustainability processes. It features a graphical, user-friendly interface to navigate and change different types of data.') }}
+{{ macros.ArticleThumb('./2024/certifico-tilda-site/', 'Full site designed in Figma and coded within Tilda CMS using custom solutions', 'In the Autumn of 2024 I completed the task of a full cycle (excluding (excluding content management tasks) of website creation from design to programming for my Russian partner.') }}
 
-{{ macros.ArticleThumb('./2024/sankey-graph-app/', 'Sankey Diagram Vizualizer', 'This application is designed to visualize data flows using sankey diagrams.') }}
+{{ macros.ArticleThumb('./2024/vanilla-tasks-tracker/', 'Vanilla Tasks Tracker (VanillaJS app)', 'The small vanilla javascript/css application designed to demonstrate the capabilities of native technologies in a browser environment.') }}
 
-{{ macros.ArticleThumb('./2024/dds-registration-site/', 'DdS Events Site', 'A simple site designed to manage DdS membership and event registration. The application is purposed to simplify the conduction of seminars and other events held by the non-profit association Départ de Sentier.') }}
+{{ macros.ArticleThumb('./2024/svelte-randonneur-app/', 'Randonneour Data Browser (Svelte app)', 'The application is designed to view and modify data describing changes that will be applied to environmental sustainability processes. It features a graphical, user-friendly interface to navigate and change different types of data.') }}
+
+{{ macros.ArticleThumb('./2024/sankey-graph-app/', 'Sankey Diagram Vizualizer (React app)', 'This application is designed to visualize data flows using sankey diagrams.') }}
+
+{{ macros.ArticleThumb('./2024/dds-registration-site/', 'Small DdS Events Django-based site', 'A simple site designed to manage DdS membership and event registration. The application is purposed to simplify the conduction of seminars and other events held by the non-profit association Départ de Sentier.') }}
 
 ## Archived projects
 
