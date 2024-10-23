@@ -24,7 +24,7 @@ tags:
 ---
 
 <!--
-@changed 2024.10.21, 21:07
+@changed 2024.10.23, 15:00
 -->
 
 {% import "macros.njk" as macros with context %}
@@ -61,7 +61,7 @@ The following screenshots are presented as they looked immediately after the com
 
 To customize the standard Tilda building blocks, typescript code is used, organized into a project that is compiled using webpack.
 
-See [the project](https://github.com/lilliputten/certifico-included-assets) on Github.
+See [the project](https://github.com/lilliputten/certifico-tilda-project-2024-10) on Github.
 
 ## Links
 
