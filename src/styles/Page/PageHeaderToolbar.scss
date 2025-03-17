@@ -17,7 +17,7 @@
   $itemSize: 2em;
 
   html:not([data-theme]) & .theme-dark,
-  [data-theme='light'] & .theme-dark,
+  [data-theme!='dark'] & .theme-dark,
   [data-theme='dark'] & .theme-light {
     display: none;
   }
