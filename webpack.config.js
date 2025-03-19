@@ -5,6 +5,8 @@ const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
+const minimizeAssets = true; // !isDev || !useLocalServedScripts;
+
 module.exports = {
   mode: 'production',
   // @see https://webpack.js.org/configuration/devtool/#devtool
@@ -46,6 +48,29 @@ module.exports = {
             loader: 'sass-loader',
             options: {
               sourceMap: true,
+              /* // NOTE: Inject 'use' for math and color features, import common variables and mixins.
+               * additionalData: [
+               *   // '@use "sass:math";',
+               *   // '@use "sass:color";',
+               *   // '@import "src/variables.scss";',
+               *   // '@import "src/mixins.scss";',
+               * ]
+               *   .filter(Boolean)
+               *   .join('\n'),
+               */
+              api: 'modern',
+              sassOptions: {
+                // @see https://github.com/sass/node-sass#outputstyle
+                outputStyle: minimizeAssets ? 'compressed' : 'expanded',
+                quietDeps: true,
+                silenceDeprecations: [
+                  // @see node_modules/sass/types/deprecations.d.ts
+                  'legacy-js-api',
+                  'import',
+                  'color-functions',
+                  'global-builtin',
+                ],
+              },
             },
           },
         ],

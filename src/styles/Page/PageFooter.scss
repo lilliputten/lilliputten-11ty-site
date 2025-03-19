@@ -11,14 +11,14 @@
   padding: 1em;
   margin: 0 auto;
 
-  @media (min-width: calc($mainColumnWidth + 2em)) {
-    padding: 1em 0;
-  }
-  @media (min-width: calc($mainColumnWidth + 2em)) {
-    padding: 1em 0;
-  }
-
   font-size: 95%;
+
+  @media (min-width: calc($mainColumnWidth + 2em)) {
+    padding: 1em 0;
+  }
+  @media (min-width: calc($mainColumnWidth + 2em)) {
+    padding: 1em 0;
+  }
 
   a:not(:hover) {
     text-decoration: none;

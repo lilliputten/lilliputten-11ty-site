@@ -9,30 +9,15 @@
 
 // Themes...
 
+// Theme background: dark
 body,
-[data-theme='light'],
-[data-theme='light'] body {
-  background-color: $backgroundColor;
-}
-
-.onLight,
-body,
-[data-theme='light'],
-[data-theme='light'] body {
-  color: $defaultTextColor;
-  a {
-    transition: all $transitionTimeMs;
-    &:hover {
-      color: $primaryLightenColor;
-    }
-  }
-}
-
 [data-theme='dark'],
 [data-theme='dark'] body {
   background-color: $backgroundDarkColor;
 }
 
+// Theme foreground: dark
+body,
 .onRed,
 .onDark,
 [data-theme='dark'],
@@ -45,6 +30,25 @@ body,
     &:hover {
       color: $primaryColor;
       opacity: 1;
+    }
+  }
+}
+
+// Theme background: light
+[data-theme='light'],
+[data-theme='light'] body {
+  background-color: $backgroundColor;
+}
+
+// Theme foreground: light
+.onLight,
+[data-theme='light'],
+[data-theme='light'] body {
+  color: $defaultTextColor;
+  a {
+    transition: all $transitionTimeMs;
+    &:hover {
+      color: $primaryLightenColor;
     }
   }
 }

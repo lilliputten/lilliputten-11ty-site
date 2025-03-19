@@ -1,5 +1,7 @@
-node_modules
-build
+/bin
+/node_modules
+/build
+/publish
 _cache
 .cache
 
