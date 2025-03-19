@@ -1,0 +1,12 @@
+/* TEAM */
+    Author: Igor Lilliputten
+    Contact: igor [at] lilliputten.com
+
+/* THANKS */
+    {CONTRIBUTORS}
+
+/* SITE */
+    Last update: {LAST_UPDATE}
+    Language: English
+    Doctype: HTML5
+    IDE: GVim

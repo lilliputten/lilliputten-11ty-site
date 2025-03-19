@@ -1,0 +1,4 @@
+Sitemap: https://lilliputten.com/sitemap.xml
+
+User-agent: *
+Allow: /
