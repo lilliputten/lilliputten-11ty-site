@@ -1,1 +1,270 @@
-<!DOCTYPE ><html lang="en" data-page="regular" data-layout="article"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sankey Diagram Vizualizer — Lilliputten &amp; Noble</title><meta name="color-scheme" content="dark light"><meta name="description" content="Hello, my name is Igor and I'm a front-end developer."><meta name="keywords" content="lilliputten"><meta name="generator" content="Eleventy"><link rel="icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/static/images/favicon/logo-192.png"><link rel="manifest" href="/manifest-93b9e3c535.webmanifest"><meta name="theme-color" content="#ffcc00"><meta property="og:url" content="https://lilliputten.com/projects/2024/sankey-graph-app/"><meta property="og:title" content="Sankey Diagram Vizualizer | Lilliputten &amp; Noble"><meta property="og:description" content="Hello, my name is Igor and I'm a front-end developer."><meta property="og:image" content="https://lilliputten.com/static/images/logo/og/og.jpg"><meta property="og:type" content="website"><meta name="title" content="Sankey Diagram Vizualizer | Lilliputten &amp; Noble"><link rel="alternate" href="https://lilliputten.com/feed/rss.xml" type="application/rss+xml" title="Lilliputten &amp; Noble"><link rel="webmention" href="https://webmention.io/lilliputten.com/webmention"><link rel="pingback" href="https://webmention.io/lilliputten.com/xmlrpc"><link rel="author" href="https://lilliputten.com/humans.txt"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700&amp;display=swap" rel="stylesheet"><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"><link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" type="text/css"><link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet" type="text/css"><link rel="stylesheet" href="/compiled-assets/styles-e6a393725a.css"><script>var FF_FOUC_FI</script></head><body class="Page page__body"><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-Z01LD05S3B"></script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-Z01LD05S3B")</script><div class="PageVisual" id="PageVisual"><canvas class="VisualAnimation" id="VisualAnimation"></canvas></div><nav id="PageHeader" class="PageHeader navbar fixed-top navbar-dark navbar-expand-md onRed"><div class="PageHeaderWrapper maxWidthContainer_ container_"><div class="PageHeaderBrand gap-1"><button id="toggleNavigation" aria-controls="navbarNavigation" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler collapsed" data-bs-target="#navbarNavigation" data-bs-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button><div class="PageHeaderLogo"><a href="/" class="Logo"></a></div></div><div class="PageHeaderNavigation navbar-collapse collapse" id="navbarNavigation"><ul class="PageMenu navbar-nav"><li class="nav-item"><a class="nav-link" href="/about/">About</a></li><li class="nav-item"><a class="nav-link" href="/projects/">Projects</a></li><li class="nav-item"><a class="nav-link" href="/contacts/">Contacts</a></li></ul><ul class="PageHeaderToolbar"><li><a href="https://github.com/lilliputten/lilliputten-11ty-site/blob/main/./src/projects/2024/sankey-graph-app/sankey-graph-app.md" target="_blank" title="Edit page on github" rel="noopener"><i class="bi bi-pencil"></i></a></li><li><a href="" onclick="return window.toggleTheme(),!1" title="Toggle color theme"><i class="bi bi-brightness-high-fill theme-dark"></i><i class="bi bi-moon-stars-fill theme-light"></i></a></li></ul></div></div></nav><main class="PageContentLayout page__content"><article class="Article"><div class="ArticleHeadWrapper"><img class="ArticleHeadThumb" src="./thumb.png" alt="Article thumbnail" width="120" height="120" decoding="async" loading="lazy" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 120 120'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAALVJREFUeJxj4OfVkJGRERYWZmNjY2RkZIADWSkvKysrAwMDDQ0NSRlJHh5eNlZWJlY2BmlxZyMjQ0cnx5jo2AiHKANjQ1MDA1FzWwZZKTdHR8ei4qKezp5C5xJtPW0rU1MJWxcGNWX/0LDQoOCgpPikXKcCQ1MjWwsLKUdPkISvn6+3t3dwQLCfchCfIJ+inByfmhaDhmpIeHiYja2NqIgoOzMHwlXSkuZaWposLCwMDAyMSAAAuFUfuzA+uvQAAAAASUVORK5CYII='%3E%3C/image%3E%3C/svg%3E&quot;)"><div class="ArticleHead"><ul class="ArticleBreadcrumbs"><li data-key="home"><a class="home" href="/" title="Site root"></a></li><li data-key="projects" class="noParent"><a href="/projects/">Projects</a></li><li data-key="projects-2024" class="hasParent" data-parent="projects"><a href="/projects/2024/">2024</a></li></ul><h1 class="ArticleTitle">Sankey Diagram Vizualizer</h1><div class="ArticleMeta"><time class="metaItem articleDatetime" datetime="2024-02-10T00:00:00.000Z" title="Document date"><span>Date:</span> February 10, 2024</time><div class="metaItem articleMinutesToRead" title="With an average speed of 200 words per minute"><span>Time to read:</span> 2 min</div></div></div></div><h2 id="the-application" tabindex="-1">The application <a class="header-anchor" href="#the-application"><i class="bi bi-link-45deg"></i></a></h2><p>The application is designed to offer a comprehensive and interactive way to visualize data flows using <a href="https://en.wikipedia.org/wiki/Sankey_diagram" c="l" class="external" title="External link: https://en.wikipedia.org/wiki/Sankey_diagram" target="_blank" rel="noopener">sankey diagrams</a>. This tool is perfect for data analysts, researchers, and professionals who need to understand and present complex data relationships in an intuitive format.</p><p>This application provides a powerful yet user-friendly platform for visualizing complex data flows, enabling users to gain insights and make informed decisions quickly and effectively.</p><p>This web application was made as part of a set of data manipulating and visualizing tools for the <a href="https://www.cauldron.ch/" c="l" class="external" title="External link: https://www.cauldron.ch/" target="_blank" rel="noopener">Cauldron Solutions</a> company.</p><h2 id="key-features" tabindex="-1">Key Features <a class="header-anchor" href="#key-features"><i class="bi bi-link-45deg"></i></a></h2><p><strong>Flexible Data Loading:</strong></p><ul><li>Load data programmatically from external data files using URL parameters.</li><li>Upload data directly from your local disk.</li><li>Utilize a predefined demo dataset for quick visualization and testing.</li></ul><p><strong>Interactive Diagram Layouts:</strong></p><ul><li>Easily relayout diagram nodes (it’s a built-in functionality from the charting library).</li></ul><p><strong>In-Application Help:</strong></p><ul><li>Access a brief help reference in a convenient popup window for guidance and troubleshooting.</li></ul><p><strong>Live Visualization Server:</strong></p><ul><li>The application provides an interactive server implemented in both Python and Node.js, for visualizing data using external requests and redirects.</li></ul><p><strong>Customizable Interface:</strong></p><ul><li>Adjust settings in side panels: application settings on the left and selected node properties on the right.</li><li>Save settings between sessions, ensuring a seamless user experience.</li></ul><p><strong>Theming and Layout Options:</strong></p><ul><li>Choose between dark and light themes.</li><li>Select horizontal or vertical layouts for optimal data presentation.</li></ul><p><strong>Node Management:</strong></p><ul><li>Automatically or manually hide nodes to simplify the diagram.</li><li>Apply different color modes to nodes: monochrome, random colors, or gradient (progressive) colors.</li><li>Manually select specific colors for individual nodes to highlight important data points.</li><li>Edit node names.</li></ul><h2 id="technologies-used" tabindex="-1">Technologies used <a class="header-anchor" href="#technologies-used"><i class="bi bi-link-45deg"></i></a></h2><ul><li><a href="https://react.dev/" c="l" class="external" title="External link: https://react.dev/" target="_blank" rel="noopener">React</a></li><li><a href="https://plotly.com/javascript/" c="l" class="external" title="External link: https://plotly.com/javascript/" target="_blank" rel="noopener">Plotly javascript graphing library</a></li><li><a href="https://mui.com/" c="l" class="external" title="External link: https://mui.com/" target="_blank" rel="noopener">MUI</a></li></ul><h2 id="the-plotly-library" tabindex="-1">The Plotly library <a class="header-anchor" href="#the-plotly-library"><i class="bi bi-link-45deg"></i></a></h2><p>The cornerstone of the application is the <a href="https://plotly.com/javascript/" c="l" class="external" title="External link: https://plotly.com/javascript/" target="_blank" rel="noopener">Plotly javascript graphing library</a>.</p><p>We had to incorporate this library in the project’s codebase to make debugging difficult moments easier, and later slightly patch the library code itself to eliminate some of the problems that arose.</p><p>For example, chart re-rendering capabilities have been added when updating colors and node names.</p><h2 id="application-screenshots" tabindex="-1">Application screenshots <a class="header-anchor" href="#application-screenshots"><i class="bi bi-link-45deg"></i></a></h2><figure><figcaption>Data load screen. It's possible to load custom data from local drive or to use predefined demo data set here. User can see general statistics on the loaded data.</figcaption><img src="./images/dataLoadScreen.png" alt="Data load screen. It's possible to load custom data from local drive or to use predefined demo data set here. User can see general statistics on the loaded data." loading="lazy" decoding="async" width="1125" height="882" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 1125 882'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAHCAIAAABV+fA3AAAACXBIWXMAABJ0AAASdAHeZh94AAAAxUlEQVR4nE3CzQoBQQAA4HlDBxeKkhJy29K22lyQcHNSSDgoy5Y4S5IHkCP2p4SYdqzdmbXDjDj5+oA01mVVE8eGoJjC0PhWDEk1RdUECF7PR8OxLc45Y4z/AXfb1nVzd9COpxMmHibPN+O/DFjQgjeIXYJd7Dwe2HUppdSn7M1Ab9UvTEqVWa08q+ZGeXGYkxRZGGRbyw4oTWuxdiLVzaTbyXgzHmpEwo1ooB4sTstgvUfaBSIEr4s52m48Rj2feJT4L/8DzNmVJ3521ycAAAAASUVORK5CYII='%3E%3C/image%3E%3C/svg%3E&quot;)"></figure><figure><figcaption>Simple demo graph data on the main application screen.</figcaption><img src="./images/mainPageBlackDemo.png" alt="Simple demo graph data on the main application screen." loading="lazy" decoding="async" width="1920" height="1053" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 1920 1053'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAIAAAB1kpiRAAAACXBIWXMAABJ0AAASdAHeZh94AAAAoUlEQVR4nGOQlJTk5RMRERHl4+PjAANOTk4eHl5ZGVlJSUkGBgYGdjY5PT0zdXVVcXFxLm5uJlZWBgYGbgEhFhYWkDQbi6ypqU1OZna0e5SRpZWQmhZImpeXmZmZgZGJgZ1VzsPTvyAnL8ElwdjaVkRbn4GBgZkZrJWFlZGDTcHXN8TV2UVNTJ1XQJCdXxAkwcgIIsF2S+rpmXBxcUD5SAAALIgQB1XI4NwAAAAASUVORK5CYII='%3E%3C/image%3E%3C/svg%3E&quot;)"></figure><figure><figcaption>The main chart window with sample data visualization of medium complexity.</figcaption><img src="./images/mainWindow.png" alt="The main chart window with sample data visualization of medium complexity." loading="lazy" decoding="async" width="783" height="482" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 783 482'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAIAAAB1kpiRAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAApUlEQVR4nEWNSw6CMBQAe/9LuNGEBXoKxcRU/GBC1PCpWBChUvm3QJ+BjbOdSQZpxnO+DWZrV8fJyvwsTbY0mW6yxYZqBkWgVCyp98JZegfVw4gCANGXg+rQwa92oWMR7PhWKxoAGCZfCSlkj1IunK9/IfubdwyCK2fvgvMsSWQzpkjJLqjI+YFdYkXUTSJacF7med91o25rEdehTU6E2DnPpvefHyYcpBATDPooAAAAAElFTkSuQmCC'%3E%3C/image%3E%3C/svg%3E&quot;)"></figure><figure><figcaption>Help dialog window with an explanantion of some basic application features.</figcaption><img src="./images/helpWindow.png" alt="Help dialog window with an explanantion of some basic application features." loading="lazy" decoding="async" width="1163" height="1015" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 1163 1015'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAHCAIAAAC6O5sJAAAACXBIWXMAABJ0AAASdAHeZh94AAAAnElEQVR4nC3NSwrCMBRA0ex/CW5AEByKQ52IWKwg1TSN+RWLLzEJKIoIbV4E9U7P4JLleteobjqbj8aTxWrTQjxDLPYNcc7mnHXLyor6zuVvMUZSn3iM/vV8Y0JETCnlnEMIpKRUiJozHkIYhgER/1BUB8mo1MooeXXuB957UgsRrLUW4AKP+63v+/+jLLeMH5WS2hittTEGACilHxUHlsJk+c4SAAAAAElFTkSuQmCC'%3E%3C/image%3E%3C/svg%3E&quot;)"></figure><h2 id="links" tabindex="-1">Links <a class="header-anchor" href="#links"><i class="bi bi-link-45deg"></i></a></h2><ul><li>The <a href="https://github.com/lilliputten/sankey-graph-app" c="l" class="external" title="External link: https://github.com/lilliputten/sankey-graph-app" target="_blank" rel="noopener">github repository</a> is available.</li></ul><div class="ArticleFooter"><ul class="ArticleTags tags"><li class="tagsTitle">Tags:</li><li class="tagsItem"><a class="linkAsText" href="/tags/projects/">projects</a></li><li class="tagsItem"><a class="linkAsText" href="/tags/2024/">2024</a></li><li class="tagsItem"><a class="linkAsText" href="/tags/cauldron/">cauldron</a></li><li class="tagsItem"><a class="linkAsText" href="/tags/application/">application</a></li><li class="tagsItem"><a class="linkAsText" href="/tags/data/">data</a></li><li class="tagsItem"><a class="linkAsText" href="/tags/sankey/">sankey</a></li><li class="tagsItem"><a class="linkAsText" href="/tags/diagram/">diagram</a></li><li class="tagsItem"><a class="linkAsText" href="/tags/vizualizer/">vizualizer</a></li><li class="tagsItem"><a class="linkAsText" href="/tags/react/">react</a></li><li class="tagsItem"><a class="linkAsText" href="/tags/plotly/">plotly</a></li><li class="tagsItem"><a class="linkAsText" href="/tags/mui/">mui</a></li><li class="tagsItem"><a class="linkAsText" href="/tags/javascript/">javascript</a></li><li class="tagsItem"><a class="linkAsText" href="/tags/typescript/">typescript</a></li></ul><div class="ArticleNav"></div></div></article></main><footer class="PageFooter"><div class="FooterContainer"><div class="FooterCopyright">© 2025 <span class="delimiter">/</span> <a href="/">Lilliputten &amp; Noble</a></div><ul class="SocialList"><li class="SocialListItem"><a href="https://github.com/lilliputten" rel="me noopener" class="SocialListLink linkAsText" id="Github" target="_blank"><i class="bi bi-github"></i> GitHub</a></li><li class="SocialListItem"><a href="https://linkedin.com/in/lilliputten" class="SocialListLink linkAsText" id="Linkedin" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i> LinkedIn</a></li></ul></div></footer><div id="noise" class="noise animated"></div><script>(()=&gt;{function t(){var t=window.document.body,t=t.parentNode||t,e=window.localStorage?window.localStorage.getItem("theme"):null;e&amp;&amp;t&amp;&amp;(t.setAttribute&amp;&amp;t.setAttribute("data-theme",e),t.dataset)&amp;&amp;(t.dataset.theme=e)}t(),window.addEventListener("load",t)})()</script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" type="text/javascript"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" type="text/javascript"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js" type="text/javascript"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.0.3/chroma.min.js" type="text/javascript"></script><script type="text/javascript" src="/compiled-assets/scripts-ae11403605.js"></script></body></html>
+<!DOCTYPE >
+<html lang="en" data-page="regular" data-layout="article">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sankey Diagram Vizualizer — Lilliputten &amp; Noble</title>
+  <meta name="color-scheme" content="dark light">
+  <meta name="description" content="Hello, my name is Igor and I'm a front-end developer.">
+  <meta name="keywords" content="lilliputten">
+  <meta name="generator" content="Eleventy">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/static/images/favicon/logo-192.png">
+  <link rel="manifest" href="/manifest-93b9e3c535.webmanifest">
+  <meta name="theme-color" content="#ffcc00">
+  <meta property="og:url" content="https://lilliputten.com/projects/2024/sankey-graph-app/">
+  <meta property="og:title" content="Sankey Diagram Vizualizer | Lilliputten &amp; Noble">
+  <meta property="og:description" content="Hello, my name is Igor and I'm a front-end developer.">
+  <meta property="og:image" content="https://lilliputten.com/static/images/logo/og/og.jpg">
+  <meta property="og:type" content="website">
+  <meta name="title" content="Sankey Diagram Vizualizer | Lilliputten &amp; Noble">
+  <link rel="alternate" href="https://lilliputten.com/feed/rss.xml" type="application/rss+xml" title="Lilliputten &amp; Noble">
+  <link rel="webmention" href="https://webmention.io/lilliputten.com/webmention">
+  <link rel="pingback" href="https://webmention.io/lilliputten.com/xmlrpc">
+  <link rel="author" href="https://lilliputten.com/humans.txt">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700&amp;display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" type="text/css">
+  <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/compiled-assets/styles-e6a393725a.css">
+  <script>
+    // NOTE: Prevent firefox FOUC...
+          var FF_FOUC_FI;
+  </script>
+</head>
+
+<body class="Page page__body">
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-Z01LD05S3B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', 'G-Z01LD05S3B');
+  </script>
+  <div class="PageVisual" id="PageVisual">
+    <canvas class="VisualAnimation" id="VisualAnimation"></canvas>
+  </div>
+  <nav id="PageHeader" class="PageHeader navbar fixed-top navbar-dark navbar-expand-md onRed">
+    <div class="PageHeaderWrapper maxWidthContainer_ container_">
+      <div class="PageHeaderBrand gap-1">
+        <button id="toggleNavigation" aria-controls="navbarNavigation" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler collapsed" data-bs-target="#navbarNavigation" data-bs-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="PageHeaderLogo">
+          <a href="/" class="Logo"></a>
+        </div>
+      </div>
+      <div class="PageHeaderNavigation navbar-collapse collapse" id="navbarNavigation">
+        <ul class="PageMenu navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="/about/">About</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="/projects/">Projects</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="/contacts/">Contacts</a>
+          </li>
+        </ul>
+        <ul class="PageHeaderToolbar">
+          <li><a href="https://github.com/lilliputten/lilliputten-11ty-site/blob/main/./src/projects/2024/sankey-graph-app/sankey-graph-app.md" target="_blank" title="Edit page on github" rel="noopener"><i class="bi bi-pencil"></i></a>
+          </li>
+          <li><a href="" onclick="window.toggleTheme(); return false" title="Toggle color theme"><i class="bi bi-brightness-high-fill theme-dark"></i><i class="bi bi-moon-stars-fill theme-light"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main class="PageContentLayout page__content">
+    <article class="Article">
+      <div class="ArticleHeadWrapper">
+        <img class="ArticleHeadThumb" src="./thumb.png" alt="Article thumbnail" width="120" height="120" decoding="async" loading="lazy" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 120 120'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAALVJREFUeJxj4OfVkJGRERYWZmNjY2RkZIADWSkvKysrAwMDDQ0NSRlJHh5eNlZWJlY2BmlxZyMjQ0cnx5jo2AiHKANjQ1MDA1FzWwZZKTdHR8ei4qKezp5C5xJtPW0rU1MJWxcGNWX/0LDQoOCgpPikXKcCQ1MjWwsLKUdPkISvn6+3t3dwQLCfchCfIJ+inByfmhaDhmpIeHiYja2NqIgoOzMHwlXSkuZaWposLCwMDAyMSAAAuFUfuzA+uvQAAAAASUVORK5CYII='%3E%3C/image%3E%3C/svg%3E&quot;)">
+        <div class="ArticleHead">
+          <ul class="ArticleBreadcrumbs">
+            <li data-key="home">
+              <a class="home" href="/" title="Site root"></a>
+            </li>
+            <li data-key="projects" class="noParent"><a href="/projects/">Projects</a>
+            </li>
+            <li data-key="projects-2024" class="hasParent" data-parent="projects"><a href="/projects/2024/">2024</a>
+            </li>
+          </ul>
+          <h1 class="ArticleTitle">Sankey Diagram Vizualizer</h1>
+          <div class="ArticleMeta">
+            <time class="metaItem articleDatetime" datetime="2024-02-10T00:00:00.000Z" title="Document date"><span>Date:</span> February 10, 2024</time>
+            <div class="metaItem articleMinutesToRead" title="With an average speed of 200 words per minute"><span>Time to read:</span> 2 min</div>
+          </div>
+        </div>
+      </div>
+      <h2 id="the-application" tabindex="-1">The application <a class="header-anchor" href="#the-application"><i class="bi bi-link-45deg"></i></a></h2>
+      <p>The application is designed to offer a comprehensive and interactive way to visualize data flows using <a href="https://en.wikipedia.org/wiki/Sankey_diagram" c="l" class="external" title="External link: https://en.wikipedia.org/wiki/Sankey_diagram"
+        target="_blank" rel="noopener">sankey diagrams</a>. This tool is perfect for data analysts, researchers, and professionals who need to understand and present complex data relationships in an intuitive format.</p>
+      <p>This application provides a powerful yet user-friendly platform for visualizing complex data flows, enabling users to gain insights and make informed decisions quickly and effectively.</p>
+      <p>This web application was made as part of a set of data manipulating and visualizing tools for the <a href="https://www.cauldron.ch/" c="l" class="external" title="External link: https://www.cauldron.ch/" target="_blank" rel="noopener">Cauldron Solutions</a> company.</p>
+      <h2
+      id="key-features" tabindex="-1">Key Features <a class="header-anchor" href="#key-features"><i class="bi bi-link-45deg"></i></a>
+        </h2>
+        <p><strong>Flexible Data Loading:</strong>
+        </p>
+        <ul>
+          <li>Load data programmatically from external data files using URL parameters.</li>
+          <li>Upload data directly from your local disk.</li>
+          <li>Utilize a predefined demo dataset for quick visualization and testing.</li>
+        </ul>
+        <p><strong>Interactive Diagram Layouts:</strong>
+        </p>
+        <ul>
+          <li>Easily relayout diagram nodes (it’s a built-in functionality from the charting library).</li>
+        </ul>
+        <p><strong>In-Application Help:</strong>
+        </p>
+        <ul>
+          <li>Access a brief help reference in a convenient popup window for guidance and troubleshooting.</li>
+        </ul>
+        <p><strong>Live Visualization Server:</strong>
+        </p>
+        <ul>
+          <li>The application provides an interactive server implemented in both Python and Node.js, for visualizing data using external requests and redirects.</li>
+        </ul>
+        <p><strong>Customizable Interface:</strong>
+        </p>
+        <ul>
+          <li>Adjust settings in side panels: application settings on the left and selected node properties on the right.</li>
+          <li>Save settings between sessions, ensuring a seamless user experience.</li>
+        </ul>
+        <p><strong>Theming and Layout Options:</strong>
+        </p>
+        <ul>
+          <li>Choose between dark and light themes.</li>
+          <li>Select horizontal or vertical layouts for optimal data presentation.</li>
+        </ul>
+        <p><strong>Node Management:</strong>
+        </p>
+        <ul>
+          <li>Automatically or manually hide nodes to simplify the diagram.</li>
+          <li>Apply different color modes to nodes: monochrome, random colors, or gradient (progressive) colors.</li>
+          <li>Manually select specific colors for individual nodes to highlight important data points.</li>
+          <li>Edit node names.</li>
+        </ul>
+        <h2 id="technologies-used" tabindex="-1">Technologies used <a class="header-anchor" href="#technologies-used"><i class="bi bi-link-45deg"></i></a></h2>
+        <ul>
+          <li><a href="https://react.dev/" c="l" class="external" title="External link: https://react.dev/" target="_blank" rel="noopener">React</a>
+          </li>
+          <li><a href="https://plotly.com/javascript/" c="l" class="external" title="External link: https://plotly.com/javascript/" target="_blank" rel="noopener">Plotly javascript graphing library</a>
+          </li>
+          <li><a href="https://mui.com/" c="l" class="external" title="External link: https://mui.com/" target="_blank" rel="noopener">MUI</a>
+          </li>
+        </ul>
+        <h2 id="the-plotly-library" tabindex="-1">The Plotly library <a class="header-anchor" href="#the-plotly-library"><i class="bi bi-link-45deg"></i></a></h2>
+        <p>The cornerstone of the application is the <a href="https://plotly.com/javascript/" c="l" class="external" title="External link: https://plotly.com/javascript/" target="_blank" rel="noopener">Plotly javascript graphing library</a>.</p>
+        <p>We had to incorporate this library in the project’s codebase to make debugging difficult moments easier, and later slightly patch the library code itself to eliminate some of the problems that arose.</p>
+        <p>For example, chart re-rendering capabilities have been added when updating colors and node names.</p>
+        <h2 id="application-screenshots" tabindex="-1">Application screenshots <a class="header-anchor" href="#application-screenshots"><i class="bi bi-link-45deg"></i></a></h2>
+        <figure>
+          <figcaption>Data load screen. It's possible to load custom data from local drive or to use predefined demo data set here. User can see general statistics on the loaded data.</figcaption>
+          <img src="./images/dataLoadScreen.png" alt="Data load screen. It's possible to load custom data from local drive or to use predefined demo data set here. User can see general statistics on the loaded data."
+          loading="lazy" decoding="async" width="1125" height="882" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 1125 882'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAHCAIAAABV+fA3AAAACXBIWXMAABJ0AAASdAHeZh94AAAAxUlEQVR4nE3CzQoBQQAA4HlDBxeKkhJy29K22lyQcHNSSDgoy5Y4S5IHkCP2p4SYdqzdmbXDjDj5+oA01mVVE8eGoJjC0PhWDEk1RdUECF7PR8OxLc45Y4z/AXfb1nVzd9COpxMmHibPN+O/DFjQgjeIXYJd7Dwe2HUppdSn7M1Ab9UvTEqVWa08q+ZGeXGYkxRZGGRbyw4oTWuxdiLVzaTbyXgzHmpEwo1ooB4sTstgvUfaBSIEr4s52m48Rj2feJT4L/8DzNmVJ3521ycAAAAASUVORK5CYII='%3E%3C/image%3E%3C/svg%3E&quot;)">
+        </figure>
+        <figure>
+          <figcaption>Simple demo graph data on the main application screen.</figcaption>
+          <img src="./images/mainPageBlackDemo.png" alt="Simple demo graph data on the main application screen." loading="lazy" decoding="async" width="1920" height="1053" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 1920 1053'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAIAAAB1kpiRAAAACXBIWXMAABJ0AAASdAHeZh94AAAAoUlEQVR4nGOQlJTk5RMRERHl4+PjAANOTk4eHl5ZGVlJSUkGBgYGdjY5PT0zdXVVcXFxLm5uJlZWBgYGbgEhFhYWkDQbi6ypqU1OZna0e5SRpZWQmhZImpeXmZmZgZGJgZ1VzsPTvyAnL8ElwdjaVkRbn4GBgZkZrJWFlZGDTcHXN8TV2UVNTJ1XQJCdXxAkwcgIIsF2S+rpmXBxcUD5SAAALIgQB1XI4NwAAAAASUVORK5CYII='%3E%3C/image%3E%3C/svg%3E&quot;)">
+        </figure>
+        <figure>
+          <figcaption>The main chart window with sample data visualization of medium complexity.</figcaption>
+          <img src="./images/mainWindow.png" alt="The main chart window with sample data visualization of medium complexity." loading="lazy" decoding="async" width="783"
+          height="482" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 783 482'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAIAAAB1kpiRAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAApUlEQVR4nEWNSw6CMBQAe/9LuNGEBXoKxcRU/GBC1PCpWBChUvm3QJ+BjbOdSQZpxnO+DWZrV8fJyvwsTbY0mW6yxYZqBkWgVCyp98JZegfVw4gCANGXg+rQwa92oWMR7PhWKxoAGCZfCSlkj1IunK9/IfubdwyCK2fvgvMsSWQzpkjJLqjI+YFdYkXUTSJacF7med91o25rEdehTU6E2DnPpvefHyYcpBATDPooAAAAAElFTkSuQmCC'%3E%3C/image%3E%3C/svg%3E&quot;)">
+        </figure>
+        <figure>
+          <figcaption>Help dialog window with an explanantion of some basic application features.</figcaption>
+          <img src="./images/helpWindow.png" alt="Help dialog window with an explanantion of some basic application features." loading="lazy" decoding="async" width="1163"
+          height="1015" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 1163 1015'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAHCAIAAAC6O5sJAAAACXBIWXMAABJ0AAASdAHeZh94AAAAnElEQVR4nC3NSwrCMBRA0ex/CW5AEByKQ52IWKwg1TSN+RWLLzEJKIoIbV4E9U7P4JLleteobjqbj8aTxWrTQjxDLPYNcc7mnHXLyor6zuVvMUZSn3iM/vV8Y0JETCnlnEMIpKRUiJozHkIYhgER/1BUB8mo1MooeXXuB957UgsRrLUW4AKP+63v+/+jLLeMH5WS2hittTEGACilHxUHlsJk+c4SAAAAAElFTkSuQmCC'%3E%3C/image%3E%3C/svg%3E&quot;)">
+        </figure>
+        <h2 id="links" tabindex="-1">Links <a class="header-anchor" href="#links"><i class="bi bi-link-45deg"></i></a></h2>
+        <ul>
+          <li>The <a href="https://github.com/lilliputten/sankey-graph-app" c="l" class="external" title="External link: https://github.com/lilliputten/sankey-graph-app" target="_blank" rel="noopener">github repository</a> is available.</li>
+        </ul>
+        <div class="ArticleFooter">
+          <ul class="ArticleTags tags">
+            <li class="tagsTitle">Tags:</li>
+            <li class="tagsItem"><a class="linkAsText" href="/tags/projects/">projects</a>
+            </li>
+            <li class="tagsItem"><a class="linkAsText" href="/tags/2024/">2024</a>
+            </li>
+            <li class="tagsItem"><a class="linkAsText" href="/tags/cauldron/">cauldron</a>
+            </li>
+            <li class="tagsItem"><a class="linkAsText" href="/tags/application/">application</a>
+            </li>
+            <li class="tagsItem"><a class="linkAsText" href="/tags/data/">data</a>
+            </li>
+            <li class="tagsItem"><a class="linkAsText" href="/tags/sankey/">sankey</a>
+            </li>
+            <li class="tagsItem"><a class="linkAsText" href="/tags/diagram/">diagram</a>
+            </li>
+            <li class="tagsItem"><a class="linkAsText" href="/tags/vizualizer/">vizualizer</a>
+            </li>
+            <li class="tagsItem"><a class="linkAsText" href="/tags/react/">react</a>
+            </li>
+            <li class="tagsItem"><a class="linkAsText" href="/tags/plotly/">plotly</a>
+            </li>
+            <li class="tagsItem"><a class="linkAsText" href="/tags/mui/">mui</a>
+            </li>
+            <li class="tagsItem"><a class="linkAsText" href="/tags/javascript/">javascript</a>
+            </li>
+            <li class="tagsItem"><a class="linkAsText" href="/tags/typescript/">typescript</a>
+            </li>
+          </ul>
+          <div class="ArticleNav"></div>
+        </div>
+    </article>
+  </main>
+  <footer class="PageFooter">
+    <div class="FooterContainer">
+      <div class="FooterCopyright">© 2025 <span class="delimiter">/</span>  <a href="/">Lilliputten &amp; Noble</a>
+      </div>
+      <ul class="SocialList">
+        <li class="SocialListItem"><a href="https://github.com/lilliputten" rel="me noopener" class="SocialListLink linkAsText" id="Github" target="_blank"><i class="bi bi-github"></i> GitHub</a>
+        </li>
+        <li class="SocialListItem"><a href="https://linkedin.com/in/lilliputten" class="SocialListLink linkAsText" id="Linkedin" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i> LinkedIn</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+  <div id="noise" class="noise animated"></div>
+  <script>
+    /* eslint-disable no-var */
+    // @ts-check
+    /// &lt;reference path="../scripts/@types/THTMLNode.d.ts" /&gt;
+    
+    (function updateThemeWrapper() {
+      function updateTheme() {
+        var body = window.document.body;
+        var html = /** @type THTMLNode | undefined */ (body.parentNode ? body.parentNode : body);
+        var theme = window.localStorage ? window.localStorage.getItem('theme') : null;
+        // NOTE: CAUTION: Double ampersands are escaped here
+        if (theme) {
+          if (html) {
+            if (html.setAttribute) {
+              html.setAttribute('data-theme', theme);
+            }
+            if (html.dataset) {
+              html.dataset.theme = theme;
+            }
+          }
+        }
+      }
+    
+      updateTheme();
+      window.addEventListener('load', updateTheme);
+    
+      // 
+    })();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.0.3/chroma.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="/compiled-assets/scripts-ae11403605.js"></script>
+</body>
+
+</html>
