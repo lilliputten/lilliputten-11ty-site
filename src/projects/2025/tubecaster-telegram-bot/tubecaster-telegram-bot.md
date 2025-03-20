@@ -41,9 +41,9 @@ Simple telegram bot aimed to convert youtube videos into audio podcasts for late
 
 ## How to Use
 
-1. **Start Chat** with [@TubeCaster](https://t.me/tubecasterbot). Request registration from menu or by `/register` command.
-2. **Paste YouTube Link** or share it from YouTube app.
-3. **Download MP3** or listen it right from the chat.
+- **Start Chat** with [@TubeCaster](https://t.me/tubecasterbot). Request registration from menu or by `/register` command.
+- **Paste YouTube Link** or share it from YouTube app.
+- **Download MP3** or listen it right from the chat.
 
 ## Application Features
 
@@ -86,7 +86,6 @@ Simple telegram bot aimed to convert youtube videos into audio podcasts for late
 
 {{ macros.imgFigure('./images/loading-audio-cat.jpg', 'Audio downloading process.') }}
 
-
 {# {{ macros.imgFigure('./images/sending-audio-full-scrren.jpg', 'sending-audio-full-scrren') }} #}
 
 {# {{ macros.imgFigure('./images/sending-audio.jpg', 'sending-audio') }} #}
@@ -96,7 +95,6 @@ Simple telegram bot aimed to convert youtube videos into audio podcasts for late
 {# {{ macros.imgFigure('./images/video-prompt.jpg', 'video-prompt') }} #}
 
 {# {{ macros.imgFigure('./images/wrong-link.jpg', 'wrong-link') }} #}
-
 
 {# ## The registration #}
 
@@ -109,7 +107,6 @@ Simple telegram bot aimed to convert youtube videos into audio podcasts for late
 {# {{ macros.imgFigure('./images/registration-required.jpg', 'registration-required') }} #}
 
 {# {{ macros.imgFigure('./images/registered-user.jpg', 'registered-user') }} #}
-
 
 ## Resources
 
@@ -125,9 +122,6 @@ The bot itself:
 
 - https://t.me/tubecasterbot
 
-
 ## The app is powered by cute animated kitties
 
 {{ macros.imgFigure('./images/fetching-video-details-cat.jpg', 'The kitty is working hard on audio extracting.') }}
-
-

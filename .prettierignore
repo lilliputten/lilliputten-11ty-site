@@ -20,6 +20,7 @@
 /utils
 
 package-lock.*
+pnpm-lock.yaml
 **/*_
 
 # This project...
