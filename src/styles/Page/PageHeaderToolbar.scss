@@ -17,8 +17,8 @@
   $itemSize: 2em;
 
   html:not([data-theme]) & .theme-dark,
-  [data-theme!='dark'] & .theme-dark,
-  [data-theme='dark'] & .theme-light {
+  html:not([data-theme='dark']) & .theme-dark,
+  html[data-theme='dark'] & .theme-light {
     display: none;
   }
 
@@ -27,6 +27,8 @@
     height: $itemSize;
     border-radius: 50%;
     text-decoration: none;
+    background-color: transparent;
+    border: 1px solid transparent;
     .onRed & {
       opacity: 0.5;
     }
@@ -36,8 +38,6 @@
       justify-content: center;
       align-items: center;
     }
-    background-color: transparent;
-    border: 1px solid transparent;
     &,
     & i {
       transition: all 100ms;

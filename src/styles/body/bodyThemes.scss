@@ -9,14 +9,16 @@
 
 // Themes...
 
+// Theme background: light
 body,
 [data-theme='light'],
 [data-theme='light'] body {
   background-color: $backgroundColor;
 }
 
-.onLight,
+// Theme foreground: light
 body,
+.onLight,
 [data-theme='light'],
 [data-theme='light'] body {
   color: $defaultTextColor;
@@ -28,11 +30,13 @@ body,
   }
 }
 
+// Theme background: dark
 [data-theme='dark'],
 [data-theme='dark'] body {
   background-color: $backgroundDarkColor;
 }
 
+// Theme foreground: dark
 .onRed,
 .onDark,
 [data-theme='dark'],

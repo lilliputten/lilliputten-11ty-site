@@ -22,9 +22,11 @@ h5,
 h6 {
   a.header-anchor {
     @include LinkAsTextWithHover;
-    text-decoration: none;
-    opacity: 0;
-    font-size: 80%;
+    & {
+      text-decoration: none;
+      opacity: 0;
+      font-size: 80%;
+    }
   }
   &:hover {
     .header-anchor {
@@ -38,6 +40,8 @@ h6 {
 h3,
 h4 {
   @include ThemedText;
-  opacity: 0.75;
-  // font-size: 100%;
+  & {
+    opacity: 0.75;
+    // font-size: 100%;
+  }
 }
