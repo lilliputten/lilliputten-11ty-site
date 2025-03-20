@@ -29,6 +29,8 @@ Below are a few ongoing or finished projects.
 
 ## Recent projects
 
+{{ macros.ArticleThumb('./2025/tubecaster-telegram-bot/', 'TubeCaster Telegram Bot', 'Simple telegram bot aimed to convert youtube videos into audio podcasts for later listening (even in offline mode) inside the Telegram app.') }}
+
 {{ macros.ArticleThumb('./2024/fsproperty-yupe-landing/', 'Design & coding of a custom landing page and a PHP server script for the existing website.', 'This page was conceived as a separate advertising campaign on an existing site. It was designed taking into account the already existing style of the site, it was not supposed to look like a separate attractive and stylish advertising page. It was developed using manually created markup and styles and scripts organized into SCSS and TypeScript modules, compiled via webpack.') }}
 
 {{ macros.ArticleThumb('./2024/certifico-tilda-site/', 'Full site designed in Figma and coded within Tilda CMS using custom solutions', 'In the Autumn of 2024 I completed the task of a full cycle (excluding (excluding content management tasks) of website creation from design to programming for my Russian partner.') }}

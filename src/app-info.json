@@ -1,10 +1,10 @@
 {
   "projectName": "lilliputten-11ty-site",
-  "timestamp": "2025.03.19 21:31 +0000",
-  "timetag": "250319-2131",
-  "version": "0.0.9",
-  "currentTimeStr": "2025.03.19 21:31 +0000",
-  "currentTimeTag": "250319-2131",
-  "gitCommitHash": "7ec3f94",
+  "timestamp": "2025.03.20 00:23 +0000",
+  "timetag": "250320-0023",
+  "version": "0.0.10",
+  "currentTimeStr": "2025.03.20 00:23 +0000",
+  "currentTimeTag": "250320-0023",
+  "gitCommitHash": "f3848dd",
   "gitBranch": "32-tubecaster-project-page"
 }

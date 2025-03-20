@@ -1,9 +1,9 @@
 {
   "name": "lilliputten-11ty-site",
-  "version": "0.0.9",
-  "timetag": "250319-2131",
-  "timestamp": "2025.03.19 21:31 +0000",
-  "changed": "2024.06.23, 01:15",
+  "version": "0.0.10",
+  "timetag": "250320-0023",
+  "timestamp": "2025.03.20 00:23 +0000",
+  "changed": "2025.03.20, 03:24",
   "homepage": "/",
   "private": false,
   "lint-staged": {
@@ -103,6 +103,7 @@
     "workbox-build": "^7.1.0"
   },
   "scripts": {
+    "build-and-publish": "npm-run-all build-prod publish",
     "publish": "echo --Publish build /posix commands and uplevel utils branch are used/-- && sh ../utils/scripts/publish.sh",
     "compile-assets-gulp": "echo --Update all assets /gulp/-- && gulp compileAssets",
     "watch-assets-gulp": "echo --Watch all assets /gulp/-- && gulp watchAssets",
@@ -111,7 +112,7 @@
     "dev": "echo --Start eleventy dev server-- && cross-env ELEVENTY_ENV=development eleventy --serve --quiet",
     "serve": "serve build",
     "prod": "npm run build-prod && npm run serve",
-    "clear-build": "echo --Clear build folder-- && rimraf -I -g build/* && echo Build folder has been cleaned",
+    "clear-build": "echo --Clear build folder-- && rimraf -I -g build/* && echo Build folder has been been cleaned",
     "build-double": "echo --Build eleventy and all artifacts-- && npm run clear-build && eleventy --quiet && echo --NOTE: Calling eleventy twice to ensure img-prepare has been run for all the images-- && eleventy && gulp build",
     "build": "echo --Build eleventy and all artifacts-- && eleventy --quiet && gulp build",
     "build-prod": "npm run clear-build && cross-env ELEVENTY_ENV=production npm run build",
