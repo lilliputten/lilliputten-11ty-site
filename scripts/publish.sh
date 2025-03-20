@@ -35,7 +35,7 @@ cd "$PUBLISH_FOLDER" && \
   echo "Add files..." && git add . -Av && \
   echo "Commit..." && git commit -am "$COMMIT_TEXT" && \
   echo "Push basic branch..." && git push && \
-  echo "Build info:" && cat build.txt && \
+  echo "Build info:" && cat app-info.json && \
   cd ..
   # echo "Don't forget to update version for target project dependency (package.json, WebUiCore entry)"
 

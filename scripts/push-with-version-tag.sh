@@ -30,7 +30,4 @@ echo "Create/update tag $SRC_TAG_PREFIX.$VERSION..." \
   && git tag -f "$SRC_TAG_PREFIX.$VERSION" \
   && git push origin -f --tags \
   && git pull origin \
-  && git push lilliputten -f --tags \
   && echo "OK"
-
-  # && git pull lilliputten \

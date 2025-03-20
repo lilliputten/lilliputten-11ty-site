@@ -30,9 +30,12 @@ echo "Updating ($VERSION, $TIMESTAMP) publish folder '$PUBLISH_FOLDER' from buil
 cd "$PUBLISH_FOLDER" && \
   pwd && \
   rm -Rf * && \
-  cp -Rfu ../$BUILD_FOLDER/* . && \
-  cp -Rfu ../$BUILD_FOLDER/.[^.]* . && \
+  (test -z "$BUILD_FOLDER" || test ! -d "../$BUILD_FOLDER" || ( \
+    (test -z "`compgen -G \"../$BUILD_FOLDER/.*\"`" || ( cp -Rfu ../$BUILD_FOLDER/.[^.]* . && echo "Copied dot files from the build folder" ) ) && \
+    cp -Rfu ../$BUILD_FOLDER/* . && echo "Copied regular files from the build folder" ) ) && \
   cd .. && \
   echo OK
+
   # If we have dot (`.*`, hidden) files in build:
+  # cp -Rfu ../$BUILD_FOLDER/* . && \
   # cp -Rfu ../$BUILD_FOLDER/.[^.]* . && \
