@@ -1,3 +1,5 @@
+// import { setCookie } from './helpers/setCookie';
+
 export function toggleTheme() {
   const body = window.document.body;
   const html = body && (body.parentNode as THTMLNode);
@@ -7,12 +9,6 @@ export function toggleTheme() {
       ? html.getAttribute('theme')
       : '';
   const theme = !currTheme || currTheme === 'light' ? 'dark' : 'light';
-  /* console.log('[themes:toggleTheme]', {
-   *   currTheme,
-   *   theme,
-   *   body,
-   * });
-   */
   if (theme && html) {
     if (html.setAttribute) {
       html.setAttribute('data-theme', theme);
@@ -20,6 +16,7 @@ export function toggleTheme() {
       html.dataset.theme = theme;
     }
   }
+  // setCookie('theme', theme);
   if (window.localStorage) {
     window.localStorage.setItem('theme', theme);
   }
