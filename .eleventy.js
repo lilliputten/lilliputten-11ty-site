@@ -293,10 +293,10 @@ module.exports = function (config) {
 
   // Transforms
 
-  if (!isDev) {
-    config.addTransform('htmlmin', require('./_11ty/transforms/htmlmin'));
-    config.addTransform('xmlmin', require('./_11ty/transforms/xmlmin'));
-  }
+  // if (!isDev) {
+  //   config.addTransform('htmlmin', require('./_11ty/transforms/htmlmin'));
+  //   config.addTransform('xmlmin', require('./_11ty/transforms/xmlmin'));
+  // }
   // config.addTransform('html-prettify', require('./_11ty/transforms/html-prettify'));
   // config.addTransform('xml-prettify', require('./_11ty/transforms/xml-prettify'));
 
@@ -370,6 +370,7 @@ module.exports = function (config) {
         return newText;
       },
     })
+    // @ts-ignore
     .use(markdownItAttrs, {
       // optional, these are default options
       leftDelimiter: '{',

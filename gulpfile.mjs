@@ -17,6 +17,9 @@ import vinylPaths from 'vinyl-paths';
 import workboxBuild from 'workbox-build';
 import replace from 'gulp-replace';
 import childProcess from 'child_process';
+import htmlmin from 'gulp-htmlmin';
+import prettify from 'gulp-html-prettify';
+// import debug from 'gulp-debug';
 
 import gulpTypescript from 'gulp-typescript'; // @see https://www.npmjs.com/package/gulp-typescript
 // import tsPipeline from 'gulp-webpack-typescript-pipeline';
@@ -133,7 +136,7 @@ gulp.task('cacheHash', () => {
     .src(
       [
         // `${DEST_PATH}/assets/**/*.{js,css}`,
-        `${DEST_PATH}/compiled-assets/**/*.{js,css}`,
+        `${DEST_PATH}/compiled-assets/**/.{js,css}`,
         `${DEST_PATH}/manifest.webmanifest`,
       ],
       {
@@ -258,6 +261,22 @@ gulp.task(
   ),
 );
 
+gulp.task('processHtml', () => {
+  return (
+    gulp
+      .src([`${DEST_PATH}/**/*.html`])
+      // .pipe(debug({ title: 'unicorn:' }))
+      .pipe(
+        htmlmin({
+          removeComments: true,
+          collapseWhitespace: true,
+        }),
+      )
+      .pipe(prettify({ indent_char: ' ', indent_size: 2 }))
+      .pipe(gulp.dest(DEST_PATH))
+  );
+});
+
 // Build
 
 gulp.task(
@@ -267,6 +286,7 @@ gulp.task(
     'cache',
     // 'clean',
     'serviceWorker',
+    'processHtml',
   ),
 );
 
