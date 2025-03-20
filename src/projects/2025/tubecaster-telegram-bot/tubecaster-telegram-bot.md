@@ -28,16 +28,15 @@ Simple telegram bot aimed to convert youtube videos into audio podcasts for late
 
 ## Key User Features
 
-- Send/share a YouTube link -- receive mp3 file almost immediately (depends on a current processing queue).
+- Send/share a YouTube link and receive mp3 file almost immediately (depends on a current processing queue).
 - Get detailed information about the YouTube video.
 - Download tracks for listening anywhere, anytime.
 
 ## Perfect For
 
-- Listen for talk-shows or videos which doesn't contain a lot of video content.
-- Listen music tracks.
-- Busy users preferring audio over video.
-- Ideal for circumventing censorship blocks (like in modern Russia).
+- For listening to talk shows, music, or videos that don't contain a lot of video content.
+- For busy users who prefer audio videos or who find it more convenient to listen to podcasts on the go.
+- This is essential to circumvent censorship blocks (as, for example, in modern Russia, where YouTube is blocked, but Telegram is still available).
 
 ## How to Use
 
