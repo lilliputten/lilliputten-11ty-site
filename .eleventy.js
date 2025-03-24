@@ -6,7 +6,7 @@
 
 const fs = require('fs');
 
-const isDev = process.env.ELEVENTY_ENV === 'development';
+// const isDev = process.env.ELEVENTY_ENV === 'development';
 
 module.exports = function (config) {
   config.addPassthroughCopy({

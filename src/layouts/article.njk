@@ -23,12 +23,15 @@ layout: page.njk
             ><span>Date:</span> {{ page.date | readableDate }}</time
           >
         {% endif %}
+        {% set readingTime = content | readingTime({"speed": 200}) %}
+        {% if readingTime and not r/^0 min/.test(readingTime) %}
         <div
           class="metaItem articleMinutesToRead"
           title="With an average speed of 200 words per minute"
         >
-          <span>Time to read:</span> {{ content | readingTime({"speed": 200}) }}
+          <span>Time to read:</span> {{ readingTime }}
         </div>
+        {% endif %}
         {#
       <a
         href="https://github.com/lilliputten/lilliputten-11ty-site/blob/main/{{ page.inputPath }}"

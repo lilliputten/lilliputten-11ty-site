@@ -7,9 +7,9 @@ permalink: /about/
 date: 2024-06-23
 hideMeta: true
 tag: false
-#tags:
-#  - site
-#  - about
+tags:
+  - site
+  - about
 ---
 
 <!--

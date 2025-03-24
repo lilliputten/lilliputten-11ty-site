@@ -13,18 +13,23 @@ tags:
   - '2025'
   - telegram
   - bot
-  - youtube
   - python
   - flask
+  - youtube
+  - audio
+  - video
+  - ffmpeg
+  - ffprobe
+  - convert
 ---
 
 <!--
-@changed 2025.03.20, 01:50
+@changed 2025.03.24, 22:16
 -->
 
 {% import "macros.njk" as macros with context %}
 
-Simple telegram bot aimed to convert youtube videos into audio podcasts for later listening (even in offline mode) inside the Telegram app.
+[TubeCasterBot](https://t.me/tubecasterbot) is a simple telegram bot Simple telegram bot aimed to convert youtube videos into audio podcasts for later listening (even in offline mode) inside the Telegram app.
 
 ## Key User Features
 
@@ -40,7 +45,7 @@ Simple telegram bot aimed to convert youtube videos into audio podcasts for late
 
 ## How to Use
 
-- **Start Chat** with [@TubeCaster](https://t.me/tubecasterbot). Request registration from menu or by `/register` command.
+- **Start Chat** with [@TubeCasterBot](https://t.me/tubecasterbot). Request registration from menu or by `/register` command.
 - **Paste YouTube Link** or share it from YouTube app.
 - **Download MP3** or listen it right from the chat.
 
@@ -58,6 +63,21 @@ Simple telegram bot aimed to convert youtube videos into audio podcasts for late
 
 - A development branch of yt-dlp used for video processing (fetching info and audio tracks).
 - The bot itself is implemented using pyTelegramBotAPI v.4 and flask v.3.
+- The bot's [landing page](https://tubecaster.lilliputten.com/) is a playground for my another toy: the [Gulp LQIP small image placeholder generator](https://github.com/lilliputten/gulp-embed-lqip-as-background) plugin.
+
+## Resources
+
+The bot landing:
+
+- https://tubecaster.lilliputten.com/
+
+The source code repository:
+
+- https://github.com/lilliputten/tubecaster-telegram-bot
+
+The bot itself:
+
+- https://t.me/tubecasterbot
 
 ## Screenshots
 
@@ -95,31 +115,17 @@ Simple telegram bot aimed to convert youtube videos into audio podcasts for late
 
 {# {{ macros.imgFigure('./images/wrong-link.jpg', 'wrong-link') }} #}
 
-{# ## The registration #}
+## Registration
 
-{# {{ macros.imgFigure('./images/registered-users-notification.jpg', 'registered-users-notification') }} #}
+{{ macros.imgFigure('./images/registered-users-notification.jpg', 'registered-users-notification') }}
 
-{# {{ macros.imgFigure('./images/registration-confirmation-request.jpg', 'registration-confirmation-request') }} #}
+{{ macros.imgFigure('./images/registration-confirmation-request.jpg', 'registration-confirmation-request') }}
 
-{# {{ macros.imgFigure('./images/registration-process.jpg', 'registration-process') }} #}
+{{ macros.imgFigure('./images/registration-process.jpg', 'registration-process') }}
 
-{# {{ macros.imgFigure('./images/registration-required.jpg', 'registration-required') }} #}
+{{ macros.imgFigure('./images/registration-required.jpg', 'registration-required') }}
 
-{# {{ macros.imgFigure('./images/registered-user.jpg', 'registered-user') }} #}
-
-## Resources
-
-The bot landing:
-
-- https://tubecaster.lilliputten.com/
-
-The source code repository:
-
-- https://github.com/lilliputten/tubecaster-telegram-bot
-
-The bot itself:
-
-- https://t.me/tubecasterbot
+{{ macros.imgFigure('./images/registered-user.jpg', 'registered-user') }}
 
 ## The app is powered by cute animated kitties
 

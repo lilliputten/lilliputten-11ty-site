@@ -106,13 +106,13 @@
     "workbox-build": "^7.1.0"
   },
   "scripts": {
-    "build-and-publish": "npm-run-all build-prod publish",
+    "build-and-publish": "echo --Build and publish site by a single command-- && npm-run-all build-prod publish",
     "publish": "echo --Publish build /posix commands and uplevel utils branch are used/-- && sh ../utils/scripts/publish.sh",
     "compile-assets-gulp": "echo --Update all assets /gulp/-- && gulp compileAssets",
     "watch-assets-gulp": "echo --Watch all assets /gulp/-- && gulp watchAssets",
     "compile-assets": "echo --Update all assets /webpack/-- && webpack",
     "watch-assets": "echo --Watch all assets /webpack/-- && webpack --watch",
-    "dev": "echo --Start eleventy dev server-- && cross-env ELEVENTY_ENV=development eleventy --serve --quiet",
+    "dev": "echo --Start eleventy dev server on the port 8080-- && cross-env ELEVENTY_ENV=development eleventy --serve --quiet",
     "serve": "serve build",
     "prod": "pnpm run build-prod && pnpm run serve",
     "clear-build": "echo --Clear build folder-- && rimraf -I -g build/* && echo Build folder has been been cleaned",

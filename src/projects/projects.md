@@ -10,9 +10,9 @@ eleventyNavigation:
 date: 2024-10-21
 hideMeta: true
 tag: false
-#tags:
-#  - site
-#  - projects
+tags:
+  - site
+  - projects
 ---
 
 <!--

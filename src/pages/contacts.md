@@ -9,9 +9,9 @@ eleventyNavigation:
   key: contacts
 hideMeta: true
 tag: false
-#tags:
-#  - site
-#  - contacts
+tags:
+  - site
+  - contacts
 ---
 
 <!--

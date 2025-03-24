@@ -3,6 +3,8 @@ title: Lilliputten & Noble
 layout: main.njk
 permalink: /
 tag: false
+tags:
+  - site
 isIndex: true
 eleventyExcludeFromCollections: true
 ---
