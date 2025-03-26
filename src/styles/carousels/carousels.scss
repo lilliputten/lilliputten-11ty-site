@@ -1,0 +1,81 @@
+@import '../shared';
+
+.shots-slider {
+  $height: 580px;
+  $plusHeight: 32px;
+  .owl-stage {
+    max-height: calc($height + $plusHeight);
+    overflow: hidden;
+  }
+  .item {
+    img {
+      height: $height;
+      margin-bottom: 0.5em;
+      border-radius: 10px;
+    }
+    figcaption {
+      // font-family: $secondary-font;
+      font-style: italic;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: #fff;
+      opacity: 0.5;
+    }
+  }
+  @media (width < 600px) {
+    $height: 500px;
+    .owl-stage {
+      max-height: calc($height + $plusHeight);
+    }
+    .item img {
+      height: $height;
+    }
+  }
+  @media (width < 500px) {
+    $height: 400px;
+    .owl-stage {
+      max-height: calc($height + $plusHeight);
+    }
+    .item img {
+      height: $height;
+    }
+    .item figcaption {
+      display: none;
+    }
+  }
+  @media (width < 400px) {
+    $height: 300px;
+    .owl-stage {
+      max-height: calc($height + $plusHeight);
+    }
+    .item img {
+      height: $height;
+    }
+  }
+  @media (width < 300px) {
+    $height: 200px;
+    .owl-stage {
+      max-height: calc($height + $plusHeight);
+    }
+    .item img {
+      height: $height;
+    }
+  }
+
+  // Owl dot Active color overide
+  .owl-dots {
+    .owl-dot {
+      &:hover {
+        span {
+          background: $primaryColor;
+        }
+      }
+
+      &.active {
+        span {
+          background: $primaryColor;
+        }
+      }
+    }
+  }
+}

@@ -18,8 +18,8 @@
   </video>
 {% endmacro %}
 
-{% macro img(src, alt = '') %}
-  <img src="{{ src }}" alt="{{ alt }}" loading="lazy" decoding="async" />
+{% macro img(src, alt = '', class = '') %}
+  <img class="{{ class }}" src="{{ src }}" alt="{{ alt }}" loading="lazy" decoding="async" />
 {% endmacro %}
 
 {% macro imgFigure(src, text = '', alt = '') %}
@@ -44,3 +44,17 @@
   </div>
 {% endmacro %}
 
+
+{% macro owlCarouselBegin(class = '', id = '') %}
+<div class="owl-carousel owl-theme {{ class }}" id="{{ id }}">
+{% endmacro %}
+
+{% macro owlCarouselEnd() %}
+</div>
+{% endmacro %}
+
+{% macro owlCarouselItem(src, text = '', alt = '') %}
+  <figure class="item">
+    {{ img(src, alt or text, 'item img-fluid') }} <figcaption class="descr">{{ text }}</figcaption>
+  </figure>
+{% endmacro %}

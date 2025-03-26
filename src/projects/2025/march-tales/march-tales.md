@@ -38,6 +38,12 @@ The project is designed to provide the user with a convenient way to listen to f
 
 Both the mobile app and the web server are still in MVP status. See TODO section at the end.
 
+## Screenshots
+
+{{ macros.owlCarouselBegin('shots-slider') }}
+{{ macros.owlCarouselItem('./images/app/author-screen-light.jpg', 'author-screen-light') }}
+{{ macros.owlCarouselEnd() }}
+
 ## Web Interface
 
 The web interface is a **Django-powered frontend** that serves as a companion to the mobile app and as an administrative interface to the database. It uses Django template system with **Webpack** for client-side asset building (via SCSS and TypeScript).
@@ -137,7 +143,3 @@ Web-site and server source code repository:
 Flutter mobile application source code repository:
 
 - https://github.com/lilliputten/march-tales-flutter-app
-
-## Screenshots
-
-### Application
