@@ -38,12 +38,6 @@ The project is designed to provide the user with a convenient way to listen to f
 
 Both the mobile app and the web server are still in MVP status. See TODO section at the end.
 
-## Screenshots
-
-{{ macros.owlCarouselBegin('shots-slider') }}
-{{ macros.owlCarouselItem('./images/app/author-screen-light.jpg', 'author-screen-light') }}
-{{ macros.owlCarouselEnd() }}
-
 ## Web Interface
 
 The web interface is a **Django-powered frontend** that serves as a companion to the mobile app and as an administrative interface to the database. It uses Django template system with **Webpack** for client-side asset building (via SCSS and TypeScript).
@@ -61,6 +55,21 @@ The administrative panel is implemented using the built-in django admin function
 - **Internationalization**: All the models and database are translated internally using **django-translated-fields**, other translations are supported by django native i18n/l10n system.
 - **Adaptive preview sizes**: **django-imagekit** is involved to generate audio tracks' author' preview on-the-fly. LQIP ("Low-quality image placeholders") previews are implemented via a dedicated middleware templatetag, which does almost the same as my [Gulp LQIP small image placeholder generator](https://github.com/lilliputten/gulp-embed-lqip-as-background) plugin: generates the image preview in the `style: backgound` with a svg-wrapped thumbnail.
 
+## Web Site Screenshots
+
+{{ macros.owlCarouselBegin('shots-slider') }}
+{{ macros.owlCarouselItem('./images/web/01-page-header.jpg', 'Page header.') }}
+{{ macros.owlCarouselItem('./images/web/02-tracks-list.jpg', 'Tracks list.') }}
+{{ macros.owlCarouselItem('./images/web/03-track-details-page.jpg', 'Track details page.') }}
+{{ macros.owlCarouselItem('./images/web/04-bottom-pagination.jpg', 'Bottom pagination.') }}
+{{ macros.owlCarouselItem('./images/web/05-author-page.jpg', 'Author page.') }}
+{{ macros.owlCarouselItem('./images/web/about-page.jpg', 'About page.') }}
+{{ macros.owlCarouselItem('./images/web/language-selector-dropdown.jpg', 'Language selector dropdown.') }}
+{{ macros.owlCarouselItem('./images/web/logged-user-menu.jpg', 'Logged user menu.') }}
+{{ macros.owlCarouselItem('./images/web/logged-user-welcome-screen.jpg', 'Logged user welcome screen.') }}
+{{ macros.owlCarouselItem('./images/web/signin-page.jpg', 'Signin page.') }}
+{{ macros.owlCarouselEnd() }}
+
 ## REST API Server
 
 The API server, also built with **Django** and it's **djangorestframework** and **django-registration**, provides endpoints for both the web interface and mobile application. It handles user authentication, data synchronization, and audio metadata management.
@@ -71,6 +80,14 @@ The API server, also built with **Django** and it's **djangorestframework** and 
 - **RESTful Endpoints**: Efficient data exchange between clients and server.
 - **Audio Processing**: Leverages **FFmpeg** and **FFprobe** for track metadata extraction and quality assurance.
 
+## Administrative Panel Screenshots
+
+{{ macros.owlCarouselBegin('shots-slider') }}
+{{ macros.owlCarouselItem('./images/admin/edit-track.jpg', 'Edit track page.') }}
+{{ macros.owlCarouselItem('./images/admin/filters.jpg', 'Filters panel.') }}
+{{ macros.owlCarouselItem('./images/admin/tracks-list-2.jpg', 'Tracks list.') }}
+{{ macros.owlCarouselEnd() }}
+
 ## Mobile Application
 
 The **Flutter-based mobile app** offers an immersive storytelling experience with robust audio controls.
@@ -80,6 +97,23 @@ The **Flutter-based mobile app** offers an immersive storytelling experience wit
 - **Audio Playback**: Powered by **Just Audio**, with background service support for notification controls.
 - **Favorites Management**: Local storage or cloud sync via the API server.
 - **Internationalization & Theming**: Multi-language support and basic customization options.
+
+## Mobile Phone Screenshots
+
+{{ macros.owlCarouselBegin('shots-slider') }}
+{{ macros.owlCarouselItem('./images/phone/tracks-list-2.jpg', 'Tracks list.') }}
+{{ macros.owlCarouselItem('./images/phone/author-screen-light.jpg', 'Author screen (light theme).') }}
+{{ macros.owlCarouselItem('./images/phone/author-tracks-light.jpg', 'Author tracks (light theme).') }}
+{{ macros.owlCarouselItem('./images/phone/authors-list-light.jpg', 'Authors list (light theme).') }}
+{{ macros.owlCarouselItem('./images/phone/notification-pane-player.jpg', 'Notification pane playe (dark theme).') }}
+{{ macros.owlCarouselItem('./images/phone/rubric-info-light.jpg', 'Rubric info (light theme).') }}
+{{ macros.owlCarouselItem('./images/phone/settings-page.jpg', 'Settings pag (dark theme).') }}
+{{ macros.owlCarouselItem('./images/phone/tag-info-light.jpg', 'Tag info (light theme).') }}
+{{ macros.owlCarouselItem('./images/phone/track-details.jpg', 'Track detail (dark theme).') }}
+{{ macros.owlCarouselItem('./images/phone/tracks-list-light.jpg', 'Tracks list (light theme).') }}
+{{ macros.owlCarouselItem('./images/phone/tracks-list-with-a-player.jpg', 'Tracks list with a playe (dark theme).') }}
+{{ macros.owlCarouselItem('./images/phone/tracks-list-without-panels-furing-scroll.jpg', 'Tracks list without panels during scroll (dark theme).') }}
+{{ macros.owlCarouselEnd() }}
 
 ## Audio playback
 
@@ -98,6 +132,16 @@ Both the website and the mobile device have relatively identical audio player be
   - **Authorized Users**: Sync preferences across devices via the API server.
 - **Unified Backend**: Both web and mobile clients share the same API server for data consistency.
 
+## Mobile Tablet Screenshots
+
+{{ macros.owlCarouselBegin('shots-slider') }}
+{{ macros.owlCarouselItem('./images/tablet/author-details-light.jpg', 'Author details (light theme).') }}
+{{ macros.owlCarouselItem('./images/tablet/author-details.jpg', 'Author detail (dark theme).') }}
+{{ macros.owlCarouselItem('./images/tablet/settings-page-light.jpg', 'Settings page (light theme).') }}
+{{ macros.owlCarouselItem('./images/tablet/track-details.jpg', 'Track detail (dark theme).') }}
+{{ macros.owlCarouselItem('./images/tablet/tracks-list-with-a-search-light.jpg', 'Tracks list with a search (light theme).') }}
+{{ macros.owlCarouselEnd() }}
+
 ## Technology Stack
 
 | Component                | Technologies Used                                                                                             |
@@ -114,6 +158,8 @@ Both the website and the mobile device have relatively identical audio player be
 **The March Cat Tales** demonstrates full-stack expertise, blending Django’s robust backend capabilities with Flutter’s cross-platform flexibility. By separating concerns between the web interface, API server, and mobile app, the project ensures scalability and a cohesive user experience across devices. Whether accessed via browser or mobile, the platform delivers an enchanting storytelling journey with modern tech under the hood.
 
 ## TODO
+
+At the moment, the project is at the MVP stage. So now we have a lot of tasks for further development.
 
 ### Mobile application
 
@@ -132,14 +178,8 @@ Both the website and the mobile device have relatively identical audio player be
 
 ## Resources
 
-Web site:
+Web site: https://tales.march.team/
 
-- https://tales.march.team/
+Web-site and server source code repository: https://github.com/lilliputten/march-tales
 
-Web-site and server source code repository:
-
-- https://github.com/lilliputten/march-tales
-
-Flutter mobile application source code repository:
-
-- https://github.com/lilliputten/march-tales-flutter-app
+Flutter mobile application source code repository: https://github.com/lilliputten/march-tales-flutter-app

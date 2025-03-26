@@ -53,8 +53,8 @@
 </div>
 {% endmacro %}
 
-{% macro owlCarouselItem(src, text = '', alt = '') %}
-  <figure class="item">
+{% macro owlCarouselItem(src, text = '', alt = '', class = '') %}
+  <figure class="{{ class }}" title="{{ text }}">
     {{ img(src, alt or text, 'item img-fluid') }} <figcaption class="descr">{{ text }}</figcaption>
   </figure>
 {% endmacro %}

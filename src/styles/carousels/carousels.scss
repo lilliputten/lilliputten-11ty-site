@@ -1,25 +1,32 @@
 @import '../shared';
 
 .shots-slider {
-  $height: 580px;
+  $height: 400px;
   $plusHeight: 32px;
+  grid-template-columns: 1fr 700px 1fr;
+  grid-column: 1 / -1;
   .owl-stage {
     max-height: calc($height + $plusHeight);
     overflow: hidden;
   }
-  .item {
+  figure {
+    display: block;
     img {
       height: $height;
       margin-bottom: 0.5em;
       border-radius: 10px;
     }
     figcaption {
-      // font-family: $secondary-font;
       font-style: italic;
+      max-width: auto;
       overflow: hidden;
       text-overflow: ellipsis;
       color: #fff;
       opacity: 0.5;
+      text-align: left;
+      margin: 0;
+      padding: 0;
+      white-space: nowrap;
     }
   }
   @media (width < 600px) {
@@ -27,7 +34,7 @@
     .owl-stage {
       max-height: calc($height + $plusHeight);
     }
-    .item img {
+    figure img {
       height: $height;
     }
   }
@@ -36,10 +43,10 @@
     .owl-stage {
       max-height: calc($height + $plusHeight);
     }
-    .item img {
+    figure img {
       height: $height;
     }
-    .item figcaption {
+    figure figcaption {
       display: none;
     }
   }
@@ -48,7 +55,7 @@
     .owl-stage {
       max-height: calc($height + $plusHeight);
     }
-    .item img {
+    figure img {
       height: $height;
     }
   }
@@ -57,7 +64,7 @@
     .owl-stage {
       max-height: calc($height + $plusHeight);
     }
-    .item img {
+    figure img {
       height: $height;
     }
   }
