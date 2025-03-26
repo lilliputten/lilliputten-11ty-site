@@ -32,7 +32,7 @@ We've finally launched the first public release of our recent project: a mobile 
 
 {% import "macros.njk" as macros with context %}
 
-**The March Cat Tales** is a multi-component storytelling project designed to deliver author-narrated fairy tales through a **mobile application**, **web interface**, and **REST API server**. Built with modern technologies, it prioritizes seamless cross-device experiences, internationalization, and user-centric design.
+[**The March Cat Tales**](https://tales.march.team/) is a multi-component storytelling project designed to deliver author-narrated fairy tales through a **mobile application**, **web interface**, and **REST API server**. Built with modern technologies, it prioritizes seamless cross-device experiences, internationalization, and user-centric design.
 
 The project is designed to provide the user with a convenient way to listen to fairy tales, legends, and short stories, narrated by the artist, — in one place. (Currently only in Russian.)
 
@@ -155,7 +155,7 @@ Both the website and the mobile device have relatively identical audio player be
 
 ## Why This Project Stands Out
 
-**The March Cat Tales** demonstrates full-stack expertise, blending Django’s robust backend capabilities with Flutter’s cross-platform flexibility. By separating concerns between the web interface, API server, and mobile app, the project ensures scalability and a cohesive user experience across devices. Whether accessed via browser or mobile, the platform delivers an enchanting storytelling journey with modern tech under the hood.
+[**The March Cat Tales**](https://tales.march.team/) demonstrates full-stack expertise, blending Django’s robust backend capabilities with Flutter’s cross-platform flexibility. By separating concerns between the web interface, API server, and mobile app, the project ensures scalability and a cohesive user experience across devices. Whether accessed via browser or mobile, the platform delivers an enchanting storytelling journey with modern tech under the hood.
 
 ## TODO
 

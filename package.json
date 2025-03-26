@@ -1,9 +1,9 @@
 {
   "name": "lilliputten-11ty-site",
   "version": "0.0.11",
-  "timetag": "250326-0603",
-  "timestamp": "2025.03.26 06:03 +0000",
-  "changed": "2025.03.20, 03:24",
+  "timetag": "250326-0635",
+  "timestamp": "2025.03.26 06:35 +0000",
+  "changed": "2025.03.26, 09:26",
   "homepage": "/",
   "private": false,
   "lint-staged": {
@@ -34,6 +34,9 @@
     "hyphen": "^1.10.4",
     "netlify-plugin-cache": "^1.0.3",
     "prettify-xml": "^1.2.0"
+  },
+  "unusedDependencies": {
+    "@vrugtehagel/eleventy-asset-hash": "npm:@jsr/vrugtehagel__eleventy-asset-hash@^0.2.5"
   },
   "devDependencies": {
     "@11ty/eleventy-navigation": "^0.3.5",
