@@ -1,0 +1,443 @@
+<!DOCTYPE >
+<html lang="en" data-page="regular" data-layout="article">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>The March Cat Tales. Mobile Application, Web Interface, and REST API Server — Lilliputten &amp; Noble</title>
+  <meta name="color-scheme" content="dark light">
+  <meta name="description" content="Hello, my name is Igor and I'm a front-end developer.">
+  <meta name="keywords" content="lilliputten,front-end,full-stack,web,developer,projects,2025,flutter,mobile,application,python,django,web,site,audio,ffmpeg,ffprobe">
+  <meta name="generator" content="Eleventy">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/static/images/favicon/logo-192.png">
+  <link rel="manifest" href="/manifest-93b9e3c535.webmanifest">
+  <meta name="theme-color" content="#ffcc00">
+  <meta property="og:url" content="https://lilliputten.com/projects/2025/march-tales/">
+  <meta property="og:title" content="The March Cat Tales. Mobile Application, Web Interface, and REST API Server | Lilliputten &amp; Noble">
+  <meta property="og:description" content="Hello, my name is Igor and I'm a front-end developer.">
+  <meta property="og:image" content="https://lilliputten.com/static/images/logo/og/og.jpg">
+  <meta property="og:type" content="website">
+  <meta name="title" content="The March Cat Tales. Mobile Application, Web Interface, and REST API Server | Lilliputten &amp; Noble">
+  <link rel="alternate" href="https://lilliputten.com/feed/rss.xml" type="application/rss+xml" title="Lilliputten &amp; Noble">
+  <link rel="webmention" href="https://webmention.io/lilliputten.com/webmention">
+  <link rel="pingback" href="https://webmention.io/lilliputten.com/xmlrpc">
+  <link rel="author" href="https://lilliputten.com/humans.txt">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700&amp;display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" type="text/css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet" type="text/css">
+  <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/compiled-assets/styles.css">
+  <script>
+    // NOTE: Prevent firefox FOUC...
+          var FF_FOUC_FI;
+  </script>
+</head>
+
+<body class="Page page__body">
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-Z01LD05S3B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', 'G-Z01LD05S3B');
+  </script>
+  <div class="PageVisual" id="PageVisual">
+    <canvas class="VisualAnimation" id="VisualAnimation"></canvas>
+  </div>
+  <nav id="PageHeader" class="PageHeader navbar fixed-top navbar-dark navbar-expand-md onRed">
+    <div class="PageHeaderWrapper maxWidthContainer_ container_">
+      <div class="PageHeaderBrand gap-1">
+        <button id="toggleNavigation" aria-controls="navbarNavigation" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler collapsed" data-bs-target="#navbarNavigation" data-bs-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="PageHeaderLogo">
+          <a href="/" class="Logo"></a>
+        </div>
+      </div>
+      <div class="PageHeaderNavigation navbar-collapse collapse" id="navbarNavigation">
+        <ul class="PageMenu navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="/about/">About</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="/projects/">Projects</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="/contacts/">Contacts</a>
+          </li>
+        </ul>
+        <ul class="PageHeaderToolbar">
+          <li><a href="https://github.com/lilliputten/lilliputten-11ty-site/blob/main/./src/projects/2025/march-tales/march-tales.md" target="_blank" title="Edit page on github" rel="noopener"><i class="bi bi-pencil"></i></a>
+          </li>
+          <li><a href="" onclick="window.toggleTheme(); return false" title="Toggle color theme"><i class="bi bi-brightness-high-fill theme-dark"></i><i class="bi bi-moon-stars-fill theme-light"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main class="PageContentLayout page__content">
+    <article class="Article">
+      <div class="ArticleHeadWrapper">
+        <img class="ArticleHeadThumb" src="./thumb.png" alt="Article thumbnail" width="120" height="120" decoding="async" loading="lazy" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 120 120'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAANNJREFUeJwByAA3/wCYLhQwICNULitaNDAtHyVBHhBHHw1OIg4A4j8McS0kfjQioUgir2U3TzYsSxsHYSgQAPSbPbJCIF0dBFcoFaVcMGo+L3osEJwuDQDQgT7BWipaJxllNSCzg1eSUzKzSxnXVRoAdh4LkC0OTCchgV1S3ax3pFEp2nIv8qdPAGEgC34iB40xC5pWLXRMKl46I5pnPsCKVgBIFwxRGQpgIQlbKA4gDgYnEgmjUx2kVRwAJxAJPxQLOxIFOBEGPB0QRCMTkkYXsFUat5A2Hn87qAcAAAAASUVORK5CYII='%3E%3C/image%3E%3C/svg%3E&quot;)">
+        <div class="ArticleHead">
+          <ul class="ArticleBreadcrumbs">
+            <li data-key="home">
+              <a class="home" href="/" title="Site root"></a>
+            </li>
+            <li data-key="projects" class="noParent"><a href="/projects/">Projects</a>
+            </li>
+            <li data-key="projects-2025" class="hasParent" data-parent="projects"><a href="/projects/2025/">2025</a>
+            </li>
+          </ul>
+          <h1 class="ArticleTitle">The March Cat Tales. Mobile Application, Web Interface, and REST API Server</h1>
+          <div class="ArticleMeta">
+            <time class="metaItem articleDatetime" datetime="2025-03-26T00:00:00.000Z" title="Document date"><span>Date:</span> March 26, 2025</time>
+            <div class="metaItem articleMinutesToRead" title="With an average speed of 200 words per minute"><span>Time to read:</span> 5 min</div>
+          </div>
+        </div>
+      </div>
+      <p><strong>The March Cat Tales</strong> is a multi-component storytelling project designed to deliver author-narrated fairy tales through a <strong>mobile application</strong>, <strong>web interface</strong>, and <strong>REST API server</strong>. Built
+        with modern technologies, it prioritizes seamless cross-device experiences, internationalization, and user-centric design.</p>
+      <p>The project is designed to provide the user with a convenient way to listen to fairy tales, legends, and short stories, narrated by the artist, — in one place. (Currently only in Russian.)</p>
+      <p>Both the mobile app and the web server are still in MVP status. See TODO section at the end.</p>
+      <h2 id="web-site-screenshots" tabindex="-1">Web Site Screenshots <a class="header-anchor" href="#web-site-screenshots"><i class="bi bi-link-45deg"></i></a></h2>
+      <div class="owl-carousel owl-theme shots-slider" id="">
+        <figure class="" title="Page header.">
+          <img class="item img-fluid" src="./images/web/01-page-header.jpg" alt="Page header." loading="lazy" decoding="async" width="683" height="482" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 683 482'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAHCAIAAABV+fA3AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAz0lEQVR4nAHEADv/AOXg3ujq6vDv8PLx8vHw8fX29fX09fT09Pb29gDv7u/v7e7q6OnW1dbU1NXr6urv7u/v7+/u7u4A8vHy8PHx8/L09fP19PLz8O/w7+/v8O/v8/PzAOno5/Ty8vPz8Ovv6u7u6/Tx8vXy9/Xy9v79/QBybVuggWmZhGmDc1hUQy3RycW5jYHWvbX///8ASUY2Rk0/X1w9lW5KcVQ2u7yzy7yw39jN////AH0xVJw6T5Q3ULdKarNGZrtnidqQtNSKrdyQsQvkkTQ7RuUDAAAAAElFTkSuQmCC'%3E%3C/image%3E%3C/svg%3E&quot;)">
+          <figcaption class="descr">Page header.</figcaption>
+        </figure>
+        <figure class="" title="Tracks list.">
+          <img class="item img-fluid" src="./images/web/02-tracks-list.jpg" alt="Tracks list." loading="lazy" decoding="async" width="683" height="482" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 683 482'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAHCAIAAABV+fA3AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAz0lEQVR4nAHEADv/AMKrrrakp8Kzr8zAv7Cmo6urqaKgm6+xrfP09ADf2Nvl4OPc3Nzm4N/g4OCeh5BxMEaIU2Tu7ewAs7ScqbGfrqqadG5gjo14u7Gqxqqzx6+1+fj3AHZ2W0hIQGRZRT8zHyEiEq+tofv7+fb5+P///wBIOyE2KBpLOCVPPi1BKxapnJbs3eTu5On9/PwA0tDF29/Q5uvc3eXY4N/P4OPf7fLx9/n5////AMl7msV1mMFzl8V2mMt8ncx8ntaHqtyPst2SsyKifpBQjLn3AAAAAElFTkSuQmCC'%3E%3C/image%3E%3C/svg%3E&quot;)">
+          <figcaption class="descr">Tracks list.</figcaption>
+        </figure>
+        <figure class="" title="Track details page.">
+          <img class="item img-fluid" src="./images/web/03-track-details-page.jpg" alt="Track details page." loading="lazy" decoding="async" width="711" height="482" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 711 482'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAGCAIAAACepSOSAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAs0lEQVR4nAGoAFf/APPq6/Hs7vf09f35+//+//////jz9enh5Pr3+ADGt6+DbGGJdGqFbWWEb2Oro5bm2NSoe2r//PwApZuNUjMeYEExWTsrTCwbdmdW8+3t2cbH+Pf3AJmRilk3JE8zI2E7KkorHWpeVPfp7+/N3fz2+ADO1da1vbTBwLLKv7C3urLAyMTbx8/Xvcjq3OIA2bO/66/L67DM6K/L77TP6qzHhkBfcCpKqGqG4S1s6j6SAnYAAAAASUVORK5CYII='%3E%3C/image%3E%3C/svg%3E&quot;)">
+          <figcaption class="descr">Track details page.</figcaption>
+        </figure>
+        <figure class="" title="Bottom pagination.">
+          <img class="item img-fluid" src="./images/web/04-bottom-pagination.jpg" alt="Bottom pagination." loading="lazy" decoding="async" width="683" height="482" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 683 482'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAHCAIAAABV+fA3AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAyElEQVR4nGM4sHfTpUunNi2dt3/p/C0bl929c+3///+/f//6//8/Q0K4+ZTO9OZs/zBd6dQI223bV/7////Pnz8guSVT6xbOqD+2f93yCa171826fevS//////39C5L79/8fSOE3kCEgAOJBAcP3L1++ffr89c2HXz9+/f7x88e379++fP3x9dufn78Z3v348vHP94+/vr3+9Pb9zy8ff3//8Ovb+x9fPv/9yXClfeXVtpWXm5edrZpzsWnp1baVV1pXgAQ7VwMA9FWbyZmL8+MAAAAASUVORK5CYII='%3E%3C/image%3E%3C/svg%3E&quot;)">
+          <figcaption class="descr">Bottom pagination.</figcaption>
+        </figure>
+        <figure class="" title="Author page.">
+          <img class="item img-fluid" src="./images/web/05-author-page.jpg" alt="Author page." loading="lazy" decoding="async" width="711" height="482" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 711 482'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAGCAIAAACepSOSAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAs0lEQVR4nAGoAFf/APPv7u7v7vf39/7+/v7+/vz7+/n4+fv8/fr5+QD78/j26u/6+Pn9/f39/Pz+///x5+jRubb++vsAr62tu7i46urp39/e3t7d7e/w593ZsYx6/f37AOvr7O3t7/Tz9+/t8PTz8/z+/PHp7ePL2Pf09QDt6+HHyLjP18Hj7N7a3N/NydD07vDv3OT8+foAs4WHhjxIj05NrWdym094lUNu03eg0G6Z2YutO/CIi4ZFiVMAAAAASUVORK5CYII='%3E%3C/image%3E%3C/svg%3E&quot;)">
+          <figcaption class="descr">Author page.</figcaption>
+        </figure>
+        <figure class="" title="About page.">
+          <img class="item img-fluid" src="./images/web/about-page.jpg" alt="About page." loading="lazy" decoding="async" width="711" height="482" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 711 482'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAGCAIAAACepSOSAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAq0lEQVR4nBXBPQ6CMBgA0J7HUzh7CWednD0A91AWBi9gAoxqjBOJxhgCKr9FBGppabH0M76HCMZlhqWU8Ke11oIy/Ej6TiDybl7PlLWMUtpSqgHS69lazkApVDV1FMc5zuu6JoQIKStc3HYHITr0aUieZCUuOGX6OwzDIEtSnXzFJWKyIz3vQHGtegAFEBy9i70v/Ah5m21ouqHphGvnbrrByjbG08VoYs2NHxqSjlM3LvKoAAAAAElFTkSuQmCC'%3E%3C/image%3E%3C/svg%3E&quot;)">
+          <figcaption class="descr">About page.</figcaption>
+        </figure>
+        <figure class="" title="Language selector dropdown.">
+          <img class="item img-fluid" src="./images/web/language-selector-dropdown.jpg" alt="Language selector dropdown." loading="lazy" decoding="async" width="491" height="418" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 491 418'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAHCAIAAAC6O5sJAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAuklEQVR4nAGvAFD/ANzQzszCvuDc28fKztXJydvQ0drW2/j49wCCe31gUUmTkI9ZZWJpYFWdmo/1/fr8+/sA9/j5+vT3v7K2dDROlEhlhz1csXmM7e/sANjX0tza2LeuroNJXJpbc343T5Ffa+3u6wBwaVBjYEG8ubLa1dnOyMjLxcXa09T69/gART8rS04vtrSm8ebf8Ozv8ezv+vn6/f39ACojFxoXCq+tpfHr5uTl5Ojp6O7u7v39/VPac/T6XReCAAAAAElFTkSuQmCC'%3E%3C/image%3E%3C/svg%3E&quot;)">
+          <figcaption class="descr">Language selector dropdown.</figcaption>
+        </figure>
+        <figure class="" title="Logged user menu.">
+          <img class="item img-fluid" src="./images/web/logged-user-menu.jpg" alt="Logged user menu." loading="lazy" decoding="async" width="710" height="460" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 710 460'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAIAAAB1kpiRAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAj0lEQVR4nCXM6wrDIAxAYd//1cYGLYU+wtSaxFs1yayMbt/fA8dc47rGUFX5O7u03lpjZhEx+7Yvy+qcSxQBoNY65xQRAIhEZt22x/NlrSXEEELJ5SPSewcAIjLBHWD98XaRIiCcpUrt3PnOiCY4H6wPziMiACBi+rlPpZgxxkeVmc9aS84ppkix5Kyqc84vUa+o9pe5SzcAAAAASUVORK5CYII='%3E%3C/image%3E%3C/svg%3E&quot;)">
+          <figcaption class="descr">Logged user menu.</figcaption>
+        </figure>
+        <figure class="" title="Logged user welcome screen.">
+          <img class="item img-fluid" src="./images/web/logged-user-welcome-screen.jpg" alt="Logged user welcome screen." loading="lazy" decoding="async" width="683" height="482" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 683 482'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAHCAIAAABV+fA3AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAApElEQVR4nC2MQQrCQAxF59KuRbAFD+AFRKjoCbyBG10Uu3cjLYrQjjNJJpMmUvXzVu/Bd69H60NgZjNTMx01ARKgqbkuptbjk8eJrAEIes8BVdXdj+fh1mURVTMzRAwxTB+qTpPYT39HRIj4b0wpAeXEKqNmoQjxHSiCcHY9wyDoBfsU/EheaMg4ZIiaXV1UTbmvF9vTbH2Zb5pid11WdVk1q8MHhYauoTuKNtkAAAAASUVORK5CYII='%3E%3C/image%3E%3C/svg%3E&quot;)">
+          <figcaption class="descr">Logged user welcome screen.</figcaption>
+        </figure>
+        <figure class="" title="Signin page.">
+          <img class="item img-fluid" src="./images/web/signin-page.jpg" alt="Signin page." loading="lazy" decoding="async" width="683" height="482" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 683 482'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAHCAIAAABV+fA3AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAiklEQVR4nFWO4QqCQBCE7/lDQXqPUPJd+hF3JIQUlChqanu3M3EmRN+vYWaWHdPc674fvAgjABFWSJrV4tKOMklQqsbG1zSIcHo9l/kiUqlvsEXxLsqxu72niqyB9pfBK8judJ0fA0AVqA8IiqDbP0FY4pA/jMtKmxTn3cEmuUsLm+Y2LVx2dPvyA2FFsZ+AgXlWAAAAAElFTkSuQmCC'%3E%3C/image%3E%3C/svg%3E&quot;)">
+          <figcaption class="descr">Signin page.</figcaption>
+        </figure>
+      </div>
+      <h2 id="web-interface" tabindex="-1">Web Interface <a class="header-anchor" href="#web-interface"><i class="bi bi-link-45deg"></i></a></h2>
+      <p>The web interface is a <strong>Django-powered frontend</strong> that serves as a companion to the mobile app and as an administrative interface to the database. It uses Django template system with <strong>Webpack</strong> for client-side asset building
+        (via SCSS and TypeScript).</p>
+      <p>The administrative panel is implemented using the built-in django admin functional and is complemented by <strong>django-unfold</strong>.</p>
+      <h3 id="key-features" tabindex="-1">Key Features: <a class="header-anchor" href="#key-features"><i class="bi bi-link-45deg"></i></a></h3>
+      <ul>
+        <li><strong>Simple Navigation</strong>: Intuitive and easy viewing of fairy tales.</li>
+        <li><strong>Local Favorites</strong>: Users can save favorite tracks without an account.</li>
+        <li><strong>Internationalization</strong>: Supports multiple (English and Russian at the moment) languages for global accessibility.</li>
+        <li><strong>Authorization Integration</strong>: Syncs favorites (and potentially other essential data) with the API server if the users has been already logged in. Implemented with <strong>django-allauth</strong> and <strong>django-registration</strong>.
+          Supports third-party oauth accounts (only Google at the moment has implemented).</li>
+        <li><strong>Administrative Panel</strong>: A convenient custom website control panel implemented with <strong>django-unfold</strong>.</li>
+        <li><strong>Processing of uploaded audio files</strong>: All uploaded audio files are processed using ffmpeg and ffprobe to fetch the audio metadata, and stores duration and file size into the database.</li>
+        <li><strong>Internationalization</strong>: All the models and database are translated internally using <strong>django-translated-fields</strong>, other translations are supported by django native i18n/l10n system.</li>
+        <li><strong>Adaptive preview sizes</strong>: <strong>django-imagekit</strong> is involved to generate audio tracks’ author’ preview on-the-fly. LQIP («Low-quality image placeholders») previews are implemented via a dedicated middleware templatetag,
+          which does almost the same as my <a href="https://github.com/lilliputten/gulp-embed-lqip-as-background" c="l" class="external" title="External link: https://github.com/lilliputten/gulp-embed-lqip-as-background" target="_blank" rel="noopener">Gulp LQIP small image placeholder generator</a> plugin:
+          generates the image preview in the <code>style: backgound</code> with a svg-wrapped thumbnail.</li>
+      </ul>
+      <h2 id="administrative-panel-screenshots" tabindex="-1">Administrative Panel Screenshots <a class="header-anchor" href="#administrative-panel-screenshots"><i class="bi bi-link-45deg"></i></a></h2>
+      <div class="owl-carousel owl-theme shots-slider" id="">
+        <figure class="" title="Edit track page.">
+          <img class="item img-fluid" src="./images/admin/edit-track.jpg" alt="Edit track page." loading="lazy" decoding="async" width="711" height="482" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 711 482'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAGCAIAAACepSOSAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAjUlEQVR4nEXL6wqDIBiAYW8gOphp+uFsyyz1cwaLsQPt/u9qjDEGz7+Xl0gdWuknt4JBBpGp0Ij5i0iNNbf7dg64MkhCx39rhC3ZqQOkwrf9j/S0X0hBh6obF3wokwVEqZFDpGL5fAUdym70+XWcr8ZehmnjEGvuKuFIzW3FxhRvIe8zPh3elcmtCgdIb54+FNcBk3xMAAAAAElFTkSuQmCC'%3E%3C/image%3E%3C/svg%3E&quot;)">
+          <figcaption class="descr">Edit track page.</figcaption>
+        </figure>
+        <figure class="" title="Filters panel.">
+          <img class="item img-fluid" src="./images/admin/filters.jpg" alt="Filters panel." loading="lazy" decoding="async" width="356" height="341" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 356 341'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAiElEQVR4nGWNWw7CIBQFWQOVyENjP6BwuZb6aNJWQGvc/55MFaOJyfmbzBnCFDLpmcJKer2POqQaxhpGspJ+AdJT7rS/NG3a6PPW9KQYEqkAAxN018Vww8tQHwOjO8w/VwqZQspd02XsH38NARYjdLcCvg3uTJvgdC+gEvAeXdudG+xx1iGbkJ++AhwI6jAD3AAAAABJRU5ErkJggg=='%3E%3C/image%3E%3C/svg%3E&quot;)">
+          <figcaption class="descr">Filters panel.</figcaption>
+        </figure>
+        <figure class="" title="Tracks list.">
+          <img class="item img-fluid" src="./images/admin/tracks-list-2.jpg" alt="Tracks list." loading="lazy" decoding="async" width="960" height="483" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 960 483'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAFCAIAAAAcxIEBAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAjklEQVR4nCXGRw6DMBAAQD8gkQjFbdfdBAIGm5b8/2c5IM1hiFCp4QPF1IjPrZVTJ6cWZo7Jq0Jq1ldd9ONX2qziDq6g33TcwRc//pTfyLNxL9breHKzgi3CZGkLuCLMqsIhTCaP2lY06v6kmDDs0mZpsgoHuGLfF7iNCD2BSWG4GM5MLRRniukO1yvF9AcFGxWDg90hfAAAAABJRU5ErkJggg=='%3E%3C/image%3E%3C/svg%3E&quot;)">
+          <figcaption class="descr">Tracks list.</figcaption>
+        </figure>
+      </div>
+      <h2 id="rest-api-server" tabindex="-1">REST API Server <a class="header-anchor" href="#rest-api-server"><i class="bi bi-link-45deg"></i></a></h2>
+      <p>The API server, also built with <strong>Django</strong> and it’s <strong>djangorestframework</strong> and <strong>django-registration</strong>, provides endpoints for both the web interface and mobile application. It handles user authentication, data
+        synchronization, and audio metadata management.</p>
+      <h3 id="key-features-1" tabindex="-1">Key Features: <a class="header-anchor" href="#key-features-1"><i class="bi bi-link-45deg"></i></a></h3>
+      <ul>
+        <li><strong>User Authorization</strong>: Secure authentication for syncing favorites across devices.</li>
+        <li><strong>RESTful Endpoints</strong>: Efficient data exchange between clients and server.</li>
+        <li><strong>Audio Processing</strong>: Leverages <strong>FFmpeg</strong> and <strong>FFprobe</strong> for track metadata extraction and quality assurance.</li>
+      </ul>
+      <h2 id="mobile-phone-screenshots" tabindex="-1">Mobile Phone Screenshots <a class="header-anchor" href="#mobile-phone-screenshots"><i class="bi bi-link-45deg"></i></a></h2>
+      <div class="owl-carousel owl-theme shots-slider" id="">
+        <figure class="" title="Tracks list.">
+          <img class="item img-fluid" src="./images/phone/tracks-list-2.jpg" alt="Tracks list." loading="lazy" decoding="async" width="540" height="960" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 540 960'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAKCAIAAAAYbLhkAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAyUlEQVR4nAG+AEH/AJYpUaIuYqMsY6ApYJ8lXaAhWgBeMEFjNkFdMTxjNkBiNT9ZLToAeWIun3w5b0wiuqRdxKBFblUjAHdXKHVgMnlLKYdcN6N3O3ROIQBKNR0kJx9sUDAjEQpkSCJnRSAASDIzOyIpNSYoNS0vOjAuSzc0AGNWVnZoaVlGSDUhIzYmJUArLAB6bla/up+QgW48HhA4HwlNLRoAQjApRTIqPCcoJh4dKBsWMR4ZAB8WGx0TGSUbIC0eJCIRGhoQFsL/MLoimumIAAAAAElFTkSuQmCC'%3E%3C/image%3E%3C/svg%3E&quot;)">
+          <figcaption class="descr">Tracks list.</figcaption>
+        </figure>
+        <figure class="" title="Author screen (light theme).">
+          <img class="item img-fluid" src="./images/phone/author-screen-light.jpg" alt="Author screen (light theme)." loading="lazy" decoding="async" width="540" height="960" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 540 960'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAKCAIAAAAYbLhkAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAyUlEQVR4nAG+AEH/ANqftMiOlNaerOKtwt+lvN2fuADUxK6/rYiumnzu4+Dy6ury6ugA1b2qn4RliW5W79zb7t3i7tzgAOPT06+aksWzsPLi5u/f4u/f4gDgzdLiz9XfztPazM7ay87i09UA2s3P0sXH2MrM39DU3M3Q59faANnJzNLExtTFyNTFyNPFx+TV1wDx5Ofv4eXz5urv3eLw3uP48PEA9u/w9+/x//78/PL0+u/y+u7xAP309v309vTu7vPu7vz3+Pv39s2HlhgjnHS0AAAAAElFTkSuQmCC'%3E%3C/image%3E%3C/svg%3E&quot;)">
+          <figcaption class="descr">Author screen (light theme).</figcaption>
+        </figure>
+        <figure class="" title="Author tracks (light theme).">
+          <img class="item img-fluid" src="./images/phone/author-tracks-light.jpg" alt="Author tracks (light theme)." loading="lazy" decoding="async" width="540" height="960" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 540 960'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAKCAIAAAAYbLhkAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAxklEQVR4nAXBTWvCMBgA4Pfve/GwmwhBBsoQqVjY8FsUwYMrTau1TdOktavRfsV1rdvcdtjzAG4oWlPBaGAgdY9Ugp4hCQLhMRmdZBRdxbmIYyh4KB0ev1qpSXKH5Q4DbTQxF8vQtDLKr/woqQ+th9q013G3emDsY+JlhMGwjZZKj2GD6cbFobnnw/ixrr90E+ymNk1dlu4IzJWnjdqPsCXMg6Q8syloi9lutS5Pl3f+VoXiK8vhp7r93j6/P8oiFPdE/hXVP3VzleTSV8VeAAAAAElFTkSuQmCC'%3E%3C/image%3E%3C/svg%3E&quot;)">
+          <figcaption class="descr">Author tracks (light theme).</figcaption>
+        </figure>
+        <figure class="" title="Authors list (light theme).">
+          <img class="item img-fluid" src="./images/phone/authors-list-light.jpg" alt="Authors list (light theme)." loading="lazy" decoding="async" width="540" height="960" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 540 960'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAKCAIAAAAYbLhkAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAyUlEQVR4nAG+AEH/ALRxgb9/jc+essmXqsiTp9CWrADe08nbzsba0tLUzMzb09Pu5uUAybCdvaWV3MzR1MTH1sXJ5dTYAM/Cw9HExdnKzeHS1erb3u3e4QCalpinoaPay87WyMvXycvh0tUAzL/By7/B3M7Q39DT5dbZ6trdAIaCgoeBgtbHydLDxtvMz+jZ2wDj2dvi1tn36e3x3+Tu3OL48fEA+fLz+vPz//38/PL0+u/y+u7xAP309f3z9fTu7vTu7v34+Pv39uSFk3dRQ5GeAAAAAElFTkSuQmCC'%3E%3C/image%3E%3C/svg%3E&quot;)">
+          <figcaption class="descr">Authors list (light theme).</figcaption>
+        </figure>
+        <figure class="" title="Notification pane playe (dark theme).">
+          <img class="item img-fluid" src="./images/phone/notification-pane-player.jpg" alt="Notification pane playe (dark theme)." loading="lazy" decoding="async" width="540" height="960" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 540 960'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAKCAIAAAAYbLhkAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAt0lEQVR4nGNIzahcse5Ec8fshtZZS1cfLShpZdBQkbcy1VVTlDLRV3V3slRTlmOIdhapiZTJ85DsyTFY2uxUGmvAEOEgnB+pWRWml2gr1ZykUZdkyGCgLmasIWitK6Yhx2+hyaMuxczAzSvKwyfGySPKyy/GzSfOyy/BICwiISwiISoqKSIqKSIiISIiwSAkLCEoJC4lrSAtoygkLCEkDBYSEpYQEBQTEBRDCAkKicsrqMorqEKEAFJyIm2BizDPAAAAAElFTkSuQmCC'%3E%3C/image%3E%3C/svg%3E&quot;)">
+          <figcaption class="descr">Notification pane playe (dark theme).</figcaption>
+        </figure>
+        <figure class="" title="Rubric info (light theme).">
+          <img class="item img-fluid" src="./images/phone/rubric-info-light.jpg" alt="Rubric info (light theme)." loading="lazy" decoding="async" width="540" height="960" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 540 960'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAKCAIAAAAYbLhkAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAuklEQVR4nBXM3QqCMBgA0O/9X0K6iy6CMCIyioryphESzvxZLvuZmpvKplZWROcBDvjayNZ0v2tE/QXtzWl3BllI2cFNSVicL+X1WjIGwj+xHaYblFgOxwF3CYw7mqnrsRvErs8JFQEFUx+gqXFzPHbwsiAU5AQYbaM9ZpaT2F5+jLh3hPVkaC9XKcIJsgWh/+tdSEVZk/KXlM+ifKsKJOfynr3qqi3lkxetVPBR9bdqVJ6rXHweTVvXPyLInHnTQNMoAAAAAElFTkSuQmCC'%3E%3C/image%3E%3C/svg%3E&quot;)">
+          <figcaption class="descr">Rubric info (light theme).</figcaption>
+        </figure>
+        <figure class="" title="Settings pag (dark theme).">
+          <img class="item img-fluid" src="./images/phone/settings-page.jpg" alt="Settings pag (dark theme)." loading="lazy" decoding="async" width="540" height="960" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 540 960'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAKCAIAAAAYbLhkAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAt0lEQVR4nAXB3W6CMBQA4PMK6DQxZlFjAgrZ1vb0tNRCSzVCJgZ34c0eQC8Mj+HPa/t98M/UlZqe2p7aK9tf1gGcMoWiQqDlIkdhCOFgXZ3bQHpLeiv1jnIIpL1UFZIX5CVVUoFjWHFqqeiMD4IcR7hl+1fyd2fnBzs/k1Of1eAZei4bphumA5cVl/Bb+q4MR+NqY3dm45Agz76L1Y+Nv2ScYpKqOIXpcDQZfMSzRTJffkajWTR+AyrDKGaJz/euAAAAAElFTkSuQmCC'%3E%3C/image%3E%3C/svg%3E&quot;)">
+          <figcaption class="descr">Settings pag (dark theme).</figcaption>
+        </figure>
+        <figure class="" title="Tag info (light theme).">
+          <img class="item img-fluid" src="./images/phone/tag-info-light.jpg" alt="Tag info (light theme)." loading="lazy" decoding="async" width="540" height="960" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 540 960'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAKCAIAAAAYbLhkAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAvklEQVR4nC3Iy26CQBQA0Pv/P9CNaRo1LogujBprw0JXjc/oRMnAPBgxFBS5igMSzRDd9CwP0FrfrQ+DzkS1x37Lll/fkPh+zHii9pcwzKIoO8ZwFYeTw8IZOe8YujKlAuxmY9ofHD15YjJhErmCScea/4wiymLq/ReZ/fINkWty2DqpUCgUWJ8f415XrAhfrv8cN/Uk0MUi2DlFfEYeaD80OgdT3B+3/FUZo/MnZg/MoNJFpYscUSNWZWnK+xvWvpr89XU5mgAAAABJRU5ErkJggg=='%3E%3C/image%3E%3C/svg%3E&quot;)">
+          <figcaption class="descr">Tag info (light theme).</figcaption>
+        </figure>
+        <figure class="" title="Track detail (dark theme).">
+          <img class="item img-fluid" src="./images/phone/track-details.jpg" alt="Track detail (dark theme)." loading="lazy" decoding="async" width="540" height="960" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 540 960'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAKCAIAAAAYbLhkAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAq0lEQVR4nCXLywqCQBSA4fMyQUSQ40ymZ+46l1AnM2wRBNGyV2hRLaLnjgj+1Qc/vOLwient09O2D+7uqoUp8atfDjg7m8VBzrtQwC52l7E/NXiLYlDcIYdkm976rTRmgzKjekWh03b0Ye9D5LIpK03X4FBELl2JktB/4EvRKbsVStNCZPmPJo1HVw8u/sZNZQiDmuVR8FS7gCKgUISCypjKaFK2l0YTpgn7AjSgLk9yw09FAAAAAElFTkSuQmCC'%3E%3C/image%3E%3C/svg%3E&quot;)">
+          <figcaption class="descr">Track detail (dark theme).</figcaption>
+        </figure>
+        <figure class="" title="Tracks list (light theme).">
+          <img class="item img-fluid" src="./images/phone/tracks-list-light.jpg" alt="Tracks list (light theme)." loading="lazy" decoding="async" width="540" height="960" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 540 960'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAKCAIAAAAYbLhkAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAyUlEQVR4nAG+AEH/AMFUf81aktNclc1WkMtRjsxNigC/hHO9eVyjXFLNkXXLiF2xd2UAiHBASUMZbkkhaEQhhGEjh2Y1AINsWjc0MHZeRTQoJGdPMJh3VgDly8/jxc7l0dfx4ubw4+jy2d4A08fB49nUvKmmhGpqhnNtp46KAI59ZJWLb3hnVS8WDR4HAGA/LADm2NXXycbZzc3Qv8XVx8jm2dYA+fL0+vT3//////f6/vb5/PT3AP309f3z9fLt7fLt7Pv29fv19TCWcSAVNJMUAAAAAElFTkSuQmCC'%3E%3C/image%3E%3C/svg%3E&quot;)">
+          <figcaption class="descr">Tracks list (light theme).</figcaption>
+        </figure>
+        <figure class="" title="Tracks list with a playe (dark theme).">
+          <img class="item img-fluid" src="./images/phone/tracks-list-with-a-player.jpg" alt="Tracks list with a playe (dark theme)." loading="lazy" decoding="async" width="540" height="960" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 540 960'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAKCAIAAAAYbLhkAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAxklEQVR4nGOYrOa3WCdxkWbCIo34BUox86TDGLKsXJLNbRJNrBIMzJNMLNOs7BmSw51i3Ixi3YwjnfSjnHVjAm0ZYr1ts12Nomx1k5wMo6y1Q1wsGXzdPeL93UIdTTJczAIdrV1sbRhcrGydza0dDI3tjM3NNLWttXQZnM3NfFxdAvyCvGytAv1CAnyDGfRkFbQ11A31TXQUFIz1zfV1TRgUxaWVRKXE+QRk+EXl+IRlBIQZ5ITEZAVFNZVUtBRVZEUl5MWlAKiMKm3MGjx1AAAAAElFTkSuQmCC'%3E%3C/image%3E%3C/svg%3E&quot;)">
+          <figcaption class="descr">Tracks list with a playe (dark theme).</figcaption>
+        </figure>
+        <figure class="" title="Tracks list without panels during scroll (dark theme).">
+          <img class="item img-fluid" src="./images/phone/tracks-list-without-panels-furing-scroll.jpg" alt="Tracks list without panels during scroll (dark theme)." loading="lazy" decoding="async" width="540" height="960" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 540 960'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAKCAIAAAAYbLhkAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAx0lEQVR4nGMoC/Ha0jNheUFxuZHNhPDECm8/hnAv7dx0y5ULqpJcNVvSvcOiLBgiPZ2CXSyDXO197WyDHKy9bcwZ3K0tbUxMHUyNHUwMTbXU3a2sGWI9jN2NZJJtldPctE1VBLubCxhCHHTdTeWLgo2qMzxcDCXqiq0ZHAzVolx1fa1USqOtY9x040INGfydnQNdXO1Nre1NrdxtbO0MTBjcrQwDXI3TI5xTfa19bfVDPK0ZKuIcqtPsJxe41QYZ1UZb1CU7AQDK/zYQSsQygwAAAABJRU5ErkJggg=='%3E%3C/image%3E%3C/svg%3E&quot;)">
+          <figcaption class="descr">Tracks list without panels during scroll (dark theme).</figcaption>
+        </figure>
+      </div>
+      <h2 id="mobile-application" tabindex="-1">Mobile Application <a class="header-anchor" href="#mobile-application"><i class="bi bi-link-45deg"></i></a></h2>
+      <p>The <strong>Flutter-based mobile app</strong> offers an immersive storytelling experience with robust audio controls.</p>
+      <h3 id="key-features-2" tabindex="-1">Key Features: <a class="header-anchor" href="#key-features-2"><i class="bi bi-link-45deg"></i></a></h3>
+      <ul>
+        <li><strong>Audio Playback</strong>: Powered by <strong>Just Audio</strong>, with background service support for notification controls.</li>
+        <li><strong>Favorites Management</strong>: Local storage or cloud sync via the API server.</li>
+        <li><strong>Internationalization &amp; Theming</strong>: Multi-language support and basic customization options.</li>
+      </ul>
+      <h2 id="audio-playback" tabindex="-1">Audio playback <a class="header-anchor" href="#audio-playback"><i class="bi bi-link-45deg"></i></a></h2>
+      <p>On the both web and mobile sites is implemented relatively the same behavior of the audio player: Both the website and the mobile device have relatively identical audio player behavior:</p>
+      <ul>
+        <li>The hideable floating player on the bottom of the page.</li>
+        <li>Both the website and the mobile application remembers the playback position of each track so that playback can be resumed at any time.</li>
+        <li>Playback positions are stored locally or on the server if the user is logged in.</li>
+        <li>It supports endless playback when tracks are played one after the other. (Since the application is still in MVP status, it uses fairly simple logic to determine the next track to play.)</li>
+      </ul>
+      <h2 id="mobile-tablet-screenshots" tabindex="-1">Mobile Tablet Screenshots <a class="header-anchor" href="#mobile-tablet-screenshots"><i class="bi bi-link-45deg"></i></a></h2>
+      <div class="owl-carousel owl-theme shots-slider" id="">
+        <figure class="" title="Author details (light theme).">
+          <img class="item img-fluid" src="./images/tablet/author-details-light.jpg" alt="Author details (light theme)." loading="lazy" decoding="async" width="640" height="400" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 640 400'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAIAAAB1kpiRAAAACXBIWXMAAAsTAAALEwEAmpwYAAAApElEQVR4nE3Guw6CMABA0X64i4/RTRcHJ3Vz4AsIzgYjjxaLihEstYhGStuAwWAQB5OTmwvWndGmO8HDJezPYW/2Dw0WYKWNDW36yp48oeLG8q92eEKBpeu2YRDkhZYTOe6P7YS2w3Y+YHjPMI6RRyAiLoohipHX9n44gsA00+DEz5EkVF6oJFcZNwSheUSAvzVl+igzXhdlpVSlVF2UzQv5FuoDbGWYibQVMNgAAAAASUVORK5CYII='%3E%3C/image%3E%3C/svg%3E&quot;)">
+          <figcaption class="descr">Author details (light theme).</figcaption>
+        </figure>
+        <figure class="" title="Author detail (dark theme).">
+          <img class="item img-fluid" src="./images/tablet/author-details.jpg" alt="Author detail (dark theme)." loading="lazy" decoding="async" width="640" height="400" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 640 400'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAIAAAB1kpiRAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAoUlEQVR4nD3GQQqCQBQA0LmEImqI2aJFC53/nT9jzkxZtHARRIsmECK6QHcoizp1hCC8xWOf9eW7vb5191LnXrqndD25nv5/0IkZpRSiRKgEKgQJnKAYsR3x/cY2QpoCVlxYXpoCB5aXrDto19pGKivICtJY1gADA8juR7q1ygBpwJpDlRejZc6ZXWQwS+dxmgZRFk2yME68IPGCqR9mfvgDTT0pgZ2ffdgAAAAASUVORK5CYII='%3E%3C/image%3E%3C/svg%3E&quot;)">
+          <figcaption class="descr">Author detail (dark theme).</figcaption>
+        </figure>
+        <figure class="" title="Settings page (light theme).">
+          <img class="item img-fluid" src="./images/tablet/settings-page-light.jpg" alt="Settings page (light theme)." loading="lazy" decoding="async" width="640" height="400" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 640 400'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAIAAAB1kpiRAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAnklEQVR4nGXGwQqCMBgA4D25YHjzKUo8dRDzVpc2DxI00FKhQ5D+c5tbyQzTa5jH4Dt8KHM3N3dbOn5he7m1zq11sfIKe1Y6Pnpx6FRjtDDPP5ojmaQCU0EoJ5Qfz7PlmMokRbBPHgGuQwJRXAW4CjBEMexiCAk/nBC7XGVWdqw2nPU/ZiGYYYD6unnfYWr1qPQg5CDkqPTYqg+Xk9ZfUeaWAHnhagQAAAAASUVORK5CYII='%3E%3C/image%3E%3C/svg%3E&quot;)">
+          <figcaption class="descr">Settings page (light theme).</figcaption>
+        </figure>
+        <figure class="" title="Track detail (dark theme).">
+          <img class="item img-fluid" src="./images/tablet/track-details.jpg" alt="Track detail (dark theme)." loading="lazy" decoding="async" width="640" height="400" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 640 400'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAIAAAB1kpiRAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAp0lEQVR4nD3CPQ6CMBgA0F4BLQEMaJwErAboVyrQH8BEA2h04iwGHQyTxzY4+PLQyO8f1Y+sf5HrI2iHoBvCy/P3TW6o4PtaJnWlKy20KpTIMg6MRoxGKY2RiEEmaat0I3Wj9CkXVXpQCciYygTQuci6UhzzQrNUAfuXACUwVFNSw45vIxYSGoTxJpj6U+YTFLreGjsrbC8M7GFradqOgZ2Z6c0t1zC/ZRUmehle7p0AAAAASUVORK5CYII='%3E%3C/image%3E%3C/svg%3E&quot;)">
+          <figcaption class="descr">Track detail (dark theme).</figcaption>
+        </figure>
+        <figure class="" title="Tracks list with a search (light theme).">
+          <img class="item img-fluid" src="./images/tablet/tracks-list-with-a-search-light.jpg" alt="Tracks list with a search (light theme)." loading="lazy" decoding="async" width="640" height="400" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 640 400'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAIAAAB1kpiRAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAvElEQVR4nC3COwuCQAAA4Pt5UTnV1B+ooa29soYgqKFFmhqChlaH9iBSiqCnmnqdop74IssLBXsg9PGBZbm5KfV4qrvOtbk8zRVprvDPUx0wqNcmdNvbCc725O4u3l7wDqJ3lLJ7EYyGHXY+xbLiQjVAKEDoruv/mgYa1QrTbzmyaguie1V8RQ1UmIU3X1LAbMysFqwLUWiYoWFGFo6wnbXwQzcBOh8SP0wez08cp+SVEvKNk2+cpBF5R+QHXFmPAIwIYJkAAAAASUVORK5CYII='%3E%3C/image%3E%3C/svg%3E&quot;)">
+          <figcaption class="descr">Tracks list with a search (light theme).</figcaption>
+        </figure>
+      </div>
+      <h2 id="seamless-cross-device-experience" tabindex="-1">Seamless Cross-Device Experience <a class="header-anchor" href="#seamless-cross-device-experience"><i class="bi bi-link-45deg"></i></a></h2>
+      <ul>
+        <li><strong>Local vs. Synced Data</strong>:
+          <ul>
+            <li><strong>Web/Mobile</strong>: Favorites can be stored locally without an account.</li>
+            <li><strong>Authorized Users</strong>: Sync preferences across devices via the API server.</li>
+          </ul>
+        </li>
+        <li><strong>Unified Backend</strong>: Both web and mobile clients share the same API server for data consistency.</li>
+      </ul>
+      <h2 id="technology-stack" tabindex="-1">Technology Stack <a class="header-anchor" href="#technology-stack"><i class="bi bi-link-45deg"></i></a></h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Component</th>
+            <th>Technologies Used</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Web Interface</strong>
+            </td>
+            <td>Django Templates, Webpack (SCSS/TypeScript)</td>
+          </tr>
+          <tr>
+            <td><strong>API Server</strong>
+            </td>
+            <td>Django REST Framework, FFmpeg/FFprobe for audio processing</td>
+          </tr>
+          <tr>
+            <td><strong>Mobile App</strong>
+            </td>
+            <td>Flutter, Just Audio</td>
+          </tr>
+          <tr>
+            <td><strong>Internationalization</strong>
+            </td>
+            <td>i18n Support (Web + Mobile)</td>
+          </tr>
+          <tr>
+            <td><strong>Authorization</strong>
+            </td>
+            <td>django-allauth and django-registration</td>
+          </tr>
+          <tr>
+            <td><strong>Databses</strong>
+            </td>
+            <td>MySQL on the server-side (through Django ORM), sqlite on the dev-server and to store mobile application data.</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 id="why-this-project-stands-out" tabindex="-1">Why This Project Stands Out <a class="header-anchor" href="#why-this-project-stands-out"><i class="bi bi-link-45deg"></i></a></h2>
+      <p><strong>The March Cat Tales</strong> demonstrates full-stack expertise, blending Django’s robust backend capabilities with Flutter’s cross-platform flexibility. By separating concerns between the web interface, API server, and mobile app, the project
+        ensures scalability and a cohesive user experience across devices. Whether accessed via browser or mobile, the platform delivers an enchanting storytelling journey with modern tech under the hood.</p>
+      <h2 id="todo" tabindex="-1">TODO <a class="header-anchor" href="#todo"><i class="bi bi-link-45deg"></i></a></h2>
+      <p>At the moment, the project is at the MVP stage. So now we have a lot of tasks for further development.</p>
+      <h3 id="mobile-application-1" tabindex="-1">Mobile application <a class="header-anchor" href="#mobile-application-1"><i class="bi bi-link-45deg"></i></a></h3>
+      <ul>
+        <li><a href="https://github.com/lilliputten/march-tales-flutter-app/issues/29" c="l" class="external" title="External link: https://github.com/lilliputten/march-tales-flutter-app/issues/29" target="_blank" rel="noopener">Create a new «main» tab aggregating relevant information</a>.</li>
+        <li><a href="https://github.com/lilliputten/march-tales-flutter-app/issues/48" c="l" class="external" title="External link: https://github.com/lilliputten/march-tales-flutter-app/issues/48" target="_blank" rel="noopener">Add filter/sorting controls for track listings.</a>.</li>
+        <li><a href="https://github.com/lilliputten/march-tales-flutter-app/issues/49" c="l" class="external" title="External link: https://github.com/lilliputten/march-tales-flutter-app/issues/49" target="_blank" rel="noopener">Add push/email notifications.</a>.</li>
+        <li><a href="https://github.com/lilliputten/march-tales-flutter-app/issues/47" c="l" class="external" title="External link: https://github.com/lilliputten/march-tales-flutter-app/issues/47" target="_blank" rel="noopener">Refine error handling methods</a>.</li>
+        <li><a href="https://github.com/lilliputten/march-tales-flutter-app/issues/50" c="l" class="external" title="External link: https://github.com/lilliputten/march-tales-flutter-app/issues/50" target="_blank" rel="noopener">Fix the «rattling» when auto-closing track list panels when scrolling</a>.</li>
+        <li><a href="https://github.com/lilliputten/march-tales-flutter-app/issues/51" c="l" class="external" title="External link: https://github.com/lilliputten/march-tales-flutter-app/issues/51" target="_blank" rel="noopener">Use thumbnail images of track previews</a>
+        </li>
+        <li><a href="https://github.com/lilliputten/march-tales-flutter-app/issues/52" c="l" class="external" title="External link: https://github.com/lilliputten/march-tales-flutter-app/issues/52" target="_blank" rel="noopener">Fix the effect of overlapping the last tracks when you click the «Show more» button</a>.</li>
+        <li><a href="https://github.com/lilliputten/march-tales-flutter-app/issues/53" c="l" class="external" title="External link: https://github.com/lilliputten/march-tales-flutter-app/issues/53" target="_blank" rel="noopener">Fix the logic of the Back button</a>.</li>
+        <li><a href="https://github.com/lilliputten/march-tales-flutter-app/issues/54" c="l" class="external" title="External link: https://github.com/lilliputten/march-tales-flutter-app/issues/54" target="_blank" rel="noopener">Add an explanatory text to the «Log in» button</a>.</li>
+        <li><a href="https://github.com/lilliputten/march-tales-flutter-app/issues/55" c="l" class="external" title="External link: https://github.com/lilliputten/march-tales-flutter-app/issues/55" target="_blank" rel="noopener">Sort tracks in Favorites by the time they were added to the list</a>.</li>
+        <li><a href="https://github.com/lilliputten/march-tales-flutter-app/issues/56" c="l" class="external" title="External link: https://github.com/lilliputten/march-tales-flutter-app/issues/56" target="_blank" rel="noopener">Implement automatic loading of tracks when scrolling</a>.</li>
+        <li><a href="">Fix the update of the session language after the change to another one</a>
+        </li>
+      </ul>
+      <h2 id="resources" tabindex="-1">Resources <a class="header-anchor" href="#resources"><i class="bi bi-link-45deg"></i></a></h2>
+      <p>Web site: <a href="https://tales.march.team/" c="l" class="external" title="External link: https://tales.march.team/" target="_blank" rel="noopener">https://tales.march.team/</a>
+      </p>
+      <p>Web-site and server source code repository: <a href="https://github.com/lilliputten/march-tales" c="l" class="external" title="External link: https://github.com/lilliputten/march-tales" target="_blank" rel="noopener">https://github.com/lilliputten/march-tales</a>
+      </p>
+      <p>Flutter mobile application source code repository: <a href="https://github.com/lilliputten/march-tales-flutter-app" c="l" class="external" title="External link: https://github.com/lilliputten/march-tales-flutter-app" target="_blank" rel="noopener">https://github.com/lilliputten/march-tales-flutter-app</a>
+      </p>
+      <div class="ArticleFooter">
+        <ul class="ArticleTags tags">
+          <li class="tagsTitle">Tags:</li>
+          <li class="tagsItem"><a class="linkAsText" href="/tags/projects/">projects</a>
+          </li>
+          <li class="tagsItem"><a class="linkAsText" href="/tags/2025/">2025</a>
+          </li>
+          <li class="tagsItem"><a class="linkAsText" href="/tags/flutter/">flutter</a>
+          </li>
+          <li class="tagsItem"><a class="linkAsText" href="/tags/mobile/">mobile</a>
+          </li>
+          <li class="tagsItem"><a class="linkAsText" href="/tags/application/">application</a>
+          </li>
+          <li class="tagsItem"><a class="linkAsText" href="/tags/python/">python</a>
+          </li>
+          <li class="tagsItem"><a class="linkAsText" href="/tags/django/">django</a>
+          </li>
+          <li class="tagsItem"><a class="linkAsText" href="/tags/web/">web</a>
+          </li>
+          <li class="tagsItem"><a class="linkAsText" href="/tags/site/">site</a>
+          </li>
+          <li class="tagsItem"><a class="linkAsText" href="/tags/audio/">audio</a>
+          </li>
+          <li class="tagsItem"><a class="linkAsText" href="/tags/ffmpeg/">ffmpeg</a>
+          </li>
+          <li class="tagsItem"><a class="linkAsText" href="/tags/ffprobe/">ffprobe</a>
+          </li>
+        </ul>
+        <div class="ArticleNav"></div>
+      </div>
+    </article>
+  </main>
+  <footer class="PageFooter">
+    <div class="FooterContainer">
+      <div class="FooterCopyright">© 2025 <span class="delimiter">/</span>  <a href="/">Lilliputten &amp; Noble</a>
+      </div>
+      <ul class="SocialList">
+        <li class="SocialListItem"><a href="https://github.com/lilliputten" rel="me noopener" class="SocialListLink linkAsText" id="Github" target="_blank"><i class="bi bi-github"></i> GitHub</a>
+        </li>
+        <li class="SocialListItem"><a href="https://linkedin.com/in/lilliputten" class="SocialListLink linkAsText" id="Linkedin" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i> LinkedIn</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+  <div id="noise" class="noise animated"></div>
+  <script>
+    /* eslint-disable no-var */
+    // @ts-check
+    /// &lt;reference path="../scripts/@types/THTMLNode.d.ts" /&gt;
+    
+    (function updateThemeWrapper() {
+      function updateTheme() {
+        var body = window.document.body;
+        var html = /** @type THTMLNode | undefined */ (body.parentNode ? body.parentNode : body);
+        var theme = window.localStorage ? window.localStorage.getItem('theme') : null;
+        // NOTE: CAUTION: Double ampersands are escaped here
+        if (theme) {
+          if (html) {
+            if (html.setAttribute) {
+              html.setAttribute('data-theme', theme);
+            }
+            if (html.dataset) {
+              html.dataset.theme = theme;
+            }
+          }
+        }
+      }
+    
+      updateTheme();
+      window.addEventListener('load', updateTheme);
+    
+      // 
+    })();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.0.3/chroma.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="/compiled-assets/scripts.js"></script>
+</body>
+
+</html>

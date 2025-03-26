@@ -8,6 +8,7 @@ declare global {
     SimplexNoise: SimplexNoise;
     SimplexNoise: unknown;
     chroma: chroma;
+    $: jQuery;
 
     /** Is it in the development mode? */
     isDev: boolean;

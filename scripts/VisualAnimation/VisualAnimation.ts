@@ -3,7 +3,7 @@
  * @changed 2024.06.14, 13:06
  */
 
-import {
+import type {
   Mesh,
   PerspectiveCamera,
   PointLight,
