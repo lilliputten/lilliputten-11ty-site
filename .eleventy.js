@@ -1,7 +1,7 @@
 // @ts-check
 /**
  * @module .eleventy.js
- * @changed 2024.06.21, 19:04
+ * @changed 2025.03.26, 07:32
  */
 
 const fs = require('fs');
@@ -18,12 +18,15 @@ module.exports = function (config) {
   config.addPassthroughCopy('static');
   // config.addPassthroughCopy('src/assets');
   config.addPassthroughCopy('src/scripts');
-  config.addPassthroughCopy('compiled-assets');
+  config.addPassthroughCopy('src/compiled-assets');
   config.addPassthroughCopy('src/**/*.(html|jpg|png|webp|avif|ico|svg|mp4|xml)');
   config.addPassthroughCopy('src/(robots|humans).txt');
 
-  // Watch and hot-reload...
-  config.addWatchTarget('compiled-assets');
+  // // Watch and hot-reload...
+  // config.addWatchTarget('compiled-assets', {
+  //   resetConfig: true
+  // });
+  // config.watchIgnores.delete('compiled-assets');
 
   // NOTE: Styles and scripts should be monitored and re-built by `gulp watchAssets`
   config.watchIgnores.add('src/scripts');

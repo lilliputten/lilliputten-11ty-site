@@ -101,6 +101,6 @@ module.exports = {
   },
   output: {
     filename: 'scripts.js',
-    path: path.resolve(__dirname, 'compiled-assets'),
+    path: path.resolve(__dirname, 'src/compiled-assets'),
   },
 };

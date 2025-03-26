@@ -16,8 +16,8 @@ yarn-error.log*
 
 .env.*
 
-# It could be re-built with `compile-assets` or `watch-assets` commands (webpack-based, see `webpack.config.js`)
-/compiled-assets
+# It should be re-built with `compile-assets` or `watch-assets` commands (webpack-based, see `webpack.config.js`)
+/src/compiled-assets
 
 # Temporariy, swap & ignored files
 /log*.txt
@@ -29,6 +29,3 @@ yarn-error.log*
 *.tmp
 *.zip
 *.tgz
-
-# 11ty
-# /compiled-assets
