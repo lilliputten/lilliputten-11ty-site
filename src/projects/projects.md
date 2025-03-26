@@ -2,11 +2,9 @@
 layout: article.njk
 permalink: /projects/
 title: Projects
-# description: Projects page
 eleventyNavigation:
   key: projects
   title: Projects
-# eleventyExcludeFromCollections: true
 date: 2024-10-21
 hideMeta: true
 tag: false
@@ -28,6 +26,8 @@ Currently I'm working for our own startup project, 360caster, for interactive mu
 Below are a few ongoing or finished projects.
 
 ## Recent projects
+
+{{ macros.ArticleThumb('./2025/march-tales/', 'The March Cat Tales: Mobile Application, Web Interface, and REST API Server', 'A multi-component storytelling project designed to deliver author-narrated fairy tales through a **mobile application**, **web interface**, and **REST API server**. Built with modern technologies, it prioritizes seamless cross-device experiences, internationalization, and user-centric design.') }}
 
 {{ macros.ArticleThumb('./2025/tubecaster-telegram-bot/', 'TubeCaster Telegram Bot', 'Simple telegram bot aimed to convert youtube videos into audio podcasts for later listening (even in offline mode) inside the Telegram app.') }}
 
