@@ -55,6 +55,35 @@
     }
   }
 
+  ul,
+  ol {
+    &:not(.ArticleTags, .ArticleBreadcrumbs) {
+      li {
+        margin: 0.5em 0;
+      }
+    }
+  }
+
+  table {
+    border-spacing: 2px;
+    border-collapse: separate;
+    $cellHPadding: 1em;
+    $cellVPadding: 1em;
+    $thVPadding: 1.5em;
+    th,
+    td {
+      padding: $cellVPadding $cellHPadding;
+    }
+    th {
+      background-color: $primaryColor;
+      color: #fff;
+      font-weight: normal;
+      padding-top: $thVPadding;
+      padding-bottom: $thVPadding;
+      margin-bottom: $thVPadding;
+    }
+  }
+
   h1,
   h2,
   h3 {

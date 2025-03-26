@@ -15,6 +15,7 @@ vim: ft=jsonc
     "skipLibCheck": true,
     "allowJs": true,
     "jsx": "react",
+    "lib": ["dom", "dom.iterable", "esnext"],
     // "no-debugger": false,
     "baseUrl": ".",
     "paths": {

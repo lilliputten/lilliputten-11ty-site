@@ -16,6 +16,9 @@ yarn-error.log*
 
 .env.*
 
+# It could be re-built with `compile-assets` or `watch-assets` commands (webpack-based, see `webpack.config.js`)
+/compiled-assets
+
 # Temporariy, swap & ignored files
 /log*.txt
 /config-local.*

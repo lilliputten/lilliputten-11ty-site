@@ -29,7 +29,7 @@ tags:
 
 {% import "macros.njk" as macros with context %}
 
-[TubeCasterBot](https://t.me/tubecasterbot) is a simple telegram bot Simple telegram bot aimed to convert youtube videos into audio podcasts for later listening (even in offline mode) inside the Telegram app.
+[TubeCaster](https://tubecaster.lilliputten.com/) is a simple telegram bot Simple telegram bot aimed to convert youtube videos into audio podcasts for later listening (even in offline mode) inside the Telegram app.
 
 ## Key User Features
 
@@ -117,15 +117,15 @@ The bot itself:
 
 ## Registration
 
-{{ macros.imgFigure('./images/registered-users-notification.jpg', 'registered-users-notification') }}
+{{ macros.imgFigure('./images/registration-required.jpg', 'Regiired registration warning.') }}
 
-{{ macros.imgFigure('./images/registration-confirmation-request.jpg', 'registration-confirmation-request') }}
+{# {{ macros.imgFigure('./images/registered-users-notification.jpg', 'registered-users-notification') }} #}
 
-{{ macros.imgFigure('./images/registration-process.jpg', 'registration-process') }}
+{# {{ macros.imgFigure('./images/registration-confirmation-request.jpg', 'registration-confirmation-request') }} #}
 
-{{ macros.imgFigure('./images/registration-required.jpg', 'registration-required') }}
+{{ macros.imgFigure('./images/registration-process.jpg', 'Complete registration process.') }}
 
-{{ macros.imgFigure('./images/registered-user.jpg', 'registered-user') }}
+{# {{ macros.imgFigure('./images/registered-user.jpg', 'registered-user') }} #}
 
 ## The app is powered by cute animated kitties
 
