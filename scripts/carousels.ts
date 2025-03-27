@@ -1,4 +1,5 @@
-type CarouselSettings = Record<string, unknown>;
+type CarouselSettings = JQuerySlickOptions; // Record<string, unknown>;
+
 interface ResponsiveItem {
   breakpoint: number;
   settings: CarouselSettings;
@@ -12,15 +13,15 @@ const defaultCarouselSettings: CarouselSettings = {
 
   lazyLoad: 'ondemand',
 
-  infinite: true,
-  speed: 1000,
-  slidesToShow: 4,
+  // infinite: true,
+  speed: 500,
+  slidesToShow: 2,
   slidesToScroll: 1,
 
-  focusOnSelect: true,
-  swipeToSlide: true,
-
-  pauseOnHover: true,
+  // focusOnSelect: true,
+  // swipeToSlide: true,
+  //
+  // pauseOnHover: true,
 
   // autoplay: true,
   // autoplaySpeed: 2000,
@@ -81,75 +82,48 @@ function seedResponsive(seed?: ResponsiveSeed) {
   return result;
 }
 
+function initCarousel(carousel: HTMLElement) {
+  const type = carousel.getAttribute('data-carousel-type');
+  const extraSettings = extraCarouselSettings[type];
+  const seedSettings = seedResponsive(responsiveSeeds[type]);
+  const settings = {
+    ...defaultCarouselSettings,
+    // ...extraSettings,
+    // ...seedSettings,
+  };
+  console.log('[carousels:initCarousels:item]', {
+    settings,
+    carousel,
+    type,
+    // idx,
+  });
+  $(carousel).slick(settings);
+}
+
 export function initCarousels() {
   const $ = window.$;
   const carousels = $('.slick-carousel');
-  /*
-   * $.map(carousels, (item: HTMLElement, idx: number) => {
-   *   console.log('XXX', {
-   *     // a,
-   *     // b,
-   *   });
-   *   debugger;
-   * });
-   */
-  carousels.map((idx: number, carousel: HTMLElement) => {
-    const type = carousel.getAttribute('data-carousel-type');
-    const extraSettings = extraCarouselSettings[type];
-    const seedSettings = seedResponsive(responsiveSeeds[type]);
-    const settings = { ...defaultCarouselSettings, ...extraSettings, ...seedSettings };
-    console.log('[carousels:initCarousels:item]', {
-      settings,
-      carousel,
-      type,
-      idx,
+  if ('IntersectionObserver' in window) {
+    // IntersectionObserver Supported
+    const onChange = (entries: IntersectionObserverEntry[], observer: IntersectionObserver) => {
+      entries.forEach((element) => {
+        if (element.isIntersecting) {
+          // Stop watching and load the slickSlider
+          initCarousel(element.target as HTMLElement);
+          observer.unobserve(element.target);
+        }
+      });
+    };
+    const observer = new IntersectionObserver(onChange, {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.0,
     });
-    $(carousel).slick(settings);
-  });
-  /*
-  window.$('.shots-slider').slick({
-    // @see https://kenwheeler.github.io/slick/
-
-    dots: true,
-    arrows: false,
-
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-
-    focusOnSelect: true,
-    swipeToSlide: true,
-
-    pauseOnHover: true,
-
-    // centerMode: true,
-
-    // centerPadding: '100px',
-    // // variableWidth: true,
-
-    // autoplay: true,
-    // autoplaySpeed: 2000,
-
-    lazyLoad: 'ondemand',
-
-    // speed: 500,
-    // fade: true,
-    // cssEase: 'linear',
-  });
-  */
-  /*
-  window.$('.shots-slider').owlCarousel({
-    margin: 20,
-    loop: true,
-    // autoWidth: true,
-    infinite: true,
-    arrows: true,
-    // autoplay: true,
-    autoplaySpeed: 2000,
-    autoplayHoverPause: true,
-    dots: true,
-    lazyLoad: true,
-  });
-  */
+    carousels.map((_idx: number, carousel: HTMLElement) => {
+      observer.observe(carousel);
+    });
+  } else {
+    // IntersectionObserver NOT Supported
+    carousels.map((_idx: number, carousel: HTMLElement) => initCarousel(carousel));
+  }
 }
