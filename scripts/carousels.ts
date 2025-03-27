@@ -13,21 +13,20 @@ const defaultCarouselSettings: CarouselSettings = {
 
   lazyLoad: 'ondemand',
 
-  // infinite: true,
-  speed: 500,
-  slidesToShow: 2,
+  infinite: true,
+  speed: 1000,
+  slidesToShow: 4,
   slidesToScroll: 1,
 
+  swipeToSlide: true,
+
+  pauseOnHover: true,
+
+  autoplay: true,
+  autoplaySpeed: 2000,
+
   // focusOnSelect: true,
-  // swipeToSlide: true,
-  //
-  // pauseOnHover: true,
-
-  // autoplay: true,
-  // autoplaySpeed: 2000,
-
   // variableWidth: true, // NOTE: It'll break `swipeToSlide` settings and require `no-caption` class to avoid broken cell' widts
-
   // centerMode: true,
   // centerPadding: '60px',
 };
@@ -88,15 +87,9 @@ function initCarousel(carousel: HTMLElement) {
   const seedSettings = seedResponsive(responsiveSeeds[type]);
   const settings = {
     ...defaultCarouselSettings,
-    // ...extraSettings,
-    // ...seedSettings,
+    ...extraSettings,
+    ...seedSettings,
   };
-  console.log('[carousels:initCarousels:item]', {
-    settings,
-    carousel,
-    type,
-    // idx,
-  });
   $(carousel).slick(settings);
 }
 
