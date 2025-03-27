@@ -31,7 +31,19 @@ const SRC_PATH = 'src';
  */
 
 const processImage = async (img, outputPath) => {
-  const originalSrc = img.getAttribute('src');
+  const originalSrc =
+    img.getAttribute('src') ||
+    img.getAttribute('data-src') ||
+    img.getAttribute('data-lazy') ||
+    img.getAttribute('data-lazy-src');
+  if (!originalSrc) {
+    const error = new Error('Not specified image source');
+    // eslint-disable-next-line no-console
+    console.error('[img-prepare:processImage:imageSrc:error 1]', error.message, {
+      img,
+    });
+    throw error;
+  }
   let fullSrc = originalSrc;
   if (/^(https?:\/\/|\/\/)/i.test(fullSrc)) {
     return;
@@ -104,7 +116,7 @@ const processImage = async (img, outputPath) => {
   }
 };
 
-const pause = (/** @type number */ delayMs = 1000) => {
+const _pause = (/** @type number */ delayMs = 1000) => {
   return new Promise((resolve) => {
     setTimeout(resolve, delayMs);
   });

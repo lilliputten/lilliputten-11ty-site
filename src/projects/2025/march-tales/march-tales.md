@@ -38,26 +38,31 @@ The project is designed to provide the user with a convenient way to listen to f
 
 Both the mobile app and the web server are still in MVP status. See TODO section at the end.
 
-## Web Site Screenshots
+## Web Interface Screenshots
 
-{{ macros.owlCarouselBegin('shots-slider') }}
-{{ macros.owlCarouselItem('./images/web/01-page-header.jpg', 'Page header.') }}
-{{ macros.owlCarouselItem('./images/web/02-tracks-list.jpg', 'Tracks list.') }}
-{{ macros.owlCarouselItem('./images/web/03-track-details-page.jpg', 'Track details page.') }}
-{{ macros.owlCarouselItem('./images/web/04-bottom-pagination.jpg', 'Bottom pagination.') }}
-{{ macros.owlCarouselItem('./images/web/05-author-page.jpg', 'Author page.') }}
-{{ macros.owlCarouselItem('./images/web/about-page.jpg', 'About page.') }}
-{{ macros.owlCarouselItem('./images/web/language-selector-dropdown.jpg', 'Language selector dropdown.') }}
-{{ macros.owlCarouselItem('./images/web/logged-user-menu.jpg', 'Logged user menu.') }}
-{{ macros.owlCarouselItem('./images/web/logged-user-welcome-screen.jpg', 'Logged user welcome screen.') }}
-{{ macros.owlCarouselItem('./images/web/signin-page.jpg', 'Signin page.') }}
-{{ macros.owlCarouselEnd() }}
+{{ macros.carouselBegin('shots-slider full-width', type='browserScreenshotsWide') }}
+{{ macros.carouselItem('./images/web-2/author-details.jpg', 'Author details.') }}
+{{ macros.carouselItem('./images/web-2/authors-list.jpg', 'Authors list.') }}
+{{ macros.carouselItem('./images/web-2/language-menu.jpg', 'Language menu.') }}
+{{ macros.carouselItem('./images/web-2/page-header.jpg', 'Page header.') }}
+{{ macros.carouselItem('./images/web-2/track-details.jpg', 'Track details.') }}
+{{ macros.carouselItem('./images/web-2/user-menu.jpg', 'User menu.') }}
+{{ macros.carouselEnd() }}
 
 ## Web Interface
 
 The web interface is a **Django-powered frontend** that serves as a companion to the mobile app and as an administrative interface to the database. It uses Django template system with **Webpack** for client-side asset building (via SCSS and TypeScript).
 
 The administrative panel is implemented using the built-in django admin functional and is complemented by **django-unfold**.
+
+## Account Control Screenshots
+
+{{ macros.carouselBegin('shots-slider full-width', type='browserScreenshotsWide') }}
+{{ macros.carouselItem('./images/web-admin/successfully-logged-in.jpg', 'Successfully logged in.') }}
+{{ macros.carouselItem('./images/web-admin/signin-screen.jpg', 'Signin screen.') }}
+{{ macros.carouselItem('./images/web-admin/account-control.jpg', 'Account control.') }}
+{{ macros.carouselItem('./images/web-admin/deleting-account.jpg', 'Deleting account.') }}
+{{ macros.carouselEnd() }}
 
 ### Key Features:
 
@@ -72,11 +77,12 @@ The administrative panel is implemented using the built-in django admin function
 
 ## Administrative Panel Screenshots
 
-{{ macros.owlCarouselBegin('shots-slider') }}
-{{ macros.owlCarouselItem('./images/admin/edit-track.jpg', 'Edit track page.') }}
-{{ macros.owlCarouselItem('./images/admin/filters.jpg', 'Filters panel.') }}
-{{ macros.owlCarouselItem('./images/admin/tracks-list-2.jpg', 'Tracks list.') }}
-{{ macros.owlCarouselEnd() }}
+{{ macros.carouselBegin('shots-slider full-width', type='browserScreenshotsWide') }}
+{{ macros.carouselItem('./images/admin-2/author-details.jpg', 'Author details.') }}
+{{ macros.carouselItem('./images/admin-2/authors-list.jpg', 'Authors list.') }}
+{{ macros.carouselItem('./images/admin-2/track-edit-page.jpg', 'Track edit page.') }}
+{{ macros.carouselItem('./images/admin-2/tracks-list.jpg', 'Tracks list.') }}
+{{ macros.carouselEnd() }}
 
 ## REST API Server
 
@@ -90,20 +96,20 @@ The API server, also built with **Django** and it's **djangorestframework** and 
 
 ## Mobile Phone Screenshots
 
-{{ macros.owlCarouselBegin('shots-slider') }}
-{{ macros.owlCarouselItem('./images/phone/tracks-list-2.jpg', 'Tracks list.') }}
-{{ macros.owlCarouselItem('./images/phone/author-screen-light.jpg', 'Author screen (light theme).') }}
-{{ macros.owlCarouselItem('./images/phone/author-tracks-light.jpg', 'Author tracks (light theme).') }}
-{{ macros.owlCarouselItem('./images/phone/authors-list-light.jpg', 'Authors list (light theme).') }}
-{{ macros.owlCarouselItem('./images/phone/notification-pane-player.jpg', 'Notification pane playe (dark theme).') }}
-{{ macros.owlCarouselItem('./images/phone/rubric-info-light.jpg', 'Rubric info (light theme).') }}
-{{ macros.owlCarouselItem('./images/phone/settings-page.jpg', 'Settings pag (dark theme).') }}
-{{ macros.owlCarouselItem('./images/phone/tag-info-light.jpg', 'Tag info (light theme).') }}
-{{ macros.owlCarouselItem('./images/phone/track-details.jpg', 'Track detail (dark theme).') }}
-{{ macros.owlCarouselItem('./images/phone/tracks-list-light.jpg', 'Tracks list (light theme).') }}
-{{ macros.owlCarouselItem('./images/phone/tracks-list-with-a-player.jpg', 'Tracks list with a playe (dark theme).') }}
-{{ macros.owlCarouselItem('./images/phone/tracks-list-without-panels-furing-scroll.jpg', 'Tracks list without panels during scroll (dark theme).') }}
-{{ macros.owlCarouselEnd() }}
+{{ macros.carouselBegin('shots-slider full-width', type='phoneScreenshotsWide') }}
+{{ macros.carouselItem('./images/phone/tracks-list-2.jpg', 'Tracks list.') }}
+{{ macros.carouselItem('./images/phone/author-screen-light.jpg', 'Author screen (light theme).') }}
+{{ macros.carouselItem('./images/phone/author-tracks-light.jpg', 'Author tracks (light theme).') }}
+{{ macros.carouselItem('./images/phone/authors-list-light.jpg', 'Authors list (light theme).') }}
+{{ macros.carouselItem('./images/phone/notification-pane-player.jpg', 'Notification pane player (dark theme).') }}
+{{ macros.carouselItem('./images/phone/rubric-info-light.jpg', 'Rubric info (light theme).') }}
+{{ macros.carouselItem('./images/phone/settings-page.jpg', 'Settings page (dark theme).') }}
+{{ macros.carouselItem('./images/phone/tag-info-light.jpg', 'Tag info (light theme).') }}
+{{ macros.carouselItem('./images/phone/track-details.jpg', 'Track details (dark theme).') }}
+{{ macros.carouselItem('./images/phone/tracks-list-light.jpg', 'Tracks list (light theme).') }}
+{{ macros.carouselItem('./images/phone/tracks-list-with-a-player.jpg', 'Tracks list with a player (dark theme).') }}
+{{ macros.carouselItem('./images/phone/tracks-list-without-panels-furing-scroll.jpg', 'Tracks list without panels during scroll (dark theme).') }}
+{{ macros.carouselEnd() }}
 
 ## Mobile Application
 
@@ -127,13 +133,13 @@ Both the website and the mobile device have relatively identical audio player be
 
 ## Mobile Tablet Screenshots
 
-{{ macros.owlCarouselBegin('shots-slider') }}
-{{ macros.owlCarouselItem('./images/tablet/author-details-light.jpg', 'Author details (light theme).') }}
-{{ macros.owlCarouselItem('./images/tablet/author-details.jpg', 'Author detail (dark theme).') }}
-{{ macros.owlCarouselItem('./images/tablet/settings-page-light.jpg', 'Settings page (light theme).') }}
-{{ macros.owlCarouselItem('./images/tablet/track-details.jpg', 'Track detail (dark theme).') }}
-{{ macros.owlCarouselItem('./images/tablet/tracks-list-with-a-search-light.jpg', 'Tracks list with a search (light theme).') }}
-{{ macros.owlCarouselEnd() }}
+{{ macros.carouselBegin('shots-slider full-width', type='browserScreenshotsWide') }}
+{{ macros.carouselItem('./images/tablet/author-details-light.jpg', 'Author details (light theme).') }}
+{{ macros.carouselItem('./images/tablet/author-details.jpg', 'Author details (dark theme).') }}
+{{ macros.carouselItem('./images/tablet/settings-page-light.jpg', 'Settings page (light theme).') }}
+{{ macros.carouselItem('./images/tablet/track-details.jpg', 'Track details (dark theme).') }}
+{{ macros.carouselItem('./images/tablet/tracks-list-with-a-search-light.jpg', 'Tracks list with a search (light theme).') }}
+{{ macros.carouselEnd() }}
 
 ## Seamless Cross-Device Experience
 

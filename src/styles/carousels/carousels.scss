@@ -1,88 +1,52 @@
 @import '../shared';
 
-.shots-slider {
-  $height: 400px;
-  $plusHeight: 32px;
-  grid-template-columns: 1fr 700px 1fr;
-  grid-column: 1 / -1;
-  .owl-stage {
-    max-height: calc($height + $plusHeight);
-    overflow: hidden;
+.slick-carousel {
+  position: relative;
+  &.full-width {
+    grid-template-columns: 1fr 700px 1fr;
+    grid-column: 1 / -1;
+  }
+  .slick-dots {
+    bottom: 10px;
+    li button {
+      &:before {
+        [data-theme='dark'] & {
+          color: #fff;
+        }
+      }
+      &:hover {
+        &:before {
+          color: $primaryColor;
+        }
+      }
+    }
   }
   figure {
     display: block;
+    padding: 10px;
     img {
-      height: $height;
       margin-bottom: 0.5em;
       border-radius: 10px;
+      height: auto;
     }
     figcaption {
-      font-style: italic;
-      max-width: auto;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      color: #fff;
-      opacity: 0.5;
-      text-align: left;
       margin: 0;
       padding: 0;
-      white-space: nowrap;
+      padding-top: 10px;
+      font-style: italic;
+      max-width: 100%;
+      font-size: 90%;
+      // white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      opacity: 0.5;
+      text-align: left;
     }
   }
-  @media (width < 600px) {
-    $height: 500px;
-    .owl-stage {
-      max-height: calc($height + $plusHeight);
-    }
-    figure img {
-      height: $height;
-    }
-  }
-  @media (width < 500px) {
-    $height: 400px;
-    .owl-stage {
-      max-height: calc($height + $plusHeight);
-    }
-    figure img {
-      height: $height;
-    }
-    figure figcaption {
+  &.no-captions {
+    // Use for `variableWidth` carousels
+    figcaption {
       display: none;
-    }
-  }
-  @media (width < 400px) {
-    $height: 300px;
-    .owl-stage {
-      max-height: calc($height + $plusHeight);
-    }
-    figure img {
-      height: $height;
-    }
-  }
-  @media (width < 300px) {
-    $height: 200px;
-    .owl-stage {
-      max-height: calc($height + $plusHeight);
-    }
-    figure img {
-      height: $height;
-    }
-  }
-
-  // Owl dot Active color overide
-  .owl-dots {
-    .owl-dot {
-      &:hover {
-        span {
-          background: $primaryColor;
-        }
-      }
-
-      &.active {
-        span {
-          background: $primaryColor;
-        }
-      }
     }
   }
 }

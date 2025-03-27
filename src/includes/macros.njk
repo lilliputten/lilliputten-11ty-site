@@ -22,6 +22,10 @@
   <img class="{{ class }}" src="{{ src }}" alt="{{ alt }}" loading="lazy" decoding="async" />
 {% endmacro %}
 
+{% macro carouselLazyImg(src, alt = '', class = '') %}
+  <img class="carousel-lazy {{ class }}" data-lazy="{{ src }}" alt="{{ alt }}" />
+{% endmacro %}
+
 {% macro imgFigure(src, text = '', alt = '') %}
   <figure>
     <figcaption>{{ text }}</figcaption> {{ img(src, alt or text) }}
@@ -45,16 +49,20 @@
 {% endmacro %}
 
 
-{% macro owlCarouselBegin(class = '', id = '') %}
-<div class="owl-carousel owl-theme {{ class }}" id="{{ id }}">
+{% macro carouselBegin(class = '', type = '', id = '') %}
+  <div class="slick-carousel {{ class }}" data-carousel-type="{{ type }}" id="{{ id }}">
 {% endmacro %}
 
-{% macro owlCarouselEnd() %}
+{% macro carouselEnd() %}
 </div>
 {% endmacro %}
 
-{% macro owlCarouselItem(src, text = '', alt = '', class = '') %}
+{% macro carouselItem(src, text = '', alt = '', class = '', lazy = true) %}
   <figure class="{{ class }}" title="{{ text }}">
-    {{ img(src, alt or text, 'item img-fluid') }} <figcaption class="descr">{{ text }}</figcaption>
+    {% if lazy %}
+      {{ carouselLazyImg(src) }} <figcaption class="descr">{{ text }}</figcaption>
+    {% else %}
+      {{ img(src, alt or text, 'img-fluid') }} <figcaption class="descr">{{ text }}</figcaption>
+    {% endif %}
   </figure>
 {% endmacro %}

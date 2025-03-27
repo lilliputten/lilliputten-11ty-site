@@ -1,0 +1,53 @@
+
+./images/web-2/author-details.jpg	Author details.
+./images/web-2/authors-list.jpg	Authors list.
+./images/web-2/language-menu.jpg	Language menu.
+./images/web-2/page-header.jpg	Page header.
+./images/web-2/track-details.jpg	Track details.
+./images/web-2/user-menu.jpg	User menu.
+
+./images/web-admin/account-control.jpg	Account control.
+./images/web-admin/deleting-account.jpg	Deleting account.
+./images/web-admin/signin-screen.jpg	Signin screen.
+./images/web-admin/successfully-logged-in.jpg	Successfully logged in.
+
+./images/admin-2/author-details.jpg	Author details.
+./images/admin-2/authors-list.jpg	Authors list.
+./images/admin-2/track-edit-page.jpg	Track edit page.
+./images/admin-2/tracks-list.jpg	Tracks list.
+
+---
+
+./images/admin/edit-track.jpg	Edit track.
+./images/admin/filters.jpg	Filters.
+./images/admin/tracks-list-2.jpg	Tracks list.
+
+./images/phone/author-screen-light.jpg	Author screen (light).
+./images/phone/author-tracks-light.jpg	Author tracks (light).
+./images/phone/authors-list-light.jpg	Authors list (light).
+./images/phone/notification-pane-player.jpg	Notification pane playe (dark).
+./images/phone/rubric-info-light.jpg	Rubric info (light).
+./images/phone/settings-page.jpg	Settings pag (dark).
+./images/phone/tag-info-light.jpg	Tag info (light).
+./images/phone/track-details.jpg	Track detail (dark).
+./images/phone/tracks-list-2.jpg	Tracks lis (dark).
+./images/phone/tracks-list-light.jpg	Tracks list (light).
+./images/phone/tracks-list-with-a-player.jpg	Tracks list with a playe (dark).
+./images/phone/tracks-list-without-panels-furing-scroll.jpg	Tracks list without panels furing scrol (dark).
+
+./images/tablet/author-details-light.jpg	Author details (light).
+./images/tablet/author-details.jpg	Author detail (dark).
+./images/tablet/settings-page-light.jpg	Settings page (light).
+./images/tablet/track-details.jpg	Track detail (dark).
+./images/tablet/tracks-list-with-a-search-light.jpg	Tracks list with a search (light).
+
+./images/web/01-page-header.jpg	Page header.
+./images/web/02-tracks-list.jpg	Tracks list.
+./images/web/03-track-details-page.jpg	Track details page.
+./images/web/04-bottom-pagination.jpg	Bottom pagination.
+./images/web/05-author-page.jpg	Author page.
+./images/web/about-page.jpg	About page.
+./images/web/language-selector-dropdown.jpg	Language selector dropdown.
+./images/web/logged-user-menu.jpg	Logged user menu.
+./images/web/logged-user-welcome-screen.jpg	Logged user welcome screen.
+./images/web/signin-page.jpg	Signin page.

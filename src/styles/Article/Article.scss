@@ -229,7 +229,9 @@
     img {
       box-shadow: 0 0 1px 0 gray;
       max-width: 100%;
-      height: auto;
+      &:not(.carousel-lazy) {
+        height: auto;
+      }
       display: inline-block;
       transition: all $transitionTimeMs;
       filter: grayscale(30%) brightness(0.9);

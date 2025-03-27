@@ -23,7 +23,7 @@
   type="text/css"
 />
 
-{# Owl-carousel #}
+{# Owl-carousel
 <link
   href="{%- if isdevelopment -%}
     /static/vendor/owl-carousel-2.3.4/assets/owl.carousel.css
@@ -33,6 +33,42 @@
   rel="stylesheet"
   type="text/css"
 />
+#}
+
+{# Fancybox-carousel
+<link
+  href="{%- if isdevelopment -%}
+    /static/vendor/fancybox-3.1.25/jquery.fancybox.css
+  {%- else -%}
+    https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.25/dist/jquery.fancybox.min.css
+  {%- endif -%}"
+  rel="stylesheet"
+  type="text/css"
+/>
+#}
+
+{# Slick-carousel, @see https://kenwheeler.github.io/slick/
+Used local styles
+#}
+<link
+  href="{%- if isdevelopment -%}
+    /static/vendor/slick-carousel-1.8.1/slick/slick.css
+  {%- else -%}
+    https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css
+  {%- endif -%}"
+  rel="stylesheet"
+  type="text/css"
+/>
+<link
+  href="{%- if isdevelopment -%}
+    /static/vendor/slick-carousel-1.8.1/slick/slick-theme.css
+  {%- else -%}
+    https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.min.css
+  {%- endif -%}"
+  rel="stylesheet"
+  type="text/css"
+/>
+
 {# Code highlight styles #}
 <link
   href="{%- if isdevelopment -%}
