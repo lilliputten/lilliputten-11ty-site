@@ -46,6 +46,7 @@
     "@types/chroma-js": "^2.4.4",
     "@types/jquery": "^3.5.1",
     "@types/requirejs": "^2.1.37",
+    "@types/slick-carousel": "^1.6.40",
     "@types/three": "^0.128.0",
     "beautify": "^0.0.8",
     "concurrently": "^9.1.2",

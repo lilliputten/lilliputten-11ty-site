@@ -54,6 +54,9 @@ importers:
       '@types/requirejs':
         specifier: ^2.1.37
         version: 2.1.37
+      '@types/slick-carousel':
+        specifier: ^1.6.40
+        version: 1.6.40
       '@types/three':
         specifier: ^0.128.0
         version: 0.128.0
@@ -1247,6 +1250,9 @@ packages:
 
   '@types/sizzle@2.3.9':
     resolution: {integrity: sha512-xzLEyKB50yqCUPUJkIsrVvoWNfFUbIZI+RspLWt8u+tIW/BetMBZtgV2LY/2o+tYH8dRvQ+eoPf3NdhQCcLE2w==}
+
+  '@types/slick-carousel@1.6.40':
+    resolution: {integrity: sha512-r56PBGVLYHmZvFSV+UC4dYbnpEu3LGzgJiSSixBx5ME+IUhsyho1XP7gKSG0R9tiYSx54ftq/g+miLQTbA10Dw==}
 
   '@types/three@0.128.0':
     resolution: {integrity: sha512-Jwq5XYUkzAcPTo34hlGAQGUyAI0b2F3aCCFWG/v7ZhJBEG5HGcusMSr70GhDlT8Gs0f02QnSPZ2RCA1MrCOa/w==}
@@ -7343,6 +7349,10 @@ snapshots:
   '@types/resolve@1.20.2': {}
 
   '@types/sizzle@2.3.9': {}
+
+  '@types/slick-carousel@1.6.40':
+    dependencies:
+      '@types/jquery': 3.5.1
 
   '@types/three@0.128.0': {}
 

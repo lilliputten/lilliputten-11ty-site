@@ -116,11 +116,11 @@ const processImage = async (img, outputPath) => {
   }
 };
 
-const _pause = (/** @type number */ delayMs = 1000) => {
-  return new Promise((resolve) => {
-    setTimeout(resolve, delayMs);
-  });
-};
+// const _pause = (/** @type number */ delayMs = 1000) => {
+//   return new Promise((resolve) => {
+//     setTimeout(resolve, delayMs);
+//   });
+// };
 
 const prepareImages = async (rawContent, outputPath) => {
   let content = rawContent;
