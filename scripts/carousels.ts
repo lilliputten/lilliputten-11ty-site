@@ -110,7 +110,7 @@ export function initCarousels() {
     const observer = new IntersectionObserver(onChange, {
       // @see https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#creating_an_intersection_observer
       root: null,
-      rootMargin: '20%',
+      rootMargin: '50%',
       threshold: 0.0,
     });
     carousels.map((_idx: number, carousel: HTMLElement) => {
