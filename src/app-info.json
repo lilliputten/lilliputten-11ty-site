@@ -1,10 +1,10 @@
 {
   "projectName": "lilliputten-11ty-site",
-  "timestamp": "2025.03.26 06:35 +0000",
-  "timetag": "250326-0635",
-  "version": "0.0.11",
-  "currentTimeStr": "2025.03.26 06:35 +0000",
-  "currentTimeTag": "250326-0635",
-  "gitCommitHash": "b36cf28",
+  "timestamp": "2025.03.27 02:00 +0000",
+  "timetag": "250327-0200",
+  "version": "0.0.12",
+  "currentTimeStr": "2025.03.27 02:00 +0000",
+  "currentTimeTag": "250327-0200",
+  "gitCommitHash": "e6139ee",
   "gitBranch": "34-create-march-tales-project-page"
 }
