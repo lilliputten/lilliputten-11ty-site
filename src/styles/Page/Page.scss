@@ -81,8 +81,11 @@
   height: 250px;
   .showNavigation &,
   [data-page='main'] .wideView & {
-    height: 90%;
+    height: 60%; // 90%; // XXX 2025.03.28
   }
+  // .showNavigation & {
+  //   height: 80%; // 90%; // XXX 2025.03.28
+  // }
   background: linear-gradient(180deg, $primaryColor 0%, rgba(255, 255, 255, 0) 70%);
   pointer-events: none;
 }

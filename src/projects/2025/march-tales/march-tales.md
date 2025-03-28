@@ -131,6 +131,7 @@ Both the website and the mobile device have relatively identical audio player be
 - It supports endless playback when tracks are played one after the other. (Since the application is still in MVP status, it uses fairly simple logic to determine the next track to play.)
 
 {#
+
 ## Mobile Tablet Screenshots
 
 {{ macros.carouselBegin('shots-slider full-width', type='browserScreenshotsWide') }}

@@ -29,7 +29,8 @@
 
   [data-page='main'] .wideView & {
     justify-content: center;
-    top: -2rem;
+    top: 2rem;
+    // top: -2rem; // XXX 2025.03.28
   }
 
   .PageHeaderWrapper {

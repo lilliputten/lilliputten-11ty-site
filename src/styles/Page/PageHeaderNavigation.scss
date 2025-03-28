@@ -13,11 +13,14 @@
   gap: 1em;
   // Mobile view
   .mobileView &.show {
-    flex-direction: column;
+    // flex-direction: column;
     padding: 0.5em 0;
+    margin-top: 2em;
   }
   // Main page
-  [data-page='main'] body:not(.mobileView) & {
-    flex-direction: column-reverse;
+  // body:not(.mobileView)
+  [data-page='main'] & {
+    gap: 2em;
+    // flex-direction: column-reverse;
   }
 }
