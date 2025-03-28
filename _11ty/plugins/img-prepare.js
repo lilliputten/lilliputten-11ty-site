@@ -116,18 +116,20 @@ const processImage = async (img, outputPath) => {
   }
 };
 
-// const _pause = (/** @type number */ delayMs = 1000) => {
-//   return new Promise((resolve) => {
-//     setTimeout(resolve, delayMs);
-//   });
-// };
+/* // DEBUG: UNUSED
+ * const _pause = ([>* @type number <] delayMs = 1000) => {
+ *   return new Promise((resolve) => {
+ *     setTimeout(resolve, delayMs);
+ *   });
+ * };
+ */
 
 const prepareImages = async (rawContent, outputPath) => {
   let content = rawContent;
 
   if (outputPath && outputPath.endsWith('.html')) {
     const dom = new JSDOM(content);
-    const images = [...dom.window.document.querySelectorAll('.Article img')];
+    const images = [...dom.window.document.querySelectorAll('.Article img, .TopHero img')];
 
     if (images.length > 0) {
       // NOTE: Waiting for image generation...

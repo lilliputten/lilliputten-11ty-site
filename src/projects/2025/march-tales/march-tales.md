@@ -24,7 +24,7 @@ tags:
 ---
 
 <!--
-@changed 2025.03.28, 02:06
+@changed 2025.03.28, 15:40
 
 We've finally launched the first public release of our recent project: a mobile application and a web-site for The March Cat Tales.
 
@@ -32,7 +32,7 @@ We've finally launched the first public release of our recent project: a mobile 
 
 {% import "macros.njk" as macros with context %}
 
-[**The March Cat Tales**](https://tales.march.team/) is a multi-component storytelling project designed to deliver author-narrated fairy tales through a **mobile application**, **web interface**, and **REST API server**. Built with modern technologies, it prioritizes seamless cross-device experiences, internationalization, and user-centric design.
+[**The March Cat Tales**](https://tales.march.team/) is a multi-component project designed to deliver author-narrated fairy tales and stories through a **mobile application**, **web interface**, and **REST API server**. Built with modern technologies, it prioritizes seamless cross-device experiences, internationalization, and user-centric design.
 
 The project is designed to provide the user with a convenient way to listen to fairy tales, legends, and short stories, narrated by the artist, — in one place. (Currently only in Russian.)
 

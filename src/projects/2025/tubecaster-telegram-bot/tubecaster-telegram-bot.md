@@ -29,7 +29,7 @@ tags:
 
 {% import "macros.njk" as macros with context %}
 
-[TubeCaster](https://tubecaster.lilliputten.com/) is a simple telegram bot Simple telegram bot aimed to convert youtube videos into audio podcasts for later listening (even in offline mode) inside the Telegram app.
+[TubeCaster](https://tubecaster.lilliputten.com/) is a simple telegram bot bot aimed to convert youtube videos into audio podcasts for later listening (even in offline mode) inside the Telegram app.
 
 ## Key User Features
 

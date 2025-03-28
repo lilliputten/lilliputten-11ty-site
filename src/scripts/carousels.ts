@@ -38,7 +38,9 @@ const extraCarouselSettings: Record<string, CarouselSettings> = {
     arrows: true,
     fade: true,
     pauseOnHover: true,
-    autoplay: false,
+    autoplay: true,
+    autoplaySpeed: 8000,
+    speed: 3000,
   },
 };
 

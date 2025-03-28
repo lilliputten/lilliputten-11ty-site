@@ -23,6 +23,17 @@
       }
     }
   }
+  &:after {
+    display: block;
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -3px;
+    height: 12px;
+    background-color: color.change(#000, $alpha: 0.2);
+    background-blend-mode: multiply;
+  }
 
   .hero-slides {
     position: relative;
@@ -31,8 +42,14 @@
       // border: 1px solid green; // DEBUG
       position: absolute;
       z-index: 100;
-      top: 68%;
       opacity: 0.5;
+      top: 68%;
+      html:not([data-page='main']) .wideView & {
+        top: 62%;
+      }
+      @media (width <= $screenSmMin) {
+        display: none !important;
+      }
       &,
       &:before {
         transition: all $transitionTimeMs;
@@ -58,9 +75,138 @@
   .hero-slide {
     width: 100%;
     height: 100%;
-    // border: 1px solid purple; // DEBUG
     position: relative;
-    position: absolute;
+    // position: absolute;
+    color: #fff;
+    .content {
+      position: absolute;
+      overflow: hidden;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      // border: 1px solid green; // DEBUG
+      & {
+        padding-left: 20px;
+        padding-right: 20px;
+        @media (width > $screenSmMin) {
+          padding-left: 70px;
+          padding-right: 70px;
+        }
+        & {
+          padding-top: 120px;
+          [data-page='main'] .wideView & {
+            padding-top: 210px;
+          }
+        }
+      }
+    }
+
+    // Styles
+    & {
+      a {
+        text-decoration: none;
+        transition: all $transitionTimeMs;
+        opacity: 0.85;
+        &,
+        & * {
+          color: #fff;
+        }
+        &:hover {
+          opacity: 1;
+        }
+      }
+      @media (width < $screenXxlMin) {
+        h3 {
+          font-size: 120%;
+        }
+        p {
+          font-size: 90%;
+        }
+      }
+      @media (width < $screenXlMin) {
+        h3 {
+          font-size: 110%;
+        }
+        p {
+          font-size: 80%;
+        }
+      }
+      @media (width < $screenMdMin) {
+        h3 {
+          font-size: 100%;
+        }
+        p {
+          font-size: 70%;
+        }
+      }
+      @media (width < $screenSmMin) {
+        p {
+          font-size: 3vw;
+        }
+      }
+    }
+
+    .layout,
+    .content {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-around;
+      gap: 20px;
+    }
+    .layout {
+      flex: 1;
+      // padding-left: 5%;
+      // padding-right: 5%;
+    }
+
+    .thumb,
+    .info,
+    .previews {
+      display: flex;
+      gap: 10px;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .thumb {
+      flex: 2;
+      justify-content: center;
+      align-items: center;
+      @media (width <= $screenSmMin) {
+        display: none;
+      }
+    }
+    .info {
+      flex: 2;
+      @media (width <= $screenLgMin) {
+        flex: 3;
+      }
+    }
+    .previews {
+      flex: 4;
+      justify-content: end;
+      align-items: center;
+      background-size: contain;
+      background-position: bottom center;
+      background-repeat: no-repeat;
+      @media (width <= $screenLgMin) {
+        display: none;
+      }
+      // margin-top: 20px;
+    }
+
+    // Common styles
+    & {
+      $articleThumbSize: 80px;
+      .article-thumb {
+        // width: $articleThumbSize;
+        // height: $articleThumbSize;
+        border-radius: 50%;
+        display: block;
+        margin-bottom: 10px;
+      }
+    }
+
     &#march-tales {
       $marchColor: #bb2266;
       background-color: $marchColor;
@@ -71,6 +217,7 @@
         $marchColor 80%
       );
     }
+
     &#tubecaster {
       background-color: #02225b;
       background-image: linear-gradient(

@@ -12,10 +12,11 @@ tag: false
 tags:
   - site
   - contacts
+showHero: true
 ---
 
 <!--
-@changed 2025.03.24, 23:14
+@changed 2025.03.28, 15:40
 -->
 
 If you want to have a chat about anything digital, UX, or collaborate, don't
