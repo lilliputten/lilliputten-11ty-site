@@ -7,7 +7,7 @@
     grid-column: 1 / -1;
   }
   .slick-dots {
-    bottom: 10px;
+    // bottom: 0; // Check it in the prodcuction. Probably, this fix is not required.
     li button {
       &:before {
         [data-theme='dark'] & {
