@@ -40,7 +40,7 @@ Both the mobile app and the web server are still in MVP status. See TODO section
 
 ## Mobile Application
 
-The **Flutter-based mobile app** s the main component of the project, and offers an immersive listenning experience with robust audio controls.
+The **Flutter-based mobile app** is the main component of the project, and offers an immersive listenning experience with robust audio controls.
 
 ### Mobile Application Screenshots
 

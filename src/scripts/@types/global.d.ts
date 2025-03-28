@@ -8,6 +8,7 @@ declare global {
     SimplexNoise: SimplexNoise;
     SimplexNoise: unknown;
     chroma: chroma;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     AOS: { init: (o: Record<string, any>) => void };
     $: jQuery;
 
