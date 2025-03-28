@@ -8,10 +8,11 @@ tag: false
 tags:
   - site
   - about
+showHero: true
 ---
 
 <!--
-@changed 2024.06.23, 02:38
+@changed 2025.03.28, 15:40
 -->
 
 My name is Igor and I'm a professional front-end developer with 8 years of experience, recently specializing mainly in React, NextJS, NodeJS and Python (with Flask and Django).

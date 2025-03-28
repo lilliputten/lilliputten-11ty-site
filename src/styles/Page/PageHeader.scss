@@ -29,7 +29,8 @@
 
   [data-page='main'] .wideView & {
     justify-content: center;
-    top: -2rem;
+    top: 1rem;
+    // top: -2rem; // XXX 2025.03.28
   }
 
   .PageHeaderWrapper {
@@ -38,6 +39,9 @@
     align-items: stretch;
     width: 100%;
     max-width: 700px;
+    .showNavigation & {
+      display: block;
+    }
   }
 
   [data-page='regular'] :not(.wideView) & {
@@ -61,36 +65,38 @@
     }
   }
 
-  [data-page='main'] .mobileView & {
-    justify-content: flex-start;
-    top: 0;
-    .PageHeaderWrapper {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      .PageHeaderLogo {
-        display: none;
-      }
-    }
-  }
+  // [data-page='main'] .mobileView & {
+  //   justify-content: flex-start;
+  //   top: 0;
+  //   .PageHeaderWrapper {
+  //     flex-direction: column;
+  //     justify-content: center;
+  //     align-items: center;
+  //     // .PageHeaderLogo {
+  //     //   display: none;
+  //     // }
+  //   }
+  // }
 
   .PageHeaderBrand {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: stretch;
-    [data-page='main'] body:not(.mobileView) & {
-      display: none;
-    }
-    [data-page='regular'] & {
-      flex: 1;
-    }
+    // [data-page='main'] body:not(.mobileView) & {
+    //   // display: none;
+    // }
+    // [data-page='regular'] & {
+    flex: 1;
+    // }
     .navbar-toggler {
       align-items: center;
       justify-content: center;
       $size: 2.75em;
       height: $size;
       width: $size;
+      border: 0;
+      box-shadow: none;
     }
   }
 

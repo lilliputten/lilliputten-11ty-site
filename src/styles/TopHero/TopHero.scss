@@ -1,0 +1,229 @@
+@use 'sass:color';
+
+@import '../shared';
+
+.TopHero {
+  width: 100%;
+  position: relative;
+  & {
+    background-color: color.change($primaryDarkenColor, $alpha: 1);
+  }
+  & {
+    $height: 200px; // --> hero area = 200
+    height: calc($height + $topPaddingDefault);
+    .wideView & {
+      & {
+        $height: 180px; // --> hero area = 300
+        height: calc($height + $topPaddingMainPageWide);
+      }
+      [data-page='main'] & {
+        $height: 250px; // --> hero area = 300
+        height: calc($height + $topPaddingMainPageWide);
+      }
+    }
+  }
+  &:after {
+    display: block;
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -3px;
+    height: 12px;
+    background-color: color.change(#000, $alpha: 0.2);
+    background-blend-mode: multiply;
+  }
+
+  .hero-slides {
+    position: relative;
+    overflow: hidden;
+    .slick-arrow {
+      position: absolute;
+      z-index: 100;
+      opacity: 0.5;
+      top: 68%;
+      html:not([data-page='main']) .wideView & {
+        top: 62%;
+      }
+      @media (width <= $screenMdMin) {
+        display: none !important;
+      }
+      &,
+      &:before {
+        transition: all $transitionTimeMs;
+      }
+      & {
+        $offset: 20px;
+        &.slick-prev {
+          left: $offset;
+          &:before {
+            content: '⟵';
+          }
+        }
+        &.slick-next {
+          right: $offset;
+          &:before {
+            content: '⟶';
+          }
+        }
+      }
+    }
+  }
+
+  .hero-slide {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    // position: absolute; // ???
+    color: #fff;
+    .content {
+      position: absolute;
+      overflow: hidden;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      & {
+        & {
+          top: 120px;
+          [data-page='main'] .wideView & {
+            top: 210px;
+          }
+        }
+      }
+    }
+
+    // Styles: link wrapper
+    a {
+      text-decoration: none;
+      transition: all $transitionTimeMs;
+      opacity: 0.85;
+      &,
+      & * {
+        color: #fff;
+      }
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    .layout,
+    .content {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-around;
+      gap: 10px;
+    }
+    .layout {
+      position: absolute;
+      overflow: hidden;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+
+    .thumb,
+    .info,
+    .previews {
+      display: flex;
+      gap: 10px;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+      max-height: 100%;
+    }
+    .previews {
+      flex: 3;
+      justify-content: end;
+      align-items: center;
+      background-size: contain;
+      background-position: bottom center;
+      background-repeat: no-repeat;
+      @media (width <= $screenLgMin) {
+        flex: 4;
+      }
+      @media (width <= $screenMdMin) {
+        flex: 2;
+        background-size: auto 100%;
+        background-position: bottom left;
+      }
+      @media (width <= $screenSmMin) {
+        flex: 3;
+      }
+    }
+    .thumb {
+      flex: 1.2;
+      justify-content: center;
+      align-items: center;
+      margin-left: 60px;
+      @media (width <= $screenXlMin) {
+        margin-left: 40px;
+      }
+      @media (width <= $screenLgMin) {
+        display: none;
+      }
+    }
+    .info {
+      max-width: 100%;
+      overflow: hidden;
+      flex: 2;
+      // Limit lines
+      @media (width <= $screenLgMin) {
+        flex: 3;
+        margin-left: 70px;
+      }
+      @media (width <= $screenMdMin) {
+        margin-left: 20px;
+      }
+      h3 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        @media (width <= $screenMdMin) {
+          white-space: nowrap;
+        }
+      }
+      p {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 8;
+        @media (width <= $screenMdMin) {
+          -webkit-line-clamp: 4;
+        }
+      }
+    }
+
+    // Common styles
+    & {
+      $articleThumbSize: 80px;
+      .article-thumb {
+        border-radius: 50%;
+        display: block;
+        margin-bottom: 10px;
+      }
+    }
+
+    &#march-tales {
+      $marchColor: #bb2266;
+      background-color: $marchColor;
+      background-image: linear-gradient(
+        30deg,
+        cleanRgb(color.adjust($marchColor, $lightness: 15%, $saturation: 20%)) 0%,
+        cleanRgb(color.adjust($marchColor, $lightness: -20%, $saturation: 50%)) 30%,
+        $marchColor 80%
+      );
+    }
+
+    &#tubecaster {
+      background-color: #02225b;
+      background-image: linear-gradient(
+        45deg,
+        rgb(0, 158, 197) 0%,
+        rgb(193, 34, 180) 20%,
+        rgb(2, 34, 91) 70%
+      );
+    }
+  }
+}

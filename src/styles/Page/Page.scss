@@ -40,6 +40,11 @@
 .PageContentLayout {
   position: relative;
 
+  margin-top: 140px;
+  .withHero & {
+    margin-top: 30px;
+  }
+
   // Flex layout
   display: flex;
   flex-direction: column;
@@ -47,12 +52,13 @@
   justify-content: center;
   flex: 1;
 
-  // Adjustable top margin (adaptive, different for main and regular page, and for opened menu)
-  margin-top: $headerHeight;
-  .showNavigation &,
-  [data-page='main'] .wideView & {
-    margin-top: $headerHeightMain;
-  }
+  /* // Adjustable top margin (adaptive, different for main and regular page, and for opened menu)
+   * margin-top: $headerHeight;
+   * .showNavigation &,
+   * [data-page='main'] .wideView & {
+   *   margin-top: $headerHeightMain;
+   * }
+   */
 
   // Grid layout
   grid-column: 1 / span 3;
@@ -81,8 +87,11 @@
   height: 250px;
   .showNavigation &,
   [data-page='main'] .wideView & {
-    height: 90%;
+    height: 45%; // 90%; // XXX 2025.03.28
   }
+  // .showNavigation & {
+  //   height: 80%; // 90%; // XXX 2025.03.28
+  // }
   background: linear-gradient(180deg, $primaryColor 0%, rgba(255, 255, 255, 0) 70%);
   pointer-events: none;
 }

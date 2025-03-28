@@ -4,8 +4,13 @@
   id="PageHeader"
   class="PageHeader navbar fixed-top navbar-dark navbar-expand-{{ treshold }} onRed"
 >
-  <div class="PageHeaderWrapper maxWidthContainer_ container_">
-    <div class="PageHeaderBrand gap-1">
+  <div class="PageHeaderWrapper">
+    <div
+      class="PageHeaderBrand gap-1"
+      data-aos="fade-right"
+      data-aos-duration="600"
+      data-aos-delay="100"
+    >
       <button
         id="toggleNavigation"
         aria-controls="navbarNavigation"
@@ -20,7 +25,13 @@
       </button>
       {% include "PageHeaderLogo.njk" %}
     </div>
-    <div class="PageHeaderNavigation navbar-collapse collapse" id="navbarNavigation">
+    <div
+      class="PageHeaderNavigation navbar-collapse collapse"
+      id="navbarNavigation"
+      data-aos="fade-left"
+      data-aos-duration="600"
+      data-aos-delay="100"
+    >
       {% include "PageMenu.njk" %}
       {% include "PageHeaderToolbar.njk" %}
     </div>

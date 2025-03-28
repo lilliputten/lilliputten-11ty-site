@@ -11,15 +11,14 @@ tag: false
 tags:
   - site
   - projects
+showHero: true
 ---
 
 <!--
-@changed 2025.03.28, 06:54
+@changed 2025.03.28, 15:40
 -->
 
 {% import "macros.njk" as macros with context %}
-
-## Selected projects
 
 Currently I'm working as a freelancer on upwork and kwork, and with my old clients on their own projects.
 

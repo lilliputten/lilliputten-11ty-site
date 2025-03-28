@@ -24,7 +24,7 @@ tags:
 ---
 
 <!--
-@changed 2025.03.28, 02:06
+@changed 2025.03.28, 15:40
 
 We've finally launched the first public release of our recent project: a mobile application and a web-site for The March Cat Tales.
 
@@ -32,7 +32,7 @@ We've finally launched the first public release of our recent project: a mobile 
 
 {% import "macros.njk" as macros with context %}
 
-[**The March Cat Tales**](https://tales.march.team/) is a multi-component storytelling project designed to deliver author-narrated fairy tales through a **mobile application**, **web interface**, and **REST API server**. Built with modern technologies, it prioritizes seamless cross-device experiences, internationalization, and user-centric design.
+[**The March Cat Tales**](https://tales.march.team/) is a multi-component project designed to deliver author-narrated fairy tales and stories through a **mobile application**, **web interface**, and **REST API server**. Built with modern technologies, it prioritizes seamless cross-device experiences, internationalization, and user-centric design.
 
 The project is designed to provide the user with a convenient way to listen to fairy tales, legends, and short stories, narrated by the artist, — in one place. (Currently only in Russian.)
 
@@ -40,7 +40,7 @@ Both the mobile app and the web server are still in MVP status. See TODO section
 
 ## Mobile Application
 
-The **Flutter-based mobile app** s the main component of the project, and offers an immersive listenning experience with robust audio controls.
+The **Flutter-based mobile app** is the main component of the project, and offers an immersive listenning experience with robust audio controls.
 
 ### Mobile Application Screenshots
 
@@ -131,6 +131,7 @@ Both the website and the mobile device have relatively identical audio player be
 - It supports endless playback when tracks are played one after the other. (Since the application is still in MVP status, it uses fairly simple logic to determine the next track to play.)
 
 {#
+
 ## Mobile Tablet Screenshots
 
 {{ macros.carouselBegin('shots-slider full-width', type='browserScreenshotsWide') }}

@@ -32,18 +32,16 @@ const defaultCarouselSettings: CarouselSettings = {
 };
 
 const extraCarouselSettings: Record<string, CarouselSettings> = {
-  /* phoneScreenshotsWide: {
-   *   slidesToShow: 6,
-   *   responsive: [
-   *     {
-   *       breakpoint: 600,
-   *       settings: {
-   *         slidesToShow: 3,
-   *       },
-   *     },
-   *   ],
-   * },
-   */
+  heroWide: {
+    slidesToShow: 1,
+    dots: false,
+    arrows: true,
+    fade: true,
+    pauseOnHover: true,
+    autoplay: true,
+    autoplaySpeed: 8000,
+    speed: 3000,
+  },
 };
 
 interface ResponsiveSeed {
@@ -94,7 +92,6 @@ function initCarousel(carousel: HTMLElement) {
 }
 
 export function initCarousels() {
-  const $ = window.$;
   const carousels = $('.slick-carousel');
   if ('IntersectionObserver' in window) {
     // IntersectionObserver Supported

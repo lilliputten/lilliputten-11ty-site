@@ -1,8 +1,3 @@
-/**
- * @module Article
- * @changed 2024.07.25, 19:33
- */
-
 @use 'sass:color';
 
 @import '../shared';
@@ -234,11 +229,11 @@
       }
       display: inline-block;
       transition: all $transitionTimeMs;
-      filter: grayscale(30%) brightness(0.9);
-      border-radius: 4px;
-      opacity: 0.8;
+      filter: grayscale(20%) brightness(0.9);
+      border-radius: 10px;
+      opacity: 0.9;
       &:hover {
-        filter: grayscale(10%) brightness();
+        filter: grayscale(0) brightness(1);
         opacity: 1;
       }
     }

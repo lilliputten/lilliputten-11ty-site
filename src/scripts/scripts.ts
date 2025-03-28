@@ -1,7 +1,7 @@
 /**
  * @desc Main js entry point module (scripts)
  * @module src/assets/scripts.ts
- * @changed 2025.03.26, 07:17
+ * @changed 2025.03.28, 11:34
  */
 
 import './sw/sw';
@@ -10,6 +10,7 @@ import { VisualAnimation } from './VisualAnimation/VisualAnimation';
 import { toggleTheme } from './toggleTheme';
 import { initNavigation, setUpdateVisualizationCallback } from './navigation';
 import { initCarousels } from './carousels';
+import { initAOS } from './aos';
 
 import './initDocument';
 
@@ -17,6 +18,7 @@ VisualAnimation({ setUpdateVisualizationCallback });
 
 initNavigation();
 initCarousels();
+initAOS();
 
 window.toggleTheme = toggleTheme;
 

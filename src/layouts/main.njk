@@ -2,8 +2,16 @@
 layout: layout.njk
 ---
 
-<article class="Article MainPageContent">
+<article
+  class="Article MainPageContent"
+  data-aos="zoom-in-down"
+  data-aos-duration="1000"
+  data-aos-delay="200"
+>
+  {#
   {% include "MainPageLogo.njk" %}
+  #}
+
   <div class="MainPageDescription">
     {# Main page content #}
     {{ content | safe }}
