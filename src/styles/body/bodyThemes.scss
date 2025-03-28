@@ -1,8 +1,3 @@
-/**
- * @module bodyThemes
- * @changed 2024.06.21, 03:59
- */
-
 @use 'sass:color';
 
 @import '../shared';
@@ -45,7 +40,7 @@ body,
   a {
     $color: #fff;
     color: $color;
-    opacity: 0.8;
+    opacity: 0.85;
     &:hover {
       color: $primaryColor;
       opacity: 1;

@@ -92,7 +92,6 @@ function initCarousel(carousel: HTMLElement) {
 }
 
 export function initCarousels() {
-  const $ = window.$;
   const carousels = $('.slick-carousel');
   if ('IntersectionObserver' in window) {
     // IntersectionObserver Supported

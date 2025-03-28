@@ -4,8 +4,7 @@
 
 .TopHero {
   width: 100%;
-  // border: 1px solid green; // DEBUG
-  // margin-bottom: 50px;
+  position: relative;
   & {
     background-color: color.change($primaryDarkenColor, $alpha: 1);
   }
@@ -14,7 +13,7 @@
     height: calc($height + $topPaddingDefault);
     .wideView & {
       & {
-        $height: 150px; // --> hero area = 300
+        $height: 180px; // --> hero area = 300
         height: calc($height + $topPaddingMainPageWide);
       }
       [data-page='main'] & {
@@ -39,7 +38,6 @@
     position: relative;
     overflow: hidden;
     .slick-arrow {
-      // border: 1px solid green; // DEBUG
       position: absolute;
       z-index: 100;
       opacity: 0.5;
@@ -47,7 +45,7 @@
       html:not([data-page='main']) .wideView & {
         top: 62%;
       }
-      @media (width <= $screenSmMin) {
+      @media (width <= $screenMdMin) {
         display: none !important;
       }
       &,
@@ -76,7 +74,7 @@
     width: 100%;
     height: 100%;
     position: relative;
-    // position: absolute;
+    // position: absolute; // ???
     color: #fff;
     .content {
       position: absolute;
@@ -85,65 +83,27 @@
       right: 0;
       top: 0;
       bottom: 0;
-      // border: 1px solid green; // DEBUG
       & {
-        padding-left: 20px;
-        padding-right: 20px;
-        @media (width > $screenSmMin) {
-          padding-left: 70px;
-          padding-right: 70px;
-        }
         & {
-          padding-top: 120px;
+          top: 120px;
           [data-page='main'] .wideView & {
-            padding-top: 210px;
+            top: 210px;
           }
         }
       }
     }
 
-    // Styles
-    & {
-      a {
-        text-decoration: none;
-        transition: all $transitionTimeMs;
-        opacity: 0.85;
-        &,
-        & * {
-          color: #fff;
-        }
-        &:hover {
-          opacity: 1;
-        }
+    // Styles: link wrapper
+    a {
+      text-decoration: none;
+      transition: all $transitionTimeMs;
+      opacity: 0.85;
+      &,
+      & * {
+        color: #fff;
       }
-      @media (width < $screenXxlMin) {
-        h3 {
-          font-size: 120%;
-        }
-        p {
-          font-size: 90%;
-        }
-      }
-      @media (width < $screenXlMin) {
-        h3 {
-          font-size: 110%;
-        }
-        p {
-          font-size: 80%;
-        }
-      }
-      @media (width < $screenMdMin) {
-        h3 {
-          font-size: 100%;
-        }
-        p {
-          font-size: 70%;
-        }
-      }
-      @media (width < $screenSmMin) {
-        p {
-          font-size: 3vw;
-        }
+      &:hover {
+        opacity: 1;
       }
     }
 
@@ -152,12 +112,15 @@
       display: flex;
       align-items: stretch;
       justify-content: space-around;
-      gap: 20px;
+      gap: 10px;
     }
     .layout {
-      flex: 1;
-      // padding-left: 5%;
-      // padding-right: 5%;
+      position: absolute;
+      overflow: hidden;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
     }
 
     .thumb,
@@ -167,40 +130,75 @@
       gap: 10px;
       flex-direction: column;
       justify-content: center;
-    }
-    .thumb {
-      flex: 2;
-      justify-content: center;
-      align-items: center;
-      @media (width <= $screenSmMin) {
-        display: none;
-      }
-    }
-    .info {
-      flex: 2;
-      @media (width <= $screenLgMin) {
-        flex: 3;
-      }
+      overflow: hidden;
+      max-height: 100%;
     }
     .previews {
-      flex: 4;
+      flex: 3;
       justify-content: end;
       align-items: center;
       background-size: contain;
       background-position: bottom center;
       background-repeat: no-repeat;
       @media (width <= $screenLgMin) {
+        flex: 4;
+      }
+      @media (width <= $screenMdMin) {
+        flex: 2;
+        background-size: auto 100%;
+        background-position: bottom left;
+      }
+      @media (width <= $screenSmMin) {
+        flex: 3;
+      }
+    }
+    .thumb {
+      flex: 1.2;
+      justify-content: center;
+      align-items: center;
+      margin-left: 60px;
+      @media (width <= $screenXlMin) {
+        margin-left: 40px;
+      }
+      @media (width <= $screenLgMin) {
         display: none;
       }
-      // margin-top: 20px;
+    }
+    .info {
+      max-width: 100%;
+      overflow: hidden;
+      flex: 2;
+      // Limit lines
+      @media (width <= $screenLgMin) {
+        flex: 3;
+        margin-left: 70px;
+      }
+      @media (width <= $screenMdMin) {
+        margin-left: 20px;
+      }
+      h3 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        @media (width <= $screenMdMin) {
+          white-space: nowrap;
+        }
+      }
+      p {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 8;
+        @media (width <= $screenMdMin) {
+          -webkit-line-clamp: 4;
+        }
+      }
     }
 
     // Common styles
     & {
       $articleThumbSize: 80px;
       .article-thumb {
-        // width: $articleThumbSize;
-        // height: $articleThumbSize;
         border-radius: 50%;
         display: block;
         margin-bottom: 10px;
