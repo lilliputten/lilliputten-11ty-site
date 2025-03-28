@@ -18,8 +18,12 @@
   </video>
 {% endmacro %}
 
-{% macro img(src, alt = '') %}
-  <img src="{{ src }}" alt="{{ alt }}" loading="lazy" decoding="async" />
+{% macro img(src, alt = '', class = '') %}
+  <img class="{{ class }}" src="{{ src }}" alt="{{ alt }}" loading="lazy" decoding="async" />
+{% endmacro %}
+
+{% macro carouselLazyImg(src, alt = '', class = '') %}
+  <img class="carousel-lazy {{ class }}" data-lazy="{{ src }}" alt="{{ alt }}" />
 {% endmacro %}
 
 {% macro imgFigure(src, text = '', alt = '') %}
@@ -44,3 +48,21 @@
   </div>
 {% endmacro %}
 
+
+{% macro carouselBegin(class = '', type = '', id = '') %}
+  <div class="slick-carousel {{ class }}" data-carousel-type="{{ type }}" id="{{ id }}">
+{% endmacro %}
+
+{% macro carouselEnd() %}
+</div>
+{% endmacro %}
+
+{% macro carouselItem(src, text = '', alt = '', class = '', lazy = true) %}
+  <figure class="{{ class }}" title="{{ text }}">
+    {% if lazy %}
+      {{ carouselLazyImg(src) }} <figcaption class="descr">{{ text }}</figcaption>
+    {% else %}
+      {{ img(src, alt or text, 'img-fluid') }} <figcaption class="descr">{{ text }}</figcaption>
+    {% endif %}
+  </figure>
+{% endmacro %}

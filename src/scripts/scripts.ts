@@ -1,7 +1,7 @@
 /**
  * @desc Main js entry point module (scripts)
  * @module src/assets/scripts.ts
- * @changed 2024.06.15, 15:50
+ * @changed 2025.03.26, 07:17
  */
 
 import './sw/sw';
@@ -9,23 +9,14 @@ import './sw/sw';
 import { VisualAnimation } from './VisualAnimation/VisualAnimation';
 import { toggleTheme } from './toggleTheme';
 import { initNavigation, setUpdateVisualizationCallback } from './navigation';
+import { initCarousels } from './carousels';
 
 import './initDocument';
-
-/* // Test
- * import { test } from './test/test';
- * const testResult = test();
- * console.log('[scripts] Main client code entry point', {
- *   test,
- *   testResult,
- *   // 'window.SimplexNoise': window.SimplexNoise,
- *   // 'window.createNoise4D': window.createNoise4D,
- * });
- */
 
 VisualAnimation({ setUpdateVisualizationCallback });
 
 initNavigation();
+initCarousels();
 
 window.toggleTheme = toggleTheme;
 

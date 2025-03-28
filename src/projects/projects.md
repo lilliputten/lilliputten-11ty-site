@@ -2,12 +2,10 @@
 layout: article.njk
 permalink: /projects/
 title: Projects
-# description: Projects page
 eleventyNavigation:
   key: projects
   title: Projects
-# eleventyExcludeFromCollections: true
-date: 2024-10-21
+date: 2024-03-28
 hideMeta: true
 tag: false
 tags:
@@ -16,18 +14,20 @@ tags:
 ---
 
 <!--
-@changed 2024.10.21, 21:41
+@changed 2025.03.28, 06:54
 -->
 
 {% import "macros.njk" as macros with context %}
 
 ## Selected projects
 
-Currently I'm working for our own startup project, 360caster, for interactive museums’ 3D tours platform _(using NextJS, mobx, MUI, SCSS, Mediasoup for Video/Audio support, proprietary 3D tools, Eleventhy)_, and for my upwork clients.
+Currently I'm working as a freelancer on upwork and kwork, and with my old clients on their own projects.
 
 Below are a few ongoing or finished projects.
 
 ## Recent projects
+
+{{ macros.ArticleThumb('./2025/march-tales/', 'The March Cat Tales: Mobile Application, Web Interface, REST API Server', 'A multi-component storytelling project designed to deliver author-narrated fairy tales through a mobile application, web interface, and REST API server. Built with modern technologies, it prioritizes seamless cross-device experiences, internationalization, and user-centric design.') }}
 
 {{ macros.ArticleThumb('./2025/tubecaster-telegram-bot/', 'TubeCaster Telegram Bot', 'Simple telegram bot aimed to convert youtube videos into audio podcasts for later listening (even in offline mode) inside the Telegram app.') }}
 

@@ -1,9 +1,7 @@
 /**
  * @module styles
- * @changed 2024.06.18, 08:22
+ * @changed 2025.03.26, 07:24
  */
-
-// @import './test/test';
 
 @import './fonts/fira-font';
 @import './body';
@@ -15,4 +13,9 @@
 @import './Article';
 @import './Collection';
 
+@import './carousels';
+
 @import './common';
+
+// @import '../../static/vendor/slick-carousel-1.8.1/slick/slick';
+// @import '../../static/vendor/slick-carousel-1.8.1/slick/slick-theme';

@@ -2,8 +2,6 @@
 title: About me
 layout: article.njk
 permalink: /about/
-# 23: true
-# description: About page
 date: 2024-06-23
 hideMeta: true
 tag: false
