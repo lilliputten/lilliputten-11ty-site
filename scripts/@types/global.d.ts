@@ -8,6 +8,7 @@ declare global {
     SimplexNoise: SimplexNoise;
     SimplexNoise: unknown;
     chroma: chroma;
+    AOS: { init: (o: Record<string, any>) => void };
     $: jQuery;
 
     /** Is it in the development mode? */
