@@ -11,6 +11,7 @@ tag: false
 tags:
   - site
   - projects
+showHero: true
 ---
 
 <!--

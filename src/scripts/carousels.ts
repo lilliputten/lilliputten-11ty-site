@@ -32,18 +32,14 @@ const defaultCarouselSettings: CarouselSettings = {
 };
 
 const extraCarouselSettings: Record<string, CarouselSettings> = {
-  /* phoneScreenshotsWide: {
-   *   slidesToShow: 6,
-   *   responsive: [
-   *     {
-   *       breakpoint: 600,
-   *       settings: {
-   *         slidesToShow: 3,
-   *       },
-   *     },
-   *   ],
-   * },
-   */
+  heroWide: {
+    slidesToShow: 1,
+    dots: false,
+    arrows: true,
+    fade: true,
+    pauseOnHover: true,
+    autoplay: false,
+  },
 };
 
 interface ResponsiveSeed {

@@ -3,7 +3,10 @@ layout: layout.njk
 ---
 
 <article class="Article MainPageContent">
+  {#
   {% include "MainPageLogo.njk" %}
+  #}
+
   <div class="MainPageDescription">
     {# Main page content #}
     {{ content | safe }}

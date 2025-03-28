@@ -12,13 +12,12 @@
   display: flex;
   align-items: stretch;
   justify-content: stretch;
-  // border: 1px solid blue; // DEBUG
-  height: 4.5rem;
-  [data-page='main'] & {
-    display: none;
-  }
+  height: 3.5rem;
+  // [data-page='main'] & {
+  //   display: none;
+  // }
   .wideView & {
-    width: 20vw;
+    width: 25vw;
     max-width: 20em;
   }
 
@@ -28,7 +27,8 @@
     background-image: url('/static/images/logo/full/ll-logo-wx.svg');
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center right;
+    transition: all $animationTimeMs;
     .wideView & {
       background-position: left center;
     }
@@ -39,12 +39,12 @@
       }
     }
   }
-  [data-page='main'] & {
-    width: 1.75em;
-    opacity: 0;
-    pointer-events: none;
-    * {
-      display: none;
-    }
-  }
+  // [data-page='main'] & {
+  //   width: 1.75em;
+  //   opacity: 0;
+  //   pointer-events: none;
+  //   * {
+  //     display: none;
+  //   }
+  // }
 }

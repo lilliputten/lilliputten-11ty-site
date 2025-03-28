@@ -1,4 +1,5 @@
 @use 'sass:color';
+@use 'sass:math';
 
 @function toRGBValues($colour) {
   @return color.red($colour) + ', ' + color.green($colour) + ', ' + color.blue($colour);
@@ -10,4 +11,12 @@
 
 @function toRGBA($colour, $alpha: 1) {
   @return rgba(toRGB($colour), $alpha);
+}
+
+@function cleanRgb($rgb) {
+  // Remove decimals from automatically generated colors, like following (primaryLightColor): `rgb(218.3846153846, 53.6153846154, 126.8461538462)`
+  $redValue: math.round(color.channel($rgb, 'red', $space: rgb));
+  $greenValue: math.round(color.channel($rgb, 'green', $space: rgb));
+  $blueValue: math.round(color.channel($rgb, 'blue', $space: rgb));
+  @return rgb($redValue, $greenValue, $blueValue);
 }

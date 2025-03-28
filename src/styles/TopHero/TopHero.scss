@@ -1,0 +1,84 @@
+@use 'sass:color';
+
+@import '../shared';
+
+.TopHero {
+  width: 100%;
+  // border: 1px solid green; // DEBUG
+  // margin-bottom: 50px;
+  & {
+    background-color: color.change($primaryDarkenColor, $alpha: 1);
+  }
+  & {
+    $height: 200px; // --> hero area = 200
+    height: calc($height + $topPaddingDefault);
+    .wideView & {
+      & {
+        $height: 150px; // --> hero area = 300
+        height: calc($height + $topPaddingMainPageWide);
+      }
+      [data-page='main'] & {
+        $height: 250px; // --> hero area = 300
+        height: calc($height + $topPaddingMainPageWide);
+      }
+    }
+  }
+
+  .hero-slides {
+    position: relative;
+    overflow: hidden;
+    .slick-arrow {
+      // border: 1px solid green; // DEBUG
+      position: absolute;
+      z-index: 100;
+      top: 68%;
+      opacity: 0.5;
+      &,
+      &:before {
+        transition: all $transitionTimeMs;
+      }
+      & {
+        $offset: 20px;
+        &.slick-prev {
+          left: $offset;
+          &:before {
+            content: '⟵';
+          }
+        }
+        &.slick-next {
+          right: $offset;
+          &:before {
+            content: '⟶';
+          }
+        }
+      }
+    }
+  }
+
+  .hero-slide {
+    width: 100%;
+    height: 100%;
+    // border: 1px solid purple; // DEBUG
+    position: relative;
+    position: absolute;
+    &#march-tales {
+      $marchColor: #bb2266;
+      background-color: $marchColor;
+      background-image: linear-gradient(
+        30deg,
+        cleanRgb(color.adjust($marchColor, $lightness: 15%, $saturation: 20%)) 0%,
+        cleanRgb(color.adjust($marchColor, $lightness: -20%, $saturation: 50%)) 30%,
+        $marchColor 80%
+      );
+    }
+    &#tubecaster {
+      background-color: #02225b;
+      background-image: linear-gradient(
+        45deg,
+        rgb(0, 158, 197) 0%,
+        rgb(193, 34, 180) 20%,
+        rgb(2, 34, 91) 70%
+      );
+    }
+  }
+}

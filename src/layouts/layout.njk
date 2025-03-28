@@ -2,15 +2,31 @@
 layout: base.njk
 ---
 
-<div class="PageVisual" id="PageVisual">
+{#
+#}
+<div
+  class="PageVisual"
+  id="PageVisual"
+  data-aos="fade-down"
+  data-aos-duration="500"
+  data-aos-delay="0"
+>
   <canvas class="VisualAnimation" id="VisualAnimation"></canvas>
 </div>
+
 {% include "PageHeader.njk" %}
+
+{% if showHero %}
+  {% include "TopHero.njk" %}
+{% endif %}
+
 <main class="PageContentLayout page__content">
   {# Main page content #}
   {{ content | safe }}
 </main>
+
 {% include "PageFooter.njk" %}
+
 {% if not isdevelopment %}
   <div id="noise" class="noise animated"></div>
 {% endif %}
