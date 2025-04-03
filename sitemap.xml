@@ -35,10 +35,13 @@
         <loc>https://lilliputten.com/tags/site/</loc>
         <lastmod>2024-06-26</lastmod>
       </url><url>
+        <loc>https://lilliputten.com/tags/about/</loc>
+        <lastmod>2024-06-26</lastmod>
+      </url><url>
         <loc>https://lilliputten.com/tags/contacts/</loc>
         <lastmod>2024-06-26</lastmod>
       </url><url>
-        <loc>https://lilliputten.com/tags/about/</loc>
+        <loc>https://lilliputten.com/tags/projects/</loc>
         <lastmod>2024-06-26</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/automation/</loc>
@@ -63,9 +66,6 @@
         <lastmod>2024-06-26</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/script/</loc>
-        <lastmod>2024-06-26</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/projects/</loc>
         <lastmod>2024-06-26</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/cms/</loc>
@@ -122,30 +122,6 @@
         <loc>https://lilliputten.com/tags/javascript/</loc>
         <lastmod>2024-06-26</lastmod>
       </url><url>
-        <loc>https://lilliputten.com/tags/sankey/</loc>
-        <lastmod>2024-06-26</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/diagram/</loc>
-        <lastmod>2024-06-26</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/vizualizer/</loc>
-        <lastmod>2024-06-26</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/react/</loc>
-        <lastmod>2024-06-26</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/plotly/</loc>
-        <lastmod>2024-06-26</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/mui/</loc>
-        <lastmod>2024-06-26</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/yupe/</loc>
-        <lastmod>2024-06-26</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/landing/</loc>
-        <lastmod>2024-06-26</lastmod>
-      </url><url>
         <loc>https://lilliputten.com/tags/dds/</loc>
         <lastmod>2024-06-26</lastmod>
       </url><url>
@@ -176,6 +152,12 @@
         <loc>https://lilliputten.com/tags/gulp.js/</loc>
         <lastmod>2024-06-26</lastmod>
       </url><url>
+        <loc>https://lilliputten.com/tags/yupe/</loc>
+        <lastmod>2024-06-26</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/landing/</loc>
+        <lastmod>2024-06-26</lastmod>
+      </url><url>
         <loc>https://lilliputten.com/tags/telegram/</loc>
         <lastmod>2024-06-26</lastmod>
       </url><url>
@@ -203,6 +185,12 @@
         <loc>https://lilliputten.com/tags/convert/</loc>
         <lastmod>2024-06-26</lastmod>
       </url><url>
+        <loc>https://lilliputten.com/tags/flutter/</loc>
+        <lastmod>2024-06-26</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/mobile/</loc>
+        <lastmod>2024-06-26</lastmod>
+      </url><url>
         <loc>https://lilliputten.com/tags/vanilla/</loc>
         <lastmod>2024-06-26</lastmod>
       </url><url>
@@ -221,10 +209,22 @@
         <loc>https://lilliputten.com/tags/browser/</loc>
         <lastmod>2024-06-26</lastmod>
       </url><url>
-        <loc>https://lilliputten.com/tags/flutter/</loc>
+        <loc>https://lilliputten.com/tags/sankey/</loc>
         <lastmod>2024-06-26</lastmod>
       </url><url>
-        <loc>https://lilliputten.com/tags/mobile/</loc>
+        <loc>https://lilliputten.com/tags/diagram/</loc>
+        <lastmod>2024-06-26</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/vizualizer/</loc>
+        <lastmod>2024-06-26</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/react/</loc>
+        <lastmod>2024-06-26</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/plotly/</loc>
+        <lastmod>2024-06-26</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/mui/</loc>
         <lastmod>2024-06-26</lastmod>
       </url><url>
         <loc>https://lilliputten.com/articles/</loc>
