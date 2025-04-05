@@ -3,7 +3,7 @@ layout: article.njk
 title: A recipe for adding a Django flatpages application with context change support, i18n and a rich content editor
 hasThumb: true
 eleventyNavigation:
-  key: django-flatpages
+  key: django-flatpages-based-cms
   title: Windows shortcut to toggle MongoDB service
   parent: articles
 date: 2025-04-05
@@ -251,3 +251,16 @@ app_urlpatterns = [
 ```
 
 See django [sitemap framework reference](https://docs.djangoproject.com/en/5.1/ref/contrib/sitemaps/) for more details.
+
+## Links
+
+- [django-ckeditor-5](https://pypi.org/project/django-ckeditor-5/)
+- [CKBox Plugin](https://ckeditor.com/docs/ckeditor5/latest/features/file-management/ckbox.html)
+- [CKFinder Plugin](https://ckeditor.com/docs/ckeditor5/latest/features/file-management/ckfinder.html)
+- [django-translated-fields](https://pypi.org/project/django-translated-fields/)
+- [Flatpages App](https://docs.djangoproject.com/en/5.1/ref/contrib/flatpages/)
+- [Sitemap framework reference](https://docs.djangoproject.com/en/5.1/ref/contrib/sitemaps/)
+- [Django Project Repository](https://github.com/django/django/)
+- [The March Cat Tales Project Article](/projects/2025/march-tales/)
+- [The March Cat Tales Project Repository](https://github.com/lilliputten/march-tales/)
+- [The March Cat Tales Site](https://tales.march.team/)
