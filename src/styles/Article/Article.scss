@@ -24,6 +24,10 @@
     grid-column: 2 / span 1;
   }
 
+  p {
+    overflow-wrap: anywhere;
+  }
+
   *:not(pre) code {
     display: inline-block;
     border: 1px solid color.change(gray, $alpha: 0.2);
@@ -34,6 +38,7 @@
     margin: 0 0.1em;
     // color: #888;
     color: $primaryColor;
+    overflow-wrap: anywhere;
   }
   > pre {
     // Stylize code blocks as regular elements...

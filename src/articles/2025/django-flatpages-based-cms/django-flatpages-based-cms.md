@@ -206,7 +206,7 @@ This module mentioned in a `FLATPAGE_CONTEXT_GETTER` settings parameter as `tale
 
 ## Create a template for the flat pages
 
-You can specify the template location in the settings parameter `FLATPAGE_DEFAULT_TEMPLATE` or in your data model on a per-page basis. In this example we'll put the default one under the `tales_django/templates/tales_django/flatpage.html.django` path.
+You can specify the template location in the settings parameter `FLATPAGE_DEFAULT_TEMPLATE` or in your data model on a per-page basis.
 
 To access the database properties you can use:
 

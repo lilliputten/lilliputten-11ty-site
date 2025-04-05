@@ -188,8 +188,10 @@
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;
+        line-clamp: 8;
         -webkit-line-clamp: 8;
         @media (width <= $screenMdMin) {
+          line-clamp: 4;
           -webkit-line-clamp: 4;
         }
       }
