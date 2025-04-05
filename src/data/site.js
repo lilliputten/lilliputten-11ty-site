@@ -1,5 +1,5 @@
 module.exports = {
-  version: '0.0.14',
+  version: '0.0.15',
   title: 'Lilliputten & Noble',
   author: 'Igor Lilliputten',
   description: "Hello, my name is Igor and I'm a front-end developer.",
