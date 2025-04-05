@@ -9,24 +9,18 @@ let updateVisualizationCallback: () => void;
  */
 const maxMobileWidth = 768;
 
+let toggleNavigationButton: HTMLElement;
+
 function updateShowNavigation() {
   const { body } = document;
-  const navbarContent = document.getElementById('navbarNavigation');
-  const showNavbarContent = navbarContent?.classList.contains('show');
+  const button = getToggleNavigationButton();
+  const isExpanded = button?.getAttribute('aria-expanded') === 'true';
   const docWidth = document.documentElement.clientWidth;
   // Compare width (from css variables):
   const mobileView = docWidth < maxMobileWidth;
-  const showNavigation = mobileView && showNavbarContent;
-  /* console.log('[navigation:updateShowNavigation]', {
-   *   showNavigation,
-   *   showNavbarContent,
-   *   mobileView,
-   * });
-   */
-  // TODO: To use local variable if no `navbarContent` is available?
   body.classList.toggle('mobileView', mobileView);
   body.classList.toggle('wideView', !mobileView);
-  body.classList.toggle('showNavigation', showNavigation);
+  body.classList.toggle('showNavigation', isExpanded);
   if (updateVisualizationCallback) {
     updateVisualizationCallback();
   }
@@ -37,24 +31,17 @@ export function setUpdateVisualizationCallback(cb: () => void) {
   updateShowNavigation();
 }
 
-function createCb(delay: number) {
-  return requestAnimationFrame.bind(null, setTimeout.bind(null, updateShowNavigation, delay));
+function getToggleNavigationButton() {
+  if (!toggleNavigationButton) {
+    toggleNavigationButton = document.getElementById('toggleNavigation');
+  }
+  return toggleNavigationButton;
 }
 
 export function initNavigation() {
-  const button = document.getElementById('toggleNavigation');
-  // NOTE: Temporarily solution to avoid a big delay for mobile classes update (repeat checks with diferent delays)
-  // TODO: To provide more decent solution
-  const cb1 = createCb(100);
-  const cb2 = createCb(500);
-  const cb3 = createCb(700);
-  if (button) {
-    button?.addEventListener('click', () => {
-      cb1();
-      cb2();
-      cb3();
-    });
-  }
-  window.addEventListener('resize', updateShowNavigation, false);
-  updateShowNavigation();
+  const button = getToggleNavigationButton();
+  const cb = requestAnimationFrame.bind(null, updateShowNavigation);
+  button.addEventListener('click', cb);
+  window.addEventListener('resize', cb, false);
+  cb();
 }

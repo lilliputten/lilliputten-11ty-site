@@ -3,7 +3,7 @@
   
     <url>
       <loc>https://lilliputten.com/articles/</loc>
-      <lastmod>2024-06-27</lastmod>
+      <lastmod>2025-04-05</lastmod>
       <changefreq>weekly</changefreq>
     </url>
   
@@ -13,9 +13,6 @@
       </url><url>
         <loc>https://lilliputten.com/projects/2024/sankey-graph-app/</loc>
         <lastmod>2024-02-10</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/projects/</loc>
-        <lastmod>2024-03-28</lastmod>
       </url><url>
         <loc>https://lilliputten.com/projects/2024/dds-registration-site/</loc>
         <lastmod>2024-04-09</lastmod>
@@ -35,13 +32,16 @@
         <loc>https://lilliputten.com/tags/site/</loc>
         <lastmod>2024-06-26</lastmod>
       </url><url>
-        <loc>https://lilliputten.com/tags/about/</loc>
-        <lastmod>2024-06-26</lastmod>
-      </url><url>
         <loc>https://lilliputten.com/tags/contacts/</loc>
         <lastmod>2024-06-26</lastmod>
       </url><url>
+        <loc>https://lilliputten.com/tags/about/</loc>
+        <lastmod>2024-06-26</lastmod>
+      </url><url>
         <loc>https://lilliputten.com/tags/projects/</loc>
+        <lastmod>2024-06-26</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/articles/</loc>
         <lastmod>2024-06-26</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/automation/</loc>
@@ -66,6 +66,24 @@
         <lastmod>2024-06-26</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/script/</loc>
+        <lastmod>2024-06-26</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/django/</loc>
+        <lastmod>2024-06-26</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/python/</loc>
+        <lastmod>2024-06-26</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/flatpage/</loc>
+        <lastmod>2024-06-26</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/ckeditor/</loc>
+        <lastmod>2024-06-26</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/internalization/</loc>
+        <lastmod>2024-06-26</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/custom/</loc>
         <lastmod>2024-06-26</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/cms/</loc>
@@ -128,12 +146,6 @@
         <loc>https://lilliputten.com/tags/registration/</loc>
         <lastmod>2024-06-26</lastmod>
       </url><url>
-        <loc>https://lilliputten.com/tags/python/</loc>
-        <lastmod>2024-06-26</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/django/</loc>
-        <lastmod>2024-06-26</lastmod>
-      </url><url>
         <loc>https://lilliputten.com/tags/bootstrap/</loc>
         <lastmod>2024-06-26</lastmod>
       </url><url>
@@ -152,10 +164,40 @@
         <loc>https://lilliputten.com/tags/gulp.js/</loc>
         <lastmod>2024-06-26</lastmod>
       </url><url>
-        <loc>https://lilliputten.com/tags/yupe/</loc>
+        <loc>https://lilliputten.com/tags/sankey/</loc>
         <lastmod>2024-06-26</lastmod>
       </url><url>
-        <loc>https://lilliputten.com/tags/landing/</loc>
+        <loc>https://lilliputten.com/tags/diagram/</loc>
+        <lastmod>2024-06-26</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/vizualizer/</loc>
+        <lastmod>2024-06-26</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/react/</loc>
+        <lastmod>2024-06-26</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/plotly/</loc>
+        <lastmod>2024-06-26</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/mui/</loc>
+        <lastmod>2024-06-26</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/vanilla/</loc>
+        <lastmod>2024-06-26</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/tasks-tracker/</loc>
+        <lastmod>2024-06-26</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/js/</loc>
+        <lastmod>2024-06-26</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/css/</loc>
+        <lastmod>2024-06-26</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/modules/</loc>
+        <lastmod>2024-06-26</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/browser/</loc>
         <lastmod>2024-06-26</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/telegram/</loc>
@@ -191,46 +233,13 @@
         <loc>https://lilliputten.com/tags/mobile/</loc>
         <lastmod>2024-06-26</lastmod>
       </url><url>
-        <loc>https://lilliputten.com/tags/vanilla/</loc>
+        <loc>https://lilliputten.com/tags/yupe/</loc>
         <lastmod>2024-06-26</lastmod>
       </url><url>
-        <loc>https://lilliputten.com/tags/tasks-tracker/</loc>
+        <loc>https://lilliputten.com/tags/landing/</loc>
         <lastmod>2024-06-26</lastmod>
       </url><url>
-        <loc>https://lilliputten.com/tags/js/</loc>
-        <lastmod>2024-06-26</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/css/</loc>
-        <lastmod>2024-06-26</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/modules/</loc>
-        <lastmod>2024-06-26</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/browser/</loc>
-        <lastmod>2024-06-26</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/sankey/</loc>
-        <lastmod>2024-06-26</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/diagram/</loc>
-        <lastmod>2024-06-26</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/vizualizer/</loc>
-        <lastmod>2024-06-26</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/react/</loc>
-        <lastmod>2024-06-26</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/plotly/</loc>
-        <lastmod>2024-06-26</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/mui/</loc>
-        <lastmod>2024-06-26</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/articles/</loc>
-        <lastmod>2024-06-26</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/articles/mongodb-service-toggle-windows-shortcut/</loc>
+        <loc>https://lilliputten.com/articles/2024/mongodb-service-toggle-windows-shortcut/</loc>
         <lastmod>2024-06-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/projects/2024/vanilla-tasks-tracker/</loc>
@@ -256,4 +265,19 @@
       </url><url>
         <loc>https://lilliputten.com/projects/2025/march-tales/</loc>
         <lastmod>2025-03-26</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/articles/</loc>
+        <lastmod>2025-04-04</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/projects/</loc>
+        <lastmod>2025-04-04</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/articles/2025/django-flatpages-based-cms/</loc>
+        <lastmod>2025-04-05</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/articles/2024/</loc>
+        <lastmod>2025-04-05</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/articles/2025/</loc>
+        <lastmod>2025-04-05</lastmod>
       </url></urlset>

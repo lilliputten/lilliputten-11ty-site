@@ -1,0 +1,382 @@
+<!DOCTYPE >
+<html lang="en" data-page="regular" data-layout="article">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>A recipe for adding a Django flatpages application with context change support, i18n and a rich content editor — Lilliputten &amp; Noble</title>
+  <meta name="color-scheme" content="dark light">
+  <meta name="description" content="Hello, my name is Igor and I'm a front-end developer.">
+  <meta name="keywords" content="lilliputten,front-end,full-stack,web,developer,article,2025,django,python,flatpage,ckeditor,internalization,custom">
+  <meta name="generator" content="Eleventy">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/static/images/favicon/logo-192.png">
+  <link rel="manifest" href="/manifest-93b9e3c535.webmanifest">
+  <meta name="theme-color" content="#ffcc00">
+  <meta property="og:url" content="https://lilliputten.com/articles/2025/django-flatpages-based-cms/">
+  <meta property="og:title" content="A recipe for adding a Django flatpages application with context change support, i18n and a rich content editor | Lilliputten &amp; Noble">
+  <meta property="og:description" content="Hello, my name is Igor and I'm a front-end developer.">
+  <meta property="og:image" content="https://lilliputten.com/static/images/logo/og/og.jpg">
+  <meta property="og:type" content="website">
+  <meta name="title" content="A recipe for adding a Django flatpages application with context change support, i18n and a rich content editor | Lilliputten &amp; Noble">
+  <link rel="alternate" href="https://lilliputten.com/feed/rss.xml" type="application/rss+xml" title="Lilliputten &amp; Noble">
+  <link rel="webmention" href="https://webmention.io/lilliputten.com/webmention">
+  <link rel="pingback" href="https://webmention.io/lilliputten.com/xmlrpc">
+  <link rel="author" href="https://lilliputten.com/humans.txt">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700&amp;display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" type="text/css">
+  <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css" rel="stylesheet" type="text/css">
+  <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.min.css" rel="stylesheet" type="text/css">
+  <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/static/vendor/aos/aos.css">
+  <link rel="stylesheet" href="/compiled-assets/styles.css?0.0.15">
+  <script>
+    // NOTE: Prevent firefox FOUC...
+          var FF_FOUC_FI;
+  </script>
+</head>
+
+<body class="Page page__body">
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-Z01LD05S3B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', 'G-Z01LD05S3B');
+  </script>
+  <div class="PageVisual" id="PageVisual" data-aos="fade-down" data-aos-duration="500" data-aos-delay="0">
+    <canvas class="VisualAnimation" id="VisualAnimation"></canvas>
+  </div>
+  <nav id="PageHeader" class="PageHeader navbar fixed-top navbar-dark navbar-expand-md onRed">
+    <div class="PageHeaderWrapper">
+      <div class="PageHeaderBrand gap-1" data-aos="fade-right" data-aos-duration="600" data-aos-delay="100">
+        <button id="toggleNavigation" aria-controls="navbarNavigation" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler collapsed" data-bs-target="#navbarNavigation" data-bs-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="PageHeaderLogo">
+          <a href="/" class="Logo"></a>
+        </div>
+        <div class="PageHeaderNavigation navbar-collapse collapse" id="navbarNavigation" -data-aos="fade-left" -data-aos-duration="600" -data-aos-delay="100">
+          <ul class="PageMenu navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="/about/">About</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="/projects/">Projects</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="/articles/">Articles</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="/contacts/">Contacts</a>
+            </li>
+          </ul>
+          <ul class="PageHeaderToolbar">
+            <li><a href="" onclick="window.toggleTheme(); return false" title="Toggle color theme"><i class="bi bi-brightness-high-fill theme-dark"></i><i class="bi bi-moon-stars-fill theme-light"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <main class="PageContentLayout page__content">
+    <article class="Article">
+      <div class="ArticleHeadWrapper">
+        <img class="ArticleHeadThumb" src="./thumb.png" alt="Article thumbnail" width="120" height="120" decoding="async" loading="lazy" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 120 120'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAKFJREFUeJw9ze0OgiAUgGFuoBKkg0cC/AAFQmxNm1vrR/d/U63c2p7f70u87kNcXdyYGApwoJK9bnl5E4pR6EmoVJlMxcDQg0pcRqLajCoVZ0vBFWBpNe6IC4/Or4eyO/6gyfH20vZOlMnerqgSyMhrz+uAJjP0BC9Jq8zAMTFQcLwO4/Q0biGyybKdD6zdUwy90BM2MymrEWQ48f7r3P/nH41/F43BmBIGAAAAAElFTkSuQmCC'%3E%3C/image%3E%3C/svg%3E&quot;)">
+        <div class="ArticleHead">
+          <ul class="ArticleBreadcrumbs">
+            <li data-key="home">
+              <a class="home" href="/" title="Site root"></a>
+            </li>
+            <li data-key="articles" class="noParent"><a href="/articles/">Articles</a>
+            </li>
+          </ul>
+          <h1 class="ArticleTitle">A recipe for adding a Django flatpages application with context change support, i18n and a rich content editor</h1>
+          <div class="ArticleMeta">
+            <time class="metaItem articleDatetime" datetime="2025-04-05T00:00:00.000Z" title="Document date"><span>Date:</span> April 5, 2025</time>
+            <div class="metaItem articleMinutesToRead" title="With an average speed of 200 words per minute"><span>Time to read:</span> 6 min</div>
+          </div>
+        </div>
+      </div>
+      <p>Here is a short guide on converting a django application into a kind of cms editor that supports internalization and advanced editing. Perhaps it will be necessary only for myself, so as not to forget in the future.</p>
+      <p>Of course, it is absolutely possible to turn your django application into something cms-like, similar to a cms editor, using the stock django <a href="https://docs.djangoproject.com/en/5.1/ref/contrib/flatpages/" c="l" class="external" title="External link: https://docs.djangoproject.com/en/5.1/ref/contrib/flatpages/"
+        target="_blank" rel="noopener">flatpages app</a>.</p>
+      <p>But it’s not very convenient for the end user if you use it «as is».</p>
+      <p>So, we’ll try to do the following:</p>
+      <ul>
+        <li>Add flatpages app.</li>
+        <li>Add <a href="https://pypi.org/project/django-ckeditor-5/" c="l" class="external" title="External link: https://pypi.org/project/django-ckeditor-5/" target="_blank" rel="noopener">django-ckeditor-5</a>.</li>
+        <li>Extend the data model to support internationalization of the cms database via <a href="https://pypi.org/project/django-translated-fields/" c="l" class="external" title="External link: https://pypi.org/project/django-translated-fields/" target="_blank"
+          rel="noopener">django-translated-fields</a>.</li>
+        <li>Override some code fragments to allow passing the context to a flatpage renderer (as it isn’t supported byu default at the moment, for some reason).</li>
+      </ul>
+      <p>So, in general, we can follow the instructions in the <a href="https://docs.djangoproject.com/en/5.1/ref/contrib/flatpages/" c="l" class="external" title="External link: https://docs.djangoproject.com/en/5.1/ref/contrib/flatpages/" target="_blank"
+        rel="noopener">flatpages app</a> manual, with some differencies and additions.</p>
+      <p>As an example, I will consider my recent django project, <a href="/projects/2025/march-tales/">The March Cat Tales</a>.</p>
+      <h2 id="the-result" tabindex="-1">The result <a class="header-anchor" href="#the-result"><i class="bi bi-link-45deg"></i></a></h2>
+      <p>Finally, you’ll have got a neat and user-friendly user interface like this:</p>
+      <figure>
+        <figcaption>Flat pages list in the admin panel.</figcaption>
+        <img class="" src="./images/flat-pages-list.jpg" alt="Flat pages list in the admin panel." loading="lazy" decoding="async" width="778" height="289" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 778 289'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAFCAIAAAAR2vFGAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAmElEQVR4nD3MWw6DIBRFUWZgBS+Xh0AFLQ9FW9s07fwn1jQmJutnJyeHeL/1w+MCkwn7WL7qurUYqUgn6BenKuF6oRgpRqZKp/I5ajH+idSpgrYSH54Mbi2f0FTQM5P5wPsFVKEY0VRhV+LsBpgov9npJd2qh7sJeyeTj2/pVtAl5E+nCuGyNDQ0bAQ9g5pBl/OVisRkPvIHIYUXT/9EiVwAAAAASUVORK5CYII='%3E%3C/image%3E%3C/svg%3E&quot;)">
+      </figure>
+      <figure>
+        <figcaption>Nice and neat twin internationalized editors.</figcaption>
+        <img class="" src="./images/admin-ui-with-an-editor.jpg" alt="Nice and neat twin internationalized editors." loading="lazy" decoding="async" width="716" height="481" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 716 481'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAGCAIAAACepSOSAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAkklEQVR4nB3MWxKCIAAAQM6QGiIgqGAgT8UxtMY+uv+dGjvALqDDUiBdIn2rFWIeUlcgVTa6QBowmRru69ZBYuvWM5kgtRU2FTagV5vQmcmVDgviYbQHlyvu4p1YIKas3Jv0c8MDYl6ancm1FenvdDbzR0z75ViI23cK52gO0s/A6qeJ58O+hM6QuivoIhUJd/EHdFYYIGmtOhsAAAAASUVORK5CYII='%3E%3C/image%3E%3C/svg%3E&quot;)">
+      </figure>
+      <h2 id="adding-the-flatpages-app-and-the-ckeditor-extension" tabindex="-1">Adding the flatpages app and the ckeditor extension <a class="header-anchor" href="#adding-the-flatpages-app-and-the-ckeditor-extension"><i class="bi bi-link-45deg"></i></a></h2>
+      <p>Add <a href="https://docs.djangoproject.com/en/5.1/ref/contrib/flatpages/" c="l" class="external" title="External link: https://docs.djangoproject.com/en/5.1/ref/contrib/flatpages/" target="_blank" rel="noopener">flatpages</a> and <a href="https://pypi.org/project/django-ckeditor-5/"
+        c="l" class="external" title="External link: https://pypi.org/project/django-ckeditor-5/" target="_blank" rel="noopener">ckeditor</a> as described in their manual.</p>
+      <p>So, you’ll have to add smth like this into your <code>settings.py</code> (you can take a look at <a href="https://github.com/lilliputten/march-tales/blob/main/tales_django/settings.py" c="l" class="external" title="External link: https://github.com/lilliputten/march-tales/blob/main/tales_django/settings.py"
+        target="_blank" rel="noopener">mine</a> for reference):</p><pre class="language-python"><code class="language-python">INSTALLED_APPS <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token string">'django.contrib.flatpages'</span><span class="token punctuation">,</span>
+    <span class="token string">'django_ckeditor_5'</span><span class="token punctuation">,</span>
+
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+
+MIDDLEWARE <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token comment"># Instead of stock 'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware', see below</span>
+    <span class="token string">'tales_django.entities.flatpages.middleware.FlatpageFallbackMiddleware'</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+
+<span class="token comment"># Pointing to the context getter, see below</span>
+FLATPAGE_CONTEXT_GETTER <span class="token operator">=</span> <span class="token string">'tales_django.get_flatpages_context.get_flatpages_context'</span>
+<span class="token comment"># Default flatpage template</span>
+FLATPAGE_DEFAULT_TEMPLATE <span class="token operator">=</span> <span class="token string">'tales_django/flatpage.html.django'</span>
+
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+
+<span class="token comment"># File storage class, see below</span>
+CKEDITOR_5_FILE_STORAGE <span class="token operator">=</span> <span class="token string">'tales_django.ckeditor_storage.ckeditor_storage'</span>
+<span class="token comment"># Permissions, possible values are: 'staff', 'authenticated', 'any'</span>
+CKEDITOR_5_FILE_UPLOAD_PERMISSION <span class="token operator">=</span> <span class="token string">'staff'</span>
+<span class="token comment"># Allow to dynamically change ckeditor locale</span>
+CKEDITOR_5_USER_LANGUAGE <span class="token operator">=</span> <span class="token boolean">True</span>
+
+CKEDITOR_5_CONFIGS <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">'default'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token comment"># Set your toolbars and other stuff here</span></code></pre>
+      <p>(Also ensure that <code>django.contrib.sites</code> is included and <code>SITE_ID</code> has been set up.)</p>
+      <p><a href="https://github.com/lilliputten/march-tales/blob/main/tales_django/ckeditor_storage.py" c="l" class="external" title="External link: https://github.com/lilliputten/march-tales/blob/main/tales_django/ckeditor_storage.py" target="_blank" rel="noopener">ckeditor_storage</a> provides
+        only a folder path to store uploaded files.</p>
+      <p>Keep in mind that it’s impossible to use server browser features in a free version of ckeditor v.5 as all of therequired plugins (<a href="https://ckeditor.com/docs/ckeditor5/latest/features/file-management/ckbox.html" c="l" class="external" title="External link: https://ckeditor.com/docs/ckeditor5/latest/features/file-management/ckbox.html"
+        target="_blank" rel="noopener">ckbox</a> or <a href="https://ckeditor.com/docs/ckeditor5/latest/features/file-management/ckfinder.html" c="l" class="external" title="External link: https://ckeditor.com/docs/ckeditor5/latest/features/file-management/ckfinder.html"
+        target="_blank" rel="noopener">ckfinder</a>) aren’t be included in the build, because they’re a part of premium features. See the section «Includes the following ckeditor5 plugins…» in the <a href="https://pypi.org/project/django-ckeditor-5/" c="l"
+        class="external" title="External link: https://pypi.org/project/django-ckeditor-5/" target="_blank" rel="noopener">django-ckeditor-5 quick reference</a>.</p>
+      <p>See the «Using file managers» section in the <a href="https://ckeditor.com/docs/ckeditor5/latest/features/images/image-upload/using-file-managers.html" c="l" class="external" title="External link: https://ckeditor.com/docs/ckeditor5/latest/features/images/image-upload/using-file-managers.html"
+        target="_blank" rel="noopener">CKEditor Ecosystem Documentation</a>: <em>«CKBox and CKFinder are both premium features. Contact us to receive an offer tailored to your needs.»</em>
+      </p>
+      <p>But if you have a license key, you can create your own configuration and use it in a js-based initalization. See the «Creating a CKEditor5 instance from javascript» section in the <a href="https://pypi.org/project/django-ckeditor-5/" c="l" class="external"
+        title="External link: https://pypi.org/project/django-ckeditor-5/" target="_blank" rel="noopener">django-ckeditor-5 reference</a>.</p>
+      <h2 id="extending-the-flatpage-data-model" tabindex="-1">Extending the FlatPage data model <a class="header-anchor" href="#extending-the-flatpage-data-model"><i class="bi bi-link-45deg"></i></a></h2>
+      <p>We’re going to add a <a href="https://github.com/lilliputten/march-tales/blob/main/tales_django/entities/App/models/FlatPage.py" c="l" class="external" title="External link: https://github.com/lilliputten/march-tales/blob/main/tales_django/entities/App/models/FlatPage.py"
+        target="_blank" rel="noopener">tales_django/entities/App/models/FlatPage.py</a> in order to add translated title and content fields:</p><pre class="language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">FlatPage</span><span class="token punctuation">(</span>BaseFlatPage<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">class</span> <span class="token class-name">Meta</span><span class="token punctuation">:</span>
+        db_table <span class="token operator">=</span> <span class="token string">'tales_django_flatpage'</span>
+        verbose_name <span class="token operator">=</span> _<span class="token punctuation">(</span><span class="token string">'Flat page'</span><span class="token punctuation">)</span>
+        verbose_name_plural <span class="token operator">=</span> _<span class="token punctuation">(</span><span class="token string">'Flat pages'</span><span class="token punctuation">)</span>
+
+    page_title <span class="token operator">=</span> TranslatedField<span class="token punctuation">(</span>models<span class="token punctuation">.</span>CharField<span class="token punctuation">(</span>_<span class="token punctuation">(</span><span class="token string">'Page title'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> max_length<span class="token operator">=</span><span class="token number">200</span><span class="token punctuation">,</span> default<span class="token operator">=</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    page_content <span class="token operator">=</span> TranslatedField<span class="token punctuation">(</span>CKEditor5Field<span class="token punctuation">(</span>_<span class="token punctuation">(</span><span class="token string">'Page content'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> blank<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> default<span class="token operator">=</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    updated_at <span class="token operator">=</span> models<span class="token punctuation">.</span>DateField<span class="token punctuation">(</span>verbose_name<span class="token operator">=</span>_<span class="token punctuation">(</span><span class="token string">'Updated at'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> auto_now<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+</code></pre>
+      <p>We use different fields names (those ones will be automatically translated by <a href="https://pypi.org/project/django-translated-fields/" c="l" class="external" title="External link: https://pypi.org/project/django-translated-fields/" target="_blank"
+        rel="noopener">django-translated-fields</a>) and a db name, and also added a field <code>updated_at</code> to provide time stamps for sitemap generation.</p>
+      <p>Of course, it’s possible to add any other required fields here.</p>
+      <p>Also added admin model <a href="https://github.com/lilliputten/march-tales/blob/main/tales_django/entities/flatpages/admin/FlatPageAdmin.py" c="l" class="external" title="External link: https://github.com/lilliputten/march-tales/blob/main/tales_django/entities/flatpages/admin/FlatPageAdmin.py"
+        target="_blank" rel="noopener">FlatPageAdmin.py</a> and form <a href="https://github.com/lilliputten/march-tales/blob/main/tales_django/entities/flatpages/forms/FlatPageForm.py" c="l" class="external" title="External link: https://github.com/lilliputten/march-tales/blob/main/tales_django/entities/flatpages/forms/FlatPageForm.py"
+        target="_blank" rel="noopener">FlatPageForm.py</a>.</p>
+      <h2 id="overriding-stock-flatpages-components" tabindex="-1">Overriding stock flatpages components <a class="header-anchor" href="#overriding-stock-flatpages-components"><i class="bi bi-link-45deg"></i></a></h2>
+      <p>We’ll use our own implementation of flatpages’ <a href="https://github.com/django/django/blob/stable/5.2.x/django/contrib/flatpages/views.py" c="l" class="external" title="External link: https://github.com/django/django/blob/stable/5.2.x/django/contrib/flatpages/views.py"
+        target="_blank" rel="noopener">views.py</a> module to allow passing a <code>FLATPAGE_CONTEXT_GETTER</code> parameters form the application settings.</p>
+      <p>Also we’ll have to use our own versions of <code>middleware.py</code> and <code>urls.py</code> to support these changes.</p>
+      <p>These files will be located in the <a href="https://github.com/lilliputten/march-tales/tree/main/tales_django/entities/flatpages" c="l" class="external" title="External link: https://github.com/lilliputten/march-tales/tree/main/tales_django/entities/flatpages"
+        target="_blank" rel="noopener">tales_django/entities/flatpages</a> folder.</p>
+      <p>The <a href="https://github.com/lilliputten/march-tales/blob/main/tales_django/entities/flatpages/middleware.py" c="l" class="external" title="External link: https://github.com/lilliputten/march-tales/blob/main/tales_django/entities/flatpages/middleware.py"
+        target="_blank" rel="noopener">middleware.py</a> module will contain almost exact copy of the stock <code>FlatpageFallbackMiddleware</code> to process page rendering queue and process flat pages. Also, the <a href="https://github.com/lilliputten/march-tales/blob/main/tales_django/entities/flatpages/urls.py"
+        c="l" class="external" title="External link: https://github.com/lilliputten/march-tales/blob/main/tales_django/entities/flatpages/urls.py" target="_blank" rel="noopener">urls.py</a> will point the router to our own <code>flatpage</code> view, contained
+        in the <a href="https://github.com/lilliputten/march-tales/blob/main/tales_django/entities/flatpages/views.py" c="l" class="external" title="External link: https://github.com/lilliputten/march-tales/blob/main/tales_django/entities/flatpages/views.py"
+        target="_blank" rel="noopener">views.py</a>.</p>
+      <p>The main change – is a <code>get_context</code> function, which dynamically retrieves additional context data for flatpage templates:</p><pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">get_context</span><span class="token punctuation">(</span>request<span class="token punctuation">:</span> HttpRequest<span class="token punctuation">,</span> flatpage<span class="token punctuation">:</span> FlatPage<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span></code></pre>
+      <p>This function provides a flexible way to add dynamic context data to flatpage templates without modifying the core flatpage rendering logic. It works by:</p>
+      <ol>
+        <li>Reading the <code>FLATPAGE_CONTEXT_GETTER</code> setting, which should be a string path to a callable that generates context data.</li>
+        <li>Dynamically importing and calling that function with the current <code>request</code> and <code>flatpage</code> objects.</li>
+        <li>Returning the resulting context dictionary to be merged with the base context in the <code>render_flatpage</code> function.</li>
+      </ol>
+      <p>Parameters:</p>
+      <ul>
+        <li><code>request (HttpRequest)</code>: The current HTTP request object.</li>
+        <li><code>flatpage (FlatPage)</code>: The flatpage object being rendered.</li>
+      </ul>
+      <p>Two additional settings’ parameters are introduced:</p>
+      <ul>
+        <li>
+          <p><code>FLATPAGE_CONTEXT_GETTER</code>: An optional string path to a callable that provides additional context for flatpage templates. It follows Django’s pattern of dynamic imports for configuration. The function should accept the current request
+            and flatpage objects (<code>request: HttpRequest, flatpage: FlatPage</code>) as parameters and return a context dictionary. Example: <code>tales_django.flatpages_context.get_flatpages_context</code>.</p>
+        </li>
+        <li>
+          <p><code>FLATPAGE_DEFAULT_TEMPLATE</code>: A default template used to render flatpages when the FlatPage model does not specify a specific template for a page. This serves as a site-wide default template for all flatpages. The template should be
+            located in the templates directory and follow Django’s template naming conventions. Example: <code>app/flatpage.html</code>. Default value: <code>flatpages/default.html</code>.</p>
+        </li>
+      </ul>
+      <p>We’ll have to add <code>FlatpageFallbackMiddleware</code> to the <code>MIDDLEWARE</code> list in the <code>settings.py</code>, as it was exposed above (our app name is <code>tales_django</code>, for a record):</p><pre class="language-python"><code class="language-python">MIDDLEWARE <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token string">'tales_django.entities.flatpages.middleware.FlatpageFallbackMiddleware'</span><span class="token punctuation">,</span></code></pre>
+      <p>And next, we have to add the router entry for a url pattern entry (in <code>tales_django/entities/App/app_urlpatterns.py</code>):</p><pre class="language-python"><code class="language-python">app_urlpatterns <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    path<span class="token punctuation">(</span><span class="token string">r'/'</span><span class="token punctuation">,</span> include<span class="token punctuation">(</span><span class="token string">'tales_django.entities.flatpages.urls'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">'django.contrib.flatpages.views.flatpage'</span><span class="token punctuation">)</span><span class="token punctuation">,</span></code></pre>
+      <p>(Our flatpages will be served directly from the root of the site.)</p>
+      <h2 id="another-minor-additions" tabindex="-1">Another minor additions <a class="header-anchor" href="#another-minor-additions"><i class="bi bi-link-45deg"></i></a></h2>
+      <p>Also were added:</p>
+      <ul>
+        <li>Custom <a href="https://github.com/lilliputten/march-tales/blob/main/static/unfold-fixes/unfold-fixes.css" c="l" class="external" title="External link: https://github.com/lilliputten/march-tales/blob/main/static/unfold-fixes/unfold-fixes.css" target="_blank"
+          rel="noopener">styles</a> and <a href="https://github.com/lilliputten/march-tales/blob/main/static/unfold-fixes/unfold-fixes.js" c="l" class="external" title="External link: https://github.com/lilliputten/march-tales/blob/main/static/unfold-fixes/unfold-fixes.js"
+          target="_blank" rel="noopener">JS codes</a> to modify stock flatpage ones.</li>
+      </ul>
+      <h2 id="pass-a-context-to-template" tabindex="-1">Pass a context to template <a class="header-anchor" href="#pass-a-context-to-template"><i class="bi bi-link-45deg"></i></a></h2>
+      <p>Use smth like this to pass your data to a template (see the usage below):</p><pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">get_flatpages_context</span><span class="token punctuation">(</span>request<span class="token punctuation">:</span> HttpRequest<span class="token punctuation">,</span> flatpage<span class="token punctuation">:</span> FlatPage<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token string">'your_data'</span><span class="token punctuation">:</span> <span class="token string">'Ok'</span><span class="token punctuation">}</span></code></pre>
+      <p>This module mentioned in a <code>FLATPAGE_CONTEXT_GETTER</code> settings parameter as <code>tales_django.flatpages_context.get_flatpages_context</code>
+      </p>
+      <h2 id="create-a-template-for-the-flat-pages" tabindex="-1">Create a template for the flat pages <a class="header-anchor" href="#create-a-template-for-the-flat-pages"><i class="bi bi-link-45deg"></i></a></h2>
+      <p>You can specify the template location in the settings parameter <code>FLATPAGE_DEFAULT_TEMPLATE</code> or in your data model on a per-page basis. In this example we’ll put the default one under the <code>tales_django/templates/tales_django/flatpage.html.django</code> path.</p>
+      <p>To access the database properties you can use:</p><pre class="language-django"><code class="language-django"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>page-title<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token django language-django"><span class="token delimiter punctuation">{{</span> <span class="token variable">flatpage</span><span class="token punctuation">.</span><span class="token variable">flatpage</span><span class="token punctuation">.</span><span class="token variable">page_title</span> <span class="token delimiter punctuation">}}</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>data-example<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  Your context data: <span class="token django language-django"><span class="token delimiter punctuation">{{</span> <span class="token variable">your_data</span> <span class="token delimiter punctuation">}}</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-content<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token django language-django"><span class="token delimiter punctuation">{{</span> <span class="token variable">flatpage</span><span class="token punctuation">.</span><span class="token variable">flatpage</span><span class="token punctuation">.</span><span class="token variable">page_content</span><span class="token operator">|</span><span class="token filter function">safe</span> <span class="token delimiter punctuation">}}</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre>
+      <p>This template set with a <code>FLATPAGE_DEFAULT_TEMPLATE</code> settings parameter.</p>
+      <h2 id="sitemap-support" tabindex="-1">Sitemap support <a class="header-anchor" href="#sitemap-support"><i class="bi bi-link-45deg"></i></a></h2>
+      <p>You can use the following recipe to add your flatpages with timestamps to the sitemap:</p><pre class="language-python"><code class="language-python"><span class="token keyword">from</span> django<span class="token punctuation">.</span>contrib<span class="token punctuation">.</span>flatpages<span class="token punctuation">.</span>sitemaps <span class="token keyword">import</span> FlatPageSitemap
+
+<span class="token keyword">class</span> <span class="token class-name">CustomFlatPageSitemap</span><span class="token punctuation">(</span>FlatPageSitemap<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    changefreq <span class="token operator">=</span> <span class="token string">'weekly'</span>
+
+    <span class="token keyword">def</span> <span class="token function">lastmod</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> obj<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> obj<span class="token punctuation">.</span>flatpage<span class="token punctuation">.</span>updated_at
+
+sitemaps <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token string">'flatpages'</span><span class="token punctuation">:</span> CustomFlatPageSitemap<span class="token punctuation">,</span>
+
+app_urlpatterns <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    path<span class="token punctuation">(</span><span class="token string">'sitemap.xml'</span><span class="token punctuation">,</span> sitemap<span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token string">'sitemaps'</span><span class="token punctuation">:</span> sitemaps<span class="token punctuation">}</span><span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">'django.contrib.sitemaps.views.sitemap'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span></code></pre>
+      <p>See django <a href="https://docs.djangoproject.com/en/5.1/ref/contrib/sitemaps/" c="l" class="external" title="External link: https://docs.djangoproject.com/en/5.1/ref/contrib/sitemaps/" target="_blank" rel="noopener">sitemap framework reference</a> for
+        more details.</p>
+      <h2 id="links" tabindex="-1">Links <a class="header-anchor" href="#links"><i class="bi bi-link-45deg"></i></a></h2>
+      <ul>
+        <li><a href="https://pypi.org/project/django-ckeditor-5/" c="l" class="external" title="External link: https://pypi.org/project/django-ckeditor-5/" target="_blank" rel="noopener">django-ckeditor-5</a>
+        </li>
+        <li><a href="https://ckeditor.com/docs/ckeditor5/latest/features/file-management/ckbox.html" c="l" class="external" title="External link: https://ckeditor.com/docs/ckeditor5/latest/features/file-management/ckbox.html" target="_blank" rel="noopener">CKBox Plugin</a>
+        </li>
+        <li><a href="https://ckeditor.com/docs/ckeditor5/latest/features/file-management/ckfinder.html" c="l" class="external" title="External link: https://ckeditor.com/docs/ckeditor5/latest/features/file-management/ckfinder.html" target="_blank" rel="noopener">CKFinder Plugin</a>
+        </li>
+        <li><a href="https://pypi.org/project/django-translated-fields/" c="l" class="external" title="External link: https://pypi.org/project/django-translated-fields/" target="_blank" rel="noopener">django-translated-fields</a>
+        </li>
+        <li><a href="https://docs.djangoproject.com/en/5.1/ref/contrib/flatpages/" c="l" class="external" title="External link: https://docs.djangoproject.com/en/5.1/ref/contrib/flatpages/" target="_blank" rel="noopener">Flatpages App</a>
+        </li>
+        <li><a href="https://docs.djangoproject.com/en/5.1/ref/contrib/sitemaps/" c="l" class="external" title="External link: https://docs.djangoproject.com/en/5.1/ref/contrib/sitemaps/" target="_blank" rel="noopener">Sitemap framework reference</a>
+        </li>
+        <li><a href="https://github.com/django/django/" c="l" class="external" title="External link: https://github.com/django/django/" target="_blank" rel="noopener">Django Project Repository</a>
+        </li>
+        <li><a href="/projects/2025/march-tales/">The March Cat Tales Project Article</a>
+        </li>
+        <li><a href="https://github.com/lilliputten/march-tales/" c="l" class="external" title="External link: https://github.com/lilliputten/march-tales/" target="_blank" rel="noopener">The March Cat Tales Project Repository</a>
+        </li>
+        <li><a href="https://tales.march.team/" c="l" class="external" title="External link: https://tales.march.team/" target="_blank" rel="noopener">The March Cat Tales Site</a>
+        </li>
+      </ul>
+      <div class="ArticleFooter">
+        <ul class="ArticleTags tags">
+          <li class="tagsTitle">Tags:</li>
+          <li class="tagsItem"><a class="linkAsText" href="/tags/2025/">2025</a>
+          </li>
+          <li class="tagsItem"><a class="linkAsText" href="/tags/django/">django</a>
+          </li>
+          <li class="tagsItem"><a class="linkAsText" href="/tags/python/">python</a>
+          </li>
+          <li class="tagsItem"><a class="linkAsText" href="/tags/flatpage/">flatpage</a>
+          </li>
+          <li class="tagsItem"><a class="linkAsText" href="/tags/ckeditor/">ckeditor</a>
+          </li>
+          <li class="tagsItem"><a class="linkAsText" href="/tags/internalization/">internalization</a>
+          </li>
+          <li class="tagsItem"><a class="linkAsText" href="/tags/custom/">custom</a>
+          </li>
+        </ul>
+        <div class="ArticleNav"></div>
+      </div>
+    </article>
+  </main>
+  <footer class="PageFooter">
+    <div class="FooterContainer">
+      <div class="FooterCopyright">© 2025 <span class="delimiter">/</span>  <a href="/">Lilliputten &amp; Noble</a>
+      </div>
+      <ul class="SocialList">
+        <li class="SocialListItem"><a href="https://linkedin.com/in/lilliputten" class="SocialListLink linkAsText" id="Linkedin" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i> LinkedIn</a>
+        </li>
+        <li class="SocialListItem"><a href="https://github.com/lilliputten" rel="me noopener" class="SocialListLink linkAsText" id="Github" target="_blank"><i class="bi bi-github"></i> GitHub</a>
+        </li>
+        <li class="SocialListItem dimmed">
+          <a href="https://github.com/lilliputten/lilliputten-11ty-site/blob/main/./src/articles/2025/django-flatpages-based-cms/django-flatpages-based-cms.md" class="SocialListLink linkAsText" id="EditPage" title="Edit page on github" target="_blank" rel="noopener"><i class="bi bi-pencil-square"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+  <div id="noise" class="noise animated"></div>
+  <script>
+    /* eslint-disable no-var */
+    // @ts-check
+    /// &lt;reference path="../scripts/@types/THTMLNode.d.ts" /&gt;
+    
+    (function updateThemeWrapper() {
+      function updateTheme() {
+        var body = window.document.body;
+        var html = /** @type THTMLNode | undefined */ (body.parentNode ? body.parentNode : body);
+        var theme = window.localStorage ? window.localStorage.getItem('theme') : null;
+        // NOTE: CAUTION: Double ampersands are escaped here
+        if (theme) {
+          if (html) {
+            if (html.setAttribute) {
+              html.setAttribute('data-theme', theme);
+            }
+            if (html.dataset) {
+              html.dataset.theme = theme;
+            }
+          }
+        }
+      }
+    
+      updateTheme();
+      window.addEventListener('load', updateTheme);
+    
+      // 
+    })();
+  </script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.0.3/chroma.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="/static/vendor/aos/aos.js"></script>
+  <script type="text/javascript" src="/compiled-assets/scripts.js?0.0.15"></script>
+</body>
+
+</html>
