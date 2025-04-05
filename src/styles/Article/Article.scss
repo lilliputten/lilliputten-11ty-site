@@ -9,7 +9,6 @@
   // Grid layout
   display: grid;
   grid-template-columns: 1fr $mainColumnWidth 1fr;
-  // grid-template-rows: 2fr;
   grid-gap: 0 1em;
   align-items: center;
 
@@ -40,13 +39,14 @@
     // Stylize code blocks as regular elements...
     margin-top: 0;
     margin-bottom: 1em;
+    border-radius: 10px;
     transition: all $transitionTimeMs;
-    filter: grayscale(30%) brightness(0.9);
-    border-radius: 4px;
-    opacity: 0.8;
+    filter: grayscale(20%) brightness(1.1);
+    html[data-theme="dark"] {
+      filter: grayscale(5%) brightness(0.9);
+    }
     &:hover {
-      filter: grayscale(10%) brightness();
-      opacity: 1;
+      filter: grayscale(0%) brightness(1);
     }
   }
 
@@ -117,7 +117,6 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0.4em 0.2em;
-    // font-size: 95%;
     li {
       display: inline-block;
       &.tagsTitle {
@@ -195,10 +194,6 @@
 
     // Grid layout
     @media (min-width: $maxColumnWidthWithGap) {
-      /* // Caption at right...
-       * grid-template-columns: $mainColumnWidth 1fr;
-       * grid-column: 2 / -1;
-       */
       // Caption at left...
       grid-template-columns: 1fr $mainColumnWidth 1fr;
       grid-column: 1 / -1;
@@ -207,9 +202,6 @@
       figcaption {
         margin-top: 0;
         max-width: $maxSideColumnWidth;
-        /* // Caption at right...
-         * padding-right: 1em;
-         */
         // Caption at left...
         margin-left: auto;
         padding-left: 1em;
@@ -229,12 +221,13 @@
       }
       display: inline-block;
       transition: all $transitionTimeMs;
-      filter: grayscale(20%) brightness(0.9);
+      filter: grayscale(20%) brightness(1.2);
       border-radius: 10px;
-      opacity: 0.9;
+      html[data-theme="dark"] {
+        filter: grayscale(10%) brightness(0.9);
+      }
       &:hover {
         filter: grayscale(0) brightness(1);
-        opacity: 1;
       }
     }
     figcaption {
@@ -254,7 +247,6 @@
     .comment {
       opacity: 0.5;
       font-style: italic;
-      // letter-spacing: 0.1rem;
     }
     @media (min-width: $maxColumnWidth) {
       .commentLeft {
@@ -266,7 +258,6 @@
       .commentRight {
         grid-column: 3 / span 1;
         padding-right: 1em;
-        // text-align: right;
         max-width: $maxSideColumnWidth;
       }
       .commentPaddedTop {

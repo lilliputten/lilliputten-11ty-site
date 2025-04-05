@@ -24,7 +24,7 @@ tags:
 ---
 
 <!--
-@changed 2025.03.28, 15:40
+@changed 2025.04.05, 08:13
 
 We've finally launched the first public release of our recent project: a mobile application and a web-site for The March Cat Tales.
 
@@ -41,6 +41,8 @@ Both the mobile app and the web server are still in MVP status. See TODO section
 ## Mobile Application
 
 The **Flutter-based mobile app** is the main component of the project, and offers an immersive listenning experience with robust audio controls.
+
+The application is on the 'closed testing' stage in the Google Play Store.
 
 ### Mobile Application Screenshots
 

@@ -12,8 +12,8 @@
       height: $articleThumbSize;
       background-color: color.change(gray, $alpha: 0.2);
       border-radius: 10px;
-      // filter: grayscale(30%) brightness(0.9);
-      opacity: 1; // 0.9;
+      filter: grayscale(10%) brightness(0.9);
+      opacity: 0.9;
     }
     .ArticleThumbContent {
       flex: 1;
@@ -52,7 +52,7 @@
         color: $primaryColor;
       }
       .ArticleThumbImg {
-        filter: grayscale(10%) brightness();
+        filter: grayscale(0) brightness(1);
         opacity: 1;
       }
     }

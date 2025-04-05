@@ -32,18 +32,26 @@ body,
 }
 
 // Theme foreground: dark
-.onRed,
 .onDark,
 [data-theme='dark'],
 [data-theme='dark'] body {
   color: $defaultTextOnDarkColor;
   a {
-    $color: #fff;
+    $color: $primaryColor;
     color: $color;
     opacity: 0.85;
     &:hover {
-      color: $primaryColor;
-      opacity: 1;
+      color: $primaryLightColor;
+      opacity: .99;
+    }
+  }
+}
+.onRed {
+  a {
+    $color: #fff;
+    color: $color;
+    i.bi {
+      color: $color;
     }
   }
 }
