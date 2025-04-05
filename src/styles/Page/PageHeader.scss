@@ -1,8 +1,3 @@
-/**
- * @module PageHeader
- * @changed 2024.06.21, 03:49
- */
-
 @import '../shared';
 
 .PageHeader {
@@ -21,16 +16,9 @@
   // Adaptive sizes...
   height: $headerHeight;
 
-  .showNavigation &,
-  [data-page='main'] .wideView & {
-    min-height: 100px;
-    height: $headerHeightMain;
-  }
-
   [data-page='main'] .wideView & {
     justify-content: center;
     top: 1rem;
-    // top: -2rem; // XXX 2025.03.28
   }
 
   .PageHeaderWrapper {
@@ -39,9 +27,6 @@
     align-items: stretch;
     width: 100%;
     max-width: 700px;
-    .showNavigation & {
-      display: block;
-    }
   }
 
   [data-page='regular'] :not(.wideView) & {
@@ -65,30 +50,12 @@
     }
   }
 
-  // [data-page='main'] .mobileView & {
-  //   justify-content: flex-start;
-  //   top: 0;
-  //   .PageHeaderWrapper {
-  //     flex-direction: column;
-  //     justify-content: center;
-  //     align-items: center;
-  //     // .PageHeaderLogo {
-  //     //   display: none;
-  //     // }
-  //   }
-  // }
-
   .PageHeaderBrand {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: stretch;
-    // [data-page='main'] body:not(.mobileView) & {
-    //   // display: none;
-    // }
-    // [data-page='regular'] & {
     flex: 1;
-    // }
     .navbar-toggler {
       align-items: center;
       justify-content: center;

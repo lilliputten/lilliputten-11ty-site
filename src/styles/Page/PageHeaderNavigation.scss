@@ -1,28 +1,18 @@
-/**
- * @module PageHeaderNavigation
- * @changed 2024.06.18, 01:08
- */
-
 @import '../shared';
 
 .PageHeaderNavigation {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   gap: 1em;
   // Mobile view
   .mobileView &.show {
-    // flex-direction: column;
     padding: 0.5em 0;
-    // margin-top: 2em;
   }
   // Main page
-  // body:not(.mobileView)
   [data-page='main'] & {
     gap: 2em;
-    // flex-direction: column-reverse;
   }
   .mobileView.showNavigation & {
-    justify-content: space-between;
-    // padding: 10px;
+    justify-content: space-around;
   }
 }

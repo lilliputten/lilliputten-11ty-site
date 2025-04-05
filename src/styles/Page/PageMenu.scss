@@ -1,16 +1,11 @@
-/**
- * @module PageMenu
- * @changed 2024.06.14, 02:15
- */
+@use 'sass:color';
 
 @import '../shared';
 
 .PageMenu {
-  html:not([data-page='main']) & {
-    flex: 1;
-  }
+  flex: 1;
   [data-page='main'] body:not(.mobileView) & {
-    // margin-left: 5em;
+    margin-left: 1em;
   }
   display: flex;
   flex-direction: row;
@@ -20,14 +15,31 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  gap: 0.2em 0.5em;
+  gap: 0.2em 1em;
+  @media (width <= $screenMdMin) {
+    font-size: 90%;
+  }
+  @media (width <= $screenSmMin) {
+    font-size: 80%;
+  }
+  .mobileView.showNavigation & {
+    margin-left: 1em;
+    gap: 0.1em 0.2em;
+  }
   li {
     display: inline-block;
   }
-  a {
+  .onRed & a {
+    border-radius: 4px;
+    display: inline-block;
+    border: 1px dashed color.change(#fff, $alpha: 0.5);
+    padding: 0 6px;
+    margin: 2px;
     text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
+    color: #fff;
+    &:hover {
+      background-color: #fff;
+      color: $primaryDarkColor;
+    }
   }
 }

@@ -1,8 +1,3 @@
-/**
- * @module Page
- * @changed 2024.06.21, 03:48
- */
-
 @import '../shared';
 
 .Page {
@@ -52,14 +47,6 @@
   justify-content: center;
   flex: 1;
 
-  /* // Adjustable top margin (adaptive, different for main and regular page, and for opened menu)
-   * margin-top: $headerHeight;
-   * .showNavigation &,
-   * [data-page='main'] .wideView & {
-   *   margin-top: $headerHeightMain;
-   * }
-   */
-
   // Grid layout
   grid-column: 1 / span 3;
   @media (max-width: $maxColumnWidth) {
@@ -85,13 +72,9 @@
   bottom: auto;
   // Adjust main height
   height: 250px;
-  .showNavigation &,
   [data-page='main'] .wideView & {
     height: 45%; // 90%; // XXX 2025.03.28
   }
-  // .showNavigation & {
-  //   height: 80%; // 90%; // XXX 2025.03.28
-  // }
   background: linear-gradient(180deg, $primaryColor 0%, rgba(255, 255, 255, 0) 70%);
   pointer-events: none;
 }
