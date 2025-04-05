@@ -252,6 +252,11 @@ app_urlpatterns = [
 
 See django [sitemap framework reference](https://docs.djangoproject.com/en/5.1/ref/contrib/sitemaps/) for more details.
 
+## A PR into the Django project
+
+I also created a [pull request](https://github.com/django/django/pull/19344) into the django project to allow
+passing a context and setting a default template with the stock django flatpage application.
+
 ## Links
 
 - [django-ckeditor-5](https://pypi.org/project/django-ckeditor-5/)
