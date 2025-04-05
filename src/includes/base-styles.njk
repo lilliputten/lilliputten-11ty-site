@@ -69,7 +69,16 @@ Used local styles
   type="text/css"
 />
 
-{# Code highlight styles #}
+{# Code highlight styles. Available themes are:
+- prism-coy.css
+- prism-dark.css
+- prism-funky.css
+- prism-okaidia.css
+- prism-solarizedlight.css
+- prism-tomorrow.css
+- prism-twilight.css
+- prism.css
+#}
 <link
   href="{%- if isdevelopment -%}
     /static/vendor/prismjs@1.20.0/themes/prism-okaidia.css

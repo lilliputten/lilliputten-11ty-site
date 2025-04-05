@@ -1,24 +1,19 @@
-/**
- * @module PageHeaderLogo
- * @changed 2024.06.17, 22:22
- */
-
 @use 'sass:color';
 
 @import '../shared';
 
 .PageHeaderLogo {
-  flex: 1;
+  flex: 3;
   display: flex;
   align-items: stretch;
   justify-content: stretch;
   height: 3.5rem;
-  // [data-page='main'] & {
-  //   display: none;
-  // }
   .wideView & {
     width: 25vw;
     max-width: 20em;
+  }
+  .mobileView.showNavigation & {
+    display: none;
   }
 
   .Logo {
@@ -27,7 +22,7 @@
     background-image: url('/static/images/logo/full/ll-logo-wx.svg');
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center right;
+    background-position: center;
     transition: all $animationTimeMs;
     .wideView & {
       background-position: left center;
@@ -39,12 +34,4 @@
       }
     }
   }
-  // [data-page='main'] & {
-  //   width: 1.75em;
-  //   opacity: 0;
-  //   pointer-events: none;
-  //   * {
-  //     display: none;
-  //   }
-  // }
 }

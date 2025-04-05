@@ -1,6 +1,6 @@
 ---
 layout: article.njk
-title: Windows shortcut to toggle MongoDB service
+title: A neat way to quickly toggle MongoDB Windows background service
 hasThumb: true
 eleventyNavigation:
   key: mongodb-service-toggle-windows-shortcut
@@ -26,6 +26,8 @@ tags:
 -->
 
 {% import "macros.njk" as macros with context %}
+
+This is a small trick to create a powershell script companied with a desktop shortcut to quickly toggle MongoDB Windows background service
 
 I use MongoDB both on my server and on my Windows desktop in development mode.
 
