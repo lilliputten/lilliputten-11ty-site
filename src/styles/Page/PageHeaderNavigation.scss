@@ -8,10 +8,6 @@
   .mobileView &.show {
     padding: 0.5em 0;
   }
-  // Main page
-  [data-page='main'] & {
-    gap: 2em;
-  }
   .mobileView.showNavigation & {
     justify-content: space-around;
   }

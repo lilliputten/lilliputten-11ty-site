@@ -4,9 +4,6 @@
 
 .PageMenu {
   flex: 1;
-  [data-page='main'] body:not(.mobileView) & {
-    margin-left: 1em;
-  }
   display: flex;
   flex-direction: row;
   margin: 0;

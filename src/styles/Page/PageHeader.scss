@@ -35,18 +35,10 @@
       flex-wrap: wrap;
     }
   }
-  [data-page='regular'] .wideView & {
-    // ATTENTION: Adjust header elements to fit main content column width
-    .PageHeaderWrapper {
-      padding: 0;
-    }
-
+  .wideView & {
     .PageHeaderBrand {
       margin-left: -1.2vw;
-    }
-
-    .PageHeaderNavigation {
-      margin-right: -0.25em;
+      margin-right: -1.2vw;
     }
   }
 
