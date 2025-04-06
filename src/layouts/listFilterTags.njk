@@ -12,6 +12,8 @@ layout: page.njk
   </div>
   <ul class="CollectionList">
     {%- for item in collections.withTags | listFilterTags(filterTags) | sortByDate | reverse -%}
+      {# Exclude current page from the list #}
+      {%- if item.url != page.url -%}
       <li class="CollectionItem">
         <h2 class="CollectionItemTitle">
           <a href="{{ item.url }}" class="CollectionItemLink">
@@ -44,6 +46,7 @@ layout: page.njk
           </div>
         </div>
       </li>
+      {%- endif -%}
     {%- endfor -%}
   </ul>
 </article>

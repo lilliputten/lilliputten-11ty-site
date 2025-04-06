@@ -9,7 +9,7 @@ eleventyNavigation:
 date: 2025-04-05
 showNavigationBreadcrumbs: true
 tags:
-  - article
+  - articles
   - '2025'
   - django
   - python

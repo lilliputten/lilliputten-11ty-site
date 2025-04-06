@@ -5,7 +5,7 @@ title: Articles
 eleventyNavigation:
   key: articles
   title: Articles
-date: 2025-04-04
+date: 2025-04-05
 hideMeta: true
 tag: false
 tags:

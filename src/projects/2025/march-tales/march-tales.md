@@ -21,10 +21,16 @@ tags:
   - audio
   - ffmpeg
   - ffprobe
+  - i18n
+  - rest
+  - authorization
+  - mysql
+  - webpack
+  - sqlite
 ---
 
 <!--
-@changed 2025.04.05, 08:13
+@changed 2025.04.07, 01:53
 
 We've finally launched the first public release of our recent project: a mobile application and a web-site for The March Cat Tales.
 
@@ -34,13 +40,13 @@ We've finally launched the first public release of our recent project: a mobile 
 
 [**The March Cat Tales**](https://tales.march.team/) is a multi-component project designed to deliver author-narrated fairy tales and stories through a **mobile application**, **web interface**, and **REST API server**. Built with modern technologies, it prioritizes seamless cross-device experiences, internationalization, and user-centric design.
 
-The project is designed to provide the user with a convenient way to listen to fairy tales, legends, and short stories, narrated by the artist, — in one place. (Currently only in Russian.)
+The project goal is to provide the user with a convenient way to listen to fairy tales, legends, and short stories, narrated by the artist, — in one place. (Currently only in Russian.)
 
 Both the mobile app and the web server are still in MVP status. See TODO section at the end.
 
 ## Mobile Application
 
-The **Flutter-based mobile app** is the main component of the project, and offers an immersive listenning experience with robust audio controls.
+The **Flutter-based mobile app** is the main component of the project, and offers an immersive listening experience with robust audio controls.
 
 The application is on the 'closed testing' stage in the Google Play Store.
 

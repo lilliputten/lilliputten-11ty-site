@@ -9,7 +9,7 @@ eleventyNavigation:
 date: 2024-06-27
 showNavigationBreadcrumbs: true
 tags:
-  - article
+  - articles
   - '2024'
   - automation
   - mongodb
