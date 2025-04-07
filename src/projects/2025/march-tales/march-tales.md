@@ -30,7 +30,7 @@ tags:
 ---
 
 <!--
-@changed 2025.04.07, 01:53
+@changed 2025.04.07, 03:22
 
 We've finally launched the first public release of our recent project: a mobile application and a web-site for The March Cat Tales.
 
@@ -120,13 +120,16 @@ The API server, also built with **Django** and it's **djangorestframework** and 
 - **RESTful Endpoints**: Efficient data exchange between clients and server.
 - **Audio Processing**: Leverages **FFmpeg** and **FFprobe** for track metadata extraction and quality assurance.
 
+See also: Notes about [Django FlatPages integration](/articles/2025/django-flatpages-based-cms/) on the project.
+
 ### Administrative Panel Screenshots
 
 {{ macros.carouselBegin('shots-slider full-width', type='browserScreenshotsWide') }}
-{{ macros.carouselItem('./images/admin-2/author-details.jpg', 'Author details.') }}
-{{ macros.carouselItem('./images/admin-2/authors-list.jpg', 'Authors list.') }}
-{{ macros.carouselItem('./images/admin-2/track-edit-page.jpg', 'Track edit page.') }}
-{{ macros.carouselItem('./images/admin-2/tracks-list.jpg', 'Tracks list.') }}
+{{ macros.carouselItem('images/admin-2/content-editor.jpg', 'Flat pages content editor.') }}
+{{ macros.carouselItem('images/admin-2/author-details.jpg', 'Author details.') }}
+{{ macros.carouselItem('images/admin-2/authors-list.jpg', 'Authors list.') }}
+{{ macros.carouselItem('images/admin-2/track-edit-page.jpg', 'Track edit page.') }}
+{{ macros.carouselItem('images/admin-2/tracks-list.jpg', 'Tracks list.') }}
 {{ macros.carouselEnd() }}
 
 ## Audio Playback
