@@ -50,6 +50,8 @@ The **Flutter-based mobile app** is the main component of the project, and offer
 
 The application is on the 'closed testing' stage in the Google Play Store.
 
+The application has already published on the [Google Play Store](https://play.google.com/store/apps/details?id=team.march.march_tales_app).
+
 ### Mobile Application Screenshots
 
 {{ macros.carouselBegin('shots-slider full-width', type='phoneScreenshotsWide') }}
@@ -125,11 +127,11 @@ See also: Notes about [Django FlatPages integration](/articles/2025/django-flatp
 ### Administrative Panel Screenshots
 
 {{ macros.carouselBegin('shots-slider full-width', type='browserScreenshotsWide') }}
-{{ macros.carouselItem('images/admin-2/content-editor.jpg', 'Flat pages content editor.') }}
-{{ macros.carouselItem('images/admin-2/author-details.jpg', 'Author details.') }}
-{{ macros.carouselItem('images/admin-2/authors-list.jpg', 'Authors list.') }}
-{{ macros.carouselItem('images/admin-2/track-edit-page.jpg', 'Track edit page.') }}
-{{ macros.carouselItem('images/admin-2/tracks-list.jpg', 'Tracks list.') }}
+{{ macros.carouselItem('./images/admin-2/content-editor.jpg', 'Flat pages content editor.') }}
+{{ macros.carouselItem('./images/admin-2/author-details.jpg', 'Author details.') }}
+{{ macros.carouselItem('./images/admin-2/authors-list.jpg', 'Authors list.') }}
+{{ macros.carouselItem('./images/admin-2/track-edit-page.jpg', 'Track edit page.') }}
+{{ macros.carouselItem('./images/admin-2/tracks-list.jpg', 'Tracks list.') }}
 {{ macros.carouselEnd() }}
 
 ## Audio Playback
@@ -179,21 +181,6 @@ Both the website and the mobile device have relatively identical audio player be
 ## TODO
 
 At the moment, the project is at the MVP stage. So now we have a lot of tasks for further development.
-
-### Mobile application
-
-- [Create a new "main" tab aggregating relevant information](https://github.com/lilliputten/march-tales-flutter-app/issues/29).
-- [Add filter/sorting controls for track listings.](https://github.com/lilliputten/march-tales-flutter-app/issues/48).
-- [Add push/email notifications.](https://github.com/lilliputten/march-tales-flutter-app/issues/49).
-- [Refine error handling methods](https://github.com/lilliputten/march-tales-flutter-app/issues/47).
-- [Fix the "rattling" when auto-closing track list panels when scrolling](https://github.com/lilliputten/march-tales-flutter-app/issues/50).
-- [Use thumbnail images of track previews](https://github.com/lilliputten/march-tales-flutter-app/issues/51)
-- [Fix the effect of overlapping the last tracks when you click the "Show more" button](https://github.com/lilliputten/march-tales-flutter-app/issues/52).
-- [Fix the logic of the Back button](https://github.com/lilliputten/march-tales-flutter-app/issues/53).
-- [Add an explanatory text to the "Log in" button](https://github.com/lilliputten/march-tales-flutter-app/issues/54).
-- [Sort tracks in Favorites by the time they were added to the list](https://github.com/lilliputten/march-tales-flutter-app/issues/55).
-- [Implement automatic loading of tracks when scrolling](https://github.com/lilliputten/march-tales-flutter-app/issues/56).
-- [Fix the update of the session language after the change to another one]()
 
 ## Resources
 

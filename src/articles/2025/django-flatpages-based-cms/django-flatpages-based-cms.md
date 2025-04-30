@@ -20,7 +20,7 @@ tags:
 ---
 
 <!--
-@changed 2025.04.05, 02:56
+@changed 2025.04.30, 16:50
 -->
 
 {% import "macros.njk" as macros with context %}
@@ -40,7 +40,8 @@ So, we'll try to do the following:
 
 So, in general, we can follow the instructions in the [flatpages app](https://docs.djangoproject.com/en/5.1/ref/contrib/flatpages/) manual, with some differencies and additions.
 
-As an example, I will consider my recent django project, [The March Cat Tales](/projects/2025/march-tales/).
+As an example, I will consider my recent django project, [The March Cat Tales](/projects/2025/march-tales/). See also the project's [repository](https://github.com/lilliputten/march-tales/) and deployed [public site](https://tales.march.team/).
+
 
 ## The result
 
@@ -266,6 +267,3 @@ passing a context and setting a default template with the stock django flatpage 
 - [Flatpages App](https://docs.djangoproject.com/en/5.1/ref/contrib/flatpages/)
 - [Sitemap framework reference](https://docs.djangoproject.com/en/5.1/ref/contrib/sitemaps/)
 - [Django Project Repository](https://github.com/django/django/)
-- [The March Cat Tales Project Article](/projects/2025/march-tales/)
-- [The March Cat Tales Project Repository](https://github.com/lilliputten/march-tales/)
-- [The March Cat Tales Site](https://tales.march.team/)
