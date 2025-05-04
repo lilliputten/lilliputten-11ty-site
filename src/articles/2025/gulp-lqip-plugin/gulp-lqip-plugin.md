@@ -29,7 +29,7 @@ tags:
 
 I recently created a gulp plugin that generates HTML image placeholders using LQIP technique and allows to embed them in the background image, without any js or css code. It's currently available on the [npm repository](https://www.npmjs.com/package/gulp-embed-lqip-as-background).
 
-{{ macros.imgFigure('./istockphoto-eyecatcher.jpg', 'Just an eye-atcher image (iStock)') }}
+{{ macros.imgFigure('./istockphoto-eyecatcher.jpg', 'Just an eye-catcher image (iStock)') }}
 
 [LQIP](https://cloudinary.com/blog/low_quality_image_placeholders_lqip_explained) stands for "Low-quality image placeholders" technique to provide already prepared small resource-effective image previews.
 
