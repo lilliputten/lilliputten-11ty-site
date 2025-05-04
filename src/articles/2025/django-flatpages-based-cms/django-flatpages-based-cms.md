@@ -15,7 +15,7 @@ tags:
   - python
   - flatpage
   - ckeditor
-  - internalization
+  - localization
   - custom
 ---
 
@@ -25,7 +25,7 @@ tags:
 
 {% import "macros.njk" as macros with context %}
 
-Here is a short guide on converting a django application into a kind of cms editor that supports internalization and advanced editing. Perhaps it will be necessary only for myself, so as not to forget in the future.
+Here is a short guide on converting a django application into a kind of cms editor that supports localization and advanced editing. Perhaps it will be necessary only for myself, so as not to forget in the future.
 
 Of course, it is absolutely possible to turn your django application into something cms-like, similar to a cms editor, using the stock django [flatpages app](https://docs.djangoproject.com/en/5.1/ref/contrib/flatpages/).
 
