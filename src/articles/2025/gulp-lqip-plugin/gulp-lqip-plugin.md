@@ -41,7 +41,7 @@ The plugin combines [Johann Servoire's gulp-image-lqip](https://github.com/Johan
 - It automatically sets the `width`, `height` (collected from the original image) and `loading=lazy` attributes for the processed images.
 - It doesn't try to prettify the results. So, you should care about that by yourself (take a look at the [gulp-html-prettify](https://www.npmjs.com/package/gulp-html-prettify) plugin).
 
-I used it my [TubeCaster Telegram Bot landing](/projects/2025/tubecaster-telegram-bot/), get the real-life example there.
+I used it in my [TubeCaster Telegram Bot landing](/projects/2025/tubecaster-telegram-bot/), get the real-life example there.
 
 ## Basic usage
 
