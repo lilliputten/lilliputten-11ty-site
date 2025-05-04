@@ -81,6 +81,8 @@ The web interface is a **Django-powered frontend** that serves as a companion to
 
 The administrative panel is implemented using the built-in django admin functional and is complemented by **django-unfold**.
 
+The public web site is available at: [https://tales.march.team/](https://tales.march.team/).
+
 ### Web Interface Screenshots
 
 {{ macros.carouselBegin('shots-slider full-width', type='browserScreenshotsWide') }}
