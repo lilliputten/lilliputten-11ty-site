@@ -51,7 +51,7 @@ gulp.task('lqip', () => gulp
   .pipe(
     gulpEmbedLqipAsBackground({
       rootPath: __dirname,
-      lazyLoadClass: 'lazy-load',
+      // lazyLoadClass: 'lazy-load',
       // srcAttr: 'src',
       // dataSrcAttr: '',
       // scaleFactorAttr: 'data-scale-factor',
