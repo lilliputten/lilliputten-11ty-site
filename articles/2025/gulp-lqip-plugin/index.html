@@ -1,0 +1,258 @@
+<!DOCTYPE >
+<html lang="en" data-page="regular" data-layout="article">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Gulp LQIP small image placeholder generator plugin — Lilliputten &amp; Noble</title>
+  <meta name="color-scheme" content="dark light">
+  <meta name="description" content="Hello, my name is Igor and I'm a front-end developer.">
+  <meta name="keywords" content="lilliputten,front-end,full-stack,web,developer,articles,2025,gulp,npm,plugin,lqip,ckeditor,image,background,html">
+  <meta name="generator" content="Eleventy">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/static/images/favicon/logo-192.png">
+  <link rel="manifest" href="/manifest-93b9e3c535.webmanifest">
+  <meta name="theme-color" content="#ffcc00">
+  <meta property="og:url" content="https://lilliputten.com/articles/2025/gulp-lqip-plugin/">
+  <meta property="og:title" content="Gulp LQIP small image placeholder generator plugin | Lilliputten &amp; Noble">
+  <meta property="og:description" content="Hello, my name is Igor and I'm a front-end developer.">
+  <meta property="og:image" content="https://lilliputten.com/static/images/logo/og/og.jpg">
+  <meta property="og:type" content="website">
+  <meta name="title" content="Gulp LQIP small image placeholder generator plugin | Lilliputten &amp; Noble">
+  <link rel="alternate" href="https://lilliputten.com/feed/rss.xml" type="application/rss+xml" title="Lilliputten &amp; Noble">
+  <link rel="webmention" href="https://webmention.io/lilliputten.com/webmention">
+  <link rel="pingback" href="https://webmention.io/lilliputten.com/xmlrpc">
+  <link rel="author" href="https://lilliputten.com/humans.txt">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700&amp;display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" type="text/css">
+  <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css" rel="stylesheet" type="text/css">
+  <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.min.css" rel="stylesheet" type="text/css">
+  <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/static/vendor/aos/aos.css">
+  <link rel="stylesheet" href="/compiled-assets/styles.css?0.0.17">
+  <script>
+    // NOTE: Prevent firefox FOUC...
+          var FF_FOUC_FI;
+  </script>
+</head>
+
+<body class="Page page__body">
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-Z01LD05S3B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', 'G-Z01LD05S3B');
+  </script>
+  <div class="PageVisual" id="PageVisual" data-aos="fade-down" data-aos-duration="500" data-aos-delay="0">
+    <canvas class="VisualAnimation" id="VisualAnimation"></canvas>
+  </div>
+  <nav id="PageHeader" class="PageHeader navbar fixed-top navbar-dark navbar-expand-md onRed">
+    <div class="PageHeaderWrapper">
+      <div class="PageHeaderBrand gap-1" data-aos="fade-right" data-aos-duration="600" data-aos-delay="100">
+        <button id="toggleNavigation" aria-controls="navbarNavigation" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler collapsed" data-bs-target="#navbarNavigation" data-bs-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="PageHeaderLogo">
+          <a href="/" class="Logo"></a>
+        </div>
+        <div class="PageHeaderNavigation navbar-collapse collapse" id="navbarNavigation" -data-aos="fade-left" -data-aos-duration="600" -data-aos-delay="100">
+          <ul class="PageMenu navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="/about/">About</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="/projects/">Projects</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="/articles/">Articles</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="/contacts/">Contacts</a>
+            </li>
+          </ul>
+          <ul class="PageHeaderToolbar">
+            <li><a href="" class="icon" onclick="window.toggleTheme(); return false" title="Toggle color theme"><i class="bi bi-brightness-high-fill theme-dark"></i><i class="bi bi-moon-stars-fill theme-light"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <main class="PageContentLayout page__content">
+    <article class="Article">
+      <div class="ArticleHeadWrapper">
+        <img class="ArticleHeadThumb" src="./thumb.png" alt="Article thumbnail" width="120" height="120" decoding="async" loading="lazy" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 120 120'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAANNJREFUeJwByAA3/wBaPTm8sarCtKyVhH5ybGlfYGFUVldHSkwAn4yDpYF3fFZQSzc0QDExNioqMi8xNjY4AJZYTZtxbXV1dE1eZx0oMBkbHhoRES8oJwDGnJbc3952hpBBR0wGBggQGB4XFBUkFxYA8/Du6OrtTmiJGCguMkFCEEVvEQYILBMTAM+mltvFvq+jrlttjEtreygwRCkTEDEnKQDMk3XGr6awjYeAYGJYRktORkpETlY+SFAA05Bn1szDtr/CkqKsgJOfcoWRZHR/WWdxi3ZM7MP7OqcAAAAASUVORK5CYII='%3E%3C/image%3E%3C/svg%3E&quot;)">
+        <div class="ArticleHead">
+          <ul class="ArticleBreadcrumbs">
+            <li data-key="home">
+              <a class="home" href="/" title="Site root"></a>
+            </li>
+            <li data-key="articles" class="noParent"><a href="/articles/">Articles</a>
+            </li>
+          </ul>
+          <h1 class="ArticleTitle">Gulp LQIP small image placeholder generator plugin</h1>
+          <div class="ArticleMeta">
+            <time class="metaItem articleDatetime" datetime="2025-05-04T00:00:00.000Z" title="Document date"><span>Date:</span> May 4, 2025</time>
+            <div class="metaItem articleMinutesToRead" title="With an average speed of 200 words per minute"><span>Time to read:</span> 2 min</div>
+          </div>
+        </div>
+      </div>
+      <p><a href="https://cloudinary.com/blog/low_quality_image_placeholders_lqip_explained" c="l" class="external" title="External link: https://cloudinary.com/blog/low_quality_image_placeholders_lqip_explained" target="_blank" rel="noopener">LQIP</a> stands
+        for «Low-quality image placeholders» technique to provide already prepared small resource-effective image previews.</p>
+      <p>The plugin combines <a href="https://github.com/Johann-S/gulp-image-lqip" c="l" class="external" title="External link: https://github.com/Johann-S/gulp-image-lqip" target="_blank" rel="noopener">Johann Servoire’s gulp-image-lqip</a> plugin and <a href="https://github.com/MeFoDy/mefody.dev"
+        c="l" class="external" title="External link: https://github.com/MeFoDy/mefody.dev" target="_blank" rel="noopener">Nikita Dubko’s 11ty site solution to embed previews</a>, but:</p>
+      <ul>
+        <li>It doesn’t require JS on the client side (it rather embeds a downscaled image into an image’s style <code>background</code> (as an svg object) and sets <code>loading=lazy</code> attribute to allow the browser to control the images loading).</li>
+        <li>It allows you to more finely control the generation (like scale factor, source and target attribues, valid extensions etc).</li>
+        <li>It returns relevant vinyl streams and allow further processing of the stream (compared to the <code>gulp-image-lqip</code> plugin). And it means that now you must to handle the resulting streams (at least to write them into the destination).</li>
+        <li>It automatically sets the <code>width</code>, <code>height</code> (collected from the original image) and <code>loading=lazy</code> attributes for the processed images.</li>
+        <li>It doesn’t try to prettify the results. So, you should care about that by yourself (take a look at the <a href="https://www.npmjs.com/package/gulp-html-prettify" c="l" class="external" title="External link: https://www.npmjs.com/package/gulp-html-prettify"
+          target="_blank" rel="noopener">gulp-html-prettify</a> plugin).</li>
+      </ul>
+      <p>I used it my <a href="/projects/2025/tubecaster-telegram-bot/">TubeCaster Telegram Bot landing</a>, get the real-life example there.</p>
+      <p>See the <a href="https://www.npmjs.com/package/gulp-embed-lqip-as-background" c="l" class="external" title="External link: https://www.npmjs.com/package/gulp-embed-lqip-as-background" target="_blank" rel="noopener">npm repository</a>.</p>
+      <h2 id="basic-usage"
+      tabindex="-1">Basic usage <a class="header-anchor" href="#basic-usage"><i class="bi bi-link-45deg"></i></a></h2><pre class="language-javascript"><code class="language-javascript">gulp<span class="token punctuation">.</span><span class="token function">task</span><span class="token punctuation">(</span><span class="token string">'lqip'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> gulp
+  <span class="token punctuation">.</span><span class="token function">src</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'*.html'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span>
+    <span class="token function">gulpEmbedLqipAsBackground</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      <span class="token literal-property property">rootPath</span><span class="token operator">:</span> __dirname<span class="token punctuation">,</span>
+      <span class="token literal-property property">lazyLoadClass</span><span class="token operator">:</span> <span class="token string">'lazy-load'</span><span class="token punctuation">,</span>
+      <span class="token comment">// srcAttr: 'src',</span>
+      <span class="token comment">// dataSrcAttr: '',</span>
+      <span class="token comment">// scaleFactorAttr: 'data-scale-factor',</span>
+      <span class="token comment">// scaleFactor: 10,</span>
+      <span class="token comment">// validFileExtensions: ['.html', '.htm'],</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span>gulp<span class="token punctuation">.</span><span class="token function">dest</span><span class="token punctuation">(</span><span class="token string">'.'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+      <p>All the commented parameters are optional. See <a href="https://github.com/lilliputten/gulp-embed-lqip-as-background#api" c="l" class="external" title="External link: https://github.com/lilliputten/gulp-embed-lqip-as-background#api" target="_blank"
+        rel="noopener">API reference</a>
+      </p>
+      <p>See the example: <a href="https://github.com/lilliputten/gulp-embed-lqip-as-background/blob/HEAD/test/test.html" c="l" class="external" title="External link: https://github.com/lilliputten/gulp-embed-lqip-as-background/blob/HEAD/test/test.html" target="_blank"
+        rel="noopener">source code</a> or <a href="https://html-preview.github.io/?url=https://github.com/lilliputten/gulp-embed-lqip-as-background/blob/HEAD/test/test.html" c="l" class="external" title="External link: https://html-preview.github.io/?url=https://github.com/lilliputten/gulp-embed-lqip-as-background/blob/HEAD/test/test.html"
+        target="_blank" rel="noopener">demo html</a>.</p>
+      <p>For example, the above command will process the images with <code>lazy-load</code> class, like this:</p><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span>
+  <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>img/csb.jpg<span class="token punctuation">"</span></span>
+  <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>img-fluid lazy-load figure<span class="token punctuation">"</span></span>
+  <span class="token attr-name">data-scale-factor</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>5<span class="token punctuation">"</span></span>
+<span class="token punctuation">/&gt;</span></span></code></pre>
+      <p>– to the code like this:</p><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span>
+  <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>img/csb.jpg<span class="token punctuation">"</span></span>
+  <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>img-fluid lazy-load figure<span class="token punctuation">"</span></span>
+  <span class="token attr-name">data-scale-factor</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>5<span class="token punctuation">"</span></span>
+  <span class="token attr-name">loading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>lazy<span class="token punctuation">"</span></span>
+  <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">background-size</span><span class="token punctuation">:</span> cover<span class="token punctuation">;</span> <span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token function">url</span><span class="token punctuation">(</span>&amp;quot<span class="token punctuation">;</span><span class="token property">data</span><span class="token punctuation">:</span>image/svg+xml<span class="token punctuation">;</span>charset=utf-8<span class="token punctuation">,</span>%3Csvg
+    xmlns=<span class="token string">'http%3A//www.w3.org/2000/svg'</span> xmlns%3Axlink=<span class="token string">'http%3A//www.w3.org/1999/xlink'</span>
+    viewBox=<span class="token string">'0 0 600 599'</span>%3E%3Cfilter id=<span class="token string">'b'</span> color-interpolation-filters=<span class="token string">'sRGB'</span>%3E%3CfeGaussianBlur
+    stdDeviation=<span class="token string">'.5'</span>%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type=<span class="token string">'discrete'</span>
+    tableValues=<span class="token string">'1 1'</span>%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage
+    filter=<span class="token string">'url(%23b)'</span> preserveAspectRatio=<span class="token string">'none'</span> height=<span class="token string">'100%25'</span> width=<span class="token string">'100%25'</span>
+    xlink%3Ahref=<span class="token string">'data%3Aimage/jpeg;base64,/9j/---A LONG BASE64 ENCOED STRING IS COMING HERE---//2Q=='</span>%3E%3C/image%3E%3C/svg%3E&amp;quot<span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span>
+  <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>600<span class="token punctuation">"</span></span>
+  <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>599<span class="token punctuation">"</span></span>
+<span class="token punctuation">/&gt;</span></span></code></pre>
+      <p>Notice the added <code>loading="lazy"</code> and <code>width</code> and <code>height</code> attributes, and the svg object with an embedded preview in the background css style.</p>
+      <h2 id="old-data-src-with-js-css-approach" tabindex="-1">Old (data-src, with js &amp; css) approach <a class="header-anchor" href="#old-data-src-with-js-css-approach"><i class="bi bi-link-45deg"></i></a></h2>
+      <p>In case if you specify the <code>dataSrcAttr</code> options parameter (eg, with <code>data-src</code>), then it’ll behave in original way: by storing the downscaled preview in the specified attribute instead of <code>style:background</code> object.</p>
+      <p>But this approach required extra js code &amp; styles, see those in the example: <a href="https://html-preview.github.io/?url=https://github.com/lilliputten/gulp-embed-lqip-as-background/blob/HEAD/test/demo-data-src-test.html" c="l" class="external"
+        title="External link: https://html-preview.github.io/?url=https://github.com/lilliputten/gulp-embed-lqip-as-background/blob/HEAD/test/demo-data-src-test.html" target="_blank" rel="noopener">source code</a> or <a href="https://html-preview.github.io/?url=https://github.com/lilliputten/gulp-embed-lqip-as-background/blob/HEAD/test/demo-data-src-test.html"
+        c="l" class="external" title="External link: https://html-preview.github.io/?url=https://github.com/lilliputten/gulp-embed-lqip-as-background/blob/HEAD/test/demo-data-src-test.html" target="_blank" rel="noopener">demo html</a>.</p><pre class="language-javascript"><code class="language-javascript">gulp<span class="token punctuation">.</span><span class="token function">task</span><span class="token punctuation">(</span><span class="token string">'lqip'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> gulp
+  <span class="token punctuation">.</span><span class="token function">src</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'*.html'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span>
+    <span class="token function">gulpEmbedLqipAsBackground</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      <span class="token literal-property property">rootPath</span><span class="token operator">:</span> __dirname<span class="token punctuation">,</span>
+      <span class="token literal-property property">dataSrcAttr</span><span class="token operator">:</span> <span class="token string">'data-src'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span>gulp<span class="token punctuation">.</span><span class="token function">dest</span><span class="token punctuation">(</span><span class="token string">'.'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+      <h2 id="see-also" tabindex="-1">See also <a class="header-anchor" href="#see-also"><i class="bi bi-link-45deg"></i></a></h2>
+      <p>See the brief <a href="https://github.com/lilliputten/gulp-embed-lqip-as-background#install" c="l" class="external" title="External link: https://github.com/lilliputten/gulp-embed-lqip-as-background#install" target="_blank" rel="noopener">installation</a> and
+        <a
+        href="https://github.com/lilliputten/gulp-embed-lqip-as-background#usage" c="l" class="external" title="External link: https://github.com/lilliputten/gulp-embed-lqip-as-background#usage" target="_blank" rel="noopener">usage</a>manuals.</p>
+      <div class="ArticleFooter">
+        <ul class="ArticleTags tags">
+          <li class="tagsTitle">Tags:</li>
+          <li class="tagsItem"><a class="linkAsText" href="/tags/articles/">articles</a>
+          </li>
+          <li class="tagsItem"><a class="linkAsText" href="/tags/2025/">2025</a>
+          </li>
+          <li class="tagsItem"><a class="linkAsText" href="/tags/gulp/">gulp</a>
+          </li>
+          <li class="tagsItem"><a class="linkAsText" href="/tags/npm/">npm</a>
+          </li>
+          <li class="tagsItem"><a class="linkAsText" href="/tags/plugin/">plugin</a>
+          </li>
+          <li class="tagsItem"><a class="linkAsText" href="/tags/lqip/">lqip</a>
+          </li>
+          <li class="tagsItem"><a class="linkAsText" href="/tags/ckeditor/">ckeditor</a>
+          </li>
+          <li class="tagsItem"><a class="linkAsText" href="/tags/image/">image</a>
+          </li>
+          <li class="tagsItem"><a class="linkAsText" href="/tags/background/">background</a>
+          </li>
+          <li class="tagsItem"><a class="linkAsText" href="/tags/html/">html</a>
+          </li>
+        </ul>
+        <div class="ArticleNav"></div>
+      </div>
+    </article>
+  </main>
+  <footer class="PageFooter">
+    <div class="FooterContainer">
+      <div class="FooterCopyright">© 2025 <span class="delimiter">/</span>  <a href="/">Lilliputten &amp; Noble</a>
+      </div>
+      <ul class="SocialList">
+        <li class="SocialListItem"><a href="https://linkedin.com/in/lilliputten" class="SocialListLink linkAsText" id="Linkedin" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i> LinkedIn</a>
+        </li>
+        <li class="SocialListItem"><a href="https://github.com/lilliputten" rel="me noopener" class="SocialListLink linkAsText" id="Github" target="_blank"><i class="bi bi-github"></i> GitHub</a>
+        </li>
+        <li class="SocialListItem dimmed"><a href="https://github.com/lilliputten/lilliputten-11ty-site/blob/main/./src/articles/2025/gulp-lqip-plugin/gulp-lqip-plugin.md" class="SocialListLink linkAsText" id="EditPage" title="Edit page on github" target="_blank" rel="noopener"><i class="bi bi-pencil-square"></i></a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+  <div id="noise" class="noise animated"></div>
+  <script>
+    /* eslint-disable no-var */
+    // @ts-check
+    /// &lt;reference path="../scripts/@types/THTMLNode.d.ts" /&gt;
+    
+    (function updateThemeWrapper() {
+      function updateTheme() {
+        var body = window.document.body;
+        var html = /** @type THTMLNode | undefined */ (body.parentNode ? body.parentNode : body);
+        var theme = window.localStorage ? window.localStorage.getItem('theme') : null;
+        // NOTE: CAUTION: Double ampersands are escaped here
+        if (theme) {
+          if (html) {
+            if (html.setAttribute) {
+              html.setAttribute('data-theme', theme);
+            }
+            if (html.dataset) {
+              html.dataset.theme = theme;
+            }
+          }
+        }
+      }
+    
+      updateTheme();
+      window.addEventListener('load', updateTheme);
+    
+      // 
+    })();
+  </script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.0.3/chroma.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="/static/vendor/aos/aos.js"></script>
+  <script type="text/javascript" src="/compiled-assets/scripts.js?0.0.17"></script>
+</body>
+
+</html>
