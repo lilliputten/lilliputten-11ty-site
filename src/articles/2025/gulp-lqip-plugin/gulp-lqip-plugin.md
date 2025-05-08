@@ -29,7 +29,7 @@ tags:
 
 I recently created a gulp plugin that generates HTML image placeholders using LQIP technique and allows to embed them in the background image, without any js or css code. It's currently available on the [npm repository](https://www.npmjs.com/package/gulp-embed-lqip-as-background).
 
-{{ macros.imgFigure('./istockphoto-eyecatcher.jpg', 'Just an eye-atcher image (iStock)') }}
+{{ macros.imgFigure('./istockphoto-eyecatcher.jpg', 'Just an eye-catcher image (iStock)') }}
 
 [LQIP](https://cloudinary.com/blog/low_quality_image_placeholders_lqip_explained) stands for "Low-quality image placeholders" technique to provide already prepared small resource-effective image previews.
 
@@ -41,7 +41,7 @@ The plugin combines [Johann Servoire's gulp-image-lqip](https://github.com/Johan
 - It automatically sets the `width`, `height` (collected from the original image) and `loading=lazy` attributes for the processed images.
 - It doesn't try to prettify the results. So, you should care about that by yourself (take a look at the [gulp-html-prettify](https://www.npmjs.com/package/gulp-html-prettify) plugin).
 
-I used it my [TubeCaster Telegram Bot landing](/projects/2025/tubecaster-telegram-bot/), get the real-life example there.
+I used it in my [TubeCaster Telegram Bot landing](/projects/2025/tubecaster-telegram-bot/), get the real-life example there.
 
 ## Basic usage
 
@@ -51,7 +51,7 @@ gulp.task('lqip', () => gulp
   .pipe(
     gulpEmbedLqipAsBackground({
       rootPath: __dirname,
-      lazyLoadClass: 'lazy-load',
+      // lazyLoadClass: 'lazy-load',
       // srcAttr: 'src',
       // dataSrcAttr: '',
       // scaleFactorAttr: 'data-scale-factor',
