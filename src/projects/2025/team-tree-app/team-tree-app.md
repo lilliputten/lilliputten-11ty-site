@@ -50,7 +50,7 @@ The application was created by order of my friends, who needed quick access to h
 
 - Used [Next.js](https://nextjs.org/) as an application framework.
 - [TailwindCSS](https://tailwindcss.com/) based UI, with a minimal amount of SCSS code.
-- Autgorization implemented with [next-auth](https://next-auth.js.org/) library (it supports oath logins with GitHub, Google or Yandex accounts).
+- Authorization implemented with [next-auth](https://next-auth.js.org/) library (it supports oath logins with GitHub, Google or Yandex accounts).
 - Internationalization via [next-intl](https://next-intl.dev/) library.
 - Database ORM by [Prisma](https://www.prisma.io/).
 - Various supported databases providers: sqlite for a local development, postgresql for a production mode (it's forcibly switching to postgresql in a production deployment, via a custom script [`prisma-switch.mjs`](https://github.com/lilliputten/team-tree-app/blob/main/prisma-switch.mjs)).
@@ -62,7 +62,7 @@ Illustrations by [freeicons.io](https://freeicons.io).
 
 ### Screenshots
 
-{{ macros.imgFigure('./images/welcome-screen.png', 'Welcome screen. A placeholder for basic introduction and auick sign-in.') }}
+{{ macros.imgFigure('./images/welcome-screen.png', 'Welcome screen. A placeholder for basic introduction and a quick sign-in form.') }}
 {{ macros.imgFigure('./images/info-screen.png', 'Information screen. A place for future application notes and help.') }}
 {{ macros.imgFigure('./images/login-modal.png', 'Sign-in modal dialog.') }}
 
