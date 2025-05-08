@@ -58,6 +58,8 @@ The application was created by order of my friends, who needed quick access to h
 - An ability to run on a local IIS server (with a IIS launcher script [`iisnode-nextjs-entry.js`](https://github.com/lilliputten/team-tree-app/blob/main/iisnode-nextjs-entry.js)). (Some notes on [IIS and NodeJS on Windows](https://github.com/lilliputten/team-tree-app/blob/main/README.iisnode.md).)
 - "Local mode": Using the boolean environment variable [`USER_REQUIRED`](https://github.com/lilliputten/team-tree-app/blob/main/.env.SAMPLE#L10), the application could be switched to a loose local mode when an unauthorized user is allowed to edit "shared" (not belonging to any users) data. Otherwise (for a production mode) any data operations for unathorized users are restricted.
 
+Illustrations by [freeicons.io](https://freeicons.io).
+
 ### Screenshots
 
 {{ macros.imgFigure('./images/welcome-screen.png', 'Welcome screen. A placeholder for basic introduction and auick sign-in.') }}
