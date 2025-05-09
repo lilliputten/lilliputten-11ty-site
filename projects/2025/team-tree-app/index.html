@@ -109,9 +109,10 @@
       <ul>
         <li>Used <a href="https://nextjs.org/" c="l" class="external" title="External link: https://nextjs.org/" target="_blank" rel="noopener">Next.js</a> as an application framework.</li>
         <li><a href="https://tailwindcss.com/" c="l" class="external" title="External link: https://tailwindcss.com/" target="_blank" rel="noopener">TailwindCSS</a> based UI, with a minimal amount of SCSS code.</li>
-        <li>Autgorization implemented with <a href="https://next-auth.js.org/" c="l" class="external" title="External link: https://next-auth.js.org/" target="_blank" rel="noopener">next-auth</a> library (it supports oath logins with GitHub, Google or Yandex
+        <li>Authorization implemented with <a href="https://next-auth.js.org/" c="l" class="external" title="External link: https://next-auth.js.org/" target="_blank" rel="noopener">next-auth</a> library (it supports oath logins with GitHub, Google or Yandex
           accounts).</li>
         <li>Internationalization via <a href="https://next-intl.dev/" c="l" class="external" title="External link: https://next-intl.dev/" target="_blank" rel="noopener">next-intl</a> library.</li>
+        <li>Color theme supports (with Tailwind).</li>
         <li>Database ORM by <a href="https://www.prisma.io/" c="l" class="external" title="External link: https://www.prisma.io/" target="_blank" rel="noopener">Prisma</a>.</li>
         <li>Various supported databases providers: sqlite for a local development, postgresql for a production mode (it’s forcibly switching to postgresql in a production deployment, via a custom script <a href="https://github.com/lilliputten/team-tree-app/blob/main/prisma-switch.mjs"
           c="l" class="external" title="External link: https://github.com/lilliputten/team-tree-app/blob/main/prisma-switch.mjs" target="_blank" rel="noopener"><code>prisma-switch.mjs</code></a>).</li>
@@ -126,9 +127,9 @@
       <p>Illustrations by <a href="https://freeicons.io" c="l" class="external" title="External link: https://freeicons.io" target="_blank" rel="noopener">freeicons.io</a>.</p>
       <h3 id="screenshots" tabindex="-1">Screenshots <a class="header-anchor" href="#screenshots"><i class="bi bi-link-45deg"></i></a></h3>
       <figure>
-        <figcaption>Welcome screen. A placeholder for basic introduction and auick sign-in.</figcaption>
-        <img class="" src="./images/welcome-screen.png" alt="Welcome screen. A placeholder for basic introduction and auick sign-in." loading="lazy" decoding="async" width="1075"
-        height="752" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 1075 752'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAGCAIAAACepSOSAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAArElEQVR4nGNQt8tQts5QtEpXsExTdihW92pXcqlXc2/U8GpjYGFgYGNi5GBhZmFg4OYWFJHV07fwVtKxF5LWYeDi4RMRk5KUUeLh5eMVklE0Cdt9/E557wZeOWsGfnFV0/hVtjn7ZI0jubj5VEzDrP3yjd2zRZRtGXgFJBTME1Tts4XljHgFxaU0HCXUnCTU7KXU7Rh4eLg5WRnYmRk42Zj5RaRFFU1FFUwgCACNUB1vyiNKGQAAAABJRU5ErkJggg=='%3E%3C/image%3E%3C/svg%3E&quot;)">
+        <figcaption>Welcome screen. A placeholder for basic introduction and a quick sign-in form.</figcaption>
+        <img class="" src="./images/welcome-screen.png" alt="Welcome screen. A placeholder for basic introduction and a quick sign-in form." loading="lazy" decoding="async"
+        width="1075" height="752" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 1075 752'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAGCAIAAACepSOSAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAArElEQVR4nGNQt8tQts5QtEpXsExTdihW92pXcqlXc2/U8GpjYGFgYGNi5GBhZmFg4OYWFJHV07fwVtKxF5LWYeDi4RMRk5KUUeLh5eMVklE0Cdt9/E557wZeOWsGfnFV0/hVtjn7ZI0jubj5VEzDrP3yjd2zRZRtGXgFJBTME1Tts4XljHgFxaU0HCXUnCTU7KXU7Rh4eLg5WRnYmRk42Zj5RaRFFU1FFUwgCACNUB1vyiNKGQAAAABJRU5ErkJggg=='%3E%3C/image%3E%3C/svg%3E&quot;)">
       </figure>
       <figure>
         <figcaption>Information screen. A place for future application notes and help.</figcaption>
