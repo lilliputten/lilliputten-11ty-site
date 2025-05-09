@@ -5,7 +5,7 @@ title: Projects
 eleventyNavigation:
   key: projects
   title: Projects
-date: 2025-04-04
+date: 2025-05-08
 hideMeta: true
 tag: false
 tags:
