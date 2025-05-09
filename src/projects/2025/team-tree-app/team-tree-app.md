@@ -52,6 +52,7 @@ The application was created by order of my friends, who needed quick access to h
 - [TailwindCSS](https://tailwindcss.com/) based UI, with a minimal amount of SCSS code.
 - Authorization implemented with [next-auth](https://next-auth.js.org/) library (it supports oath logins with GitHub, Google or Yandex accounts).
 - Internationalization via [next-intl](https://next-intl.dev/) library.
+- Color theme supports (with Tailwind).
 - Database ORM by [Prisma](https://www.prisma.io/).
 - Various supported databases providers: sqlite for a local development, postgresql for a production mode (it's forcibly switching to postgresql in a production deployment, via a custom script [`prisma-switch.mjs`](https://github.com/lilliputten/team-tree-app/blob/main/prisma-switch.mjs)).
 - [Vercel](https://vercel.com/) platform integration: CI/CD and hosting.
