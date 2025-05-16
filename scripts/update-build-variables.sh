@@ -52,6 +52,12 @@ UPDATE_FILE() {
       | sed "s/\(\"timestamp\":\) \".*\"/\1 \"$TIMESTAMP\"/" \
       | sed "s/\(\"timetag\":\) \".*\"/\1 \"$TIMETAG\"/" \
     > $FILE || exit 1
+  elif [ "$EXT" = "yaml" -o "$EXT" = "js" ]; then
+    cat $FILE.bak \
+      | sed "s/\(version:\s*\)\([\"']\).*\2/\1\2$VERSION\2/" \
+      | sed "s/\(timestamp:\s*\)\([\"']\).*\2/\1\2$TIMESTAMP\2/" \
+      | sed "s/\(timetag:\s*\)\([\"']\).*\2/\1\2$TIMETAG\2/" \
+    > $FILE || exit 1
   elif [ "$EXT" = "local" ]; then # env.local files
     cat $FILE.bak \
       | sed "s/\(version=\)\s*\".*\"/\1\"$VERSION\"/" \
@@ -79,3 +85,4 @@ UPDATE_FILE "$prjPath/package.json"
 UPDATE_FILE "$prjPath/package-lock.json"
 UPDATE_FILE "$prjPath/README.md"
 UPDATE_FILE "$prjPath/src/layouts/base.njk"
+UPDATE_FILE "$prjPath/src/data/site.js"

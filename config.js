@@ -13,7 +13,7 @@ const configFileName = path.resolve(scriptPath, 'config.sh');
 /** Timezone for timestamps (GMT, Europe/Moscow, Asia/Bangkok, Asia/Tashkent, etc)
  * NOTE: See orioginal data in 'config.sh'
  */
-let timeZone = 'GMT';
+let timeZone = 'Europe/Moscow';
 
 try {
   // Read shell config file
