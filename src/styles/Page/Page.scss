@@ -73,7 +73,8 @@
   // Adjust main height
   height: 250px;
   [data-page='main'] .wideView & {
-    height: 45%; // 90%; // XXX 2025.03.28
+    // height: 45%; // 90%; // XXX 2025.03.28
+    height: 420px;
   }
   background: linear-gradient(180deg, $primaryColor 0%, rgba(255, 255, 255, 0) 70%);
   pointer-events: none;
