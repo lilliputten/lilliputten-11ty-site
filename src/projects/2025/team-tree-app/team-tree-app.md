@@ -30,7 +30,7 @@ tags:
 ---
 
 <!--
-@changed 2025.05.08, 18:41
+@changed 2025.05.17, 21:14
 
 We've finally launched the first public release of our recent project: a mobile application and a web-site for The March Cat Tales.
 
@@ -48,13 +48,13 @@ The application was created by order of my friends, who needed quick access to h
 
 ### Key Features:
 
-- Used [Next.js](https://nextjs.org/) as an application framework.
+- [Next.js](https://nextjs.org/) is used as an application framework.
 - [TailwindCSS](https://tailwindcss.com/) based UI, with a minimal amount of SCSS code.
 - Authorization implemented with [next-auth](https://next-auth.js.org/) library (it supports oath logins with GitHub, Google or Yandex accounts).
 - Internationalization via [next-intl](https://next-intl.dev/) library.
 - Color theme supports (with Tailwind).
 - Database ORM by [Prisma](https://www.prisma.io/).
-- Various supported databases providers: sqlite for a local development, postgresql for a production mode (it's forcibly switching to postgresql in a production deployment, via a custom script [`prisma-switch.mjs`](https://github.com/lilliputten/team-tree-app/blob/main/prisma-switch.mjs)).
+- Various supported databases providers: sqlite for a local development, postgresql for a production mode (it's forcibly switching to postgresql in a production deployment, via a custom script [`prisma-switch.mjs`](https://github.com/lilliputten/team-tree-app/blob/main/prisma-switch.mjs) -- as prisma doesn't support various database sources, we have to change them manually).
 - [Vercel](https://vercel.com/) platform integration: CI/CD and hosting.
 - An ability to run on a local IIS server (with a IIS launcher script [`iisnode-nextjs-entry.js`](https://github.com/lilliputten/team-tree-app/blob/main/iisnode-nextjs-entry.js)). (Some notes on [IIS and NodeJS on Windows](https://github.com/lilliputten/team-tree-app/blob/main/README.iisnode.md).)
 - "Local mode": Using the boolean environment variable [`USER_REQUIRED`](https://github.com/lilliputten/team-tree-app/blob/main/.env.SAMPLE#L10), the application could be switched to a loose local mode when an unauthorized user is allowed to edit "shared" (not belonging to any users) data. Otherwise (for a production mode) any data operations for unathorized users are restricted.
