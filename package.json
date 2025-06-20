@@ -1,8 +1,8 @@
 {
   "name": "lilliputten-11ty-site",
   "version": "0.0.17",
-  "timetag": "250516-1733",
-  "timestamp": "2025.05.16 17:33 +0300",
+  "timetag": "250621-0233",
+  "timestamp": "2025.06.21 02:33:59 +0300",
   "changed": "2025.03.26, 09:26",
   "homepage": "/",
   "private": false,
@@ -114,7 +114,7 @@
   },
   "scripts": {
     "build-and-publish": "echo --Build and publish site by a single command-- && npm-run-all compile-assets build-prod publish",
-    "publish": "echo --Publish build /posix commands and uplevel utils branch are used/-- && sh ../utils/scripts/publish.sh",
+    "publish": "echo --Publish build /posix commands and uplevel utils branch are used/-- && sh ./.utils/publish.sh",
     "compile-assets-gulp-UNUSED": "echo --Update all assets /gulp/-- && gulp compileAssets",
     "watch-assets-gulp-UNUSED": "echo --Watch all assets /gulp/-- && gulp watchAssets",
     "compile-assets": "echo --Update all assets /webpack/-- && webpack",
