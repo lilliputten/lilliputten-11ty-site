@@ -42,7 +42,39 @@ We've finally launched the first public release of our recent project: a mobile 
 
 The project goal is to provide the user with a convenient way to listen to fairy tales, legends, and short stories, narrated by the artist, — in one place. (Currently only in Russian.)
 
+{{ macros.imgFigure('./combo-700x340.png', 'Mobile application screens preview.') }}
+
 Both the mobile app and the web server are still in MVP status. See TODO section at the end.
+
+## Web Interface
+
+The web interface is a **Django-powered frontend** that serves as a companion to the mobile app and as an administrative interface to the database. It uses Django template system with **Webpack** for client-side asset building (via SCSS and TypeScript).
+
+The administrative panel is implemented using the built-in django admin functional and is complemented by **django-unfold**.
+
+The public web site is available at: [https://tales.march.team/](https://tales.march.team/).
+
+### Web Interface Screenshots
+
+{{ macros.carouselBegin('shots-slider full-width', type='browserScreenshotsWide') }}
+{{ macros.carouselItem('./images/web-2/author-details.jpg', 'Author details.') }}
+{{ macros.carouselItem('./images/web-2/authors-list.jpg', 'Authors list.') }}
+{{ macros.carouselItem('./images/web-2/language-menu.jpg', 'Language menu.') }}
+{{ macros.carouselItem('./images/web-2/page-header.jpg', 'Page header.') }}
+{{ macros.carouselItem('./images/web-2/track-details.jpg', 'Track details.') }}
+{{ macros.carouselItem('./images/web-2/user-menu.jpg', 'User menu.') }}
+{{ macros.carouselEnd() }}
+
+### Key Features:
+
+- **Simple Navigation**: Intuitive and easy viewing of fairy tales.
+- **Local Favorites**: Users can save favorite tracks without an account.
+- **Internationalization**: Supports multiple (English and Russian at the moment) languages for global accessibility.
+- **Authorization Integration**: Syncs favorites (and potentially other essential data) with the API server if the users has been already logged in. Implemented with **django-allauth** and **django-registration**. Supports third-party oauth accounts (only Google at the moment has implemented).
+- **Administrative Panel**: A convenient custom website control panel implemented with **django-unfold**.
+- **Processing of uploaded audio files**: All uploaded audio files are processed using ffmpeg and ffprobe to fetch the audio metadata, and stores duration and file size into the database.
+- **Internationalization**: All the models and database are translated internally using **django-translated-fields**, other translations are supported by django native i18n/l10n system.
+- **Adaptive preview sizes**: **django-imagekit** is involved to generate audio tracks' author' preview on-the-fly. LQIP ("Low-quality image placeholders") previews are implemented via a dedicated middleware templatetag, which does almost the same as my [Gulp LQIP small image placeholder generator](https://github.com/lilliputten/gulp-embed-lqip-as-background) plugin: generates the image preview in the `style: backgound` with a svg-wrapped thumbnail.
 
 ## Mobile Application
 
@@ -74,36 +106,6 @@ The application has already published on the [Google Play Store](https://play.go
 - **Audio Playback**: Powered by **Just Audio**, with background service support for notification controls.
 - **Favorites Management**: Local storage or cloud sync via the API server.
 - **Internationalization & Theming**: Multi-language support and basic customization options.
-
-## Web Interface
-
-The web interface is a **Django-powered frontend** that serves as a companion to the mobile app and as an administrative interface to the database. It uses Django template system with **Webpack** for client-side asset building (via SCSS and TypeScript).
-
-The administrative panel is implemented using the built-in django admin functional and is complemented by **django-unfold**.
-
-The public web site is available at: [https://tales.march.team/](https://tales.march.team/).
-
-### Web Interface Screenshots
-
-{{ macros.carouselBegin('shots-slider full-width', type='browserScreenshotsWide') }}
-{{ macros.carouselItem('./images/web-2/author-details.jpg', 'Author details.') }}
-{{ macros.carouselItem('./images/web-2/authors-list.jpg', 'Authors list.') }}
-{{ macros.carouselItem('./images/web-2/language-menu.jpg', 'Language menu.') }}
-{{ macros.carouselItem('./images/web-2/page-header.jpg', 'Page header.') }}
-{{ macros.carouselItem('./images/web-2/track-details.jpg', 'Track details.') }}
-{{ macros.carouselItem('./images/web-2/user-menu.jpg', 'User menu.') }}
-{{ macros.carouselEnd() }}
-
-### Key Features:
-
-- **Simple Navigation**: Intuitive and easy viewing of fairy tales.
-- **Local Favorites**: Users can save favorite tracks without an account.
-- **Internationalization**: Supports multiple (English and Russian at the moment) languages for global accessibility.
-- **Authorization Integration**: Syncs favorites (and potentially other essential data) with the API server if the users has been already logged in. Implemented with **django-allauth** and **django-registration**. Supports third-party oauth accounts (only Google at the moment has implemented).
-- **Administrative Panel**: A convenient custom website control panel implemented with **django-unfold**.
-- **Processing of uploaded audio files**: All uploaded audio files are processed using ffmpeg and ffprobe to fetch the audio metadata, and stores duration and file size into the database.
-- **Internationalization**: All the models and database are translated internally using **django-translated-fields**, other translations are supported by django native i18n/l10n system.
-- **Adaptive preview sizes**: **django-imagekit** is involved to generate audio tracks' author' preview on-the-fly. LQIP ("Low-quality image placeholders") previews are implemented via a dedicated middleware templatetag, which does almost the same as my [Gulp LQIP small image placeholder generator](https://github.com/lilliputten/gulp-embed-lqip-as-background) plugin: generates the image preview in the `style: backgound` with a svg-wrapped thumbnail.
 
 ## REST API Server
 
