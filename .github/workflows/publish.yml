@@ -48,6 +48,16 @@ jobs:
       #     cd publish
       #     git checkout -B publish origin/publish
 
+      - name: Set Git user identity
+        run: |
+          git config --global user.email "lilliputten@gmail.com"
+          git config --global user.name "lilliputten"
+
+      - name: Get info
+        run: |
+          cd publish
+          git status
+
       # Setup pnpm using the official action (version 8)
       - uses: pnpm/action-setup@v4
         with:
@@ -68,16 +78,6 @@ jobs:
       # - name: Update build
       #   run: ./.utils/publish-update.sh
 
-      - name: Set Git user identity
-        run: |
-          git config --global user.email "lilliputten@gmail.com"
-          git config --global user.name "lilliputten"
-
-      - name: Get info
-        run: |
-          cd publish
-          git status
-
-      # - name: Publish build
-      #   run: ./.utils/github-publish.sh
+      - name: Publish build
+        run: ./.utils/github-publish.sh
 
