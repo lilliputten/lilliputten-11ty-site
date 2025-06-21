@@ -58,3 +58,5 @@ jobs:
       - name: Publish build
         run: ./.utils/github-publish.sh
 
+      - name: Publish with tags
+        run: ./.utils/publish-push-with-tags.sh
