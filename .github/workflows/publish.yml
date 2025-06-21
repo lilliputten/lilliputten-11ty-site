@@ -19,13 +19,13 @@ jobs:
           submodules: recursive
           fetch-depth: 0  # fetch all branches, not just default
 
-      # - name: Checkout submodule branch 'publish'
-      #   run: |
-      #     cd publish
-      #     git fetch origin
-      #     git checkout publish
-      #     git pull origin publish
-      #
+      - name: Checkout submodule branch 'publish'
+        run: |
+          cd publish
+          git fetch origin
+          git checkout publish
+          git pull origin publish
+
       # - name: Configure submodule to track 'publish' branch and update
       #   run: |
       #     git config -f .gitmodules submodule.publish.branch publish
@@ -77,7 +77,6 @@ jobs:
         run: |
           cd publish
           git status
-          find . -type d
 
       # - name: Publish build
       #   run: ./.utils/github-publish.sh
