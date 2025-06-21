@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: production
     steps:
+
       - name: Checkout the repository with full history
         uses: actions/checkout@v4
         with:
@@ -45,11 +46,26 @@ jobs:
           node-version: 20
           cache: 'pnpm'
 
-      - name: Install workspaces' dependencies
+      - name: Install dependencies
         run: pnpm install --frozen-lockfile --config.confirmModulesPurge=false
 
-      - name: Build the project
-        run: pnpm build
+      # - name: Build the project
+      #   run: pnpm build
 
-      - name: Publish build
-        run: ./.utils/publish.sh
+      # - name: Update build
+      #   run: ./.utils/publish-update.sh
+
+      - name: Set Git user identity
+        run: |
+          git config --global user.email "lilliputten@gmail.com"
+          git config --global user.name "lilliputten"
+
+      - name: Get info
+        run: |
+          cd publish
+          git status
+          find . -type f
+
+      # - name: Publish build
+      #   run: ./.utils/github-publish.sh
+
