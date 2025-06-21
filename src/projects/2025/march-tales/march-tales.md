@@ -30,7 +30,7 @@ tags:
 ---
 
 <!--
-@changed 2025.06.21, 05:21
+@changed 2025.06.21, 09:20
 
 We've finally launched the first public release of our recent project: a mobile application and a web-site for The March Cat Tales.
 
