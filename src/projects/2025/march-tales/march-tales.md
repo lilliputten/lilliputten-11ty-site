@@ -103,9 +103,12 @@ The application has already published on the [Google Play Store](https://play.go
 
 ### Key Features:
 
-- **Audio Playback**: Powered by **Just Audio**, with background service support for notification controls.
+- **Audio Playback**: Powered by **Just Audio**, with background service support for notification controls. It's possible to control the playback from the lockscreen and notifications drawer.
+- **Restoring the playback position**: Each track can be paused at any position and playback can start from the last stop.
 - **Favorites Management**: Local storage or cloud sync via the API server.
+- **Synchronization**: Favorites and playback positions can be synchronized scroll all the user's devices (if they authorized).
 - **Internationalization & Theming**: Multi-language support and basic customization options.
+- **Version control**: For the safety purposes, the application version is always comparing with the expected API version on the server, and in case of an inconsistency there is a warning message displayed to the user.
 
 ## REST API Server
 
