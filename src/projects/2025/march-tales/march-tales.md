@@ -30,7 +30,7 @@ tags:
 ---
 
 <!--
-@changed 2025.04.07, 03:22
+@changed 2025.06.21, 05:21
 
 We've finally launched the first public release of our recent project: a mobile application and a web-site for The March Cat Tales.
 
@@ -42,7 +42,7 @@ We've finally launched the first public release of our recent project: a mobile 
 
 The project goal is to provide the user with a convenient way to listen to fairy tales, legends, and short stories, narrated by the artist, — in one place. (Currently only in Russian.)
 
-{{ macros.imgFigure('./combo-700x340.png', 'Mobile application screens preview.') }}
+{{ macros.imgFigure('./combo-700x340.png', 'Mobile application screens\' previews.') }}
 
 Both the mobile app and the web server are still in MVP status. See TODO section at the end.
 

@@ -75,7 +75,7 @@
       padding: $cellVPadding $cellHPadding;
     }
     th {
-      background-color: color.change($primaryColor, $alpha: 0.85);
+      background-color: color.change($primaryColor, $alpha: 0.75);
       color: #fff;
       font-weight: normal;
       padding-top: $thVPadding;
