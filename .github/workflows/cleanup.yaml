@@ -17,7 +17,7 @@ on:
         default: 1
 
 jobs:
-  delete-old-actions:
+  cleanup:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
