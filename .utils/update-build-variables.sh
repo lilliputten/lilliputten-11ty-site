@@ -6,12 +6,12 @@ scriptsPath=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
 rootPath=`dirname "$scriptsPath"`
 prjPath="$rootPath" # `pwd`
 
-# Import config variables (expected variables `$DIST_REPO` and `$PUBLISH_FOLDER`)...
+# Import config variables...
 test -f "$scriptsPath/config.sh" && . "$scriptsPath/config.sh"
 test -f "$scriptsPath/config-local.sh" && . "$scriptsPath/config-local.sh"
 
 # # Check basic required variables...
-# test -f "$rootPath/config-check.sh" && . "$rootPath/config-check.sh" --omit-publish-folder-check
+# test -f "$scriptsPath/config-check.sh" && . "$scriptsPath/config-check.sh" --omit-publish-folder-check
 
 # Read (and derive) variables from changed files...
 VERSION_PATH="$rootPath/${VERSION_FILE}"

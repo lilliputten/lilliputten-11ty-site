@@ -1,0 +1,55 @@
+# .github/workflows/deploy.yaml
+
+name: Build and publish a bundle
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Checkout the repository with full history
+        uses: actions/checkout@v4
+        with:
+          # token: ${{ secrets.ACCESS_TOKEN }}
+          submodules: recursive
+          # fetch-depth: 0  # fetch all branches, not just default
+
+      # - name: Fetch and checkout other branch
+      #   run: |
+      #     git fetch origin publish
+      #     git checkout publish
+
+      # - name: Set submodule branch and update
+      #   run: |
+      #     git config --file=.gitmodules submodule.publish.branch publish
+      #     git submodule sync
+      #     git submodule update --init --recursive --remote
+      #
+      # - name: Checkout the specific branch in submodule
+      #   run: |
+      #     cd publish
+      #     git checkout -B publish origin/publish
+
+      # Setup pnpm using the official action (version 8)
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      # Setup Node.js with caching for pnpm dependencies
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'
+
+      - name: Install workspaces' dependencies
+        run: pnpm install --frozen-lockfile --config.confirmModulesPurge=false
+
+      - name: Build the project
+        run: pnpm build
+
+      - name: Publish build
+        run: ./.utils/publish.sh

@@ -11,7 +11,7 @@ test -f "$scriptsPath/config.sh" && . "$scriptsPath/config.sh"
 test -f "$scriptsPath/config-local.sh" && . "$scriptsPath/config-local.sh"
 
 # Check basic required variables...
-test -f "$rootPath/config-check.sh" && . "$rootPath/config-check.sh"
+test -f "$scriptsPath/config-check.sh" && . "$scriptsPath/config-check.sh"
 
 VERSION=`cat "$rootPath/$VERSION_FILE"`
 PROJECT_INFO=`cat "$rootPath/$PROJECT_INFO_FILE"`

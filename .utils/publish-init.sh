@@ -10,7 +10,7 @@ prjPath="$rootPath" # `pwd`
 test -f "$scriptsPath/config.sh" && . "$scriptsPath/config.sh"
 
 # Check basic required variables...
-test -f "$rootPath/config-check.sh" && . "$rootPath/config-check.sh" --omit-publish-folder-check
+test -f "$scriptsPath/config-check.sh" && . "$scriptsPath/config-check.sh" --omit-publish-folder-check
 
 # Publish folder should be absent...
 if [ -d "$PUBLISH_FOLDER" ]; then

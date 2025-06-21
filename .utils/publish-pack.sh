@@ -10,7 +10,7 @@ prjPath="$rootPath" # `pwd`
 test -f "$scriptsPath/config.sh" && . "$scriptsPath/config.sh"
 
 # Check basic required variables...
-test -f "$rootPath/config-check.sh" && . "$rootPath/config-check.sh"
+test -f "$scriptsPath/config-check.sh" && . "$scriptsPath/config-check.sh"
 
 PRJNAME=`git remote -v  | sed -rn '1s#.*/(.*)\.git.*#\1#p'`
 

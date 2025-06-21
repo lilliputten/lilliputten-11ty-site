@@ -1,0 +1,4 @@
+[submodule "publish"]
+  path = publish
+  url = git@github.com:lilliputten/lilliputten-11ty-site.git
+  branch = publish

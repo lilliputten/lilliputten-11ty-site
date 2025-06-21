@@ -1,6 +1,6 @@
 #!/bin/sh
 # @desc Push only tags
-# @changed 2024.12.11, 03:44
+# @changed 2025.06.21, 03:15
 
 scriptsPath=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
 rootPath=`dirname "$scriptsPath"`
@@ -10,7 +10,7 @@ prjPath="$rootPath" # `pwd`
 test -f "$scriptsPath/config.sh" && . "$scriptsPath/config.sh"
 
 # Check basic required variables...
-test -f "$rootPath/config-check.sh" && . "$rootPath/config-check.sh"
+test -f "$scriptsPath/config-check.sh" && . "$scriptsPath/config-check.sh"
 
 # Make build if absent
 sh "$scriptsPath/publish-update.sh" || exit 1

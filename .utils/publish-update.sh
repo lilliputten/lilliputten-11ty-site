@@ -1,6 +1,6 @@
 #!/bin/sh
 # @desc Update publish folder (prepare remote update)
-# @changed 2024.12.11, 05:03
+# @changed 2025.06.21, 03:15
 
 scriptsPath=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
 rootPath=`dirname "$scriptsPath"`
@@ -10,10 +10,10 @@ prjPath="$rootPath" # `pwd`
 test -f "$scriptsPath/config.sh" && . "$scriptsPath/config.sh"
 
 # Check basic required variables...
-test -f "$rootPath/config-check.sh" && . "$rootPath/config-check.sh"
+test -f "$scriptsPath/config-check.sh" && . "$scriptsPath/config-check.sh"
 
 # Make build if it's absent
-test -d "$BUILD_FOLDER" || npm run build || exit 1
+test -d "$BUILD_FOLDER" || pnpm run build || exit 1
 
 echo "Updating publish folder '$PUBLISH_FOLDER' from build folder '$BUILD_FOLDER'..."
 

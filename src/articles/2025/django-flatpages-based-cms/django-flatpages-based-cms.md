@@ -42,7 +42,6 @@ So, in general, we can follow the instructions in the [flatpages app](https://do
 
 As an example, I will consider my recent django project, [The March Cat Tales](/projects/2025/march-tales/). See also the project's [repository](https://github.com/lilliputten/march-tales/) and deployed [public site](https://tales.march.team/).
 
-
 ## The result
 
 Finally, you'll have got a neat and user-friendly user interface like this:

@@ -15,7 +15,7 @@ prjPath="$rootPath" # `pwd`
 test -f "$scriptsPath/config.sh" && . "$scriptsPath/config.sh"
 
 # Check basic required variables...
-test -f "$rootPath/config-check.sh" && . "$rootPath/config-check.sh"
+test -f "$scriptsPath/config-check.sh" && . "$scriptsPath/config-check.sh"
 
 if [ -z "$PUBLISH_FOLDER" ]; then
   echo "Publish folder hasn't been specified. See 'PUBLISH_FOLDER' parameter in 'config.sh'"

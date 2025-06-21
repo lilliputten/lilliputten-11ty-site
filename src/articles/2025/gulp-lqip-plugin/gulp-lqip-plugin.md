@@ -46,21 +46,22 @@ I used it in my [TubeCaster Telegram Bot landing](/projects/2025/tubecaster-tele
 ## Basic usage
 
 ```javascript
-gulp.task('lqip', () => gulp
-  .src(['*.html'])
-  .pipe(
-    gulpEmbedLqipAsBackground({
-      rootPath: __dirname,
-      // lazyLoadClass: 'lazy-load',
-      // srcAttr: 'src',
-      // dataSrcAttr: '',
-      // scaleFactorAttr: 'data-scale-factor',
-      // scaleFactor: 10,
-      // validFileExtensions: ['.html', '.htm'],
-    }),
-  )
-  .pipe(gulp.dest('.')));
-
+gulp.task('lqip', () =>
+  gulp
+    .src(['*.html'])
+    .pipe(
+      gulpEmbedLqipAsBackground({
+        rootPath: __dirname,
+        // lazyLoadClass: 'lazy-load',
+        // srcAttr: 'src',
+        // dataSrcAttr: '',
+        // scaleFactorAttr: 'data-scale-factor',
+        // scaleFactor: 10,
+        // validFileExtensions: ['.html', '.htm'],
+      }),
+    )
+    .pipe(gulp.dest('.')),
+);
 ```
 
 All the commented parameters are optional. See [API reference](https://github.com/lilliputten/gulp-embed-lqip-as-background#api)
@@ -70,11 +71,7 @@ See the example: [source code](https://github.com/lilliputten/gulp-embed-lqip-as
 For example, the above command will process the images with `lazy-load` class, like this:
 
 ```html
-<img
-  src="img/csb.jpg"
-  class="img-fluid lazy-load figure"
-  data-scale-factor="5"
-/>
+<img src="img/csb.jpg" class="img-fluid lazy-load figure" data-scale-factor="5" />
 ```
 
 -- to the code like this:
@@ -106,17 +103,19 @@ In case if you specify the `dataSrcAttr` options parameter (eg, with `data-src`)
 But this approach required extra js code & styles, see those in the example: [source code](https://github.com/lilliputten/gulp-embed-lqip-as-background/blob/HEAD/test/demo-data-src-test.html) or [demo html](https://html-preview.github.io/?url=https://github.com/lilliputten/gulp-embed-lqip-as-background/blob/HEAD/test/demo-data-src-test.html).
 
 ```javascript
-gulp.task('lqip', () => gulp
-  .src(['*.html'])
-  .pipe(
-    gulpEmbedLqipAsBackground({
-      rootPath: __dirname,
-      dataSrcAttr: 'data-src',
-    }),
-  )
-  .pipe(gulp.dest('.')));
-
+gulp.task('lqip', () =>
+  gulp
+    .src(['*.html'])
+    .pipe(
+      gulpEmbedLqipAsBackground({
+        rootPath: __dirname,
+        dataSrcAttr: 'data-src',
+      }),
+    )
+    .pipe(gulp.dest('.')),
+);
 ```
+
 ## See also
 
 - The brief [installation](https://github.com/lilliputten/gulp-embed-lqip-as-background#install) and [usage](https://github.com/lilliputten/gulp-embed-lqip-as-background#usage) manuals.

@@ -38,7 +38,7 @@ We've finally launched the first public release of our recent project: a mobile 
 
 {% import "macros.njk" as macros with context %}
 
-[**Team Tree App**](https://team-tree-app.vercel.app) is a  small fullstack Next.js Vercel-hosted application aimed for editing hierarchical data with a nice pack of basic features, could serve as a starting point for a following Next.js project.
+[**Team Tree App**](https://team-tree-app.vercel.app) is a small fullstack Next.js Vercel-hosted application aimed for editing hierarchical data with a nice pack of basic features, could serve as a starting point for a following Next.js project.
 
 At the moment, the data model is limited to working with only one string field, but it can be easily expanded.
 
