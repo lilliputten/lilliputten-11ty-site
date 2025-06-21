@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # @desc Update publish folder (prepare remote update)
 # @changed 2025.06.21, 03:15
 

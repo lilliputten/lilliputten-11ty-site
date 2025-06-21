@@ -15,7 +15,6 @@ jobs:
       - name: Checkout the repository with full history
         uses: actions/checkout@v4
         with:
-          # token: ${{ secrets.ACCESS_TOKEN }}
           submodules: recursive
           fetch-depth: 0  # fetch all branches, not just default
 
@@ -25,28 +24,6 @@ jobs:
           git fetch origin
           git checkout publish
           git pull origin publish
-
-      # - name: Configure submodule to track 'publish' branch and update
-      #   run: |
-      #     git config -f .gitmodules submodule.publish.branch publish
-      #     git submodule sync
-      #     git submodule update --remote publish
-
-      # - name: Fetch and checkout other branch
-      #   run: |
-      #     git fetch origin publish
-      #     git checkout publish
-
-      # - name: Set submodule branch and update
-      #   run: |
-      #     git config --file=.gitmodules submodule.publish.branch publish
-      #     git submodule sync
-      #     git submodule update --init --recursive --remote
-      #
-      # - name: Checkout the specific branch in submodule
-      #   run: |
-      #     cd publish
-      #     git checkout -B publish origin/publish
 
       - name: Set Git user identity
         run: |
@@ -58,13 +35,13 @@ jobs:
           cd publish
           git status
 
-      # Setup pnpm using the official action (version 8)
-      - uses: pnpm/action-setup@v4
+      - name: Setup pnpm using the official action
+        uses: pnpm/action-setup@v4
         with:
           version: 10
 
-      # Setup Node.js with caching for pnpm dependencies
-      - uses: actions/setup-node@v4
+      - name: Setup Node.js with caching for pnpm dependencies
+        uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'pnpm'
@@ -72,14 +49,11 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile --config.confirmModulesPurge=false
 
-      # - name: Build the project
-      #   run: pnpm build
+      - name: Build the project
+        run: pnpm build
 
-      # - name: Update build
-      #   run: ./.utils/publish-update.sh
-
-      - name: Emulate build changes
-        run: cp -vf .deploy.stamp publish/
+      - name: Update build
+        run: ./.utils/publish-update.sh
 
       - name: Publish build
         run: ./.utils/github-publish.sh
