@@ -13,7 +13,7 @@ test -f "$scriptsPath/config.sh" && . "$scriptsPath/config.sh"
 test -f "$scriptsPath/config-check.sh" && . "$scriptsPath/config-check.sh"
 
 # Make build if absent
-sh "$scriptsPath/publish-update.sh" || exit 1
+# sh "$scriptsPath/publish-update.sh" || exit 1
 
 VERSION=`cat "$rootPath/$VERSION_FILE"`
 PROJECT_INFO=`cat "$rootPath/$PROJECT_INFO_FILE"`
