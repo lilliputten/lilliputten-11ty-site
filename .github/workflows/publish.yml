@@ -78,6 +78,9 @@ jobs:
       # - name: Update build
       #   run: ./.utils/publish-update.sh
 
+      - name: Emulate build changes
+        run: cp -vf .deploy.stamp publish/
+
       - name: Publish build
         run: ./.utils/github-publish.sh
 
