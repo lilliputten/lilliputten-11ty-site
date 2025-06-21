@@ -117,32 +117,29 @@
           target="_blank" rel="noopener">gulp-html-prettify</a> plugin).</li>
       </ul>
       <p>I used it in my <a href="/projects/2025/tubecaster-telegram-bot/">TubeCaster Telegram Bot landing</a>, get the real-life example there.</p>
-      <h2 id="basic-usage" tabindex="-1">Basic usage <a class="header-anchor" href="#basic-usage"><i class="bi bi-link-45deg"></i></a></h2><pre class="language-javascript"><code class="language-javascript">gulp<span class="token punctuation">.</span><span class="token function">task</span><span class="token punctuation">(</span><span class="token string">'lqip'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> gulp
-  <span class="token punctuation">.</span><span class="token function">src</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'*.html'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-  <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span>
-    <span class="token function">gulpEmbedLqipAsBackground</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-      <span class="token literal-property property">rootPath</span><span class="token operator">:</span> __dirname<span class="token punctuation">,</span>
-      <span class="token comment">// lazyLoadClass: 'lazy-load',</span>
-      <span class="token comment">// srcAttr: 'src',</span>
-      <span class="token comment">// dataSrcAttr: '',</span>
-      <span class="token comment">// scaleFactorAttr: 'data-scale-factor',</span>
-      <span class="token comment">// scaleFactor: 10,</span>
-      <span class="token comment">// validFileExtensions: ['.html', '.htm'],</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-  <span class="token punctuation">)</span>
-  <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span>gulp<span class="token punctuation">.</span><span class="token function">dest</span><span class="token punctuation">(</span><span class="token string">'.'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+      <h2 id="basic-usage" tabindex="-1">Basic usage <a class="header-anchor" href="#basic-usage"><i class="bi bi-link-45deg"></i></a></h2><pre class="language-javascript"><code class="language-javascript">gulp<span class="token punctuation">.</span><span class="token function">task</span><span class="token punctuation">(</span><span class="token string">'lqip'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span>
+  gulp
+    <span class="token punctuation">.</span><span class="token function">src</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'*.html'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span>
+      <span class="token function">gulpEmbedLqipAsBackground</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        <span class="token literal-property property">rootPath</span><span class="token operator">:</span> __dirname<span class="token punctuation">,</span>
+        <span class="token comment">// lazyLoadClass: 'lazy-load',</span>
+        <span class="token comment">// srcAttr: 'src',</span>
+        <span class="token comment">// dataSrcAttr: '',</span>
+        <span class="token comment">// scaleFactorAttr: 'data-scale-factor',</span>
+        <span class="token comment">// scaleFactor: 10,</span>
+        <span class="token comment">// validFileExtensions: ['.html', '.htm'],</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span>gulp<span class="token punctuation">.</span><span class="token function">dest</span><span class="token punctuation">(</span><span class="token string">'.'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
       <p>All the commented parameters are optional. See <a href="https://github.com/lilliputten/gulp-embed-lqip-as-background#api" c="l" class="external" title="External link: https://github.com/lilliputten/gulp-embed-lqip-as-background#api" target="_blank"
         rel="noopener">API reference</a>
       </p>
       <p>See the example: <a href="https://github.com/lilliputten/gulp-embed-lqip-as-background/blob/HEAD/test/test.html" c="l" class="external" title="External link: https://github.com/lilliputten/gulp-embed-lqip-as-background/blob/HEAD/test/test.html" target="_blank"
         rel="noopener">source code</a> or <a href="https://html-preview.github.io/?url=https://github.com/lilliputten/gulp-embed-lqip-as-background/blob/HEAD/test/test.html" c="l" class="external" title="External link: https://html-preview.github.io/?url=https://github.com/lilliputten/gulp-embed-lqip-as-background/blob/HEAD/test/test.html"
         target="_blank" rel="noopener">demo html</a>.</p>
-      <p>For example, the above command will process the images with <code>lazy-load</code> class, like this:</p><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span>
-  <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>img/csb.jpg<span class="token punctuation">"</span></span>
-  <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>img-fluid lazy-load figure<span class="token punctuation">"</span></span>
-  <span class="token attr-name">data-scale-factor</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>5<span class="token punctuation">"</span></span>
-<span class="token punctuation">/&gt;</span></span></code></pre>
+      <p>For example, the above command will process the images with <code>lazy-load</code> class, like this:</p><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>img/csb.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>img-fluid lazy-load figure<span class="token punctuation">"</span></span> <span class="token attr-name">data-scale-factor</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>5<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span></code></pre>
       <p>– to the code like this:</p><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span>
   <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>img/csb.jpg<span class="token punctuation">"</span></span>
   <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>img-fluid lazy-load figure<span class="token punctuation">"</span></span>
@@ -163,16 +160,17 @@
       <p>In case if you specify the <code>dataSrcAttr</code> options parameter (eg, with <code>data-src</code>), then it’ll behave in original way: by storing the downscaled preview in the specified attribute instead of <code>style:background</code> object.</p>
       <p>But this approach required extra js code &amp; styles, see those in the example: <a href="https://github.com/lilliputten/gulp-embed-lqip-as-background/blob/HEAD/test/demo-data-src-test.html" c="l" class="external" title="External link: https://github.com/lilliputten/gulp-embed-lqip-as-background/blob/HEAD/test/demo-data-src-test.html"
         target="_blank" rel="noopener">source code</a> or <a href="https://html-preview.github.io/?url=https://github.com/lilliputten/gulp-embed-lqip-as-background/blob/HEAD/test/demo-data-src-test.html" c="l" class="external" title="External link: https://html-preview.github.io/?url=https://github.com/lilliputten/gulp-embed-lqip-as-background/blob/HEAD/test/demo-data-src-test.html"
-        target="_blank" rel="noopener">demo html</a>.</p><pre class="language-javascript"><code class="language-javascript">gulp<span class="token punctuation">.</span><span class="token function">task</span><span class="token punctuation">(</span><span class="token string">'lqip'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> gulp
-  <span class="token punctuation">.</span><span class="token function">src</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'*.html'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-  <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span>
-    <span class="token function">gulpEmbedLqipAsBackground</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-      <span class="token literal-property property">rootPath</span><span class="token operator">:</span> __dirname<span class="token punctuation">,</span>
-      <span class="token literal-property property">dataSrcAttr</span><span class="token operator">:</span> <span class="token string">'data-src'</span><span class="token punctuation">,</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-  <span class="token punctuation">)</span>
-  <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span>gulp<span class="token punctuation">.</span><span class="token function">dest</span><span class="token punctuation">(</span><span class="token string">'.'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+        target="_blank" rel="noopener">demo html</a>.</p><pre class="language-javascript"><code class="language-javascript">gulp<span class="token punctuation">.</span><span class="token function">task</span><span class="token punctuation">(</span><span class="token string">'lqip'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span>
+  gulp
+    <span class="token punctuation">.</span><span class="token function">src</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'*.html'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span>
+      <span class="token function">gulpEmbedLqipAsBackground</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        <span class="token literal-property property">rootPath</span><span class="token operator">:</span> __dirname<span class="token punctuation">,</span>
+        <span class="token literal-property property">dataSrcAttr</span><span class="token operator">:</span> <span class="token string">'data-src'</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span>gulp<span class="token punctuation">.</span><span class="token function">dest</span><span class="token punctuation">(</span><span class="token string">'.'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
       <h2 id="see-also" tabindex="-1">See also <a class="header-anchor" href="#see-also"><i class="bi bi-link-45deg"></i></a></h2>
       <ul>
         <li>The brief <a href="https://github.com/lilliputten/gulp-embed-lqip-as-background#install" c="l" class="external" title="External link: https://github.com/lilliputten/gulp-embed-lqip-as-background#install" target="_blank" rel="noopener">installation</a> and
