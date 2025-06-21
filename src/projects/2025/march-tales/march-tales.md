@@ -6,7 +6,7 @@ eleventyNavigation:
   key: march-tales
   title: The March Cat Tales. Mobile Application, Web Interface, REST API Server
   parent: projects-2025
-date: 2025-03-26
+date: 2025-06-19
 showNavigationBreadcrumbs: true
 tags:
   - projects
