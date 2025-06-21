@@ -80,9 +80,7 @@ The public web site is available at: [https://tales.march.team/](https://tales.m
 
 The **Flutter-based mobile app** is the main component of the project, and offers an immersive listening experience with robust audio controls.
 
-The application is on the 'closed testing' stage in the Google Play Store.
-
-The application has already published on the [Google Play Store](https://play.google.com/store/apps/details?id=team.march.march_tales_app).
+The application has been already published on the [Google Play Store](https://play.google.com/store/apps/details?id=team.march.march_tales_app).
 
 ### Mobile Application Screenshots
 
@@ -114,7 +112,7 @@ The application has already published on the [Google Play Store](https://play.go
 
 ## REST API Server
 
-The API server, also built with **Django** and it's **djangorestframework** and **django-registration**, provides endpoints for both the web interface and mobile application. It handles user authentication, data synchronization, and audio metadata management.
+The API server, also built with **Django** and it's **djangorestframework**, **django-registration**, and other plugins, provides endpoints for both the web interface and mobile application. It handles database requests, user authentication, data synchronization, audio metadata management and media files hosting.
 
 ### Account Control Screenshots
 
@@ -128,8 +126,10 @@ The API server, also built with **Django** and it's **djangorestframework** and 
 ### Key Features:
 
 - **User Authorization**: Secure authentication for syncing favorites across devices.
+- **Data server**: serves all the essential application data.
 - **RESTful Endpoints**: Efficient data exchange between clients and server.
 - **Audio Processing**: Leverages **FFmpeg** and **FFprobe** for track metadata extraction and quality assurance.
+- **Administration panel**: provides all the administration tools to manage data and maintenance.
 
 See also: Notes about [Django FlatPages integration](/articles/2025/django-flatpages-based-cms/) on the project.
 
@@ -147,10 +147,11 @@ See also: Notes about [Django FlatPages integration](/articles/2025/django-flatp
 
 Both the website and the mobile device have relatively identical audio player behavior:
 
-- The hideable floating player on the bottom of the page.
+- The hideable pinned player at the bottom of the page.
 - Both the website and the mobile application remembers the playback position of each track so that playback can be resumed at any time.
 - Playback positions are stored locally or on the server if the user is logged in.
 - It supports endless playback when tracks are played one after the other. (Since the application is still in MVP status, it uses fairly simple logic to determine the next track to play.)
+- Infinite playback support.
 
 {#
 
@@ -183,13 +184,13 @@ Both the website and the mobile device have relatively identical audio player be
 | **Authorization**        | django-allauth and django-registration                                                                        |
 | **Databses**             | MySQL on the server-side (through Django ORM), sqlite on the dev-server and to store mobile application data. |
 
-## Why This Project Stands Out
+## Project summary
 
 [**The March Cat Tales**](https://tales.march.team/) demonstrates full-stack expertise, blending Django’s robust backend capabilities with Flutter’s cross-platform flexibility. By separating concerns between the web interface, API server, and mobile app, the project ensures scalability and a cohesive user experience across devices. Whether accessed via browser or mobile, the platform delivers an enchanting storytelling journey with modern tech under the hood.
 
 ## TODO
 
-At the moment, the project is at the MVP stage. So now we have a lot of tasks for further development.
+At the moment, the project is at the MVP stage. So now we have a lot of tasks for further development, like monetization, more advanced user cabinets, E-mail and push notifications, etc. And we will be grateful for any suggestions and feedback.
 
 ## Resources
 
