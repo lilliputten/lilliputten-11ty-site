@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # @desc Update version number & build timestamps
 # @changed 2025.06.08, 03:23
 

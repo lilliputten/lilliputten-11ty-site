@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # @desc Push only tags
 # @changed 2025.06.21, 03:15
 

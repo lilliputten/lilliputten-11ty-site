@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # @desc Increment version number
 # @changed 2024.12.02, 12:54
 

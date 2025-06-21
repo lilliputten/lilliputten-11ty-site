@@ -1,5 +1,6 @@
 #!/bin/bash
 # @desc Update publish folder (prepare remote update)
+# NOTE: Uses `bash` shbang string due to bash-specific `compgen` command
 # @changed 2025.06.21, 03:15
 
 scriptsPath=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")

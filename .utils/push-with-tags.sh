@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # @desc Create/update version tag (from build folder)
 # @changed 2024.12.11, 03:49
 

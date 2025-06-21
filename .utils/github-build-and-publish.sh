@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # @desc Publish (and make if absent) publish build
 # @changed 2025.06.21, 03:34
 

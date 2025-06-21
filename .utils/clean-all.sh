@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # @desc Clean all temp files
 # @changed 2025.06.08, 03:19
 

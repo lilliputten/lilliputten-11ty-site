@@ -10,7 +10,7 @@ on:
       daysAgo:
         description: Delete actions older than this many days
         required: false
-        default: 0
+        default: 1
       keepLatest:
         description: Number of latest actions to keep
         required: false

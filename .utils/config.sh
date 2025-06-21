@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # vim: ft=sh
 # @desc Config variables (common version -- stored in repository)
 # @changed 2025.06.21, 03:15

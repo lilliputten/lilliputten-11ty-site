@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # @desc Check basic required variables
 # @changed 2025.06.21, 03:15
 

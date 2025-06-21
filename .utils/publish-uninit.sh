@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # @desc Initialize publish syncing repository
 # @changed 2024.12.11, 02:49
 

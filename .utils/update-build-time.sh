@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # @desc Update build date/time tag file with current timestamp
 # @changed 2024.11.20, 05:22
 # NOTE: This script updates only .txt files not properties in `package.json`.

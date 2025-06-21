@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # @desc Pack publish folder
 # @changed 2025.05.12, 20:55
 
