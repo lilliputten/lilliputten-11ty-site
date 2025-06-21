@@ -96,7 +96,7 @@
           <h1 class="ArticleTitle">The March Cat Tales. Mobile Application, Web Interface, REST API Server</h1>
           <div class="ArticleMeta">
             <time class="metaItem articleDatetime" datetime="2025-03-26T00:00:00.000Z" title="Document date"><span>Date:</span> March 26, 2025</time>
-            <div class="metaItem articleMinutesToRead" title="With an average speed of 200 words per minute"><span>Time to read:</span> 5 min</div>
+            <div class="metaItem articleMinutesToRead" title="With an average speed of 200 words per minute"><span>Time to read:</span> 6 min</div>
           </div>
         </div>
       </div>
@@ -157,8 +157,7 @@
       </ul>
       <h2 id="mobile-application" tabindex="-1">Mobile Application <a class="header-anchor" href="#mobile-application"><i class="bi bi-link-45deg"></i></a></h2>
       <p>The <strong>Flutter-based mobile app</strong> is the main component of the project, and offers an immersive listening experience with robust audio controls.</p>
-      <p>The application is on the ‘closed testing’ stage in the Google Play Store.</p>
-      <p>The application has already published on the <a href="https://play.google.com/store/apps/details?id=team.march.march_tales_app" c="l" class="external" title="External link: https://play.google.com/store/apps/details?id=team.march.march_tales_app"
+      <p>The application has been already published on the <a href="https://play.google.com/store/apps/details?id=team.march.march_tales_app" c="l" class="external" title="External link: https://play.google.com/store/apps/details?id=team.march.march_tales_app"
         target="_blank" rel="noopener">Google Play Store</a>.</p>
       <h3 id="mobile-application-screenshots" tabindex="-1">Mobile Application Screenshots <a class="header-anchor" href="#mobile-application-screenshots"><i class="bi bi-link-45deg"></i></a></h3>
       <div class="slick-carousel shots-slider full-width" data-carousel-type="phoneScreenshotsWide" id="">
@@ -215,14 +214,16 @@
       <ul>
         <li><strong>Audio Playback</strong>: Powered by <strong>Just Audio</strong>, with background service support for notification controls. It’s possible to control the playback from the lockscreen and notifications drawer.</li>
         <li><strong>Restoring the playback position</strong>: Each track can be paused at any position and playback can start from the last stop.</li>
+        <li><strong>Endless playback</strong> allows to listen to all the available tracks infinitely.</li>
+        <li><strong>Pinned hideable player</strong> at the bottom of the screen.</li>
         <li><strong>Favorites Management</strong>: Local storage or cloud sync via the API server.</li>
-        <li><strong>Synchronization</strong>: Favorites and playback positions can be synchronized scroll all the user’s devices (if they authorized).</li>
+        <li><strong>Synchronization</strong>: Favorites and playback positions can be synchronized across all the user’s devices and browsers (if authorized).</li>
         <li><strong>Internationalization &amp; Theming</strong>: Multi-language support and basic customization options.</li>
-        <li><strong>Version control</strong>: For the safety purposes, the application version is always comparing with the expected API version on the server, and in case of an inconsistency there is a warning message displayed to the user.</li>
+        <li><strong>API/app version control</strong>: For the safety purposes, the application version is always comparing with the expected API version on the server, and in case of an inconsistency there is a warning message displayed to the user.</li>
       </ul>
       <h2 id="rest-api-server" tabindex="-1">REST API Server <a class="header-anchor" href="#rest-api-server"><i class="bi bi-link-45deg"></i></a></h2>
-      <p>The API server, also built with <strong>Django</strong> and it’s <strong>djangorestframework</strong> and <strong>django-registration</strong>, provides endpoints for both the web interface and mobile application. It handles user authentication, data
-        synchronization, and audio metadata management.</p>
+      <p>The API server, also built with <strong>Django</strong> and it’s <strong>djangorestframework</strong>, <strong>django-registration</strong>, and other plugins, provides endpoints for both the web interface and mobile application. It handles database
+        requests, user authentication, data synchronization, audio metadata management and media files hosting.</p>
       <h3 id="account-control-screenshots" tabindex="-1">Account Control Screenshots <a class="header-anchor" href="#account-control-screenshots"><i class="bi bi-link-45deg"></i></a></h3>
       <div class="slick-carousel shots-slider full-width" data-carousel-type="browserScreenshotsWide" id="">
         <figure class="" title="Successfully logged in.">
@@ -245,8 +246,10 @@
       <h3 id="key-features-2" tabindex="-1">Key Features: <a class="header-anchor" href="#key-features-2"><i class="bi bi-link-45deg"></i></a></h3>
       <ul>
         <li><strong>User Authorization</strong>: Secure authentication for syncing favorites across devices.</li>
+        <li><strong>Data server</strong>: serves all the essential application data.</li>
         <li><strong>RESTful Endpoints</strong>: Efficient data exchange between clients and server.</li>
         <li><strong>Audio Processing</strong>: Leverages <strong>FFmpeg</strong> and <strong>FFprobe</strong> for track metadata extraction and quality assurance.</li>
+        <li><strong>Administration panel</strong>: provides all the administration tools to manage data and maintenance.</li>
       </ul>
       <p>See also: Notes about <a href="/articles/2025/django-flatpages-based-cms/">Django FlatPages integration</a> on the project.</p>
       <h3 id="administrative-panel-screenshots" tabindex="-1">Administrative Panel Screenshots <a class="header-anchor" href="#administrative-panel-screenshots"><i class="bi bi-link-45deg"></i></a></h3>
@@ -275,10 +278,11 @@
       <h2 id="audio-playback" tabindex="-1">Audio Playback <a class="header-anchor" href="#audio-playback"><i class="bi bi-link-45deg"></i></a></h2>
       <p>Both the website and the mobile device have relatively identical audio player behavior:</p>
       <ul>
-        <li>The hideable floating player on the bottom of the page.</li>
+        <li>The hideable pinned player at the bottom of the page.</li>
         <li>Both the website and the mobile application remembers the playback position of each track so that playback can be resumed at any time.</li>
         <li>Playback positions are stored locally or on the server if the user is logged in.</li>
         <li>It supports endless playback when tracks are played one after the other. (Since the application is still in MVP status, it uses fairly simple logic to determine the next track to play.)</li>
+        <li>Infinite playback support.</li>
       </ul>
       <h2 id="seamless-cross-device-experience" tabindex="-1">Seamless Cross-Device Experience <a class="header-anchor" href="#seamless-cross-device-experience"><i class="bi bi-link-45deg"></i></a></h2>
       <ul>
@@ -331,61 +335,63 @@
           </tr>
         </tbody>
       </table>
-      <h2 id="why-this-project-stands-out" tabindex="-1">Why This Project Stands Out <a class="header-anchor" href="#why-this-project-stands-out"><i class="bi bi-link-45deg"></i></a></h2>
+      <h2 id="project-summary" tabindex="-1">Project summary <a class="header-anchor" href="#project-summary"><i class="bi bi-link-45deg"></i></a></h2>
       <p><a href="https://tales.march.team/" c="l" class="external" title="External link: https://tales.march.team/" target="_blank" rel="noopener"><strong>The March Cat Tales</strong></a> demonstrates full-stack expertise, blending Django’s robust backend
         capabilities with Flutter’s cross-platform flexibility. By separating concerns between the web interface, API server, and mobile app, the project ensures scalability and a cohesive user experience across devices. Whether accessed via browser or
         mobile, the platform delivers an enchanting storytelling journey with modern tech under the hood.</p>
       <h2 id="todo" tabindex="-1">TODO <a class="header-anchor" href="#todo"><i class="bi bi-link-45deg"></i></a></h2>
-      <p>At the moment, the project is at the MVP stage. So now we have a lot of tasks for further development.</p>
-      <h2 id="resources" tabindex="-1">Resources <a class="header-anchor" href="#resources"><i class="bi bi-link-45deg"></i></a></h2>
-      <p>Web site: <a href="https://tales.march.team/" c="l" class="external" title="External link: https://tales.march.team/" target="_blank" rel="noopener">https://tales.march.team/</a>
-      </p>
-      <p>Web-site and server source code repository: <a href="https://github.com/lilliputten/march-tales" c="l" class="external" title="External link: https://github.com/lilliputten/march-tales" target="_blank" rel="noopener">https://github.com/lilliputten/march-tales</a>
-      </p>
-      <p>Flutter mobile application source code repository: <a href="https://github.com/lilliputten/march-tales-flutter-app" c="l" class="external" title="External link: https://github.com/lilliputten/march-tales-flutter-app" target="_blank" rel="noopener">https://github.com/lilliputten/march-tales-flutter-app</a>
-      </p>
-      <div class="ArticleFooter">
-        <ul class="ArticleTags tags">
-          <li class="tagsTitle">Tags:</li>
-          <li class="tagsItem"><a class="linkAsText" href="/tags/projects/">projects</a>
-          </li>
-          <li class="tagsItem"><a class="linkAsText" href="/tags/2025/">2025</a>
-          </li>
-          <li class="tagsItem"><a class="linkAsText" href="/tags/flutter/">flutter</a>
-          </li>
-          <li class="tagsItem"><a class="linkAsText" href="/tags/mobile/">mobile</a>
-          </li>
-          <li class="tagsItem"><a class="linkAsText" href="/tags/application/">application</a>
-          </li>
-          <li class="tagsItem"><a class="linkAsText" href="/tags/python/">python</a>
-          </li>
-          <li class="tagsItem"><a class="linkAsText" href="/tags/django/">django</a>
-          </li>
-          <li class="tagsItem"><a class="linkAsText" href="/tags/web/">web</a>
-          </li>
-          <li class="tagsItem"><a class="linkAsText" href="/tags/site/">site</a>
-          </li>
-          <li class="tagsItem"><a class="linkAsText" href="/tags/audio/">audio</a>
-          </li>
-          <li class="tagsItem"><a class="linkAsText" href="/tags/ffmpeg/">ffmpeg</a>
-          </li>
-          <li class="tagsItem"><a class="linkAsText" href="/tags/ffprobe/">ffprobe</a>
-          </li>
-          <li class="tagsItem"><a class="linkAsText" href="/tags/i18n/">i18n</a>
-          </li>
-          <li class="tagsItem"><a class="linkAsText" href="/tags/rest/">rest</a>
-          </li>
-          <li class="tagsItem"><a class="linkAsText" href="/tags/authorization/">authorization</a>
-          </li>
-          <li class="tagsItem"><a class="linkAsText" href="/tags/mysql/">mysql</a>
-          </li>
-          <li class="tagsItem"><a class="linkAsText" href="/tags/webpack/">webpack</a>
-          </li>
-          <li class="tagsItem"><a class="linkAsText" href="/tags/sqlite/">sqlite</a>
-          </li>
-        </ul>
-        <div class="ArticleNav"></div>
-      </div>
+      <p>At the moment, the project is at the MVP stage. So now we have a lot of tasks for further development, like monetization, more advanced user cabinets, E-mail and push notifications, etc. And we will be grateful for any suggestions and feedback.</p>
+      <h2
+      id="resources" tabindex="-1">Resources <a class="header-anchor" href="#resources"><i class="bi bi-link-45deg"></i></a>
+        </h2>
+        <p>Web site: <a href="https://tales.march.team/" c="l" class="external" title="External link: https://tales.march.team/" target="_blank" rel="noopener">https://tales.march.team/</a>
+        </p>
+        <p>Web-site and server source code repository: <a href="https://github.com/lilliputten/march-tales" c="l" class="external" title="External link: https://github.com/lilliputten/march-tales" target="_blank" rel="noopener">https://github.com/lilliputten/march-tales</a>
+        </p>
+        <p>Flutter mobile application source code repository: <a href="https://github.com/lilliputten/march-tales-flutter-app" c="l" class="external" title="External link: https://github.com/lilliputten/march-tales-flutter-app" target="_blank" rel="noopener">https://github.com/lilliputten/march-tales-flutter-app</a>
+        </p>
+        <div class="ArticleFooter">
+          <ul class="ArticleTags tags">
+            <li class="tagsTitle">Tags:</li>
+            <li class="tagsItem"><a class="linkAsText" href="/tags/projects/">projects</a>
+            </li>
+            <li class="tagsItem"><a class="linkAsText" href="/tags/2025/">2025</a>
+            </li>
+            <li class="tagsItem"><a class="linkAsText" href="/tags/flutter/">flutter</a>
+            </li>
+            <li class="tagsItem"><a class="linkAsText" href="/tags/mobile/">mobile</a>
+            </li>
+            <li class="tagsItem"><a class="linkAsText" href="/tags/application/">application</a>
+            </li>
+            <li class="tagsItem"><a class="linkAsText" href="/tags/python/">python</a>
+            </li>
+            <li class="tagsItem"><a class="linkAsText" href="/tags/django/">django</a>
+            </li>
+            <li class="tagsItem"><a class="linkAsText" href="/tags/web/">web</a>
+            </li>
+            <li class="tagsItem"><a class="linkAsText" href="/tags/site/">site</a>
+            </li>
+            <li class="tagsItem"><a class="linkAsText" href="/tags/audio/">audio</a>
+            </li>
+            <li class="tagsItem"><a class="linkAsText" href="/tags/ffmpeg/">ffmpeg</a>
+            </li>
+            <li class="tagsItem"><a class="linkAsText" href="/tags/ffprobe/">ffprobe</a>
+            </li>
+            <li class="tagsItem"><a class="linkAsText" href="/tags/i18n/">i18n</a>
+            </li>
+            <li class="tagsItem"><a class="linkAsText" href="/tags/rest/">rest</a>
+            </li>
+            <li class="tagsItem"><a class="linkAsText" href="/tags/authorization/">authorization</a>
+            </li>
+            <li class="tagsItem"><a class="linkAsText" href="/tags/mysql/">mysql</a>
+            </li>
+            <li class="tagsItem"><a class="linkAsText" href="/tags/webpack/">webpack</a>
+            </li>
+            <li class="tagsItem"><a class="linkAsText" href="/tags/sqlite/">sqlite</a>
+            </li>
+          </ul>
+          <div class="ArticleNav"></div>
+        </div>
     </article>
   </main>
   <footer class="PageFooter">
