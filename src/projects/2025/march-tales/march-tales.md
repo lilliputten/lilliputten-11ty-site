@@ -17,7 +17,7 @@ tags:
   - python
   - django
   - web
-  - site
+  - website
   - audio
   - ffmpeg
   - ffprobe

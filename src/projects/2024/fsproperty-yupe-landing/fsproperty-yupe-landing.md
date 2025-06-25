@@ -15,7 +15,7 @@ tags:
   - cms
   - yupe
   - design
-  - site
+  - website
   - coding
   - landing
   - typescript

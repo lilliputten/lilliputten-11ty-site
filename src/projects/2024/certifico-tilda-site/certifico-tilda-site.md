@@ -15,7 +15,7 @@ tags:
   - cms
   - tilda
   - design
-  - site
+  - website
   - coding
   - typescript
   - scss
