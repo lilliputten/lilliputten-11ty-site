@@ -5,6 +5,8 @@ name: Build and publish a bundle
 on:
   push:
     branches: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
   publish:
@@ -30,11 +32,6 @@ jobs:
           git config --global user.email "lilliputten@gmail.com"
           git config --global user.name "lilliputten"
 
-      - name: Get info
-        run: |
-          cd publish
-          git status
-
       - name: Setup pnpm using the official action
         uses: pnpm/action-setup@v4
         with:
@@ -44,7 +41,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'pnpm'
+          cache: pnpm
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile --config.confirmModulesPurge=false
