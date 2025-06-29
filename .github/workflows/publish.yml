@@ -1,12 +1,13 @@
 # .github/workflows/publish.yaml
 
-name: Build and publish a bundle
+name: Build and Publish a Bundle
 
 on:
   push:
     branches: [main]
   pull_request:
     branches: [main]
+  workflow_dispatch:
 
 jobs:
   publish:
