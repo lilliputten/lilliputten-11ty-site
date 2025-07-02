@@ -182,6 +182,9 @@
         @media (width <= $screenMdMin) {
           white-space: nowrap;
         }
+        @media (width <= $screenSmMin) {
+          display: none;
+        }
       }
       p {
         display: -webkit-box;
