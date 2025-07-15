@@ -5,7 +5,7 @@ title: Projects
 eleventyNavigation:
   key: projects
   title: Projects
-date: 2025-05-08
+date: 2025-07-15
 hideMeta: true
 tag: false
 tags:
@@ -15,7 +15,7 @@ showHero: true
 ---
 
 <!--
-@changed 2025.05.17, 21:22
+@changed 2025.07.15, 18:59
 -->
 
 {% import "macros.njk" as macros with context %}
@@ -25,6 +25,8 @@ Currently I'm working as a freelancer on upwork and kwork, and with my old clien
 Below are a few ongoing or finished projects.
 
 ## Recent projects
+
+{{ macros.ArticleThumb('./2025/action-excel-vlookup-emulator/', 'Excel VLOOKUP Function Trainer Application', 'A step-by-step simulator for practicing actions for comparing and searching for missing values in different columns of Excel tables.') }}
 
 {{ macros.ArticleThumb('./2025/team-tree-app/', 'Team Tree App', 'A small fullstack Next.js Vercel-hosted application aimed for editing hierarchical data with a nice pack of basic features, could serve as a starting point for a following Next.js project.') }}
 

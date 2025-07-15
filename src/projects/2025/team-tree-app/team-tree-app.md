@@ -42,9 +42,7 @@ We've finally launched the first public release of our recent project: a mobile 
 
 At the moment, the data model is limited to working with only one string field, but it can be easily expanded.
 
-And, of course, as it's not a production project, there are still a lot of placeholders (I'll fix them if the app continues to evolve).
-
-The application was created by order of my friends, who needed quick access to hierarchical data in their work.
+The application was created by order of my friends, who needed quick access to hierarchical data in their work process.
 
 ### Key Features:
 
