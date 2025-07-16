@@ -53,5 +53,5 @@ The application is a step-by-step simulator for practicing actions for comparing
 
 ## Links
 
-- Vercel deployed app: https://action-excel-vlookup-emulator.vercel.app/?en
-- Repository: https://github.com/lilliputten/action-excel-vlookup-emulator/
+- [Vercel deployed app](https://action-excel-vlookup-emulator.vercel.app/?en)
+- [Repository](https://github.com/lilliputten/action-excel-vlookup-emulator/)
