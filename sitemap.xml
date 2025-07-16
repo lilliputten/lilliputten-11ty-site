@@ -77,13 +77,13 @@
         <loc>https://lilliputten.com/tags/site/</loc>
         <lastmod>2025-07-16</lastmod>
       </url><url>
-        <loc>https://lilliputten.com/tags/articles/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
         <loc>https://lilliputten.com/tags/about/</loc>
         <lastmod>2025-07-16</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/contacts/</loc>
+        <lastmod>2025-07-16</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/articles/</loc>
         <lastmod>2025-07-16</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/projects/</loc>
@@ -129,33 +129,6 @@
         <lastmod>2025-07-16</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/custom/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/cms/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/tilda/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/design/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/website/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/coding/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/typescript/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/scss/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/webpack/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/php/</loc>
         <lastmod>2025-07-16</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/gulp/</loc>
@@ -206,6 +179,33 @@
         <loc>https://lilliputten.com/tags/gulp.js/</loc>
         <lastmod>2025-07-16</lastmod>
       </url><url>
+        <loc>https://lilliputten.com/tags/cms/</loc>
+        <lastmod>2025-07-16</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/tilda/</loc>
+        <lastmod>2025-07-16</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/design/</loc>
+        <lastmod>2025-07-16</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/website/</loc>
+        <lastmod>2025-07-16</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/coding/</loc>
+        <lastmod>2025-07-16</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/typescript/</loc>
+        <lastmod>2025-07-16</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/scss/</loc>
+        <lastmod>2025-07-16</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/webpack/</loc>
+        <lastmod>2025-07-16</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/php/</loc>
+        <lastmod>2025-07-16</lastmod>
+      </url><url>
         <loc>https://lilliputten.com/tags/yupe/</loc>
         <lastmod>2025-07-16</lastmod>
       </url><url>
@@ -215,28 +215,7 @@
         <loc>https://lilliputten.com/tags/cauldron/</loc>
         <lastmod>2025-07-16</lastmod>
       </url><url>
-        <loc>https://lilliputten.com/tags/randonneur/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/web/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
         <loc>https://lilliputten.com/tags/data/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/manipuation/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/svelte/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/svelteui/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/svelte-headless-table/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/javascript/</loc>
         <lastmod>2025-07-16</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/sankey/</loc>
@@ -257,6 +236,39 @@
         <loc>https://lilliputten.com/tags/mui/</loc>
         <lastmod>2025-07-16</lastmod>
       </url><url>
+        <loc>https://lilliputten.com/tags/javascript/</loc>
+        <lastmod>2025-07-16</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/web/</loc>
+        <lastmod>2025-07-16</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/vite/</loc>
+        <lastmod>2025-07-16</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/next-intl/</loc>
+        <lastmod>2025-07-16</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/tailwindcss/</loc>
+        <lastmod>2025-07-16</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/vercel/</loc>
+        <lastmod>2025-07-16</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/i18n/</loc>
+        <lastmod>2025-07-16</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/excel/</loc>
+        <lastmod>2025-07-16</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/emulation/</loc>
+        <lastmod>2025-07-16</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/trainer/</loc>
+        <lastmod>2025-07-16</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/action/</loc>
+        <lastmod>2025-07-16</lastmod>
+      </url><url>
         <loc>https://lilliputten.com/tags/vanilla/</loc>
         <lastmod>2025-07-16</lastmod>
       </url><url>
@@ -275,19 +287,19 @@
         <loc>https://lilliputten.com/tags/browser/</loc>
         <lastmod>2025-07-16</lastmod>
       </url><url>
-        <loc>https://lilliputten.com/tags/vite/</loc>
+        <loc>https://lilliputten.com/tags/randonneur/</loc>
         <lastmod>2025-07-16</lastmod>
       </url><url>
-        <loc>https://lilliputten.com/tags/next-intl/</loc>
+        <loc>https://lilliputten.com/tags/manipuation/</loc>
         <lastmod>2025-07-16</lastmod>
       </url><url>
-        <loc>https://lilliputten.com/tags/tailwindcss/</loc>
+        <loc>https://lilliputten.com/tags/svelte/</loc>
         <lastmod>2025-07-16</lastmod>
       </url><url>
-        <loc>https://lilliputten.com/tags/vercel/</loc>
+        <loc>https://lilliputten.com/tags/svelteui/</loc>
         <lastmod>2025-07-16</lastmod>
       </url><url>
-        <loc>https://lilliputten.com/tags/i18n/</loc>
+        <loc>https://lilliputten.com/tags/svelte-headless-table/</loc>
         <lastmod>2025-07-16</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/flutter/</loc>
@@ -317,24 +329,6 @@
         <loc>https://lilliputten.com/tags/sqlite/</loc>
         <lastmod>2025-07-16</lastmod>
       </url><url>
-        <loc>https://lilliputten.com/tags/nextjs/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/next-auth/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/iis/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/oauth/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/prisma/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/postgresql/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
         <loc>https://lilliputten.com/tags/telegram/</loc>
         <lastmod>2025-07-16</lastmod>
       </url><url>
@@ -351,5 +345,23 @@
         <lastmod>2025-07-16</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/convert/</loc>
+        <lastmod>2025-07-16</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/nextjs/</loc>
+        <lastmod>2025-07-16</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/next-auth/</loc>
+        <lastmod>2025-07-16</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/iis/</loc>
+        <lastmod>2025-07-16</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/oauth/</loc>
+        <lastmod>2025-07-16</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/prisma/</loc>
+        <lastmod>2025-07-16</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/postgresql/</loc>
         <lastmod>2025-07-16</lastmod>
       </url></urlset>
