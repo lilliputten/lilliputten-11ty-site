@@ -19,6 +19,10 @@ tags:
   - tailwindcss
   - vercel
   - i18n
+  - excel
+  - emulation
+  - trainer
+  - action
 ---
 
 <!--
