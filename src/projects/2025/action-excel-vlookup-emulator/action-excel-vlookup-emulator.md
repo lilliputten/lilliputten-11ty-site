@@ -46,7 +46,7 @@ The application is a step-by-step simulator for practicing actions for comparing
 <!-- {{ macros.imgFigure('./images/bottom-buttons-step-13.png', 'Bottom Buttons Step, Stage 13.') }} -->
 <!-- {{ macros.imgFigure('./images/bottom-buttons-final.png', 'Bottom Buttons, the Final Stage.') }} -->
 {{ macros.imgFigure('./images/cells-with-a-fireworks.png', 'Cells With a Fireworks Indication.') }}
-<-- {{ macros.imgFigure('./images/input-cell-with-fireworks.png', 'Input Cell With a Fireworks Indication, on a Step Completion.') }} -->
+<!-- {{ macros.imgFigure('./images/input-cell-with-fireworks.png', 'Input Cell With a Fireworks Indication, on a Step Completion.') }} -->
 {{ macros.imgFigure('./images/error-tooltip.png', 'Error Tooltip with a Hint.') }}
 {{ macros.imgFigure('./images/final-results-column.png', 'Final Results Column.') }}
 {{ macros.imgFigure('./images/misc-toasts.png', 'Misc Correction Toasts.') }}
