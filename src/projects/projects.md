@@ -30,11 +30,11 @@ Below are a few ongoing or finished projects.
 {{ macros.ArticleThumb('./2025/action-excel-vlookup-emulator/', 'Excel VLOOKUP Function Trainer Application', 'A step-by-step simulator for practicing actions for comparing and searching for missing values in different columns of Excel tables.') }}
 -->
 
+{{ macros.ArticleThumb('./2025/tubecaster-telegram-bot/', 'TubeCaster Telegram Bot', 'Simple telegram bot aimed to convert youtube videos into audio podcasts for later listening (even in offline mode) inside the Telegram app. Supports a few tariffs, including paid (via Telegram XTR), guest, and limited free plan.') }}
+
+{{ macros.ArticleThumb('./2025/march-tales/', 'The March Cat Tales Mobile App, Server & Site', 'A multi-component project designed to deliver author-narrated fairy tales through a Flutter mobile application, web UI, and REST API Django-driven server.') }}
+
 {{ macros.ArticleThumb('./2025/team-tree-app/', 'Team Tree App', 'A small fullstack Next.js Vercel-hosted application aimed for editing hierarchical data with a nice pack of basic features, could serve as a starting point for a following Next.js project.') }}
-
-{{ macros.ArticleThumb('./2025/march-tales/', 'The March Cat Tales', 'Flutter Mobile Application, Django Web Interface & REST API Server. A multi-component project designed to deliver author-narrated fairy tales through a mobile application, web interface, and REST API server, and provide an administrative panel to manage data.') }}
-
-{{ macros.ArticleThumb('./2025/tubecaster-telegram-bot/', 'TubeCaster Telegram Bot', 'Simple telegram bot aimed to convert youtube videos into audio podcasts for later listening (even in offline mode) inside the Telegram app.') }}
 
 {{ macros.ArticleThumb('./2024/fsproperty-yupe-landing/', 'Design & coding of a custom landing page and a PHP server script for the existing website.', 'This page was conceived as a separate advertising campaign on an existing site. It was designed taking into account the already existing style of the site, it was not supposed to look like a separate attractive and stylish advertising page. It was developed using manually created markup and styles and scripts organized into SCSS and TypeScript modules, compiled via webpack.') }}
 

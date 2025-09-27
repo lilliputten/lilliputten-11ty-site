@@ -1,0 +1,24 @@
+## Screenshots
+
+{{ macros.carouselBegin('shots-slider full-width', type='phoneScreenshotsWide') }}
+{{ macros.carouselItem('./images/00-help.jpg', 'Help message') }}
+{{ macros.carouselItem('./images/menu.jpg', 'The application menu.') }}
+{{ macros.carouselItem('./images/00-start-and-registered.jpg', 'Start screen with a successful registration message.') }}
+{{ macros.carouselItem('./images/details-1.jpg', 'Fetched video details.') }}
+{{ macros.carouselItem('./images/loading-audio-cat.jpg', 'Audio downloading process.') }}
+{{ macros.carouselItem('./images/registration-required.jpg', 'Regiired registration warning.') }}
+{{ macros.carouselItem('./images/registration-process.jpg', 'Complete registration process.') }}
+{{ macros.carouselEnd() }}
+
+{{ macros.imgFigure('./images/00-help.jpg', 'Help message') }}
+{{ macros.imgFigure('./images/menu.jpg', 'The application menu.') }}
+{{ macros.imgFigure('./images/00-start-and-registered.jpg', 'Start screen with a successful registration message.') }}
+{{ macros.imgFigure('./images/details-1.jpg', 'Fetched video details.') }}
+{{ macros.imgFigure('./images/loading-audio-cat.jpg', 'Audio downloading process.') }}
+
+## Registration
+
+{{ macros.imgFigure('./images/registration-required.jpg', 'Regiired registration warning.') }}
+{{ macros.imgFigure('./images/registration-process.jpg', 'Complete registration process.') }}
+## The app is powered by cute animated kitties
+{{ macros.imgFigure('./images/fetching-video-details-cat.jpg', 'The kitty is working hard on audio extracting.') }}

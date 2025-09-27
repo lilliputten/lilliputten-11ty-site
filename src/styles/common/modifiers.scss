@@ -16,6 +16,7 @@
   opacity: 0.1;
 }
 
+// .Article a[target='_blank'],
 a.mail,
 a.external {
   &:after {
@@ -26,6 +27,7 @@ a.external {
     line-height: 1;
   }
 }
+// .Article a[target='_blank'],
 a.external {
   &:after {
     content: '\f143'; // bootstrap icon arrow-up-right-square: https://icons.getbootstrap.com/icons/arrow-up-right-square/

@@ -234,6 +234,12 @@
       &:hover {
         filter: grayscale(0) brightness(1);
       }
+      &.rounded-full {
+        border-radius: 50%;
+      }
+      &.max-w-300px {
+        max-width: 300px;
+      }
     }
     figcaption {
       opacity: 0.75;
