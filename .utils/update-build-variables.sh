@@ -1,6 +1,6 @@
 #!/bin/bash
 # @desc Update version number & build timestamps
-# @changed 2025.06.08, 03:23
+# @changed 2025.09.27, 11:21
 
 scriptsPath=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
 rootPath=`dirname "$scriptsPath"`
@@ -62,11 +62,11 @@ UPDATE_FILE() {
       | sed "s/\(timestamp=\)\s*\".*\"/\1\"$TIMESTAMP\"/" \
       | sed "s/\(timetag=\)\s*\".*\"/\1\"$TIMETAG\"/" \
     > $FILE || exit 1
-  elif [ "$EXT" = "toml" ]; then # Python
+  elif [ "$EXT" = "toml" -o "$EXT" = "js" ]; then # Python
     cat $FILE.bak \
-      | sed "s/\(version =\) \([\"']\).*\2/\1 \2$VERSION\2/" \
-      | sed "s/\(timestamp =\) \([\"']\).*\2/\1 \2$TIMESTAMP\2/" \
-      | sed "s/\(timetag =\) \([\"']\).*\2/\1 \2$TIMETAG\2/" \
+      | sed "s/\(version\)\(\s*[=:]\s*\)\([\"']\).*\3/\1\2\3$VERSION\3/" \
+      | sed "s/\(timestamp\)\(\s*[=:]\s*\)\([\"']\).*\3/\1\2\3$TIMESTAMP\3/" \
+      | sed "s/\(timetag\)\(\s*[=:]\s*\)\([\"']\).*\3/\1\2\3$TIMETAG\3/" \
     > $FILE || exit 1
   elif [ "$EXT" = "py" ]; then # Python
     cat $FILE.bak \
@@ -74,7 +74,7 @@ UPDATE_FILE() {
       | sed "s/\(__timestamp__ =\) \([\"']\).*\2/\1 \2$TIMESTAMP\2/" \
       | sed "s/\(__timetag__ =\) \([\"']\).*\2/\1 \2$TIMETAG\2/" \
     > $FILE || exit 1
-  else # MD
+  else # md, njk
     cat $FILE.bak \
       | sed "s/^\(-* *Project info:\) .*$/\1 $PROJECT_INFO_REP/" \
       | sed "s/^\(-* *Version:\) .*$/\1 $VERSION/" \
@@ -94,3 +94,5 @@ UPDATE_FILE "$prjPath/package-lock.json"
 UPDATE_FILE "$prjPath/README.md"
 UPDATE_FILE "$prjPath/client/README.md"
 UPDATE_FILE "$prjPath/server/README.md"
+UPDATE_FILE "$prjPath/src/layouts/base.njk"
+UPDATE_FILE "$prjPath/src/data/site.js"

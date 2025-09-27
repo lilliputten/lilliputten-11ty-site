@@ -10,13 +10,23 @@ date: 2025-09-21
 showNavigationBreadcrumbs: true
 tags:
   - links
+  - publications
   - '2025'
-  - FullStackDevelopment
-  - SoftwareDevelopment
-  - CareerGrowth
-  - ExpertGeneralist
-  - ContinuousLearning
-  - ImposterSyndrome
+  - breadth vs depth
+  - career growth
+  - context switching
+  - continuous learning
+  - expert generalist
+  - full-stack development
+  - imposter syndrome
+  - martin fowler
+  - personal experience
+  - practical knowledge
+  - skill maintenance
+  - software architecture
+  - software development
+  - t-shaped skills
+  - technical rust
 ---
 
 <!--
@@ -29,7 +39,7 @@ The Full-Stack Dilemma: Expert or Generalist?
 
 As a full-stack developer, I constantly wrestle with the tension between breadth and depth. On one hand, I love being able to own a feature from the database to the UI. On the other, it's easy to feel the "rust" on skills I haven't used in a few months and the pressure of specialists who seem to have deeper, more cutting-edge knowledge in their domain.
 
-In myy personal experience:
+In my personal experience:
 
 I always keep forgetting which language passes objects to functions by reference and which by value. (PHP, I'm watching you!)
 
@@ -51,7 +61,8 @@ The struggle isn't a sign of failure; it's the natural state of being a generali
 
 How do my fellow generalists, full-stack devs, and "T-shaped" people manage this? How do you choose what to go deep on, and how do you keep the rust off?
 
-## The article
+## References
 
-[Expert Generalists](https://martinfowler.com/articles/expert-generalist.html) / by Martin Fowler et al, July 202
+The article: [Expert Generalists](https://martinfowler.com/articles/expert-generalist.html) / by Martin Fowler et al, July 2025.
 
+The author: [Martin Fowler](https://martinfowler.com/aboutMe.html) is a British software developer, author and international public speaker on software development, specialising in object-oriented analysis and design, UML, patterns, and agile software development methodologies, including extreme programming.

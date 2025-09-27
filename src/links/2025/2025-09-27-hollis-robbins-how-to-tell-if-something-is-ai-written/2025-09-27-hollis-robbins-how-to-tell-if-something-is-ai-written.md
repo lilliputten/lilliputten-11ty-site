@@ -1,28 +1,42 @@
 ---
 layout: article.njk
-title: How to Tell if Something is AI-Written (It is easy for me, with aphantasia) / by Hollis Robbins, Aug 2025
+title: How to Tell if Something is AI-Written / by Hollis Robbins, Aug 2025
 hasThumb: true
 eleventyNavigation:
   key: 2025-09-27-hollis-robbins-how-to-tell-if-something-is-ai-written
-  title: How to Tell if Something is AI-Written (It is easy for me, with aphantasia) / by Hollis Robbins, Aug 2025
+  title: How to Tell if Something is AI-Written / by Hollis Robbins, Aug 2025
   parent: links-2025
 date: 2025-09-27
 showNavigationBreadcrumbs: true
 tags:
   - links
+  - publications
   - '2025'
-  - AI
-  - artificiality
+  - ai
+  - ai detection
+  - ai linguistic patterns
+  - ai text markers
   - aphantasia
+  - aphantasia and writing
+  - artificiality
+  - artificiality in text
+  - hollis robbins
+  - human vs ai writing
+  - institutional buzzwords
+  - mental imagery in reading
+  - over-structured writing
+  - personal detail in writing
 ---
 
 <!--
-@changed 2025.09.27, 10:38
+@changed 2025.09.27, 12:10
 -->
 
 {% import "macros.njk" as macros with context %}
 
-Found this article a few days ago, and was rereading it from time to time since then, being unable to figure out what exactly is wrong with it.
+## Subtitle: It is easy for me, with aphantasia
+
+Found this article on [substack.com](https://hollisrobbinsanecdotal.substack.com/p/how-to-tell-if-something-is-ai-written) a few days ago, and was rereading it from time to time since then, being unable to figure out what exactly is wrong with it.
 
 I've read it carefully -- probably, three times, or so -- and yet it somehow just didn’t click for me.
 
@@ -46,7 +60,10 @@ And I completely missed the point of the lack of "not just X but also Y" constru
 
 But, undoubtedly, this is a good reason for reflection and a basis for a deeper study of your own criteria for determining AI-generated texts and for working out our own position on this delicate and urgent issue.
 
-## The article
+## References
 
-[How to Tell if Something is AI-Written (It is easy for me, with aphantasia)](https://hollisrobbinsanecdotal.substack.com/p/how-to-tell-if-something-is-ai-written) / by Hollis Robbins, Aug 2025
+The article: [How to Tell if Something is AI-Written](https://hollisrobbinsanecdotal.substack.com/p/how-to-tell-if-something-is-ai-written) / by Hollis Robbins, Aug 2025.
 
+The author: [Hollis Robbins](https://substack.com/@hollisrobbins) is an American academic and essayist. Robbins is professor of English and also serves as Special Advisor for Humanities at the University of Utah; she was formerly dean of humanities. Her scholarship focuses on African-American literature and her essays focus on higher ed and artificial intelligence.
+
+An article about aphantasia, and a study on it by prof. Carl Zeman: [The Shape of Things Unseen (Review)](https://hollisrobbinsanecdotal.substack.com/p/the-shape-of-things-unseen-review). While I was reading, I doubted how possible it was to measure the presence of these "mental pictures", and this article (and in the study) claims that it is really possible (prof. Zeman was engaged in this). The next step is to find this study and try to understand what practical methods were used.

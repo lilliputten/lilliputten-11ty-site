@@ -48,7 +48,7 @@ I'm really looking for an interesting new job right now.
 At the moment, I'm mainly considering options with remote work, but ready to discuss relocation and partial/full on-site options.
 
 - Pritable PDS's are available:
-<a class="external" href="/cv.pdf" title="PDF document" target="_blank" rel="noreferrer">in English</a>
-and
-<a class="external" href="/cv-ru.pdf" title="PDF document" target="_blank" rel="noreferrer">in Russian</a>
-(the size of both is about 100KB).
+  <a class="external" href="/cv.pdf" title="PDF document" target="_blank" rel="noreferrer">in English</a>
+  and
+  <a class="external" href="/cv-ru.pdf" title="PDF document" target="_blank" rel="noreferrer">in Russian</a>
+  (the size of both is about 100KB).
