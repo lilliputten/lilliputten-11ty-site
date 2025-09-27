@@ -98,7 +98,7 @@
           <h1 class="ArticleTitle">TubeCaster Telegram Bot</h1>
           <div class="ArticleMeta">
             <time class="metaItem articleDatetime" datetime="2025-09-27T00:00:00.000Z" title="Document date"><span>Date:</span> September 27, 2025</time>
-            <div class="metaItem articleMinutesToRead" title="With an average speed of 200 words per minute"><span>Time to read:</span> 3 min</div>
+            <div class="metaItem articleMinutesToRead" title="With an average speed of 200 words per minute"><span>Time to read:</span> 4 min</div>
           </div>
         </div>
       </div>
@@ -130,39 +130,46 @@
         via <code>/plans</code> command, or on the bot landing page.</p>
       <h2 id="key-user-features" tabindex="-1">Key User Features <a class="header-anchor" href="#key-user-features"><i class="bi bi-link-45deg"></i></a></h2>
       <ul>
-        <li>Send/share a YouTube link and receive mp3 file almost immediately (depends on a current processing queue).</li>
+        <li>Send or share the YouTube link and receive the mp3 file almost immediately (depends on the current processing queue).</li>
+        <li>Start downloading or request detailed video information by sharing it directly from the YouTube app or by pasting the video URL manually.</li>
         <li>Get detailed information about the YouTube video.</li>
         <li>Download tracks for listening anywhere, anytime.</li>
       </ul>
-      <h2 id="how-to-use-1" tabindex="-1">How to Use <a class="header-anchor" href="#how-to-use-1"><i class="bi bi-link-45deg"></i></a></h2>
-      <ul>
-        <li><strong>Start Chat</strong> with <a href="https://t.me/tubecasterbot" c="l" class="external" title="External link: https://t.me/tubecasterbot" target="_blank" rel="noopener">@TubeCasterBot</a>. Request registration from menu or by <code>/register</code> command.</li>
-        <li><strong>Paste YouTube Link</strong> or share it from YouTube app.</li>
-        <li><strong>Download MP3</strong> or listen it right from the chat.</li>
-      </ul>
       <h2 id="application-features" tabindex="-1">Application Features <a class="header-anchor" href="#application-features"><i class="bi bi-link-45deg"></i></a></h2>
       <ul>
-        <li>Remote realtime logging via http or syslog. It’s possible to receive application logs in the realtime on the developer machine during troubleshooting process.</li>
-        <li>Different database providers for local development and production via prisma. (It’s the only to way to use db on vercel hosting to switch to Postgres.)</li>
+        <li>A simple authorization system (via requests and semi-automated confirmation). At some point, we decided to restrict access to the bot only to registered users. Now all the new users are required to send a registration request.</li>
+        <li>There is also exists an ability to to pay (via telegram stars) for unlimited access. See pricing details.</li>
         <li>Actual audio length calculation (via ffprobe packets list command). Sometimes the generated files contain incorrect meta information, in which case the only way out is to get real data using ffprobe.</li>
         <li>Large audio files splitting on-the fly. If the file size exceeds the telegram API limit (50MB), it is split into several smaller files before being sent to the user.</li>
-        <li>Testing with partial functional/local resources.</li>
-        <li>A simple authorization system (using requests). At some point, we decided to restrict access to the bot only to registered users. Now all the new users are required to send a registration request.</li>
-        <li>Detecting delays in the processing queue. In this case, repeated messages are periodically sent indicating that the request is still being processed.</li>
+        <li>Detecting delays in the processing queue. In this case, repeated messages are periodically (each minute) sent indicating that the request is still being processed.</li>
+        <li>Remote realtime logging via http or syslog. It’s possible to receive application logs in the realtime on the developer machine during troubleshooting process.</li>
+        <li>Different database providers for local development and production via prisma. (It’s the only to way to use db on vercel hosting to switch to Postgres.)</li>
+      </ul>
+      <h2 id="and-the-most-important" tabindex="-1">And the most important: <a class="header-anchor" href="#and-the-most-important"><i class="bi bi-link-45deg"></i></a></h2>
+      <ul>
+        <li>
+          <p>The app is powered by mighty cute animated kitties!</p>
+          <figure>
+            <figcaption>The kitties is working hard on audio extracting (under the hood).</figcaption>
+            <img class="max-w-300px rounded-full" src="./loading-audio-cat-circle.jpg" alt="The kitties is working hard on audio extracting (under the hood)." loading="lazy"
+            decoding="async" width="730" height="730" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 730 730'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA00lEQVR4nAHIADf/ALK17bCz6nh9o1hee21zlair4LW48K+y6QCvs+pKT2kCBw8AAQkAAwkqNEWjp9qztu4Ad32kCBAYXV1nc3N7fnmDERgeVFx6u733AFhffAoSGdnL0P7r8KqdpxAbIzpCWLW48ABuc5gYKzV4hppmbYhJYXkjTllQVnG6vfcAqaziUltvLTtCJDQ+LDpDPUhXnaHStrnwALG17be36oyKqW5uh3p6mKqq27m89LK27ACvsumxte25vvi7v/i7v/q1ufKytu2zt+6m42Y7rGZz6AAAAABJRU5ErkJggg=='%3E%3C/image%3E%3C/svg%3E&quot;)">
+          </figure>
+        </li>
       </ul>
       <h2 id="tech-insides" tabindex="-1">Tech Insides <a class="header-anchor" href="#tech-insides"><i class="bi bi-link-45deg"></i></a></h2>
       <ul>
         <li>A development branch of yt-dlp used for video processing (fetching info and audio tracks).</li>
+        <li>Ffmpeg/ffprobe are used to process audio files.</li>
         <li>The bot itself is implemented using pyTelegramBotAPI v.4 and flask v.3.</li>
-        <li>The bot’s <a href="https://tubecaster.lilliputten.com/" c="l" class="external" title="External link: https://tubecaster.lilliputten.com/" target="_blank" rel="noopener">landing page</a> is a playground for my another toy: the <a href="https://github.com/lilliputten/gulp-embed-lqip-as-background"
+        <li>The bot’s <a href="https://tubecaster.lilliputten.com/" c="l" class="external" title="External link: https://tubecaster.lilliputten.com/" target="_blank" rel="noopener">landing page</a> is a playground for another tiny toy: the <a href="https://github.com/lilliputten/gulp-embed-lqip-as-background"
           c="l" class="external" title="External link: https://github.com/lilliputten/gulp-embed-lqip-as-background" target="_blank" rel="noopener">Gulp LQIP small image placeholder generator</a> plugin.</li>
       </ul>
-      <h2 id="the-app-is-powered-by-cute-animated-kitties" tabindex="-1">The app is powered by cute animated kitties <a class="header-anchor" href="#the-app-is-powered-by-cute-animated-kitties"><i class="bi bi-link-45deg"></i></a></h2>
-      <figure>
-        <figcaption>The kitties is working hard on audio extracting (under the hood).</figcaption>
-        <img class="max-w-300px rounded-full" src="./loading-audio-cat-circle.jpg" alt="The kitties is working hard on audio extracting (under the hood)." loading="lazy" decoding="async"
-        width="730" height="730" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 730 730'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA00lEQVR4nAHIADf/ALK17bCz6nh9o1hee21zlair4LW48K+y6QCvs+pKT2kCBw8AAQkAAwkqNEWjp9qztu4Ad32kCBAYXV1nc3N7fnmDERgeVFx6u733AFhffAoSGdnL0P7r8KqdpxAbIzpCWLW48ABuc5gYKzV4hppmbYhJYXkjTllQVnG6vfcAqaziUltvLTtCJDQ+LDpDPUhXnaHStrnwALG17be36oyKqW5uh3p6mKqq27m89LK27ACvsumxte25vvi7v/i7v/q1ufKytu2zt+6m42Y7rGZz6AAAAABJRU5ErkJggg=='%3E%3C/image%3E%3C/svg%3E&quot;)">
-      </figure>
+      <h2 id="warnings" tabindex="-1">Warnings <a class="header-anchor" href="#warnings"><i class="bi bi-link-45deg"></i></a></h2>
+      <p>The bot accepts only YouTube links at the moment. No TikTok, Vimeo, or any other links are accepted.</p>
+      <p>The bot allows to retrieve just a few (currently, 3) audio files or video details in the guest state, by default. It’s possible to obtain unlimited paid access, or ask for free test mode.</p>
+      <p>The bot is working in experimental mode and that Google may change its algorithms and API, which may lead to temporary disruptions in the application.</p>
+      <p>Downloading and processing audio files takes time and may require up to several minutes (it depends on the video size, the active queue size and youtube delays). If the bot has accepted your command for processing and it seems to you that the process
+        has been delayed, please be patient. In case of long-term operations, the bot will send you notifications about the active process every minute.</p>
       <h2 id="resources" tabindex="-1">Resources <a class="header-anchor" href="#resources"><i class="bi bi-link-45deg"></i></a></h2>
       <p>The bot promotional landing: <a href="https://tubecaster.lilliputten.com/" c="l" class="external" title="External link: https://tubecaster.lilliputten.com/" target="_blank" rel="noopener">https://tubecaster.lilliputten.com/</a>
       </p>
