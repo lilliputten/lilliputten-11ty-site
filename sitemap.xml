@@ -44,9 +44,6 @@
         <loc>https://lilliputten.com/articles/2025/django-flatpages-based-cms/</loc>
         <lastmod>2025-04-05</lastmod>
       </url><url>
-        <loc>https://lilliputten.com/articles/</loc>
-        <lastmod>2025-04-05</lastmod>
-      </url><url>
         <loc>https://lilliputten.com/articles/2025/gulp-lqip-plugin/</loc>
         <lastmod>2025-05-04</lastmod>
       </url><url>
@@ -62,9 +59,6 @@
         <loc>https://lilliputten.com/projects/2025/action-excel-vlookup-emulator/</loc>
         <lastmod>2025-07-15</lastmod>
       </url><url>
-        <loc>https://lilliputten.com/projects/</loc>
-        <lastmod>2025-07-15</lastmod>
-      </url><url>
         <loc>https://lilliputten.com/links/2025/2025-09-21-martin-fowler-articles-expert-generalist/</loc>
         <lastmod>2025-09-21</lastmod>
       </url><url>
@@ -75,6 +69,9 @@
         <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/projects/2025/tubecaster-telegram-bot/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/projects/</loc>
         <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/404.html</loc>
@@ -149,51 +146,6 @@
         <loc>https://lilliputten.com/tags/custom/</loc>
         <lastmod>2025-09-27</lastmod>
       </url><url>
-        <loc>https://lilliputten.com/tags/breadth-vs-depth/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/career-growth/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/context-switching/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/continuous-learning/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/expert-generalist/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/full-stack-development/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/imposter-syndrome/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/martin-fowler/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/personal-experience/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/practical-knowledge/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/skill-maintenance/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/software-architecture/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/software-development/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/t-shaped-skills/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/technical-rust/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
         <loc>https://lilliputten.com/tags/gulp/</loc>
         <lastmod>2025-09-27</lastmod>
       </url><url>
@@ -255,6 +207,51 @@
         <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/personal-detail-in-writing/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/breadth-vs-depth/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/career-growth/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/context-switching/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/continuous-learning/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/expert-generalist/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/full-stack-development/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/imposter-syndrome/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/martin-fowler/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/personal-experience/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/practical-knowledge/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/skill-maintenance/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/software-architecture/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/software-development/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/t-shaped-skills/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/technical-rust/</loc>
         <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/cms/</loc>
@@ -320,28 +317,7 @@
         <loc>https://lilliputten.com/tags/cauldron/</loc>
         <lastmod>2025-09-27</lastmod>
       </url><url>
-        <loc>https://lilliputten.com/tags/randonneur/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/web/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
         <loc>https://lilliputten.com/tags/data/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/manipuation/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/svelte/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/svelteui/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/svelte-headless-table/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/javascript/</loc>
         <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/sankey/</loc>
@@ -362,6 +338,9 @@
         <loc>https://lilliputten.com/tags/mui/</loc>
         <lastmod>2025-09-27</lastmod>
       </url><url>
+        <loc>https://lilliputten.com/tags/javascript/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
         <loc>https://lilliputten.com/tags/vanilla/</loc>
         <lastmod>2025-09-27</lastmod>
       </url><url>
@@ -378,6 +357,24 @@
         <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/browser/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/randonneur/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/web/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/manipuation/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/svelte/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/svelteui/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/svelte-headless-table/</loc>
         <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/vite/</loc>
@@ -472,4 +469,7 @@
       </url><url>
         <loc>https://lilliputten.com/tags/online-payment/</loc>
         <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/articles/</loc>
+        <lastmod>2025-12-31</lastmod>
       </url></urlset>
