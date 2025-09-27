@@ -19,6 +19,10 @@ tags:
   - tailwindcss
   - vercel
   - i18n
+  - excel
+  - emulation
+  - trainer
+  - action
 ---
 
 <!--
@@ -28,7 +32,7 @@ tags:
 
 {% import "macros.njk" as macros with context %}
 
-[The VLOOKUP trainer applicaiton](https://action-excel-vlookup-emulator.vercel.app/?en) is implemented via React, Vite, TS, and Tailwind, and deployed to Vercel. Developed for Russian company [Action Academy](https://academy.action-mcfr.ru/).
+[The VLOOKUP trainer applicaiton](https://action-excel-vlookup-emulator.vercel.app/?en) is implemented via React, Vite, TS, and Tailwind, and deployed to Vercel. Developed for a Russian company [Action Academy](https://academy.action-mcfr.ru/).
 
 The goal is to help to understand a Vertical Lookup or VLOOKUP ("вертикальный просмотр", ВПР, in Russian; the applicaiton supports both English and Russian localizations) function in Miscrosoft Excel.
 
@@ -36,9 +40,7 @@ The application is a step-by-step simulator for practicing actions for comparing
 
 {{ macros.imgFigure('./images/opengraph-image-medium.jpg', 'Application banner.') }}
 
-### Key Features:
-
-### Screenshots
+## Screenshots
 
 {{ macros.imgFigure('./images/initial-invitation.png', 'Initial invitation.') }}
 
@@ -48,12 +50,12 @@ The application is a step-by-step simulator for practicing actions for comparing
 <!-- {{ macros.imgFigure('./images/bottom-buttons-step-13.png', 'Bottom Buttons Step, Stage 13.') }} -->
 <!-- {{ macros.imgFigure('./images/bottom-buttons-final.png', 'Bottom Buttons, the Final Stage.') }} -->
 {{ macros.imgFigure('./images/cells-with-a-fireworks.png', 'Cells With a Fireworks Indication.') }}
-{{ macros.imgFigure('./images/input-cell-with-fireworks.png', 'Input Cell With a Fireworks Indication, on a Step Completion.') }}
+<!-- {{ macros.imgFigure('./images/input-cell-with-fireworks.png', 'Input Cell With a Fireworks Indication, on a Step Completion.') }} -->
 {{ macros.imgFigure('./images/error-tooltip.png', 'Error Tooltip with a Hint.') }}
 {{ macros.imgFigure('./images/final-results-column.png', 'Final Results Column.') }}
 {{ macros.imgFigure('./images/misc-toasts.png', 'Misc Correction Toasts.') }}
 
 ## Links
 
-- Vercel deployed app: https://action-excel-vlookup-emulator.vercel.app/?en
-- Repository: https://github.com/lilliputten/action-excel-vlookup-emulator/
+- [Vercel deployed app](https://action-excel-vlookup-emulator.vercel.app/?en)
+- [Repository](https://github.com/lilliputten/action-excel-vlookup-emulator/)
