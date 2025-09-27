@@ -32,6 +32,9 @@
         <loc>https://lilliputten.com/articles/2025/</loc>
         <lastmod>2025-01-01</lastmod>
       </url><url>
+        <loc>https://lilliputten.com/links/2025/</loc>
+        <lastmod>2025-01-01</lastmod>
+      </url><url>
         <loc>https://lilliputten.com/projects/2025/</loc>
         <lastmod>2025-01-01</lastmod>
       </url><url>
@@ -65,303 +68,342 @@
         <loc>https://lilliputten.com/projects/</loc>
         <lastmod>2025-07-15</lastmod>
       </url><url>
+        <loc>https://lilliputten.com/links/2025/2025-09-21-martin-fowler-articles-expert-generalist/</loc>
+        <lastmod>2025-09-21</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/links/2025/2025-09-27-hollis-robbins-how-to-tell-if-something-is-ai-written/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/links/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
         <loc>https://lilliputten.com/404.html</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/2024/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/2025/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/site/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/about/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/contacts/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/articles/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/links/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/about/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/contacts/</loc>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/projects/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/automation/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/mongodb/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/service/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/toggle/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/windows/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/shortcut/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/powershell/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/script/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/django/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/python/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/flatpage/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/ckeditor/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/localization/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/custom/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/gulp/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/npm/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/plugin/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/lqip/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/image/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/background/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/html/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
-        <loc>https://lilliputten.com/tags/dds/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <loc>https://lilliputten.com/tags/ai/</loc>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
-        <loc>https://lilliputten.com/tags/registration/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <loc>https://lilliputten.com/tags/artificiality/</loc>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
-        <loc>https://lilliputten.com/tags/application/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/bootstrap/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/stripe/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/django-registration/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/fpdf2/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/sendgrid/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/gulp.js/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <loc>https://lilliputten.com/tags/aphantasia/</loc>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/cms/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/tilda/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/design/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/website/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/coding/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/typescript/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/scss/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/webpack/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/php/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/fullstackdevelopment/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/softwaredevelopment/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/careergrowth/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/expertgeneralist/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/continuouslearning/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/impostersyndrome/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/dds/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/registration/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/application/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/bootstrap/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/stripe/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/django-registration/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/fpdf2/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/sendgrid/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/gulp.js/</loc>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/yupe/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/landing/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/cauldron/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/data/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/sankey/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/diagram/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/vizualizer/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/react/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/plotly/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/mui/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/javascript/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/web/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/vite/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/next-intl/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/tailwindcss/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/vercel/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/i18n/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/excel/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/emulation/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/trainer/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/action/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/vanilla/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/tasks-tracker/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/js/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/css/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/modules/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/browser/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/randonneur/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/web/</loc>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/manipuation/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/svelte/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/svelteui/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/svelte-headless-table/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/vanilla/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/tasks-tracker/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/js/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/css/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/modules/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/browser/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/vite/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/next-intl/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/tailwindcss/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/vercel/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/i18n/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/excel/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/emulation/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/trainer/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/action/</loc>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/flutter/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/mobile/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/audio/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/ffmpeg/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/ffprobe/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/rest/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/authorization/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/mysql/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/sqlite/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/telegram/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/bot/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/flask/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/youtube/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/video/</loc>
-        <lastmod>2025-07-16</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/convert/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/nextjs/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/next-auth/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/iis/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/oauth/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/prisma/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/postgresql/</loc>
-        <lastmod>2025-07-16</lastmod>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/telegram/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/bot/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/flask/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/youtube/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/video/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/convert/</loc>
+        <lastmod>2025-09-27</lastmod>
       </url></urlset>
