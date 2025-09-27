@@ -9,8 +9,8 @@ eleventyNavigation:
 date: 2025-09-27
 showNavigationBreadcrumbs: true
 tags:
-  - links
   - publications
+  - links
   - '2025'
   - ai
   - ai detection

@@ -6,7 +6,7 @@ eleventyNavigation:
   key: tubecaster-telegram-bot
   title: TubeCaster Telegram Bot
   parent: projects-2025
-date: 2025-02-01
+date: 2025-09-27
 showNavigationBreadcrumbs: true
 tags:
   - projects
@@ -21,112 +21,82 @@ tags:
   - ffmpeg
   - ffprobe
   - convert
+  - online payment
 ---
 
 <!--
-@changed 2025.04.07, 01:55
+@changed 2025.09.27, 13:25
 -->
 
 {% import "macros.njk" as macros with context %}
 
-[TubeCaster](https://tubecaster.lilliputten.com/) is a simple telegram bot aimed to convert youtube videos into audio podcasts for later listening (even in offline mode) inside the Telegram app.
+Tubecaster is a simple telegram bot aimed to convert youtube videos into audio podcasts for later listening (even in offline mode) inside the Telegram app.
+
+## It's a Perfect Solution, if you...
+
+- ...Like to listen to talk shows, music, or even videos, if they contain more conversational content, than action scenes.
+- ...Are a pretty busy person, who prefer audio over video or who find it more convenient to listen to podcasts on the go.
+- ...Are in a country that blocks YouTube due to censorship or other reasons, but Telegram is still available there (for some reason).
+
+If it's about you, then...
+
+{{ macros.imgFigure('./splash-700.jpg', 'Meet the TubeCaster!', '', '', 'https://tubecaster.lilliputten.com/') }}
+
+## How to use
+
+- **Start chatting** with [@TubeCasterBot](https://t.me/tubecasterbot), use `/start`, `/help` or `/plans` commands if you're there for the first time.
+- **Select usage plan.** Use default guest mode or request free plan via the `/become_user`, or buy an advanced usage plan via the `/get_full_access` command.
+- **Send YouTube link to the bot.** Share a YouTube clip link from the application or just paste it into the chat. Use `/cast` command to download, or `/info` command to get the clip details.
+- **Download and listen.** Download generated MP3 file or listen it right from the chat. Check your status and statistics with `/status` and `/stats` commands.
+
+# Paid/free tarif plans
+
+The user can use a **GUEST** usage plan, available by default, request an experimental **FREE** plan (also free at the moment), or pay for an unlimited **PAID** plan. All the plains details are available in the bot via `/plans` command, or on the bot landing page.
 
 ## Key User Features
 
-- Send/share a YouTube link and receive mp3 file almost immediately (depends on a current processing queue).
+- Send or share the YouTube link and receive the mp3 file almost immediately (depends on the current processing queue).
+- Start downloading or request detailed video information by sharing it directly from the YouTube app or by pasting the video URL manually.
 - Get detailed information about the YouTube video.
 - Download tracks for listening anywhere, anytime.
 
-## Perfect For
-
-- For listening to talk shows, music, or videos that don't contain a lot of video content.
-- For busy users who prefer audio videos or who find it more convenient to listen to podcasts on the go.
-- This is essential to circumvent censorship blocks (as, for example, in modern Russia, where YouTube is blocked, but Telegram is still available).
-
-## How to Use
-
-- **Start Chat** with [@TubeCasterBot](https://t.me/tubecasterbot). Request registration from menu or by `/register` command.
-- **Paste YouTube Link** or share it from YouTube app.
-- **Download MP3** or listen it right from the chat.
-
 ## Application Features
 
-- Remote realtime logging via http or syslog. It's possible to receive application logs in the realtime on the developer machine during troubleshooting process.
-- Different database providers for local development and production via prisma. (It's the only to way to use db on vercel hosting to switch to Postgres.)
+- A simple authorization system (via requests and semi-automated confirmation). At some point, we decided to restrict access to the bot only to registered users. Now all the new users are required to send a registration request.
+- There is also exists an ability to to pay (via telegram stars) for unlimited access. See pricing details.
 - Actual audio length calculation (via ffprobe packets list command). Sometimes the generated files contain incorrect meta information, in which case the only way out is to get real data using ffprobe.
 - Large audio files splitting on-the fly. If the file size exceeds the telegram API limit (50MB), it is split into several smaller files before being sent to the user.
-- Testing with partial functional/local resources.
-- A simple authorization system (using requests). At some point, we decided to restrict access to the bot only to registered users. Now all the new users are required to send a registration request.
-- Detecting delays in the processing queue. In this case, repeated messages are periodically sent indicating that the request is still being processed.
+- Detecting delays in the processing queue. In this case, repeated messages are periodically (each minute) sent indicating that the request is still being processed.
+- Remote realtime logging via http or syslog. It's possible to receive application logs in the realtime on the developer machine during troubleshooting process.
+- Different database providers for local development and production via prisma. (It's the only to way to use db on vercel hosting to switch to Postgres.)
+
+## And the most important:
+
+- The app is powered by mighty cute animated kitties!
+
+{{ macros.imgFigure('./loading-audio-cat-circle.jpg', 'The kitties is working hard on audio extracting (under the hood).', '', 'max-w-300px rounded-full') }}
 
 ## Tech Insides
 
 - A development branch of yt-dlp used for video processing (fetching info and audio tracks).
+- Ffmpeg/ffprobe are used to process audio files.
 - The bot itself is implemented using pyTelegramBotAPI v.4 and flask v.3.
-- The bot's [landing page](https://tubecaster.lilliputten.com/) is a playground for my another toy: the [Gulp LQIP small image placeholder generator](https://github.com/lilliputten/gulp-embed-lqip-as-background) plugin.
+- The bot's [landing page](https://tubecaster.lilliputten.com/) is a playground for another tiny toy: the [Gulp LQIP small image placeholder generator](https://github.com/lilliputten/gulp-embed-lqip-as-background) plugin.
+
+## Warnings
+
+The bot accepts only YouTube links at the moment. No TikTok, Vimeo, or any other links are accepted.
+
+The bot allows to retrieve just a few (currently, 3) audio files or video details in the guest state, by default. It's possible to obtain unlimited paid access, or ask for free test mode.
+
+The bot is working in experimental mode and that Google may change its algorithms and API, which may lead to temporary disruptions in the application.
+
+Downloading and processing audio files takes time and may require up to several minutes (it depends on the video size, the active queue size and youtube delays). If the bot has accepted your command for processing and it seems to you that the process has been delayed, please be patient. In case of long-term operations, the bot will send you notifications about the active process every minute.
 
 ## Resources
 
-The bot landing:
+The bot promotional landing: https://tubecaster.lilliputten.com/
 
-- https://tubecaster.lilliputten.com/
+The source code repository: https://github.com/lilliputten/tubecaster-telegram-bot
 
-The source code repository:
-
-- https://github.com/lilliputten/tubecaster-telegram-bot
-
-The bot itself:
-
-- https://t.me/tubecasterbot
-
-## Screenshots
-
-{{ macros.imgFigure('./images/00-help.jpg', 'Help message') }}
-
-{{ macros.imgFigure('./images/menu.jpg', 'The application menu.') }}
-
-{{ macros.imgFigure('./images/00-start-and-registered.jpg', 'Start screen with a successful registration message.') }}
-
-{# {{ macros.imgFigure('./images/00-start-register.jpg', '00-start-register') }} #}
-
-{# {{ macros.imgFigure('./images/00-start.jpg', 'Start screen.') }} #}
-
-{# {{ macros.imgFigure('./images/01-welcome-and-registered-users-notification.jpg', '01-welcome-and-registered-users-notification') }} #}
-
-{# {{ macros.imgFigure('./images/audio-details.png', 'audio-details') }} #}
-
-{# {{ macros.imgFigure('./images/audio.jpg', 'audio') }} #}
-
-{{ macros.imgFigure('./images/details-1.jpg', 'Fetched video details.') }}
-
-{# {{ macros.imgFigure('./images/details-2.png', 'details-2') }} #}
-
-{# {{ macros.imgFigure('./images/downloaded-audio.jpg', 'downloaded-audio') }} #}
-
-{{ macros.imgFigure('./images/loading-audio-cat.jpg', 'Audio downloading process.') }}
-
-{# {{ macros.imgFigure('./images/sending-audio-full-scrren.jpg', 'sending-audio-full-scrren') }} #}
-
-{# {{ macros.imgFigure('./images/sending-audio.jpg', 'sending-audio') }} #}
-
-{# {{ macros.imgFigure('./images/video-details.jpg', 'video-details') }} #}
-
-{# {{ macros.imgFigure('./images/video-prompt.jpg', 'video-prompt') }} #}
-
-{# {{ macros.imgFigure('./images/wrong-link.jpg', 'wrong-link') }} #}
-
-## Registration
-
-{{ macros.imgFigure('./images/registration-required.jpg', 'Regiired registration warning.') }}
-
-{# {{ macros.imgFigure('./images/registered-users-notification.jpg', 'registered-users-notification') }} #}
-
-{# {{ macros.imgFigure('./images/registration-confirmation-request.jpg', 'registration-confirmation-request') }} #}
-
-{{ macros.imgFigure('./images/registration-process.jpg', 'Complete registration process.') }}
-
-{# {{ macros.imgFigure('./images/registered-user.jpg', 'registered-user') }} #}
-
-## The app is powered by cute animated kitties
-
-{{ macros.imgFigure('./images/fetching-video-details-cat.jpg', 'The kitty is working hard on audio extracting.') }}
+The bot itself: https://t.me/tubecasterbot

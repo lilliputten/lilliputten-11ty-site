@@ -26,9 +26,10 @@
   <img class="carousel-lazy {{ class }}" data-lazy="{{ src }}" alt="{{ alt }}" />
 {% endmacro %}
 
-{% macro imgFigure(src, text = '', alt = '') %}
+{% macro imgFigure(src, text = '', alt = '', class = '', href = '') %}
   <figure>
-    <figcaption>{{ text }}</figcaption> {{ img(src, alt or text) }}
+    <figcaption>{%- if href -%}<a {{ 'class=external ' if href.startsWith('http') }} href="{{ href }}">{%- endif -%}{{ text }}{%- if href -%}</a>{%- endif -%}</figcaption>
+    {%- if href -%}<a href="{{ href }}">{%- endif -%}{{ img(src, alt or text, class) }}{%- if href -%}</a>{%- endif -%}
   </figure>
 {% endmacro %}
 
