@@ -89,13 +89,13 @@
         <loc>https://lilliputten.com/tags/site/</loc>
         <lastmod>2025-09-27</lastmod>
       </url><url>
-        <loc>https://lilliputten.com/tags/articles/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
         <loc>https://lilliputten.com/tags/publications/</loc>
         <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/links/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/articles/</loc>
         <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/about/</loc>
@@ -170,75 +170,6 @@
         <loc>https://lilliputten.com/tags/html/</loc>
         <lastmod>2025-09-27</lastmod>
       </url><url>
-        <loc>https://lilliputten.com/tags/ai/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/ai-detection/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/ai-linguistic-patterns/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/ai-text-markers/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/aphantasia/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/aphantasia-and-writing/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/artificiality/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/artificiality-in-text/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/hollis-robbins/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/human-vs-ai-writing/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/institutional-buzzwords/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/mental-imagery-in-reading/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/over-structured-writing/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/personal-detail-in-writing/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/cms/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/tilda/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/design/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/website/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/coding/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/typescript/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/scss/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/webpack/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/php/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
         <loc>https://lilliputten.com/tags/breadth-vs-depth/</loc>
         <lastmod>2025-09-27</lastmod>
       </url><url>
@@ -282,6 +213,75 @@
         <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/technical-rust/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/cms/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/tilda/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/design/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/website/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/coding/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/typescript/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/scss/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/webpack/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/php/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/ai/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/ai-detection/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/ai-linguistic-patterns/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/ai-text-markers/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/aphantasia/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/aphantasia-and-writing/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/artificiality/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/artificiality-in-text/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/hollis-robbins/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/human-vs-ai-writing/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/institutional-buzzwords/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/mental-imagery-in-reading/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/over-structured-writing/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/personal-detail-in-writing/</loc>
         <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/dds/</loc>
@@ -380,6 +380,33 @@
         <loc>https://lilliputten.com/tags/browser/</loc>
         <lastmod>2025-09-27</lastmod>
       </url><url>
+        <loc>https://lilliputten.com/tags/vite/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/next-intl/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/tailwindcss/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/vercel/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/i18n/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/excel/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/emulation/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/trainer/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/action/</loc>
+        <lastmod>2025-09-27</lastmod>
+      </url><url>
         <loc>https://lilliputten.com/tags/flutter/</loc>
         <lastmod>2025-09-27</lastmod>
       </url><url>
@@ -393,9 +420,6 @@
         <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/ffprobe/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/i18n/</loc>
         <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/rest/</loc>
@@ -416,15 +440,6 @@
         <loc>https://lilliputten.com/tags/next-auth/</loc>
         <lastmod>2025-09-27</lastmod>
       </url><url>
-        <loc>https://lilliputten.com/tags/next-intl/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/tailwindcss/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/vercel/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
         <loc>https://lilliputten.com/tags/iis/</loc>
         <lastmod>2025-09-27</lastmod>
       </url><url>
@@ -435,21 +450,6 @@
         <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/postgresql/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/vite/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/excel/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/emulation/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/trainer/</loc>
-        <lastmod>2025-09-27</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/action/</loc>
         <lastmod>2025-09-27</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/telegram/</loc>
