@@ -5,7 +5,7 @@ hasThumb: true
 eleventyNavigation:
   key: gulp-lqip-plugin
   title: Gulp LQIP small image placeholder generator plugin
-  parent: articles
+  parent: articles-2025
 date: 2025-05-04
 showNavigationBreadcrumbs: true
 tags:

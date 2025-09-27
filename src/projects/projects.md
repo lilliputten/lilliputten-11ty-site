@@ -26,7 +26,9 @@ Below are a few ongoing or finished projects.
 
 ## Recent projects
 
+<!--
 {{ macros.ArticleThumb('./2025/action-excel-vlookup-emulator/', 'Excel VLOOKUP Function Trainer Application', 'A step-by-step simulator for practicing actions for comparing and searching for missing values in different columns of Excel tables.') }}
+-->
 
 {{ macros.ArticleThumb('./2025/team-tree-app/', 'Team Tree App', 'A small fullstack Next.js Vercel-hosted application aimed for editing hierarchical data with a nice pack of basic features, could serve as a starting point for a following Next.js project.') }}
 

@@ -20,9 +20,9 @@ showHero: true
 
 {% import "macros.njk" as macros with context %}
 
-I recently started trying to write down some of the work practices and workarounds that I encounter during my regular work, when I have enough time and passion for that. Probably mostly just for myself, so as not to forget them.
+_I recently started trying to write down some of the work practices and workarounds that I encounter during my regular work, when I have enough time and passion for that. Probably mostly just for myself, so as not to forget them._
 
-One silly article a year. At least.
+_One silly article a year. At least._
 
 ## Here are some of them, behold!
 

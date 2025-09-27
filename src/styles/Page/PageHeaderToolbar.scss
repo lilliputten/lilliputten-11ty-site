@@ -4,12 +4,16 @@
 
 .PageHeaderToolbar {
   display: flex;
-  gap: 0.5em;
+  gap: 0.2em;
   margin: 0;
   padding: 0;
   list-style: none;
 
   $itemSize: 2em;
+
+  @media (width <= $screenSmMin) {
+    gap: 0;
+  }
 
   html:not([data-theme]) & .theme-dark,
   html:not([data-theme='dark']) & .theme-dark,
@@ -36,16 +40,43 @@
     &,
     & i {
       transition: all $transitionTimeMs;
+      @media (width <= $screenSmMin) {
+        transform: scale(0.95);
+      }
     }
     &:hover {
       opacity: 1;
       background-color: color.change(#fff, $alpha: 0.1);
       i {
         transform: scale(1.25);
+        @media (width <= $screenSmMin) {
+          transform: scale(1.1);
+        }
       }
     }
     &:active {
       background-color: color.change(#fff, $alpha: 0.5);
+    }
+    &#about {
+      i {
+        display: inline-block;
+        $size: 26px;
+        width: $size;
+        height: $size;
+        font-size: 110%;
+        background-image: url("/static/images/logo/sq/ll-cir-tr-w.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 70%;
+      }
+      &:hover {
+        // background-size: 80%;
+      }
+    }
+    &#contacts {
+      i {
+        font-size: 130%;
+      }
     }
   }
 }

@@ -5,7 +5,7 @@ hasThumb: true
 eleventyNavigation:
   key: mongodb-service-toggle-windows-shortcut
   title: Windows shortcut to toggle MongoDB service
-  parent: articles
+  parent: articles-2024
 date: 2024-06-27
 showNavigationBreadcrumbs: true
 tags:

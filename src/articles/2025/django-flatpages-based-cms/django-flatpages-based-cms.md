@@ -5,7 +5,7 @@ hasThumb: true
 eleventyNavigation:
   key: django-flatpages-based-cms
   title: Windows shortcut to toggle MongoDB service
-  parent: articles
+  parent: articles-2025
 date: 2025-04-05
 showNavigationBreadcrumbs: true
 tags:

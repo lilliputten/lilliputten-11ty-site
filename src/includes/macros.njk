@@ -48,6 +48,21 @@
   </div>
 {% endmacro %}
 
+{% macro LinkThumb(url, thumbPath, title = '', description = '', tag = 'h3') %}
+  <div class="ArticleThumb">
+    <a href="{{ url }}" target="_blank">
+      <img class="ArticleThumbImg" src="{{ thumbPath }}" />
+      <div class="ArticleThumbContent">
+        {%- if title -%}
+          <{{ tag }} class="ArticleThumbTitle">{{ title }}</{{ tag }}>
+        {%- endif -%}
+        {%- if description -%}
+          <p class="ArticleThumbDescription">{{ description }}</p>
+        {%- endif -%}
+      </div>
+    </a>
+  </div>
+{% endmacro %}
 
 {% macro carouselBegin(class = '', type = '', id = '') %}
   <div class="slick-carousel {{ class }}" data-carousel-type="{{ type }}" id="{{ id }}">
