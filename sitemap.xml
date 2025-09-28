@@ -89,19 +89,19 @@
         <loc>https://lilliputten.com/tags/site/</loc>
         <lastmod>2025-09-28</lastmod>
       </url><url>
+        <loc>https://lilliputten.com/tags/articles/</loc>
+        <lastmod>2025-09-28</lastmod>
+      </url><url>
         <loc>https://lilliputten.com/tags/publications/</loc>
         <lastmod>2025-09-28</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/links/</loc>
         <lastmod>2025-09-28</lastmod>
       </url><url>
-        <loc>https://lilliputten.com/tags/articles/</loc>
+        <loc>https://lilliputten.com/tags/contacts/</loc>
         <lastmod>2025-09-28</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/about/</loc>
-        <lastmod>2025-09-28</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/contacts/</loc>
         <lastmod>2025-09-28</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/projects/</loc>
@@ -284,6 +284,12 @@
         <loc>https://lilliputten.com/tags/php/</loc>
         <lastmod>2025-09-28</lastmod>
       </url><url>
+        <loc>https://lilliputten.com/tags/yupe/</loc>
+        <lastmod>2025-09-28</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/landing/</loc>
+        <lastmod>2025-09-28</lastmod>
+      </url><url>
         <loc>https://lilliputten.com/tags/dds/</loc>
         <lastmod>2025-09-28</lastmod>
       </url><url>
@@ -356,12 +362,6 @@
         <loc>https://lilliputten.com/tags/svelte-headless-table/</loc>
         <lastmod>2025-09-28</lastmod>
       </url><url>
-        <loc>https://lilliputten.com/tags/yupe/</loc>
-        <lastmod>2025-09-28</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/landing/</loc>
-        <lastmod>2025-09-28</lastmod>
-      </url><url>
         <loc>https://lilliputten.com/tags/vanilla/</loc>
         <lastmod>2025-09-28</lastmod>
       </url><url>
@@ -431,27 +431,6 @@
         <loc>https://lilliputten.com/tags/sqlite/</loc>
         <lastmod>2025-09-28</lastmod>
       </url><url>
-        <loc>https://lilliputten.com/tags/flutter/</loc>
-        <lastmod>2025-09-28</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/mobile/</loc>
-        <lastmod>2025-09-28</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/audio/</loc>
-        <lastmod>2025-09-28</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/ffmpeg/</loc>
-        <lastmod>2025-09-28</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/ffprobe/</loc>
-        <lastmod>2025-09-28</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/rest/</loc>
-        <lastmod>2025-09-28</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/mysql/</loc>
-        <lastmod>2025-09-28</lastmod>
-      </url><url>
         <loc>https://lilliputten.com/tags/telegram/</loc>
         <lastmod>2025-09-28</lastmod>
       </url><url>
@@ -464,12 +443,33 @@
         <loc>https://lilliputten.com/tags/youtube/</loc>
         <lastmod>2025-09-28</lastmod>
       </url><url>
+        <loc>https://lilliputten.com/tags/audio/</loc>
+        <lastmod>2025-09-28</lastmod>
+      </url><url>
         <loc>https://lilliputten.com/tags/video/</loc>
+        <lastmod>2025-09-28</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/ffmpeg/</loc>
+        <lastmod>2025-09-28</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/ffprobe/</loc>
         <lastmod>2025-09-28</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/convert/</loc>
         <lastmod>2025-09-28</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/online-payment/</loc>
+        <lastmod>2025-09-28</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/flutter/</loc>
+        <lastmod>2025-09-28</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/mobile/</loc>
+        <lastmod>2025-09-28</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/rest/</loc>
+        <lastmod>2025-09-28</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/mysql/</loc>
         <lastmod>2025-09-28</lastmod>
       </url></urlset>
