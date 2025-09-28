@@ -101,10 +101,10 @@
         <loc>https://lilliputten.com/tags/about/</loc>
         <lastmod>2025-09-28</lastmod>
       </url><url>
-        <loc>https://lilliputten.com/tags/projects/</loc>
+        <loc>https://lilliputten.com/tags/contacts/</loc>
         <lastmod>2025-09-28</lastmod>
       </url><url>
-        <loc>https://lilliputten.com/tags/contacts/</loc>
+        <loc>https://lilliputten.com/tags/projects/</loc>
         <lastmod>2025-09-28</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/automation/</loc>
@@ -131,24 +131,6 @@
         <loc>https://lilliputten.com/tags/script/</loc>
         <lastmod>2025-09-28</lastmod>
       </url><url>
-        <loc>https://lilliputten.com/tags/django/</loc>
-        <lastmod>2025-09-28</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/python/</loc>
-        <lastmod>2025-09-28</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/flatpage/</loc>
-        <lastmod>2025-09-28</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/ckeditor/</loc>
-        <lastmod>2025-09-28</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/localization/</loc>
-        <lastmod>2025-09-28</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/custom/</loc>
-        <lastmod>2025-09-28</lastmod>
-      </url><url>
         <loc>https://lilliputten.com/tags/gulp/</loc>
         <lastmod>2025-09-28</lastmod>
       </url><url>
@@ -161,6 +143,9 @@
         <loc>https://lilliputten.com/tags/lqip/</loc>
         <lastmod>2025-09-28</lastmod>
       </url><url>
+        <loc>https://lilliputten.com/tags/ckeditor/</loc>
+        <lastmod>2025-09-28</lastmod>
+      </url><url>
         <loc>https://lilliputten.com/tags/image/</loc>
         <lastmod>2025-09-28</lastmod>
       </url><url>
@@ -168,6 +153,21 @@
         <lastmod>2025-09-28</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/html/</loc>
+        <lastmod>2025-09-28</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/django/</loc>
+        <lastmod>2025-09-28</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/python/</loc>
+        <lastmod>2025-09-28</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/flatpage/</loc>
+        <lastmod>2025-09-28</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/localization/</loc>
+        <lastmod>2025-09-28</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/custom/</loc>
         <lastmod>2025-09-28</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/breadth-vs-depth/</loc>
@@ -309,6 +309,12 @@
         <lastmod>2025-09-28</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/gulp.js/</loc>
+        <lastmod>2025-09-28</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/yupe/</loc>
+        <lastmod>2025-09-28</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/landing/</loc>
         <lastmod>2025-09-28</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/cauldron/</loc>
@@ -465,11 +471,5 @@
         <lastmod>2025-09-28</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/online-payment/</loc>
-        <lastmod>2025-09-28</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/yupe/</loc>
-        <lastmod>2025-09-28</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/landing/</loc>
         <lastmod>2025-09-28</lastmod>
       </url></urlset>
