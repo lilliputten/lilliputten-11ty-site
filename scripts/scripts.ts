@@ -7,6 +7,7 @@
 import './sw/sw';
 
 import { VisualAnimation } from './VisualAnimation/VisualAnimation';
+import { BottomAnimation } from './BottomAnimation/BottomAnimation';
 import { toggleTheme } from './toggleTheme';
 import { initNavigation, setUpdateVisualizationCallback } from './navigation';
 import { initCarousels } from './carousels';
@@ -15,6 +16,7 @@ import { initAOS } from './aos';
 import './initDocument';
 
 VisualAnimation({ setUpdateVisualizationCallback });
+BottomAnimation();
 
 initNavigation();
 initCarousels();

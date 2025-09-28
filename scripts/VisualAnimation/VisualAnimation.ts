@@ -1,20 +1,6 @@
-/**
- * @module VisualAnimation
- * @changed 2024.06.14, 13:06
- */
+import type { Mesh, PerspectiveCamera, PointLight, Scene, WebGLRenderer } from 'three';
 
-import type {
-  Mesh,
-  PerspectiveCamera,
-  PointLight,
-  Scene,
-  WebGLRenderer,
-  // Camera,
-  // Object3D,
-} from 'three';
-
-import { TConf, TColor } from './TConf';
-import { conf } from './conf';
+import { conf, TConf, TColor } from './conf';
 
 export interface TVisualAnimationParams {
   setUpdateVisualizationCallback?: (updateVisualizationCallback: () => void) => void;
@@ -38,9 +24,7 @@ function startVisualAnimation(conf: TConf, params: TVisualAnimationParams) {
   let wWidth: number;
   let wHeight: number;
 
-  // const ThreeMath = THREE.Math;
-
-  let plane: Mesh; // : Object3D;
+  let plane: Mesh;
 
   // @ts-ignore: Wrong type definitions for simplex noise
   const simplex = new window.SimplexNoise();
@@ -61,7 +45,6 @@ function startVisualAnimation(conf: TConf, params: TVisualAnimationParams) {
   init();
 
   function init() {
-    // console.log('[VisualAnimation:init]');
     renderer = new THREE.WebGLRenderer({
       canvas,
       antialias: true,
@@ -82,7 +65,6 @@ function startVisualAnimation(conf: TConf, params: TVisualAnimationParams) {
     }
 
     initScene();
-    // initGui();
     animate();
   }
 
@@ -97,25 +79,6 @@ function startVisualAnimation(conf: TConf, params: TVisualAnimationParams) {
     // raycaster.ray.intersectPlane(mousePlane, mousePosition);
   }
 
-  /* // UNUSED: Input controls
-   * function initGui() {
-   *   noiseInput.value = 101 - conf.xyCoef;
-   *   heightInput.value = (conf.zCoef * 100) / 25;
-   *   // Noise Coef input
-   *   noiseInput.addEventListener('input', (e) => {
-   *     conf.xyCoef = 101 - noiseInput.value;
-   *   });
-   *   // Height Coef input
-   *   heightInput.addEventListener('input', (e) => {
-   *     conf.zCoef = (heightInput.value * 25) / 100;
-   *   });
-   *   // Random colors
-   *   document.getElementById('trigger').addEventListener('click', (e) => {
-   *     setRandomLightsColors();
-   *   });
-   * }
-   */
-
   function numericColor(s: TColor): number {
     if (typeof s === 'string') {
       if (s.startsWith('#')) {
@@ -127,12 +90,7 @@ function startVisualAnimation(conf: TConf, params: TVisualAnimationParams) {
   }
 
   function addLight(color: TColor, lightDistance: number, x: number, y: number, z: number) {
-    const light = new THREE.PointLight(
-      // prettier-ignore
-      numericColor(color),
-      conf.lightIntensity,
-      lightDistance,
-    );
+    const light = new THREE.PointLight(numericColor(color), conf.lightIntensity, lightDistance);
     light.position.set(x, y, z);
     scene.add(light);
     return light;
@@ -143,8 +101,6 @@ function startVisualAnimation(conf: TConf, params: TVisualAnimationParams) {
     initLights();
 
     const mat = new THREE.MeshLambertMaterial({ color: 0xffffff, side: THREE.DoubleSide });
-    // let mat = new THREE.MeshPhongMaterial({ color: 0xffffff });
-    // let mat = new THREE.MeshStandardMaterial({ color: 0x808080, roughness: 0.5, metalness: 0.8 });
     const geo = new THREE.PlaneBufferGeometry(wWidth, wHeight, wWidth / 2, wHeight / 2);
     plane = new THREE.Mesh(geo, mat);
     scene.add(plane);
@@ -155,12 +111,6 @@ function startVisualAnimation(conf: TConf, params: TVisualAnimationParams) {
     plane.rotation.x = planeRotationX;
     plane.position.y = planePositionY;
     camera.position.z = cameraPositionZ;
-    /* console.log('[VisualAnimation:initScene]', {
-     *   planeRotationX,
-     *   planePositionY,
-     *   cameraPositionZ,
-     * });
-     */
   }
 
   function initLights() {
@@ -178,29 +128,20 @@ function startVisualAnimation(conf: TConf, params: TVisualAnimationParams) {
   }
 
   function animate() {
-    // console.log('[VisualAnimation:animate]');
-
     animatePlane();
     animateLights();
 
     renderer.render(scene, camera);
 
-    // setTimeout(() => requestAnimationFrame(animate), 10);
     requestAnimationFrame(animate);
   }
 
   function animatePlane() {
     const gArray = plane.geometry.attributes.position.array as number[];
     const time = Date.now() * 0.0002;
-    /* console.log('[VisualAnimation:animatePlane]', {
-     *   gArray,
-     *   time,
-     * });
-     */
     for (let i = 0; i < gArray.length; i += 3) {
       gArray[i + 2] =
         simplex.noise4D(
-          // prettier-ignore
           gArray[i] / conf.xyCoef,
           gArray[i + 1] / conf.xyCoef,
           time,
@@ -208,7 +149,6 @@ function startVisualAnimation(conf: TConf, params: TVisualAnimationParams) {
         ) * conf.zCoef;
     }
     plane.geometry.attributes.position.needsUpdate = true;
-    // plane.geometry.computeBoundingSphere();
   }
 
   function animateLights() {
@@ -231,20 +171,6 @@ function startVisualAnimation(conf: TConf, params: TVisualAnimationParams) {
       light4.position.z = Math.cos(time * 0.8) * d;
     }
   }
-
-  /* [>* Create random colors <]
-   * function setRandomLightsColors() {
-   *   conf.light1Color = window.chroma.random().hex();
-   *   conf.light2Color = window.chroma.random().hex();
-   *   conf.light3Color = window.chroma.random().hex();
-   *   conf.light4Color = window.chroma.random().hex();
-   *   light1.color = new THREE.Color(conf.light1Color);
-   *   light2.color = new THREE.Color(conf.light2Color);
-   *   light3.color = new THREE.Color(conf.light3Color);
-   *   light4.color = new THREE.Color(conf.light4Color);
-   *   // console.log(conf);
-   * }
-   */
 
   function updateSize() {
     const elWidth = wrapper.clientWidth;

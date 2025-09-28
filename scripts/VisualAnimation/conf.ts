@@ -1,4 +1,22 @@
-import { TConf } from './TConf';
+export type TColor = number | string;
+
+export interface TConf {
+  el: string;
+  wrapperEl: string;
+
+  fov: number;
+  cameraZ: number;
+  xyCoef: number;
+  zCoef: number;
+  lightIntensity: number;
+  ambientColor: TColor;
+
+  // Basic colors
+  light1Color: TColor;
+  light2Color: TColor;
+  light3Color: TColor;
+  light4Color: TColor;
+}
 
 export const conf: TConf = {
   el: 'VisualAnimation',
@@ -10,15 +28,8 @@ export const conf: TConf = {
   zCoef: 15, // 10,
   lightIntensity: 1, // 0.9,
 
-  ambientColor: '#cc2200', // '#00ff00', // 0x000000,
+  ambientColor: '#cc2200',
 
-  /*
-   * // Default colors (convert from hex color string: s/'#\(.*\)'/0x\1/)
-   * light1Color: '#0e09dc',
-   * light2Color: '#1cd1e1',
-   * light3Color: '#18c02c',
-   * light4Color: '#ee3bcf',
-   */
   // Set 1
   light1Color: '#4b9e89',
   light2Color: '#5c75a1',
