@@ -57,6 +57,9 @@
     &:active {
       background-color: color.change(#fff, $alpha: 0.5);
     }
+    &#theme .theme-dark {
+      font-size: 125%;
+    }
     &#about {
       i {
         display: inline-block;
@@ -75,7 +78,7 @@
     }
     &#contacts {
       i {
-        font-size: 130%;
+        font-size: 155%;
       }
     }
   }

@@ -49,7 +49,7 @@ If it's about you, then...
 - **Send YouTube link to the bot.** Share a YouTube clip link from the application or just paste it into the chat. Use `/cast` command to download, or `/info` command to get the clip details.
 - **Download and listen.** Download generated MP3 file or listen it right from the chat. Check your status and statistics with `/status` and `/stats` commands.
 
-# Paid/free tarif plans
+# Paid/free tariff plans
 
 The user can use a **GUEST** usage plan, available by default, request an experimental **FREE** plan (also free at the moment), or pay for an unlimited **PAID** plan. All the plains details are available in the bot via `/plans` command, or on the bot landing page.
 
@@ -72,9 +72,9 @@ The user can use a **GUEST** usage plan, available by default, request an experi
 
 ## And the most important:
 
-- The app is powered by mighty cute animated kitties!
-
 {{ macros.imgFigure('./loading-audio-cat-circle.jpg', 'The kitties is working hard on audio extracting (under the hood).', '', 'max-w-300px rounded-full') }}
+
+- The app is powered by mighty cute animated kitties.
 
 ## Tech Insides
 

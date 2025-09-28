@@ -1,4 +1,7 @@
-<footer class="PageFooter">
+<footer class="PageFooter" id="PageFooter">
+  <div class="BottomAnimationWrapper" id="BottomAnimationWrapper">
+    <canvas class="BottomAnimation" id="BottomAnimation"></canvas>
+  </div>
   <div class="FooterContainer">
     <div class="FooterCopyright">
       © {{ helpers.currentYear() }} <span class="delimiter">/</span>
@@ -29,7 +32,7 @@
           ><i class="bi bi-github"></i> GitHub</a
         >
       </li>
-      <li class="SocialListItem dimmed">
+      <li class="SocialListItem opacity-75">
         <a
           href="https://github.com/lilliputten/lilliputten-11ty-site/blob/main/{{ page.inputPath }}"
           class="SocialListLink linkAsText"

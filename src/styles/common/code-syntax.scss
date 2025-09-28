@@ -1,0 +1,13 @@
+@use 'sass:color';
+
+@import '../shared';
+
+:not(pre) > code[class*='language-'],
+pre[class*='language-'] {
+  $bgColor: #001c34;
+  background-color: color.change($bgColor, $alpha: 0.8);
+}
+code[class*='language-'],
+pre[class*='language-'] {
+  font-size: 0.9em;
+}

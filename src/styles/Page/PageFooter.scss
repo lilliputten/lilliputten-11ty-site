@@ -11,11 +11,8 @@
   padding: 1em;
   margin: 0 auto;
 
-  font-size: 95%;
+  font-size: 85%;
 
-  @media (min-width: calc($mainColumnWidth + 2em)) {
-    padding: 1em 0;
-  }
   @media (min-width: calc($mainColumnWidth + 2em)) {
     padding: 1em 0;
   }
@@ -24,9 +21,18 @@
     text-decoration: none;
   }
 
+  .BottomAnimationWrapper {
+    width: 100%;
+    height: 30px;
+    .BottomAnimation {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
   .FooterContainer {
     [data-page='regular'] & {
-      border-top: 1px solid $primaryColor;
+      // border-top: 1px solid $primaryColor;
       padding-top: 1em;
     }
     display: flex;
