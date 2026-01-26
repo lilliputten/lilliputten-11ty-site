@@ -1,5 +1,6 @@
 {
   "search.exclude": {
+    "publish": true,
     "build": true,
     "compiled-assets": true,
     "static": true,

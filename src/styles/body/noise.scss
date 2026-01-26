@@ -6,25 +6,36 @@
   position: fixed;
   z-index: 9999;
   overflow: hidden;
-  content: '';
-  top: -300%;
-  left: -150%;
-  height: 600%;
-  width: 600%;
-  &.animated {
-    // animation: grain 20s steps(10) infinite;
-    animation: grain 30s steps(10) infinite;
-  }
-  background-image: url('/static/images/background/noise.png');
-  background-size: 200px;
-  background-repeat: repeat;
   pointer-events: none;
-  transition: opacity 500ms;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: opacity 300ms;
   opacity: 0;
   &.show {
     opacity: 0.2;
     [data-theme='dark'] & {
       opacity: 0.1;
+    }
+  }
+  &:before {
+    content: '';
+    position: fixed;
+    top: -150%;
+    left: -150%;
+    bottom: -150%;
+    right: -150%;
+    // height: 600%;
+    // width: 600%;
+    border: 2px solid green;
+    background-image: url('/static/images/background/noise.png');
+    background-size: 200px;
+    background-repeat: repeat;
+  }
+  &.animated {
+    &:before {
+      animation: grain 30s steps(10) infinite;
     }
   }
 }
