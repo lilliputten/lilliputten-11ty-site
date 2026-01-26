@@ -5,12 +5,12 @@ hasThumb: true
 eleventyNavigation:
   key: 2025-09-21-martin-fowler-articles-expert-generalist
   title: Expert Generalists / by Martin Fowler et al, July 202
-  parent: links-2025
+  parent: reviews-2025
 date: 2025-09-21
 showNavigationBreadcrumbs: true
 tags:
   - publications
-  - links
+  - reviews
   - '2025'
   - breadth vs depth
   - career growth
