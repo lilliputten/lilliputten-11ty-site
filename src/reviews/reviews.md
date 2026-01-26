@@ -1,17 +1,17 @@
 ---
 layout: article.njk
-permalink: /links/
-title: Links
+permalink: /reviews/
+title: Reviews
 eleventyNavigation:
-  key: links
-  title: Links
+  key: reviews
+  title: Reviews
 date: 2025-09-28
 hideMeta: true
 tag: false
 tags:
   - site
   - publications
-  - links
+  - reviews
 showHero: true
 ---
 

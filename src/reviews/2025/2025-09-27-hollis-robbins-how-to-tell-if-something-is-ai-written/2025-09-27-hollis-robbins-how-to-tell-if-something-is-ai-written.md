@@ -5,12 +5,12 @@ hasThumb: true
 eleventyNavigation:
   key: 2025-09-27-hollis-robbins-how-to-tell-if-something-is-ai-written
   title: How to Tell if Something is AI-Written / by Hollis Robbins, Aug 2025
-  parent: links-2025
+  parent: reviews-2025
 date: 2025-09-27
 showNavigationBreadcrumbs: true
 tags:
   - publications
-  - links
+  - reviews
   - '2025'
   - ai
   - ai detection

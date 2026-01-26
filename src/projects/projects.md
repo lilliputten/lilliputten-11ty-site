@@ -30,6 +30,8 @@ Below are a few ongoing or finished projects.
 {{ macros.ArticleThumb('./2025/action-excel-vlookup-emulator/', 'Excel VLOOKUP Function Trainer Application', 'A step-by-step simulator for practicing actions for comparing and searching for missing values in different columns of Excel tables.') }}
 -->
 
+{{ macros.ArticleThumb('./2026/mindstack/', 'MindStack Memory Trainer', 'Full-stack learning platform that combines cognitive science techniques with modern web tech—handling complex algorithms, multi-provider authentication, and international payments in one cohesive experience.') }}
+
 {{ macros.ArticleThumb('./2025/tubecaster-telegram-bot/', 'TubeCaster Telegram Bot', 'Simple telegram bot aimed to convert youtube videos into audio podcasts for later listening (even in offline mode) inside the Telegram app. Supports a few tariffs, including paid (via Telegram XTR), guest, and limited free plan.') }}
 
 {{ macros.ArticleThumb('./2025/march-tales/', 'The March Cat Tales Mobile App, Server & Site', 'A multi-component project designed to deliver author-narrated fairy tales through a Flutter mobile application, web UI, and REST API Django-driven server.') }}
