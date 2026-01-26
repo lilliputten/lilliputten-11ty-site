@@ -119,10 +119,13 @@ The system maintains session consistency across all providers and handles edge c
 
 ### 4. International Payments Integration
 
+{{ macros.imgFigure('./shots-v.0.1.0/payments-choose-payment-system.jpg', 'Multiple payment options are available.') }}
+{{ macros.imgFigure('./shots-v.0.1.0/payments-pricing.jpg', 'Flexible tariff plans are provided.') }}
+
 Monetizing a global app means handling different payment ecosystems:
 
 - **Stripe** for international users
-- **YooKassa** for Russian users (due to sanctions)
+- **YooKassa** for Russian users
 - **Telegram Stars** for future integration (not implemented as on 2026.01)
 
 Each system has different webhook patterns, currency handling, and compliance requirements. The payment system is built to be extensible for future payment methods.

@@ -210,6 +210,16 @@
       }
     }
 
+    &#mindstack {
+      background-color: #02225b;
+      background-image: linear-gradient(
+        45deg,
+        rgb(2, 34, 91) 0%,
+        rgb(193, 34, 180) 70%,
+        rgb(2, 34, 91) 90%
+      );
+    }
+
     &#march-tales {
       $marchColor: #bb2266;
       background-color: $marchColor;
