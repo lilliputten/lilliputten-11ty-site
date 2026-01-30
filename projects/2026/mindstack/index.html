@@ -104,7 +104,7 @@
       </div>
       <p><strong><a href="https://mind-stack-trainer.vercel.app/" c="l" class="external" title="External link: https://mind-stack-trainer.vercel.app/" target="_blank" rel="noopener">MindStack Memory Trainer</a></strong> is a modern, full-featured web application
         for memory training and knowledge retention. Built with Next.js 15, it combines spaced repetition algorithms with interactive workouts to help users learn and remember information more effectively.</p>
-      <p>What started as a simple flashcard app evolved into a comprehensive learning platform with AI integration, multi-language support, and complex payment systems. The journey involved navigating through authentication complexities, database optimizations,
+      <p>What started as a simple flashcard app will turn into a full-fledged learning platform with AI integration, multi-language support, and complex payment systems. The journey involved navigating through authentication complexities, database optimizations,
         and creating an intuitive user experience for a cognitively demanding task.</p>
       <figure>
         <figcaption>MindStack Memory Trainer</figcaption>
@@ -126,14 +126,15 @@
         <img class="" src="./shots-v.0.1.0/training-incorrect-answer.jpg" alt="Learning from mistakes with comprehensive answer breakdowns." loading="lazy" decoding="async" width="700"
         height="545" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 700 545'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAHCAIAAABV+fA3AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAs0lEQVR4nAXBbQ6CIAAAUM7RMpHSEDEUEIMwMzCbrq1P+9H979F74Hr/+enbXb/t8LHuZd17f3rq86fpZ5Bzi1KJqELbCiYKbvUq0QtUL2MDuBmFcDflRumHsmeiR9JHrIW5BaK5UzHU/CKZkzuXlR7SJiIG4hrU3ZzKcZWdQtLGhSv0hLAO4yrccFAdH7h0ETYIG5ioYF0EaxZEdAlTYPuZ6ymvPBVdxltaHgk7EKbJTv0B2WknS3lgOe8AAAAASUVORK5CYII='%3E%3C/image%3E%3C/svg%3E&quot;)">
       </figure>
-      <p>Most learning apps focus on content delivery, but MindStack had a different goal: to leverage proven cognitive science techniques (spaced repetition and active recall) in a way that felt seamless and engaging. The technical challenge was twofold:</p>
+      <p>MindStack was built around a fresh approach to learning: combine modern web technologies with smart automation to make memory training feel effortless and engaging. Instead of starting from scratch, users can generate entire sets of questions and
+        answers with AI, turning inspiration into practice in seconds. The core technical challenge was balancing powerful features with a smooth, inviting experience:</p>
       <ol>
-        <li><strong>Implementing effective algorithms</strong> that adapt to individual learning patterns</li>
-        <li><strong>Creating an intuitive interface</strong> that doesn’t get in the way of the learning process</li>
+        <li><strong>Leveraging modern tech stacks</strong> like Next.js 15, TypeScript, and real-time databases to create a responsive, reliable foundation.</li>
+        <li><strong>Designing an interface that feels intuitive and polished</strong>, so users stay focused on learning—not on learning the app.</li>
       </ol>
-      <p>The system needed to track hundreds of data points per user—response times, confidence levels, topic mastery—and use that data to optimize future sessions. All while maintaining a responsive, pleasant user experience.</p>
-      <h2 id="technical-architecture-next-js-15-meets-cognitive-science"
-      tabindex="-1">Technical Architecture: Next.js 15 Meets Cognitive Science <a class="header-anchor" href="#technical-architecture-next-js-15-meets-cognitive-science"><i class="bi bi-link-45deg"></i></a></h2>
+      <p>Under the hood, the platform integrates AI for content generation, multi-provider authentication, and complex state management—all while maintaining a fast, visually cohesive interface. The goal was to make advanced technology feel simple, helping
+        users build knowledge through smart tools and a clean, modern design.</p>
+      <h2 id="technical-architecture-next-js-15-meets-entertainment-and-education" tabindex="-1">Technical Architecture: Next.js 15 Meets Entertainment and Education <a class="header-anchor" href="#technical-architecture-next-js-15-meets-entertainment-and-education"><i class="bi bi-link-45deg"></i></a></h2>
       <h3 id="the-core-stack" tabindex="-1">The Core Stack <a class="header-anchor" href="#the-core-stack"><i class="bi bi-link-45deg"></i></a></h3>
       <ul>
         <li><strong>Next.js 15 with App Router</strong> – For server components and optimal performance</li>
@@ -178,16 +179,15 @@
       </figure>
       <p>Creating and organizing learning materials should be as easy as using them. The topic system supports:</p>
       <ul>
-        <li>Hierarchical categorization with unlimited nesting</li>
-        <li>Multi-language content (questions and answers can be in different languages)</li>
-        <li>Public/private sharing controls</li>
+        <li>Multilingual content (creators can choose the language for the trainings they create, and users can choose trainings with the language that suits them)</li>
+        <li>Public/private access controls</li>
         <li>AI-assisted content generation</li>
       </ul>
       <h3 id="2-ai-powered-content-creation" tabindex="-1">2. AI-Powered Content Creation <a class="header-anchor" href="#2-ai-powered-content-creation"><i class="bi bi-link-45deg"></i></a></h3>
       <figure>
-        <figcaption>AI question generation interface with topic context and customization options.</figcaption>
-        <img class="" src="./shots-v.0.1.0/ai-generate-questions-form.jpg" alt="AI question generation interface with topic context and customization options."
-        loading="lazy" decoding="async" width="700" height="545" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 700 545'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAHCAIAAABV+fA3AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAtklEQVR4nAXBwZKCIBgAYF6htQD5QQEVCREjcjJbd2o6NFMd97gznXr/V9jvQ2m6hHQ+/jyfv5/r4+/2eu+nuw2zjwsq9JbyhquhaMYMfMY8LYM0CdQONW7k0mPuKjeD3pNi2PCe8I4wi0w/g46YB20n0Okr7zbgcmEJM8iERVQjEYPezkxFLALhjkKLWY2MP4EeMFhZxzX0K9qtqcG5wrhAbvct24Pr4n05QJVAR6H6UraibP4BHJcdT/IyYiMAAAAASUVORK5CYII='%3E%3C/image%3E%3C/svg%3E&quot;)">
+        <figcaption>AI question generation interface with customization options.</figcaption>
+        <img class="" src="./shots-v.0.1.0/ai-generate-questions-form.jpg" alt="AI question generation interface with customization options." loading="lazy" decoding="async" width="700"
+        height="545" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 700 545'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAHCAIAAABV+fA3AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAtklEQVR4nAXBwZKCIBgAYF6htQD5QQEVCREjcjJbd2o6NFMd97gznXr/V9jvQ2m6hHQ+/jyfv5/r4+/2eu+nuw2zjwsq9JbyhquhaMYMfMY8LYM0CdQONW7k0mPuKjeD3pNi2PCe8I4wi0w/g46YB20n0Okr7zbgcmEJM8iERVQjEYPezkxFLALhjkKLWY2MP4EeMFhZxzX0K9qtqcG5wrhAbvct24Pr4n05QJVAR6H6UraibP4BHJcdT/IyYiMAAAAASUVORK5CYII='%3E%3C/image%3E%3C/svg%3E&quot;)">
       </figure>
       <figure>
         <figcaption>AI-powered answer generation with multiple format options.</figcaption>
@@ -198,7 +198,6 @@
       <ul>
         <li>Generate questions from text descriptions</li>
         <li>Create answer variations automatically</li>
-        <li>Suggest related topics and categories</li>
       </ul>
       <p>The AI integration uses multiple providers (GigaChat and Cloudflare Workers AI) with fallback mechanisms to ensure reliability.</p>
       <h3 id="3-multi-provider-authentication" tabindex="-1">3. Multi-Provider Authentication <a class="header-anchor" href="#3-multi-provider-authentication"><i class="bi bi-link-45deg"></i></a></h3>
@@ -243,9 +242,8 @@
         width="700" height="473" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 700 473'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAGCAIAAACepSOSAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAm0lEQVR4nBXI2wqDIAAAUCHYhV5ak4zmpanpKtOWjXWhttj//9MIztMByo7aLdqtuv0Ks4hmle3G7SbtDyj3yZtlZ/cVZqWPieiBFSNAxXxAdQBVADXM+wi7MK1DVMXYgkRNiR7CmzmmJeT9hXZnVJ1QGWEDcDmnaoB3H+ddJl6Ue8I7wh3hFmTyfWXPmLiYWlJ4rj2TjgnLRPMHUXQX5sX1SSwAAAAASUVORK5CYII='%3E%3C/image%3E%3C/svg%3E&quot;)">
       </figure>
       <figure>
-        <figcaption>Workout completion screen with performance summary and insights.</figcaption>
-        <img class="" src="./shots-v.0.1.0/training-finished.jpg" alt="Workout completion screen with performance summary and insights." loading="lazy" decoding="async" width="700"
-        height="545" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 700 545'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAHCAIAAABV+fA3AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAt0lEQVR4nAXBWXaDIBQAULZhYvIgqYIDIs5YtKJkMv3IVNtzuv995F50vv3b718z/w3nRdtnZ1/KPNT4o+2CeN6BJ10s1lg4IB2cr0i52lXOvkHF58yEAdrioMPhAMEAQb9lGmiLyu5G5ZFE00dyZPLE69lPDKYteDWqzRIW856PvphYOlb9PW0uW68AL0Nlf2dywlQRpsCv3F26JnxDYhcHSB+WTF15aePcRNlXLPso1aFQYVK9ARxaJgDPHZ4rAAAAAElFTkSuQmCC'%3E%3C/image%3E%3C/svg%3E&quot;)">
+        <figcaption>Workout completion screen.</figcaption>
+        <img class="" src="./shots-v.0.1.0/training-finished.jpg" alt="Workout completion screen." loading="lazy" decoding="async" width="700" height="545" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 700 545'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAHCAIAAABV+fA3AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAt0lEQVR4nAXBWXaDIBQAULZhYvIgqYIDIs5YtKJkMv3IVNtzuv995F50vv3b718z/w3nRdtnZ1/KPNT4o+2CeN6BJ10s1lg4IB2cr0i52lXOvkHF58yEAdrioMPhAMEAQb9lGmiLyu5G5ZFE00dyZPLE69lPDKYteDWqzRIW856PvphYOlb9PW0uW68AL0Nlf2dywlQRpsCv3F26JnxDYhcHSB+WTF15aePcRNlXLPso1aFQYVK9ARxaJgDPHZ4rAAAAAElFTkSuQmCC'%3E%3C/image%3E%3C/svg%3E&quot;)">
       </figure>
       <figure>
         <figcaption>Training overview dashboard showing progress across all topics.</figcaption>
@@ -356,11 +354,11 @@
         <figcaption>Individual topic view with metadata and quick actions.</figcaption>
         <img class="" src="./shots-v.0.1.0/topics-item.jpg" alt="Individual topic view with metadata and quick actions." loading="lazy" decoding="async" width="700" height="122" style="background-size:cover;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 700 122'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAADCAIAAAD+5KMAAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAApUlEQVR4nAXBbQqCQBAAUE+h66x9aNgHiFqzs6Olu6YbSBBBIBR0h/50l67be56elW5dXTZHsyD280oUHBZaFBQUJEoSpRIlhagAFSgFKpO4k5hJ9LpYvw7jcz9O+eW+7W5r+8jcNWl6oEFyD9xHtZW6BTKgG6B3oD+iHgV6KsgNoI2oBRzi2s7ZrZouObnUnFetWZ6G1DYzrkJkQJb49fkXdZPAPw3pIZVlyovCAAAAAElFTkSuQmCC'%3E%3C/image%3E%3C/svg%3E&quot;)">
       </figure>
-      <p>MindStack successfully combines:</p>
+      <p>At its core, MindStack blends smart features with a polished interface:</p>
       <ul>
-        <li><strong>Cognitive science</strong> – Effective learning techniques</li>
-        <li><strong>Modern web tech</strong> – Performance and reliability</li>
-        <li><strong>User-centric design</strong> – Intuitive, pleasant experience</li>
+        <li><strong>AI-powered workflows</strong> – From empty topic to ready-to-practice questions in minutes</li>
+        <li><strong>Responsive, modern tech</strong> – Built on Next.js 15 with real-time state management</li>
+        <li><strong>User-friendly design</strong> – Clean layouts, clear interactions, and thoughtful defaults</li>
       </ul>
       <p>The application handles everything from AI content generation to complex payment processing, all while maintaining a focus on what matters most: helping people learn and remember.</p>
       <h2 id="lessons-learned" tabindex="-1">Lessons Learned <a class="header-anchor" href="#lessons-learned"><i class="bi bi-link-45deg"></i></a></h2>
@@ -387,9 +385,6 @@
         <li><strong>GitHub Repository</strong>: <a href="https://github.com/lilliputten/mindstack/" c="l" class="external" title="External link: https://github.com/lilliputten/mindstack/" target="_blank" rel="noopener">https://github.com/lilliputten/mindstack/</a>
         </li>
       </ul>
-      <hr>
-      <p><em>MindStack represents the intersection of modern web development and practical cognitive science. It’s not just another flashcard app—it’s a system designed to help knowledge actually stick, using technology to enhance human learning capabilities.</em>
-      </p>
       <div class="ArticleFooter">
         <ul class="ArticleTags tags">
           <li class="tagsTitle">Tags:</li>

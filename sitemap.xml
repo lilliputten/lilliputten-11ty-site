@@ -101,10 +101,10 @@
         <loc>https://lilliputten.com/tags/articles/</loc>
         <lastmod>2026-01-30</lastmod>
       </url><url>
-        <loc>https://lilliputten.com/tags/about/</loc>
+        <loc>https://lilliputten.com/tags/contacts/</loc>
         <lastmod>2026-01-30</lastmod>
       </url><url>
-        <loc>https://lilliputten.com/tags/contacts/</loc>
+        <loc>https://lilliputten.com/tags/about/</loc>
         <lastmod>2026-01-30</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/projects/</loc>
@@ -140,24 +140,6 @@
         <loc>https://lilliputten.com/tags/script/</loc>
         <lastmod>2026-01-30</lastmod>
       </url><url>
-        <loc>https://lilliputten.com/tags/django/</loc>
-        <lastmod>2026-01-30</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/python/</loc>
-        <lastmod>2026-01-30</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/flatpage/</loc>
-        <lastmod>2026-01-30</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/ckeditor/</loc>
-        <lastmod>2026-01-30</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/localization/</loc>
-        <lastmod>2026-01-30</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/custom/</loc>
-        <lastmod>2026-01-30</lastmod>
-      </url><url>
         <loc>https://lilliputten.com/tags/gulp/</loc>
         <lastmod>2026-01-30</lastmod>
       </url><url>
@@ -170,6 +152,9 @@
         <loc>https://lilliputten.com/tags/lqip/</loc>
         <lastmod>2026-01-30</lastmod>
       </url><url>
+        <loc>https://lilliputten.com/tags/ckeditor/</loc>
+        <lastmod>2026-01-30</lastmod>
+      </url><url>
         <loc>https://lilliputten.com/tags/image/</loc>
         <lastmod>2026-01-30</lastmod>
       </url><url>
@@ -177,6 +162,21 @@
         <lastmod>2026-01-30</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/html/</loc>
+        <lastmod>2026-01-30</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/django/</loc>
+        <lastmod>2026-01-30</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/python/</loc>
+        <lastmod>2026-01-30</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/flatpage/</loc>
+        <lastmod>2026-01-30</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/localization/</loc>
+        <lastmod>2026-01-30</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/custom/</loc>
         <lastmod>2026-01-30</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/cms/</loc>
@@ -204,12 +204,6 @@
         <lastmod>2026-01-30</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/php/</loc>
-        <lastmod>2026-01-30</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/yupe/</loc>
-        <lastmod>2026-01-30</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/landing/</loc>
         <lastmod>2026-01-30</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/dds/</loc>
@@ -266,6 +260,12 @@
         <loc>https://lilliputten.com/tags/javascript/</loc>
         <lastmod>2026-01-30</lastmod>
       </url><url>
+        <loc>https://lilliputten.com/tags/yupe/</loc>
+        <lastmod>2026-01-30</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/landing/</loc>
+        <lastmod>2026-01-30</lastmod>
+      </url><url>
         <loc>https://lilliputten.com/tags/vanilla/</loc>
         <lastmod>2026-01-30</lastmod>
       </url><url>
@@ -302,6 +302,36 @@
         <loc>https://lilliputten.com/tags/svelte-headless-table/</loc>
         <lastmod>2026-01-30</lastmod>
       </url><url>
+        <loc>https://lilliputten.com/tags/flutter/</loc>
+        <lastmod>2026-01-30</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/mobile/</loc>
+        <lastmod>2026-01-30</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/audio/</loc>
+        <lastmod>2026-01-30</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/ffmpeg/</loc>
+        <lastmod>2026-01-30</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/ffprobe/</loc>
+        <lastmod>2026-01-30</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/i18n/</loc>
+        <lastmod>2026-01-30</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/rest/</loc>
+        <lastmod>2026-01-30</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/authorization/</loc>
+        <lastmod>2026-01-30</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/mysql/</loc>
+        <lastmod>2026-01-30</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/sqlite/</loc>
+        <lastmod>2026-01-30</lastmod>
+      </url><url>
         <loc>https://lilliputten.com/tags/vite/</loc>
         <lastmod>2026-01-30</lastmod>
       </url><url>
@@ -314,9 +344,6 @@
         <loc>https://lilliputten.com/tags/vercel/</loc>
         <lastmod>2026-01-30</lastmod>
       </url><url>
-        <loc>https://lilliputten.com/tags/i18n/</loc>
-        <lastmod>2026-01-30</lastmod>
-      </url><url>
         <loc>https://lilliputten.com/tags/excel/</loc>
         <lastmod>2026-01-30</lastmod>
       </url><url>
@@ -327,36 +354,6 @@
         <lastmod>2026-01-30</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/action/</loc>
-        <lastmod>2026-01-30</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/telegram/</loc>
-        <lastmod>2026-01-30</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/bot/</loc>
-        <lastmod>2026-01-30</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/flask/</loc>
-        <lastmod>2026-01-30</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/youtube/</loc>
-        <lastmod>2026-01-30</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/audio/</loc>
-        <lastmod>2026-01-30</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/video/</loc>
-        <lastmod>2026-01-30</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/ffmpeg/</loc>
-        <lastmod>2026-01-30</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/ffprobe/</loc>
-        <lastmod>2026-01-30</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/convert/</loc>
-        <lastmod>2026-01-30</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/online-payment/</loc>
         <lastmod>2026-01-30</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/nextjs/</loc>
@@ -374,16 +371,70 @@
         <loc>https://lilliputten.com/tags/prisma/</loc>
         <lastmod>2026-01-30</lastmod>
       </url><url>
-        <loc>https://lilliputten.com/tags/authorization/</loc>
-        <lastmod>2026-01-30</lastmod>
-      </url><url>
         <loc>https://lilliputten.com/tags/postgresql/</loc>
         <lastmod>2026-01-30</lastmod>
       </url><url>
-        <loc>https://lilliputten.com/tags/sqlite/</loc>
+        <loc>https://lilliputten.com/tags/telegram/</loc>
+        <lastmod>2026-01-30</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/bot/</loc>
+        <lastmod>2026-01-30</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/flask/</loc>
+        <lastmod>2026-01-30</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/youtube/</loc>
+        <lastmod>2026-01-30</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/video/</loc>
+        <lastmod>2026-01-30</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/convert/</loc>
+        <lastmod>2026-01-30</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/online-payment/</loc>
         <lastmod>2026-01-30</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/ai/</loc>
+        <lastmod>2026-01-30</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/ai-detection/</loc>
+        <lastmod>2026-01-30</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/ai-linguistic-patterns/</loc>
+        <lastmod>2026-01-30</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/ai-text-markers/</loc>
+        <lastmod>2026-01-30</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/aphantasia/</loc>
+        <lastmod>2026-01-30</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/aphantasia-and-writing/</loc>
+        <lastmod>2026-01-30</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/artificiality/</loc>
+        <lastmod>2026-01-30</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/artificiality-in-text/</loc>
+        <lastmod>2026-01-30</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/hollis-robbins/</loc>
+        <lastmod>2026-01-30</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/human-vs-ai-writing/</loc>
+        <lastmod>2026-01-30</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/institutional-buzzwords/</loc>
+        <lastmod>2026-01-30</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/mental-imagery-in-reading/</loc>
+        <lastmod>2026-01-30</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/over-structured-writing/</loc>
+        <lastmod>2026-01-30</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/personal-detail-in-writing/</loc>
         <lastmod>2026-01-30</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/memory-training/</loc>
@@ -396,18 +447,6 @@
         <lastmod>2026-01-30</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/webapp/</loc>
-        <lastmod>2026-01-30</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/flutter/</loc>
-        <lastmod>2026-01-30</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/mobile/</loc>
-        <lastmod>2026-01-30</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/rest/</loc>
-        <lastmod>2026-01-30</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/mysql/</loc>
         <lastmod>2026-01-30</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/breadth-vs-depth/</loc>
@@ -453,44 +492,5 @@
         <lastmod>2026-01-30</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/technical-rust/</loc>
-        <lastmod>2026-01-30</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/ai-detection/</loc>
-        <lastmod>2026-01-30</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/ai-linguistic-patterns/</loc>
-        <lastmod>2026-01-30</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/ai-text-markers/</loc>
-        <lastmod>2026-01-30</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/aphantasia/</loc>
-        <lastmod>2026-01-30</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/aphantasia-and-writing/</loc>
-        <lastmod>2026-01-30</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/artificiality/</loc>
-        <lastmod>2026-01-30</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/artificiality-in-text/</loc>
-        <lastmod>2026-01-30</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/hollis-robbins/</loc>
-        <lastmod>2026-01-30</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/human-vs-ai-writing/</loc>
-        <lastmod>2026-01-30</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/institutional-buzzwords/</loc>
-        <lastmod>2026-01-30</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/mental-imagery-in-reading/</loc>
-        <lastmod>2026-01-30</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/over-structured-writing/</loc>
-        <lastmod>2026-01-30</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/personal-detail-in-writing/</loc>
         <lastmod>2026-01-30</lastmod>
       </url></urlset>
