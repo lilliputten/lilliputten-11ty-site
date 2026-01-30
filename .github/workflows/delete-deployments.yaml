@@ -1,0 +1,14 @@
+name: Clean Up Old Deployments (int128/delete-deployments-action)
+
+# @see https://github.com/int128/delete-deployments-action
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  delete:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: int128/delete-deployments-action@v1

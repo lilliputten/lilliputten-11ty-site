@@ -1,6 +1,6 @@
 # .github/workflows/cleanup.yaml
 
-name: Clean Up Deployments
+name: Clean Up Actions
 
 on:
   schedule:
