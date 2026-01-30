@@ -233,12 +233,6 @@
         <loc>https://lilliputten.com/tags/gulp.js/</loc>
         <lastmod>2026-01-30</lastmod>
       </url><url>
-        <loc>https://lilliputten.com/tags/yupe/</loc>
-        <lastmod>2026-01-30</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/landing/</loc>
-        <lastmod>2026-01-30</lastmod>
-      </url><url>
         <loc>https://lilliputten.com/tags/cauldron/</loc>
         <lastmod>2026-01-30</lastmod>
       </url><url>
@@ -264,6 +258,12 @@
         <lastmod>2026-01-30</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/javascript/</loc>
+        <lastmod>2026-01-30</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/yupe/</loc>
+        <lastmod>2026-01-30</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/landing/</loc>
         <lastmod>2026-01-30</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/randonneur/</loc>
@@ -356,24 +356,6 @@
         <loc>https://lilliputten.com/tags/sqlite/</loc>
         <lastmod>2026-01-30</lastmod>
       </url><url>
-        <loc>https://lilliputten.com/tags/nextjs/</loc>
-        <lastmod>2026-01-30</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/next-auth/</loc>
-        <lastmod>2026-01-30</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/iis/</loc>
-        <lastmod>2026-01-30</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/oauth/</loc>
-        <lastmod>2026-01-30</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/prisma/</loc>
-        <lastmod>2026-01-30</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/postgresql/</loc>
-        <lastmod>2026-01-30</lastmod>
-      </url><url>
         <loc>https://lilliputten.com/tags/telegram/</loc>
         <lastmod>2026-01-30</lastmod>
       </url><url>
@@ -393,6 +375,33 @@
         <lastmod>2026-01-30</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/online-payment/</loc>
+        <lastmod>2026-01-30</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/nextjs/</loc>
+        <lastmod>2026-01-30</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/prisma/</loc>
+        <lastmod>2026-01-30</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/postgresql/</loc>
+        <lastmod>2026-01-30</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/next-auth/</loc>
+        <lastmod>2026-01-30</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/ai/</loc>
+        <lastmod>2026-01-30</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/memory-training/</loc>
+        <lastmod>2026-01-30</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/spaced-repetition/</loc>
+        <lastmod>2026-01-30</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/education/</loc>
+        <lastmod>2026-01-30</lastmod>
+      </url><url>
+        <loc>https://lilliputten.com/tags/webapp/</loc>
         <lastmod>2026-01-30</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/breadth-vs-depth/</loc>
@@ -440,19 +449,10 @@
         <loc>https://lilliputten.com/tags/technical-rust/</loc>
         <lastmod>2026-01-30</lastmod>
       </url><url>
-        <loc>https://lilliputten.com/tags/ai/</loc>
+        <loc>https://lilliputten.com/tags/iis/</loc>
         <lastmod>2026-01-30</lastmod>
       </url><url>
-        <loc>https://lilliputten.com/tags/memory-training/</loc>
-        <lastmod>2026-01-30</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/spaced-repetition/</loc>
-        <lastmod>2026-01-30</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/education/</loc>
-        <lastmod>2026-01-30</lastmod>
-      </url><url>
-        <loc>https://lilliputten.com/tags/webapp/</loc>
+        <loc>https://lilliputten.com/tags/oauth/</loc>
         <lastmod>2026-01-30</lastmod>
       </url><url>
         <loc>https://lilliputten.com/tags/ai-detection/</loc>
