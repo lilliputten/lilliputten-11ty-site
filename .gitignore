@@ -1,7 +1,6 @@
 /bin
 /node_modules
 /build
-/publish
 _cache
 .cache
 
