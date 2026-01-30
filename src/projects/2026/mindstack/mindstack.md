@@ -36,7 +36,7 @@ tags:
 
 **[MindStack Memory Trainer](https://mind-stack-trainer.vercel.app/)** is a modern, full-featured web application for memory training and knowledge retention. Built with Next.js 15, it combines spaced repetition algorithms with interactive workouts to help users learn and remember information more effectively.
 
-What started as a simple flashcard app evolved into a comprehensive learning platform with AI integration, multi-language support, and complex payment systems. The journey involved navigating through authentication complexities, database optimizations, and creating an intuitive user experience for a cognitively demanding task.
+What started as a simple flashcard app will turn into a full-fledged learning platform with AI integration, multi-language support, and complex payment systems. The journey involved navigating through authentication complexities, database optimizations, and creating an intuitive user experience for a cognitively demanding task.
 
 {{ macros.imgFigure('./opengraph-image-700.jpg', 'MindStack Memory Trainer') }}
 
@@ -46,14 +46,14 @@ What started as a simple flashcard app evolved into a comprehensive learning pla
 {{ macros.imgFigure('./shots-v.0.1.0/training-correct-answer.jpg', 'Immediate feedback after a correct answer with detailed explanation.') }}
 {{ macros.imgFigure('./shots-v.0.1.0/training-incorrect-answer.jpg', 'Learning from mistakes with comprehensive answer breakdowns.') }}
 
-Most learning apps focus on content delivery, but MindStack had a different goal: to leverage proven cognitive science techniques (spaced repetition and active recall) in a way that felt seamless and engaging. The technical challenge was twofold:
+MindStack was built around a fresh approach to learning: combine modern web technologies with smart automation to make memory training feel effortless and engaging. Instead of starting from scratch, users can generate entire sets of questions and answers with AI, turning inspiration into practice in seconds. The core technical challenge was balancing powerful features with a smooth, inviting experience:
 
-1. **Implementing effective algorithms** that adapt to individual learning patterns
-2. **Creating an intuitive interface** that doesn't get in the way of the learning process
+1. **Leveraging modern tech stacks** like Next.js 15, TypeScript, and real-time databases to create a responsive, reliable foundation.
+2. **Designing an interface that feels intuitive and polished**, so users stay focused on learning—not on learning the app.
 
-The system needed to track hundreds of data points per user—response times, confidence levels, topic mastery—and use that data to optimize future sessions. All while maintaining a responsive, pleasant user experience.
+Under the hood, the platform integrates AI for content generation, multi-provider authentication, and complex state management—all while maintaining a fast, visually cohesive interface. The goal was to make advanced technology feel simple, helping users build knowledge through smart tools and a clean, modern design.
 
-## Technical Architecture: Next.js 15 Meets Cognitive Science
+## Technical Architecture: Next.js 15 Meets Entertainment and Education
 
 ### The Core Stack
 
@@ -85,21 +85,19 @@ Modeling learning data was particularly interesting. A user's progress isn't lin
 
 Creating and organizing learning materials should be as easy as using them. The topic system supports:
 
-- Hierarchical categorization with unlimited nesting
-- Multi-language content (questions and answers can be in different languages)
-- Public/private sharing controls
+- Multilingual content (creators can choose the language for the trainings they create, and users can choose trainings with the language that suits them)
+- Public/private access controls
 - AI-assisted content generation
 
 ### 2. AI-Powered Content Creation
 
-{{ macros.imgFigure('./shots-v.0.1.0/ai-generate-questions-form.jpg', 'AI question generation interface with topic context and customization options.') }}
+{{ macros.imgFigure('./shots-v.0.1.0/ai-generate-questions-form.jpg', 'AI question generation interface with customization options.') }}
 {{ macros.imgFigure('./shots-v.0.1.0/ai-generate-answers-form.jpg', 'AI-powered answer generation with multiple format options.') }}
 
 One of the biggest barriers to using memory training apps is content creation. MindStack solves this with integrated AI:
 
 - Generate questions from text descriptions
 - Create answer variations automatically
-- Suggest related topics and categories
 
 The AI integration uses multiple providers (GigaChat and Cloudflare Workers AI) with fallback mechanisms to ensure reliability.
 
@@ -133,7 +131,7 @@ Each system has different webhook patterns, currency handling, and compliance re
 ### 5. Workout Engine
 
 {{ macros.imgFigure('./shots-v.0.1.0/training-questions-with-code-blocks.jpg', 'Code snippet support in questions with syntax highlighting.') }}
-{{ macros.imgFigure('./shots-v.0.1.0/training-finished.jpg', 'Workout completion screen with performance summary and insights.') }}
+{{ macros.imgFigure('./shots-v.0.1.0/training-finished.jpg', 'Workout completion screen.') }}
 {{ macros.imgFigure('./shots-v.0.1.0/training-overview.jpg', 'Training overview dashboard showing progress across all topics.') }}
 {{ macros.imgFigure('./shots-v.0.1.0/trainings-list.jpg', 'Training history with filtering and search capabilities.') }}
 {{ macros.imgFigure('./shots-v.0.1.0/trainings-item.jpg', 'Detailed view of a single training session with statistics.') }}
@@ -213,11 +211,11 @@ Organizing learning materials is half the battle. The category system allows for
 {{ macros.imgFigure('./shots-v.0.1.0/esit-question-form.jpg', 'Question editing with support for multimedia attachments.') }}
 {{ macros.imgFigure('./shots-v.0.1.0/topics-item.jpg', 'Individual topic view with metadata and quick actions.') }}
 
-MindStack successfully combines:
+At its core, MindStack blends smart features with a polished interface:
 
-- **Cognitive science** -- Effective learning techniques
-- **Modern web tech** -- Performance and reliability
-- **User-centric design** -- Intuitive, pleasant experience
+- **AI-powered workflows** – From empty topic to ready-to-practice questions in minutes
+- **Responsive, modern tech** – Built on Next.js 15 with real-time state management
+- **User-friendly design** – Clean layouts, clear interactions, and thoughtful defaults
 
 The application handles everything from AI content generation to complex payment processing, all while maintaining a focus on what matters most: helping people learn and remember.
 
@@ -242,7 +240,3 @@ The MVP is live, but there's plenty more to build:
 - **Vercel Deployment**: [https://mind-stack-trainer.vercel.app/](https://mind-stack-trainer.vercel.app/)
 - **Live Application**: [https://mindstack.lilliputten.com/](https://mindstack.lilliputten.com/)
 - **GitHub Repository**: [https://github.com/lilliputten/mindstack/](https://github.com/lilliputten/mindstack/)
-
----
-
-_MindStack represents the intersection of modern web development and practical cognitive science. It's not just another flashcard app—it's a system designed to help knowledge actually stick, using technology to enhance human learning capabilities._
