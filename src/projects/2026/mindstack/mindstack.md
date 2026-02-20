@@ -28,6 +28,22 @@ tags:
   - webapp
 ---
 
+nextjs
+react
+typescript
+tailwindcss
+prisma
+postgresql
+next-auth
+vercel
+ai
+stripe
+i18n
+memory-training
+spaced-repetition
+education
+webapp
+
 <!--
 @changed 2026.01.26, 14:38
 -->
@@ -57,11 +73,11 @@ Under the hood, the platform integrates AI for content generation, multi-provide
 
 ### The Core Stack
 
-- **Next.js 15 with App Router** -- For server components and optimal performance
-- **TypeScript** -- Full type safety across the entire codebase
-- **Prisma + PostgreSQL** -- Type-safe database operations with complex relations
-- **Tailwind CSS + Radix UI** -- Consistent, accessible design system
-- **NextAuth.js** -- Multi-provider authentication (GitHub, Google, Yandex, Email, Telegram)
+- **Next.js 15 with App Router**—For server components and optimal performance
+- **TypeScript**—Full type safety across the entire codebase
+- **Prisma + PostgreSQL**—Type-safe database operations with complex relations
+- **Tailwind CSS + Radix UI**—Consistent, accessible design system
+- **NextAuth.js**—Multi-provider authentication (GitHub, Google, Yandex, Email, Telegram)
 
 ### Database Challenges
 
@@ -221,10 +237,10 @@ The application handles everything from AI content generation to complex payment
 
 ## Lessons Learned
 
-1. **Start with internationalization** -- Adding languages later is painful
-2. **Type everything** -- TypeScript caught countless bugs early
-3. **Test the hard parts first** -- The workout engine was tested from day one
-4. **Design for extension** -- The payment system needed to handle unexpected requirements
+1. **Start with internationalization**—Adding languages later is painful
+2. **Type everything**—TypeScript caught countless bugs early
+3. **Test the hard parts first**—The workout engine was tested from day one
+4. **Design for extension**—The payment system needed to handle unexpected requirements
 
 ## What's Next
 

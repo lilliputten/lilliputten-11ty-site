@@ -52,7 +52,7 @@ layout: page.njk
         <li class="tagsTitle">Tags:</li>
         {%- for tag in tags | filterTags -%}
           <li class="tagsItem">
-            <a class="linkAsText" href="/tags/{{ tag }}/">{{ tag }}</a>
+            <a class="linkAsText" href="/tags/{{ tag | slug }}/">{{ tag }}</a>
           </li>
         {%- endfor -%}
       </ul>
