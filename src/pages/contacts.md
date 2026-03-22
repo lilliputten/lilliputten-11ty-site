@@ -4,7 +4,7 @@ layout: article.njk
 permalink: /contacts/
 # eleventyExcludeFromCollections: true
 # description: Contacts page
-date: 2025-03-24
+date: 2026-03-22
 eleventyNavigation:
   key: contacts
 hideMeta: true
@@ -16,7 +16,7 @@ showHero: true
 ---
 
 <!--
-@changed 2025.03.28, 15:40
+@changed 2026.03.22, 18:59
 -->
 
 If you want to have a chat about anything digital, UX, or collaborate, don't
@@ -26,6 +26,7 @@ hesitate to connect with me, unsing any of the following methods:
 
 - Github: [github.com/lilliputten](https://github.com/lilliputten)
 - LinkedIn: [linkedin.com/in/lilliputten](http://linkedin.com/in/lilliputten)
+- Upwork: [upwork.com/freelancers/lilliputten](https://upwork.com/freelancers/lilliputten)
 
 <!--
 - Gitpages (this site): [lilliputten.github.io](https://lilliputten.github.io)
