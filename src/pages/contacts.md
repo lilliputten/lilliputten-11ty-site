@@ -4,7 +4,7 @@ layout: article.njk
 permalink: /contacts/
 # eleventyExcludeFromCollections: true
 # description: Contacts page
-date: 2026-04-0
+date: 2026-04-07
 eleventyNavigation:
   key: contacts
 hideMeta: true
