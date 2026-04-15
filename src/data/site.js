@@ -1,6 +1,6 @@
 module.exports = {
-  version: '0.0.21',
-  timetag: '260220-1816',
+  version: '0.0.22',
+  timetag: '260415-0627',
   title: 'Lilliputten & Noble',
   author: 'Igor Lilliputten',
   description: "Hello, my name is Igor and I'm a front-end developer.",
