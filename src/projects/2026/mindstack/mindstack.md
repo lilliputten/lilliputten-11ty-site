@@ -1,10 +1,10 @@
 ---
 layout: article.njk
-title: MindStack - Personal Knowledge Training Platform
+title: "MindStack: Personal Knowledge Training Platform"
 hasThumb: true
 eleventyNavigation:
   key: mindstack
-  title: MindStack - Personal Knowledge Training
+  title: "MindStack: Personal Knowledge Training"
   parent: projects-2026
 date: 2026-04-15
 showNavigationBreadcrumbs: true
@@ -66,16 +66,16 @@ webapp
 
 Unlike generic memory training apps, MindStack emphasizes **you control the workflow**—from initial idea through AI-assisted generation to final approved training content. The platform provides structured hierarchy (Categories → Topics → Questions → Answers), privacy-first design, and multi-language support for creating personal or shareable knowledge bases.
 
-{{ macros.imgFigure('./opengraph-image-700.jpg', 'MindStack - Personal Knowledge Training Platform') }}
+{{ macros.imgFigure('./opengraph-image-700.jpg', 'MindStack: Personal Knowledge Training Platform') }}
 
 ## The Vision: Turn Your Knowledge Into Repeatable Trainings
 
 MindStack was built around a core principle: **your knowledge deserves better than generic flashcards**. Instead of using pre-made courses, you build personal training systems from your real materials. The platform balances powerful AI assistance with complete user control:
 
-1. **Create from your own data** - Work documents, study notes, technical docs, or any subject matter
-2. **Generate with AI, approve manually** - AI drafts questions and answers, but nothing saves without your explicit approval
-3. **Maintain quality with smart tools** - Duplicate detection, in-place editing, and structured workflows keep datasets clean
-4. **Train effectively with spaced repetition** - Practice what matters with algorithms that adapt to your performance
+1. **Create from your own data** -- Work documents, study notes, technical docs, or any subject matter
+2. **Generate with AI, approve manually** -- AI drafts questions and answers, but nothing saves without your explicit approval
+3. **Maintain quality with smart tools** -- Duplicate detection, in-place editing, and structured workflows keep datasets clean
+4. **Train effectively with spaced repetition** -- Practice what matters with algorithms that adapt to your performance
 
 The result is a platform that feels like a personal knowledge assistant—helping you capture, structure, and master your own expertise.
 
@@ -108,7 +108,7 @@ Modeling personal knowledge required careful schema design:
 
 ### 1. In-Place Editing with HeadlessEditor
 
-{{ macros.imgFigure('./features-v.0.1.4/edit-topic-questions-and-answers.jpg', 'In-place editing with HeadlessEditor - edit questions and answers without context switching. (v.0.1.4)') }}
+{{ macros.imgFigure('./features-v.0.1.4/edit-topic-questions-and-answers.jpg', 'In-place editing with HeadlessEditor: edit questions and answers without context switching. (v.0.1.4)') }}
 <!--
 {{ macros.imgFigure('./features-v.0.1.0/settings-page.jpg', 'Settings with the opened theme selector. (v.0.1.0)') }}
 -->
@@ -155,14 +155,14 @@ When adding or generating new questions, MindStack compares them against existin
 
 ### 4. Privacy-First Design
 
-{{ macros.imgFigure('./features-v.0.1.4/topics-list.jpg', 'Topics show privacy status - private by default, public only when you choose. (v.0.1.4)') }}
+{{ macros.imgFigure('./features-v.0.1.4/topics-list.jpg', 'Topics show privacy status -- private by default, public only when you choose. (v.0.1.4)') }}
 
 Your knowledge is yours unless you choose to share:
 
-- **Private by default** - New topics are only visible to you
-- **Optional sharing** - Make topics public to contribute to the community
-- **Change anytime** - Toggle privacy settings as needed
-- **Ideal for sensitive content** - Work materials, proprietary knowledge, personal notes
+- **Private by default** -- New topics are only visible to you
+- **Optional sharing** -- Make topics public to contribute to the community
+- **Change anytime** -- Toggle privacy settings as needed
+- **Ideal for sensitive content** -- Work materials, proprietary knowledge, personal notes
 
 Use cases for private topics:
 - Job-related training materials
@@ -305,22 +305,22 @@ Multi-environment setup with database migrations:
 
 At its core, MindStack delivers on its promise:
 
-- **Personal-first approach** - Create from your own knowledge, not generic courses
-- **Generation control** - Review and approve every AI-generated item
-- **Quality maintenance** - Duplicate detection and in-place editing keep datasets clean
-- **Privacy by default** - Your data stays private unless you choose to share
-- **Structured hierarchy** - Organized knowledge that scales from 10 to 1000+ items
+- **Personal-first approach** -- Create from your own knowledge, not generic courses
+- **Generation control** -- Review and approve every AI-generated item
+- **Quality maintenance** -- Duplicate detection and in-place editing keep datasets clean
+- **Privacy by default** -- Your data stays private unless you choose to share
+- **Structured hierarchy** -- Organized knowledge that scales from 10 to 1000+ items
 
 The application handles everything from AI content generation to complex payment processing, all while maintaining focus on what matters: helping you capture and master your own expertise.
 
 ## Lessons Learned
 
-1. **Positioning matters** - Clear value proposition ("turn your knowledge into trainings") resonates more than generic features
-2. **Control builds trust** - Users want AI assistance, not AI automation. Always let them review and approve
-3. **Start with i18n** - Adding languages later is exponentially harder
-4. **Type everything** - TypeScript caught countless bugs in nested data structures
-5. **Design for extension** - Payment system needed to handle unexpected regional requirements
-6. **Document beta features** - Be honest about limitations (duplicate detection) and future plans
+1. **Positioning matters** -- Clear value proposition ("turn your knowledge into trainings") resonates more than generic features
+2. **Control builds trust** -- Users want AI assistance, not AI automation. Always let them review and approve
+3. **Start with i18n** -- Adding languages later is exponentially harder
+4. **Type everything** -- TypeScript caught countless bugs in nested data structures
+5. **Design for extension** -- Payment system needed to handle unexpected regional requirements
+6. **Document beta features** -- Be honest about limitations (duplicate detection) and future plans
 
 ## What's Next
 
@@ -340,10 +340,12 @@ The foundation is solid, with exciting features planned:
 - **GitHub Repository**: [https://github.com/lilliputten/mindstack/](https://github.com/lilliputten/mindstack/)
 - **Documentation**: [https://mindstack.lilliputten.com/docs](https://mindstack.lilliputten.com/docs)
 
+<a href="https://www.producthunt.com/products/mindstack-personal-knowledge-trainer?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-mindstack-personal-knowledge-trainer" target="_blank" rel="noopener noreferrer"><img alt="MindStack: Personal Knowledge Trainer. Turn Your Knowledge Into Repeatable Trainings | Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1124734&amp;theme=light&amp;t=1776288902603"></a>
+
 ---
 
 **Technologies:** Next.js 15, React, TypeScript, Tailwind CSS, Prisma, PostgreSQL, Cloudflare Workers AI, GigaChat, Stripe, YooMoney, Radix UI, React Query, Zustand, next-intl
 
 **Role:** Full-stack development, architecture design, AI integration, payment systems, internationalization
 
-**Timeline:** January 2026 - Present (ongoing development)
+**Timeline:** Autumn 2025 -- Present (ongoing development)
