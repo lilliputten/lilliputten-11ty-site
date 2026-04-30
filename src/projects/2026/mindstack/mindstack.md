@@ -1,10 +1,10 @@
 ---
 layout: article.njk
-title: "MindStack: Personal Knowledge Training Platform"
+title: 'MindStack: Personal Knowledge Training Platform'
 hasThumb: true
 eleventyNavigation:
   key: mindstack
-  title: "MindStack: Personal Knowledge Training"
+  title: 'MindStack: Personal Knowledge Training'
   parent: projects-2026
 date: 2026-04-15
 showNavigationBreadcrumbs: true
@@ -109,6 +109,7 @@ Modeling personal knowledge required careful schema design:
 ### 1. In-Place Editing with HeadlessEditor
 
 {{ macros.imgFigure('./features-v.0.1.4/edit-topic-questions-and-answers.jpg', 'In-place editing with HeadlessEditor: edit questions and answers without context switching. (v.0.1.4)') }}
+
 <!--
 {{ macros.imgFigure('./features-v.0.1.0/settings-page.jpg', 'Settings with the opened theme selector. (v.0.1.0)') }}
 -->
@@ -129,14 +130,14 @@ Editing shouldn't require modal dialogs or context switches. The HeadlessEditor 
 
 AI assists but never replaces your judgment. The generation workflow:
 
-1. Provide a brief description of what you want to cover
-2. AI generates draft questions and answers
-3. Review each item individually:
-   - ✅ Approve to save to your topic
-   - ✏️ Edit before approving
-   - 🔄 Regenerate if unsatisfied
-   - ❌ Delete irrelevant items
-4. Only approved items are saved to your database
+- Provide a brief description of what you want to cover
+- AI generates draft questions and answers
+- Review each item individually:
+  - Approve to save to your topic
+  - Edit before approving
+  - Regenerate if unsatisfied
+  - Delete irrelevant items
+- Only approved items are saved to your database
 
 **Key difference:** Generated content stays in "draft" mode until you explicitly approve it. You maintain full editorial control.
 
@@ -165,6 +166,7 @@ Your knowledge is yours unless you choose to share:
 - **Ideal for sensitive content** -- Work materials, proprietary knowledge, personal notes
 
 Use cases for private topics:
+
 - Job-related training materials
 - Proprietary technical knowledge
 - Personal study notes
@@ -196,6 +198,7 @@ Categories (broad subjects)
 ```
 
 Example:
+
 ```python
 Programming Languages
   └─ Python Basics
@@ -238,9 +241,6 @@ Multiple login options for different user preferences:
 - **OAuth providers**: Google, GitHub, Yandex
 - **OTP methods**: Email verification codes, Telegram bot authentication
 - **Guest access**: Browse public topics without account (limited functionality)
-<!--
-- **Account linking**: Connect multiple auth methods to same account
--->
 
 ### Payment System Integration
 

@@ -33,7 +33,10 @@ export function setUpdateVisualizationCallback(cb: () => void) {
 
 function getToggleNavigationButton() {
   if (!toggleNavigationButton) {
-    toggleNavigationButton = document.getElementById('toggleNavigation');
+    const el = document.getElementById('toggleNavigation');
+    if (el) {
+      toggleNavigationButton = el;
+    }
   }
   return toggleNavigationButton;
 }

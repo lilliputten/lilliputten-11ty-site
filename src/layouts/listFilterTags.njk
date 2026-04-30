@@ -40,8 +40,8 @@ layout: page.njk
               {# {{ item.data.tags | dump | safe }} #}
               {%- for tag in item.data.tags | filterTags -%}
                 <span class="tagsItem">
-                  <a class="linkAsText" href="/tags//">{{ tag | slug }}</a>
-                </span>{{ tag }}
+                  <a class="linkAsText" href="/tags//">{{ tag | slug }}</a> </span
+                >{{ tag }}
               {%- endfor -%}
             </div>
           </div>
