@@ -162,33 +162,15 @@ module.exports = function (config) {
       return array;
     }
     const tagsList = tags.map(String);
-    /* console.log('[.eleventy:listFilterTags]', {
-     *   tagsList,
-     *   array,
-     * });
-     */
     const result = array.filter((item) => {
       if ('tags' in item.data && Array.isArray(item.data.tags)) {
         const itemTags = /** @type {string[]} */ (item.data.tags.map(String));
-        /* const hasAtLeastOneTag = itemTags.find((tag) => {
-         *   return tagsList.includes(tag);
-         * });
-         */
         const hasAllTags = tagsList.reduce((found, tag) => {
           return found && itemTags.includes(tag);
         }, true);
-        /* console.log('[.eleventy:listFilterTags]', item.fileSlug, {
-         *   hasAllTags,
-         *   // hasAtLeastOneTag,
-         *   tagsList,
-         *   itemTags,
-         *   item,
-         * });
-         */
         return hasAllTags;
       }
     });
-    // console.log('[.eleventy:listFilterTags]', tagsList, result);
     return result;
   });
 
@@ -289,10 +271,11 @@ module.exports = function (config) {
 
   // Transforms
 
-  if (!isDev) {
+  // if (!isDev) {
+  //   // NOTE: These plugins can break down embedded js
     config.addTransform('htmlmin', require('./_11ty/transforms/htmlmin'));
     config.addTransform('xmlmin', require('./_11ty/transforms/xmlmin'));
-  }
+  // }
   // config.addTransform('html-prettify', require('./_11ty/transforms/html-prettify'));
   // config.addTransform('xml-prettify', require('./_11ty/transforms/xml-prettify'));
 

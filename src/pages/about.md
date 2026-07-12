@@ -2,7 +2,7 @@
 title: About me
 layout: article.njk
 permalink: /about/
-date: 2025-06-25
+date: 2026-07-12
 hideMeta: true
 tag: false
 tags:
@@ -12,7 +12,7 @@ showHero: true
 ---
 
 <!--
-@changed 2025.06.25, 04:14
+@changed 2026.07.12, 19:01
 -->
 
 My name is Igor and I'm a professional front-end developer with more than 8 years of experience, recently specializing mainly in React, NextJS, NodeJS and Python (with Flask and Django).
@@ -47,8 +47,8 @@ I'm really looking for an interesting new job right now.
 
 At the moment, I'm mainly considering options with remote work, but ready to discuss relocation and partial/full on-site options.
 
-- Pritable PDS's are available:
+- CVs are available in pdf format:
   <a class="external" href="/cv.pdf" title="PDF document" target="_blank" rel="noreferrer">in English</a>
   and
   <a class="external" href="/cv-ru.pdf" title="PDF document" target="_blank" rel="noreferrer">in Russian</a>
-  (the size of both is about 100KB).
+  (~100KB each).

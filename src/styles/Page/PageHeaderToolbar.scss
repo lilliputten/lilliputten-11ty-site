@@ -27,10 +27,10 @@
       width: $itemSize;
       height: $itemSize;
     }
-    // border-radius: 50%;
+    border-radius: 50%;
     text-decoration: none;
-    // background-color: transparent;
-    // border: 1px solid transparent;
+    background-color: transparent;
+    border: 1px solid transparent;
     .onRed & {
       opacity: 0.85;
     }
@@ -40,26 +40,26 @@
       justify-content: center;
       align-items: center;
     }
-    // &,
-    // & i {
-    //   transition: all $transitionTimeMs;
-    //   @media (width <= $screenSmMin) {
-    //     // transform: scale(0.95);
-    //   }
-    // }
-    // @include safeHover {
-    //   // opacity: 1;
-    //   // background-color: color.change(#fff, $alpha: 0.1);
-    //   // i {
-    //   //   transform: scale(1.25);
-    //   //   @media (width <= $screenSmMin) {
-    //   //     transform: scale(1.1);
-    //   //   }
-    //   // }
-    // }
-    // &:active {
-    //   background-color: color.change(#fff, $alpha: 0.5);
-    // }
+    &,
+    & i {
+      transition: all $transitionTimeMs;
+      @media (width <= $screenSmMin) {
+        transform: scale(0.95);
+      }
+    }
+    @include safeHover {
+      opacity: 1;
+      background-color: color.change(#fff, $alpha: 0.1);
+      i {
+        transform: scale(1.25);
+        @media (width <= $screenSmMin) {
+          transform: scale(1.1);
+        }
+      }
+    }
+    &:active {
+      background-color: color.change(#fff, $alpha: 0.5);
+    }
     // &#theme .theme-dark {
     //   font-size: 125%;
     // }
@@ -75,7 +75,7 @@
     //     background-position: center;
     //     background-size: 70%;
     //   }
-    //   &:hover {
+    //   @include safeHover {
     //     // background-size: 80%;
     //   }
     // }

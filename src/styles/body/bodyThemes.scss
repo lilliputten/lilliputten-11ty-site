@@ -19,7 +19,7 @@ body,
   color: $defaultTextColor;
   a {
     transition: all $transitionTimeMs;
-    &:hover {
+    @include safeHover {
       color: $primaryLightenColor;
     }
   }
@@ -40,33 +40,42 @@ body,
     $color: $primaryColor;
     color: $color;
     opacity: 0.85;
-    &:hover {
+    @include safeHover {
       color: $primaryLightColor;
       opacity: 0.99;
     }
   }
 }
-// .onRed {
-//   a {
-//     $color: #fff;
-//     color: $color;
-//     i.bi {
-//       color: $color;
-//     }
-//   }
-// }
-// [data-theme='light'] body .onRed,
-// [data-theme='dark'] body .onRed,
-// .onRed {
-//   $color: #fff;
-//   color: color.change($color, $alpha: 0.8);
-//   a {
-//     opacity: 0.9;
-//     &:hover {
-//       color: $color;
-//     }
-//   }
-// }
+
+.onRed {
+  a {
+    $color: #fff;
+    color: $color;
+    i.bi {
+      color: $color;
+    }
+  }
+}
+body .onRed,
+.onRed {
+  $color: #fff;
+  &,
+  span {
+    color: color.change($color, $alpha: 0.8);
+  }
+  a {
+    @include transition;
+    @include safeHover {
+      &,
+      span {
+        color: $color;
+      }
+      span {
+        text-decoration: underline !important;
+      }
+    }
+  }
+}
 
 .linkAsText {
   @include LinkAsText;

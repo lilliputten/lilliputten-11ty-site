@@ -58,6 +58,7 @@
       width: $size;
       border: 0;
       box-shadow: none;
+      border-radius: 50%;
       @include transition;
       @include safeHover {
         background-color: color.change($primaryDarkColor, $alpha: 0.2);

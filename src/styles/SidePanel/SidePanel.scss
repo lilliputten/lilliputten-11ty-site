@@ -9,6 +9,7 @@ $togglerSize: 52px;
 
 .SidePanelContent {
   width: $panelWidth;
+  max-width: 100%;
   // background-color: $primaryColor;
   background: linear-gradient(120deg, $primaryColor, $primaryDarkColor);
   color: #fff;
@@ -21,16 +22,31 @@ $togglerSize: 52px;
   box-shadow: 2px 4px 12px color.change(#000, $alpha: 0.5);
   transition: left $transitionTimeMs;
   left: -$panelWidth;
-  .navbar-toggler {
+
+  // Theme button
+  #theme {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+
+  html:not([data-theme]) & .theme-dark,
+  html:not([data-theme='dark']) & .theme-dark,
+  html[data-theme='dark'] & .theme-light {
+    display: none;
+  }
+
+  .close-button {
     z-index: 10;
     position: fixed;
-    left: calc(0px - $togglerOffset - $togglerSize);
+    // left: calc(0px - $togglerOffset - $togglerSize);
+    right: -$togglerOffset;
     top: $togglerOffset;
     width: $togglerSize;
     height: $togglerSize;
     // border: 1px solid color.change(#fff, $alpha: 0.2);
     // background-color: color.change($primaryDarkColor, $alpha: 0.4);
-    border-radius: 5px;
+    border-radius: 50%;
     @include transition;
     @include safeHover {
       background-color: color.change($primaryDarkColor, $alpha: 0.3);
@@ -40,6 +56,12 @@ $togglerSize: 52px;
     flex-direction: column;
     align-items: flex-start;
     margin: 1em 0;
+  }
+  li {
+    &, a, a span {
+      max-width: 100%;
+      @include textEllipsis;
+    }
   }
   body & a {
     color: #fff;
@@ -53,8 +75,9 @@ $togglerSize: 52px;
     }
   }
   .PageHeaderLogo {
+    width: 100%;
     justify-content: flex-start;
-    padding-right: calc($togglerSize);
+    padding-right: calc($togglerOffset);
     position: relative;
     left: -15px;
     .Logo {
@@ -95,8 +118,9 @@ $togglerSize: 52px;
     visibility: visible;
     .SidePanelContent {
       left: 0;
-      .navbar-toggler {
-        left: calc($panelWidth - $togglerOffset - $togglerSize);
+      .close-button {
+        right: $togglerOffset;
+        // left: calc($panelWidth - $togglerOffset - $togglerSize);
       }
     }
   }
