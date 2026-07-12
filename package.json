@@ -3,7 +3,7 @@
   "version": "0.0.22",
   "timetag": "260416-0327",
   "timestamp": "2026.04.16 03:27:57 +0300",
-  "changed": "2026.01.26, 15:34",
+  "changed": "2026.07.12, 14:50",
   "homepage": "/",
   "private": false,
   "lint-staged": {
@@ -126,7 +126,7 @@
     "clear-build": "echo --Clear build folder-- && rimraf -I -g build/* && echo Build folder has been been cleaned",
     "build-double": "echo --Build eleventy and all artifacts-- && pnpm run clear-build && eleventy --quiet && echo --NOTE: Calling eleventy twice to ensure img-prepare has been run for all the images-- && eleventy && gulp build",
     "build": "echo --Build eleventy and all artifacts-- && pnpm clear-build && eleventy --quiet && gulp build",
-    "build-prod": "pnpm run clear-build && cross-env ELEVENTY_ENV=production pnpm run build",
+    "build-prod": "cross-env ELEVENTY_ENV=production pnpm run build",
     "prepare": "npx simple-git-hooks",
     "generate-weekly-links": "node _11ty/scripts/weekly-links.js",
     "prettier": "echo --Run prettier-- && prettier --write --cache . | grep -v -e cached -e unchanged || true",

@@ -6,10 +6,10 @@ vim: ft=jsonc
 */
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "es6",
+    "target": "ES2015",
+    "module": "NodeNext",
     "sourceMap": true,
-    "moduleResolution": "node",
+    "moduleResolution": "NodeNext",
     "noImplicitAny": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
@@ -17,11 +17,11 @@ vim: ft=jsonc
     "jsx": "react",
     "lib": ["dom", "dom.iterable", "esnext"],
     // "no-debugger": false,
-    "baseUrl": ".",
+    // "baseUrl": ".",
     "paths": {
-      "src/*": ["src/scripts/*"]
-    },
-    "outDir": "./compiled-assets/"
+      "src/*": ["./src/scripts/*"]
+    }
+    // "outDir": "./compiled-assets/"
   },
   "files": ["src/scripts/scripts.ts"],
   "typeRoots": ["src/scripts/@types/**/*"],

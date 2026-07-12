@@ -1,12 +1,12 @@
 // @ts-check
 /**
  * @module .eleventy.js
- * @changed 2025.03.26, 07:32
+ * @changed 2026.07.12, 15:00
  */
 
 const fs = require('fs');
 
-// const isDev = process.env.ELEVENTY_ENV === 'development';
+const isDev = process.env.ELEVENTY_ENV === 'development';
 
 module.exports = function (config) {
   config.addPassthroughCopy({
@@ -289,10 +289,10 @@ module.exports = function (config) {
 
   // Transforms
 
-  // if (!isDev) {
-  //   config.addTransform('htmlmin', require('./_11ty/transforms/htmlmin'));
-  //   config.addTransform('xmlmin', require('./_11ty/transforms/xmlmin'));
-  // }
+  if (!isDev) {
+    config.addTransform('htmlmin', require('./_11ty/transforms/htmlmin'));
+    config.addTransform('xmlmin', require('./_11ty/transforms/xmlmin'));
+  }
   // config.addTransform('html-prettify', require('./_11ty/transforms/html-prettify'));
   // config.addTransform('xml-prettify', require('./_11ty/transforms/xml-prettify'));
 
