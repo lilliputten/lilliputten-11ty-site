@@ -22,5 +22,5 @@ related technologies.
 Dive into [my story](/about/), explore the [various projects](/projects/) I've
 brought to life, and don't hesitate to [reach out to me](/contacts/) if you
 have any questions or suggestions. Recently I also decided to occasionally drop
-some [technical articles](/articles/), related to my daily tasks, or slightly
-more unrelated [publication reviews](/reviews).
+some [notes and technical articles](/topics/), related to my daily tasks, or slightly
+more unrelated topics.

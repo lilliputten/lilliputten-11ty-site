@@ -3,13 +3,13 @@ layout: article.njk
 title: A recipe for adding a Django flatpages application with context change support, i18n and a rich content editor
 hasThumb: true
 eleventyNavigation:
-  key: django-flatpages-based-cms
+  key: 2025-04-05-django-flatpages-based-cms
   title: Windows shortcut to toggle MongoDB service
-  parent: articles-2025
+  parent: topics-2025
 date: 2025-04-05
 showNavigationBreadcrumbs: true
 tags:
-  - articles
+  - topics
   - '2025'
   - django
   - python

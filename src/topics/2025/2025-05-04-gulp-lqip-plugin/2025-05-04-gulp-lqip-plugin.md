@@ -3,13 +3,13 @@ layout: article.njk
 title: Gulp LQIP small image placeholder generator plugin
 hasThumb: true
 eleventyNavigation:
-  key: gulp-lqip-plugin
+  key: 2025-05-04-gulp-lqip-plugin
   title: Gulp LQIP small image placeholder generator plugin
-  parent: articles-2025
+  parent: topics-2025
 date: 2025-05-04
 showNavigationBreadcrumbs: true
 tags:
-  - articles
+  - topics
   - '2025'
   - gulp
   - npm

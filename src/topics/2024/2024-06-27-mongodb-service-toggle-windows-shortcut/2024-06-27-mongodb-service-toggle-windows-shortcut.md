@@ -3,13 +3,13 @@ layout: article.njk
 title: A neat way to quickly toggle MongoDB Windows background service
 hasThumb: true
 eleventyNavigation:
-  key: mongodb-service-toggle-windows-shortcut
+  key: 2024-06-27-mongodb-service-toggle-windows-shortcut
   title: Windows shortcut to toggle MongoDB service
-  parent: articles-2024
+  parent: topics-2024
 date: 2024-06-27
 showNavigationBreadcrumbs: true
 tags:
-  - articles
+  - topics
   - '2024'
   - automation
   - mongodb

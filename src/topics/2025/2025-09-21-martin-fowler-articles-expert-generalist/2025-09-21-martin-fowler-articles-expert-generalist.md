@@ -4,11 +4,12 @@ title: Expert Generalists / by Martin Fowler et al, July 2025
 hasThumb: true
 eleventyNavigation:
   key: 2025-09-21-martin-fowler-articles-expert-generalist
-  title: Expert Generalists / by Martin Fowler et al, July 202
-  parent: reviews-2025
+  title: Expert Generalists / by Martin Fowler et al, July 2025
+  parent: topics-2025
 date: 2025-09-21
 showNavigationBreadcrumbs: true
 tags:
+  - topics
   - publications
   - reviews
   - '2025'

@@ -4,7 +4,7 @@
 
 $panelWidth: 320px;
 $togglerOffset: 10px;
-$togglerOffsetTop: 24px;
+// $togglerOffsetTop: 24px;
 $togglerSize: 52px;
 
 .SidePanelContent {
@@ -25,15 +25,15 @@ $togglerSize: 52px;
     z-index: 10;
     position: fixed;
     left: calc(0px - $togglerOffset - $togglerSize);
-    top: $togglerOffsetTop;
+    top: $togglerOffset;
     width: $togglerSize;
     height: $togglerSize;
     // border: 1px solid color.change(#fff, $alpha: 0.2);
-    background-color: color.change($primaryDarkColor, $alpha: 0.4);
+    // background-color: color.change($primaryDarkColor, $alpha: 0.4);
     border-radius: 5px;
     @include transition;
     @include safeHover {
-      background-color: color.change($primaryDarkColor, $alpha: 0.7);
+      background-color: color.change($primaryDarkColor, $alpha: 0.3);
     }
   }
   ul {
