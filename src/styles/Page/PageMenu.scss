@@ -13,30 +13,7 @@
   justify-content: center;
   position: relative;
   gap: 0.2em 1em;
-  @media (width <= $screenMdMin) {
-    font-size: 90%;
-  }
-  @media (width <= $screenSmMin) {
-    font-size: 80%;
-  }
-  .mobileView.showNavigation & {
-    margin-left: 1em;
-    gap: 0.1em 0.2em;
-  }
   li {
     display: inline-block;
-  }
-  .onRed & a {
-    border-radius: 4px;
-    display: inline-block;
-    border: 1px dashed color.change(#fff, $alpha: 0.5);
-    padding: 0 6px;
-    margin: 2px;
-    text-decoration: none;
-    color: #fff;
-    &:hover {
-      background-color: #fff;
-      color: $primaryDarkColor;
-    }
   }
 }

@@ -1,19 +1,26 @@
-<ul class="PageHeaderToolbar">
+<ul class="PageHeaderToolbar navbar-nav">
+  {#
   <li>
     <a href="/about/" class="icon" id="about" title="About"><i></i></a>
   </li>
   <li>
     <a href="/contacts/" class="icon" id="contacts" title="Contacts"><i class="bi bi-at"></i></a>
   </li>
-  <li>
+  #}
+  <li class="nav-item">
     <a
       href=""
-      class="icon"
+      class="nav-link"
+      aria-controls="navbarNavigation"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      data-bs-target="#navbarNavigation"
+      data-bs-toggle="collapse"
       onclick="window.toggleTheme(); return false"
       id="theme"
       title="Toggle color theme"
       ><i class="bi bi-brightness-high-fill theme-dark"></i
-      ><i class="bi bi-moon-stars-fill theme-light"></i
-    ></a>
+      ><i class="bi bi-moon-stars-fill theme-light"></i> <span>Toggle color theme</span></a
+    >
   </li>
 </ul>

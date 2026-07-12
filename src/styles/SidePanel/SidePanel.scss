@@ -1,0 +1,103 @@
+@use 'sass:color';
+
+@import '../shared';
+
+$panelWidth: 320px;
+$togglerOffset: 10px;
+$togglerOffsetTop: 24px;
+$togglerSize: 52px;
+
+.SidePanelContent {
+  width: $panelWidth;
+  // background-color: $primaryColor;
+  background: linear-gradient(120deg, $primaryColor, $primaryDarkColor);
+  color: #fff;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  overflow: auto;
+  scrollbar-width: thin;
+  padding: 24px;
+  box-shadow: 2px 4px 12px color.change(#000, $alpha: 0.5);
+  transition: left $transitionTimeMs;
+  left: -$panelWidth;
+  .navbar-toggler {
+    z-index: 10;
+    position: fixed;
+    left: calc(0px - $togglerOffset - $togglerSize);
+    top: $togglerOffsetTop;
+    width: $togglerSize;
+    height: $togglerSize;
+    // border: 1px solid color.change(#fff, $alpha: 0.2);
+    background-color: color.change($primaryDarkColor, $alpha: 0.4);
+    border-radius: 5px;
+    @include transition;
+    @include safeHover {
+      background-color: color.change($primaryDarkColor, $alpha: 0.7);
+    }
+  }
+  ul {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 1em 0;
+  }
+  body & a {
+    color: #fff;
+    @include transition;
+    @include safeHover {
+      opacity: $hoverOpacity;
+      color: #fff;
+      span {
+        text-decoration: underline !important;
+      }
+    }
+  }
+  .PageHeaderLogo {
+    justify-content: flex-start;
+    padding-right: calc($togglerSize);
+    position: relative;
+    left: -15px;
+    .Logo {
+      background-position: left;
+    }
+  }
+}
+
+.SidePanelBackdrop,
+.SidePanelWrapper {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.SidePanelBackdrop {
+  background-color: color.change(#000, $alpha: 0.5);
+}
+
+.SidePanelWrapper {
+  z-index: calc($zindex-fixed + 10);
+  position: fixed;
+  // border: 2px solid red; // DEBUG
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  transition:
+    opacity $transitionTimeMs,
+    visibility $transitionTimeMs;
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    .SidePanelContent {
+      left: 0;
+      .navbar-toggler {
+        left: calc($panelWidth - $togglerOffset - $togglerSize);
+      }
+    }
+  }
+}

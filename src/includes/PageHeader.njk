@@ -13,19 +13,20 @@
     >
       <button
         id="toggleNavigation"
+        class="navbar-toggler collapsed"
         aria-controls="navbarNavigation"
         aria-expanded="false"
         aria-label="Toggle navigation"
-        class="navbar-toggler collapsed"
         data-bs-target="#navbarNavigation"
         data-bs-toggle="collapse"
         type="button"
       >
-        <span class="navbar-toggler-icon"> </span>
+        <span class="navbar-toggler-icon"></span>
       </button>
       {% include "PageHeaderLogo.njk" %}
+      {#
       <div
-        class="PageHeaderNavigation navbar-collapse collapse"
+        class="PageHeaderNavigation _navbar-collapse _collapse"
         id="navbarNavigation"
         -data-aos="fade-left"
         -data-aos-duration="600"
@@ -34,6 +35,7 @@
         {% include "PageMenu.njk" %}
         {% include "PageHeaderToolbar.njk" %}
       </div>
+      #}
     </div>
   </div>
 </nav>

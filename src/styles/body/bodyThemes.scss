@@ -6,7 +6,7 @@
 
 // Theme background: light
 body,
-[data-theme='light'],
+// [data-theme='light'],
 [data-theme='light'] body {
   background-color: $backgroundColor;
 }
@@ -14,7 +14,7 @@ body,
 // Theme foreground: light
 body,
 .onLight,
-[data-theme='light'],
+// [data-theme='light'],
 [data-theme='light'] body {
   color: $defaultTextColor;
   a {
@@ -33,7 +33,7 @@ body,
 
 // Theme foreground: dark
 .onDark,
-[data-theme='dark'],
+// [data-theme='dark'],
 [data-theme='dark'] body {
   color: $defaultTextOnDarkColor;
   a {
@@ -46,27 +46,27 @@ body,
     }
   }
 }
-.onRed {
-  a {
-    $color: #fff;
-    color: $color;
-    i.bi {
-      color: $color;
-    }
-  }
-}
-
-body .onRed,
-.onRed {
-  $color: #fff;
-  color: color.change($color, $alpha: 0.8);
-  a {
-    opacity: 0.9;
-    &:hover {
-      color: $color;
-    }
-  }
-}
+// .onRed {
+//   a {
+//     $color: #fff;
+//     color: $color;
+//     i.bi {
+//       color: $color;
+//     }
+//   }
+// }
+// [data-theme='light'] body .onRed,
+// [data-theme='dark'] body .onRed,
+// .onRed {
+//   $color: #fff;
+//   color: color.change($color, $alpha: 0.8);
+//   a {
+//     opacity: 0.9;
+//     &:hover {
+//       color: $color;
+//     }
+//   }
+// }
 
 .linkAsText {
   @include LinkAsText;

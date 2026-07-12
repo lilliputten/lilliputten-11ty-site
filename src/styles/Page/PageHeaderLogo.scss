@@ -12,9 +12,9 @@
     width: 25vw;
     max-width: 20em;
   }
-  .mobileView.showNavigation & {
-    display: none;
-  }
+  // .mobileView.showNavigation & {
+  //   display: none;
+  // }
 
   .Logo {
     display: inline-block;
@@ -23,12 +23,12 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    transition: all $animationTimeMs;
+    @include transition;
     .wideView & {
       background-position: left center;
     }
     & {
-      opacity: 0.8;
+      opacity: 0.7;
       &:hover {
         opacity: 1;
       }

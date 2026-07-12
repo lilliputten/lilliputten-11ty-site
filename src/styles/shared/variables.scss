@@ -105,3 +105,11 @@ $topPaddingMainPageWide: 250px;
 $headerHeight: 130px;
 $headerHeightMain: 15vh; // 45vh; // XXX 2025.03.28
 $overContentZIndex: 100;
+
+// Hover
+
+// Hover media constant, use as `@include hoverMedia { &:hover { ... } }`, see also mixins `hoverMedia` and `safeHover`
+$hoverMediaRules: '(hover: hover) and (pointer: fine)';
+
+// Default hover opacity
+$hoverOpacity: 0.75;
