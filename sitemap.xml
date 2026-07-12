@@ -118,15 +118,11 @@
     <lastmod>2026-07-12</lastmod>
   </url>
   <url>
-    <loc>https://lilliputten.com/tags/projects/</loc>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://lilliputten.com/tags/topics/</loc>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
     <loc>https://lilliputten.com/tags/site/</loc>
+    <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://lilliputten.com/tags/contacts/</loc>
     <lastmod>2026-07-12</lastmod>
   </url>
   <url>
@@ -134,7 +130,11 @@
     <lastmod>2026-07-12</lastmod>
   </url>
   <url>
-    <loc>https://lilliputten.com/tags/contacts/</loc>
+    <loc>https://lilliputten.com/tags/projects/</loc>
+    <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://lilliputten.com/tags/topics/</loc>
     <lastmod>2026-07-12</lastmod>
   </url>
   <url>
@@ -171,14 +171,6 @@
   </url>
   <url>
     <loc>https://lilliputten.com/tags/php/</loc>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://lilliputten.com/tags/yupe/</loc>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://lilliputten.com/tags/landing/</loc>
     <lastmod>2026-07-12</lastmod>
   </url>
   <url>
@@ -306,38 +298,6 @@
     <lastmod>2026-07-12</lastmod>
   </url>
   <url>
-    <loc>https://lilliputten.com/tags/nextjs/</loc>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://lilliputten.com/tags/next-auth/</loc>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://lilliputten.com/tags/iis/</loc>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://lilliputten.com/tags/oauth/</loc>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://lilliputten.com/tags/prisma/</loc>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://lilliputten.com/tags/authorization/</loc>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://lilliputten.com/tags/postgresql/</loc>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://lilliputten.com/tags/sqlite/</loc>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
     <loc>https://lilliputten.com/tags/flutter/</loc>
     <lastmod>2026-07-12</lastmod>
   </url>
@@ -370,7 +330,139 @@
     <lastmod>2026-07-12</lastmod>
   </url>
   <url>
+    <loc>https://lilliputten.com/tags/authorization/</loc>
+    <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
     <loc>https://lilliputten.com/tags/mysql/</loc>
+    <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://lilliputten.com/tags/sqlite/</loc>
+    <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://lilliputten.com/tags/nextjs/</loc>
+    <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://lilliputten.com/tags/next-auth/</loc>
+    <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://lilliputten.com/tags/iis/</loc>
+    <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://lilliputten.com/tags/oauth/</loc>
+    <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://lilliputten.com/tags/prisma/</loc>
+    <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://lilliputten.com/tags/postgresql/</loc>
+    <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://lilliputten.com/tags/dds/</loc>
+    <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://lilliputten.com/tags/registration/</loc>
+    <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://lilliputten.com/tags/bootstrap/</loc>
+    <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://lilliputten.com/tags/stripe/</loc>
+    <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://lilliputten.com/tags/django-registration/</loc>
+    <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://lilliputten.com/tags/fpdf2/</loc>
+    <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://lilliputten.com/tags/sendgrid/</loc>
+    <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://lilliputten.com/tags/gulp.js/</loc>
+    <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://lilliputten.com/tags/yupe/</loc>
+    <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://lilliputten.com/tags/landing/</loc>
+    <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://lilliputten.com/tags/telegram/</loc>
+    <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://lilliputten.com/tags/bot/</loc>
+    <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://lilliputten.com/tags/flask/</loc>
+    <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://lilliputten.com/tags/youtube/</loc>
+    <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://lilliputten.com/tags/video/</loc>
+    <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://lilliputten.com/tags/convert/</loc>
+    <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://lilliputten.com/tags/online-payment/</loc>
+    <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://lilliputten.com/tags/automation/</loc>
+    <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://lilliputten.com/tags/mongodb/</loc>
+    <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://lilliputten.com/tags/service/</loc>
+    <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://lilliputten.com/tags/toggle/</loc>
+    <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://lilliputten.com/tags/windows/</loc>
+    <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://lilliputten.com/tags/shortcut/</loc>
+    <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://lilliputten.com/tags/powershell/</loc>
+    <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://lilliputten.com/tags/script/</loc>
     <lastmod>2026-07-12</lastmod>
   </url>
   <url>
@@ -410,10 +502,6 @@
     <lastmod>2026-07-12</lastmod>
   </url>
   <url>
-    <loc>https://lilliputten.com/tags/stripe/</loc>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
     <loc>https://lilliputten.com/tags/langchain/</loc>
     <lastmod>2026-07-12</lastmod>
   </url>
@@ -447,38 +535,6 @@
   </url>
   <url>
     <loc>https://lilliputten.com/tags/porter-stemmers/</loc>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://lilliputten.com/tags/automation/</loc>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://lilliputten.com/tags/mongodb/</loc>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://lilliputten.com/tags/service/</loc>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://lilliputten.com/tags/toggle/</loc>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://lilliputten.com/tags/windows/</loc>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://lilliputten.com/tags/shortcut/</loc>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://lilliputten.com/tags/powershell/</loc>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://lilliputten.com/tags/script/</loc>
     <lastmod>2026-07-12</lastmod>
   </url>
   <url>
@@ -591,62 +647,6 @@
   </url>
   <url>
     <loc>https://lilliputten.com/tags/technical-rust/</loc>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://lilliputten.com/tags/telegram/</loc>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://lilliputten.com/tags/bot/</loc>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://lilliputten.com/tags/flask/</loc>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://lilliputten.com/tags/youtube/</loc>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://lilliputten.com/tags/video/</loc>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://lilliputten.com/tags/convert/</loc>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://lilliputten.com/tags/online-payment/</loc>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://lilliputten.com/tags/dds/</loc>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://lilliputten.com/tags/registration/</loc>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://lilliputten.com/tags/bootstrap/</loc>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://lilliputten.com/tags/django-registration/</loc>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://lilliputten.com/tags/fpdf2/</loc>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://lilliputten.com/tags/sendgrid/</loc>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://lilliputten.com/tags/gulp.js/</loc>
     <lastmod>2026-07-12</lastmod>
   </url>
   <url>
