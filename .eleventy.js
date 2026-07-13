@@ -273,8 +273,8 @@ module.exports = function (config) {
 
   // if (!isDev) {
   //   // NOTE: These plugins can break down embedded js
-    config.addTransform('htmlmin', require('./_11ty/transforms/htmlmin'));
-    config.addTransform('xmlmin', require('./_11ty/transforms/xmlmin'));
+  config.addTransform('htmlmin', require('./_11ty/transforms/htmlmin'));
+  config.addTransform('xmlmin', require('./_11ty/transforms/xmlmin'));
   // }
   // config.addTransform('html-prettify', require('./_11ty/transforms/html-prettify'));
   // config.addTransform('xml-prettify', require('./_11ty/transforms/xml-prettify'));

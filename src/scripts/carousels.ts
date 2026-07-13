@@ -88,6 +88,17 @@ function initCarousel(carousel: HTMLElement) {
     ...extraSettings,
     ...seedSettings,
   };
+  const isHeroWide = type === 'heroWide';
+  if (isHeroWide) {
+    // Start with a random slide for the hero carousel (don't use the last slide -- it can't properly initialize, TODO)
+    const slidesCount = carousel.querySelectorAll('.hero-slide').length - 1;
+    const randomStart = Math.floor(Math.random() * slidesCount);
+    console.log('[carousels] heroWide', {
+      slidesCount,
+      randomStart,
+    });
+    settings.initialSlide = randomStart;
+  }
   $(carousel).slick(settings);
 }
 

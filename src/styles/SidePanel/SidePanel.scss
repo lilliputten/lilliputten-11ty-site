@@ -58,7 +58,9 @@ $togglerSize: 52px;
     margin: 1em 0;
   }
   li {
-    &, a, a span {
+    &,
+    a,
+    a span {
       max-width: 100%;
       @include textEllipsis;
     }
