@@ -37,7 +37,7 @@
   <link rel="stylesheet" href="/compiled-assets/styles.css?v0.0.22-260712-1856">
   <script>
     // NOTE: Prevent firefox FOUC...
-                  var FF_FOUC_FI;
+          var FF_FOUC_FI;
   </script>
 </head>
 
@@ -45,11 +45,11 @@
   <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-Z01LD05S3B"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-                  function gtag() {
-                    dataLayer.push(arguments);
-                  }
-                  gtag('js', new Date());
-                  gtag('config', 'G-Z01LD05S3B');
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', 'G-Z01LD05S3B');
   </script>
   <div class="PageVisual" id="PageVisual" data-aos="fade-down" data-aos-duration="500" data-aos-delay="0">
     <canvas class="VisualAnimation" id="VisualAnimation"></canvas>
@@ -93,7 +93,7 @@
               <h3>MindStack: Personal Knowledge Trainer</h3>
               <p>Personal knowledge training platform that transforms your expertise into AI-assisted learning systems with in-place editing, duplicate detection, spaced repetition, and complete user control over content generation.</p>
             </div>
-            <div class="previews" style="background-image: url('/projects/2026/mindstack/hero-preview-1.png')" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="1000"></div>
+            <div class="previews" style="background-image:url(/projects/2026/mindstack/hero-preview-1.png)" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="1000"></div>
           </a>
         </div>
       </div>
@@ -107,7 +107,7 @@
               <h3>The March Cat Tales</h3>
               <p><strong>Mobile Application, Web Interface, REST API Server:</strong> A multi-component project designed to deliver author-narrated fairy tales and stories through a Flutter mobile application and a web interface, via a Django REST API server.</p>
             </div>
-            <div class="previews" style="background-image: url('/projects/2025/march-tales/hero-preview-1.png')" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="1000"></div>
+            <div class="previews" style="background-image:url(/projects/2025/march-tales/hero-preview-1.png)" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="1000"></div>
           </a>
         </div>
       </div>
@@ -121,7 +121,7 @@
               <h3>TubeCasterBot</h3>
               <p>A telegram bot aimed to convert YouTube videos into audio podcasts for later listening (even in offline mode) inside the Telegram app implemented with pyTelegramBotAPI and Flask framework.</p>
             </div>
-            <div class="previews" style="background-image: url('/projects/2025/tubecaster-telegram-bot/hero-preview-1.png')" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="1000"></div>
+            <div class="previews" style="background-image:url(/projects/2025/tubecaster-telegram-bot/hero-preview-1.png)" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="1000"></div>
           </a>
         </div>
       </div>
@@ -239,16 +239,11 @@
   </div>
   <div id="noise" class="noise animated"></div>
   <script>
-    /* eslint-disable no-var */
-    // @ts-check
-    /// &lt;reference path="../scripts/@types/THTMLNode.d.ts" /&gt;
-    
     (function updateThemeWrapper() {
       function updateTheme() {
         var body = window.document.body;
-        var html = /** @type THTMLNode | undefined */ (body.parentNode ? body.parentNode : body);
+        var html = (body.parentNode ? body.parentNode : body);
         var theme = window.localStorage ? window.localStorage.getItem('theme') : null;
-        // NOTE: CAUTION: Double ampersands are escaped here
         if (theme) {
           if (html) {
             if (html.setAttribute) {
@@ -260,7 +255,6 @@
           }
         }
       }
-    
       window.addEventListener('load', updateTheme);
       updateTheme();
     })();

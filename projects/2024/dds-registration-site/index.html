@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="/compiled-assets/styles.css?v0.0.22-260712-1856">
   <script>
     // NOTE: Prevent firefox FOUC...
-                  var FF_FOUC_FI;
+          var FF_FOUC_FI;
   </script>
 </head>
 
@@ -43,11 +43,11 @@
   <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-Z01LD05S3B"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-                  function gtag() {
-                    dataLayer.push(arguments);
-                  }
-                  gtag('js', new Date());
-                  gtag('config', 'G-Z01LD05S3B');
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', 'G-Z01LD05S3B');
   </script>
   <div class="PageVisual" id="PageVisual" data-aos="fade-down" data-aos-duration="500" data-aos-delay="0">
     <canvas class="VisualAnimation" id="VisualAnimation"></canvas>
@@ -278,16 +278,11 @@
   </div>
   <div id="noise" class="noise animated"></div>
   <script>
-    /* eslint-disable no-var */
-    // @ts-check
-    /// &lt;reference path="../scripts/@types/THTMLNode.d.ts" /&gt;
-    
     (function updateThemeWrapper() {
       function updateTheme() {
         var body = window.document.body;
-        var html = /** @type THTMLNode | undefined */ (body.parentNode ? body.parentNode : body);
+        var html = (body.parentNode ? body.parentNode : body);
         var theme = window.localStorage ? window.localStorage.getItem('theme') : null;
-        // NOTE: CAUTION: Double ampersands are escaped here
         if (theme) {
           if (html) {
             if (html.setAttribute) {
@@ -299,7 +294,6 @@
           }
         }
       }
-    
       window.addEventListener('load', updateTheme);
       updateTheme();
     })();

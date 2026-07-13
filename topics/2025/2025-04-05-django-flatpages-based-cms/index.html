@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="/compiled-assets/styles.css?v0.0.22-260712-1856">
   <script>
     // NOTE: Prevent firefox FOUC...
-                  var FF_FOUC_FI;
+          var FF_FOUC_FI;
   </script>
 </head>
 
@@ -43,11 +43,11 @@
   <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-Z01LD05S3B"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-                  function gtag() {
-                    dataLayer.push(arguments);
-                  }
-                  gtag('js', new Date());
-                  gtag('config', 'G-Z01LD05S3B');
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', 'G-Z01LD05S3B');
   </script>
   <div class="PageVisual" id="PageVisual" data-aos="fade-down" data-aos-duration="500" data-aos-delay="0">
     <canvas class="VisualAnimation" id="VisualAnimation"></canvas>
@@ -128,7 +128,7 @@
       </figure>
       <h2 id="adding-the-flatpages-app-and-the-ckeditor-extension" tabindex="-1">Adding the flatpages app and the ckeditor extension <a class="header-anchor" href="#adding-the-flatpages-app-and-the-ckeditor-extension"><i class="bi bi-link-45deg"></i></a></h2>
       <p>Add <a href="https://docs.djangoproject.com/en/5.1/ref/contrib/flatpages/" c="l" class="external" title="External link: https://docs.djangoproject.com/en/5.1/ref/contrib/flatpages/" target="_blank" rel="noopener">flatpages</a> and <a href="https://pypi.org/project/django-ckeditor-5/"
-        c="l" class="external" title="External link: https://pypi.org/project/django-ckeditor-5/" target="_blank" rel="noopener">ckeditor</a>as described in their manual.</p>
+        c="l" class="external" title="External link: https://pypi.org/project/django-ckeditor-5/" target="_blank" rel="noopener">ckeditor</a> as described in their manual.</p>
       <p>So, you’ll have to add smth like this into your <code>settings.py</code> (you can take a look at <a href="https://github.com/lilliputten/march-tales/blob/main/tales_django/settings.py" c="l" class="external" title="External link: https://github.com/lilliputten/march-tales/blob/main/tales_django/settings.py"
         target="_blank" rel="noopener">mine</a> for reference):</p><pre class="language-python"><code class="language-python">INSTALLED_APPS <span class="token operator">=</span> <span class="token punctuation">[</span>
     <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
@@ -233,20 +233,18 @@ CKEDITOR_5_CONFIGS <span class="token operator">=</span> <span class="token punc
     <span class="token string">'tales_django.entities.flatpages.middleware.FlatpageFallbackMiddleware'</span><span class="token punctuation">,</span></code></pre>
       <p>And next, we have to add the router entry for a url pattern entry (in <code>tales_django/entities/App/app_urlpatterns.py</code>):</p><pre class="language-python"><code class="language-python">app_urlpatterns <span class="token operator">=</span> <span class="token punctuation">[</span>
     <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-    path<span class="token punctuation">(</span><span class="token string">r'/'</span><span class="token punctuation">,</span> include<span class="token punctuation">(</span><span class="token string">'tales_django.entities.flatpages.urls'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">'django.contrib.flatpages.views.flatpage'</span><span class="token punctuation">)</span><span class="token punctuation">,</span></code>
-                                </pre>
+    path<span class="token punctuation">(</span><span class="token string">r'/'</span><span class="token punctuation">,</span> include<span class="token punctuation">(</span><span class="token string">'tales_django.entities.flatpages.urls'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">'django.contrib.flatpages.views.flatpage'</span><span class="token punctuation">)</span><span class="token punctuation">,</span></code></pre>
       <p>(Our flatpages will be served directly from the root of the site.)</p>
       <h2 id="another-minor-additions" tabindex="-1">Another minor additions <a class="header-anchor" href="#another-minor-additions"><i class="bi bi-link-45deg"></i></a></h2>
       <p>Also were added:</p>
       <ul>
         <li>Custom <a href="https://github.com/lilliputten/march-tales/blob/main/static/unfold-fixes/unfold-fixes.css" c="l" class="external" title="External link: https://github.com/lilliputten/march-tales/blob/main/static/unfold-fixes/unfold-fixes.css" target="_blank"
           rel="noopener">styles</a> and <a href="https://github.com/lilliputten/march-tales/blob/main/static/unfold-fixes/unfold-fixes.js" c="l" class="external" title="External link: https://github.com/lilliputten/march-tales/blob/main/static/unfold-fixes/unfold-fixes.js"
-          target="_blank" rel="noopener">JS codes</a>to modify stock flatpage ones.</li>
+          target="_blank" rel="noopener">JS codes</a> to modify stock flatpage ones.</li>
       </ul>
       <h2 id="pass-a-context-to-template" tabindex="-1">Pass a context to template <a class="header-anchor" href="#pass-a-context-to-template"><i class="bi bi-link-45deg"></i></a></h2>
       <p>Use smth like this to pass your data to a template (see the usage below):</p><pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">get_flatpages_context</span><span class="token punctuation">(</span>request<span class="token punctuation">:</span> HttpRequest<span class="token punctuation">,</span> flatpage<span class="token punctuation">:</span> FlatPage<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token string">'your_data'</span><span class="token punctuation">:</span> <span class="token string">'Ok'</span><span class="token punctuation">}</span></code>
-                                        </pre>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token string">'your_data'</span><span class="token punctuation">:</span> <span class="token string">'Ok'</span><span class="token punctuation">}</span></code></pre>
       <p>This module mentioned in a <code>FLATPAGE_CONTEXT_GETTER</code> settings parameter as <code>tales_django.flatpages_context.get_flatpages_context</code>
       </p>
       <h2 id="create-a-template-for-the-flat-pages" tabindex="-1">Create a template for the flat pages <a class="header-anchor" href="#create-a-template-for-the-flat-pages"><i class="bi bi-link-45deg"></i></a></h2>
@@ -373,16 +371,11 @@ app_urlpatterns <span class="token operator">=</span> <span class="token punctua
   </div>
   <div id="noise" class="noise animated"></div>
   <script>
-    /* eslint-disable no-var */
-    // @ts-check
-    /// &lt;reference path="../scripts/@types/THTMLNode.d.ts" /&gt;
-    
     (function updateThemeWrapper() {
       function updateTheme() {
         var body = window.document.body;
-        var html = /** @type THTMLNode | undefined */ (body.parentNode ? body.parentNode : body);
+        var html = (body.parentNode ? body.parentNode : body);
         var theme = window.localStorage ? window.localStorage.getItem('theme') : null;
-        // NOTE: CAUTION: Double ampersands are escaped here
         if (theme) {
           if (html) {
             if (html.setAttribute) {
@@ -394,7 +387,6 @@ app_urlpatterns <span class="token operator">=</span> <span class="token punctua
           }
         }
       }
-    
       window.addEventListener('load', updateTheme);
       updateTheme();
     })();
