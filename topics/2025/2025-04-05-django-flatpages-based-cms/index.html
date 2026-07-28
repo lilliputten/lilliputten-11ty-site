@@ -374,7 +374,7 @@ app_urlpatterns <span class="token operator">=</span> <span class="token punctua
     (function updateThemeWrapper() {
       function updateTheme() {
         var body = window.document.body;
-        var html = (body.parentNode ? body.parentNode : body);
+        var html = body.parentNode ? body.parentNode : body;
         var theme = window.localStorage ? window.localStorage.getItem('theme') : null;
         if (theme) {
           if (html) {
