@@ -40,22 +40,6 @@ tags:
   - typescript
 ---
 
-nextjs
-react
-typescript
-tailwindcss
-prisma
-postgresql
-vercel
-ai
-stripe
-i18n
-knowledge-training
-spaced-repetition
-personal-learning
-dataset-creation
-webapp
-
 <!--
 @changed 2026.04.15, 05:30
 -->
