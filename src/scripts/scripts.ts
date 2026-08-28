@@ -24,5 +24,12 @@ initAOS();
 
 window.toggleTheme = toggleTheme;
 
+// Forcibely update components' dimensions
+setTimeout(() => {
+  requestAnimationFrame(() => {
+    window.dispatchEvent(new Event('resize'));
+  });
+}, 200);
+
 // Root module, no exports
 export {};

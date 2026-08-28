@@ -91,8 +91,9 @@ function initCarousel(carousel: HTMLElement) {
   const isHeroWide = type === 'heroWide';
   if (isHeroWide) {
     // Start with a random slide for the hero carousel (don't use the last slide -- it can't properly initialize, TODO)
-    const slidesCount = carousel.querySelectorAll('.hero-slide').length - 1;
+    const slidesCount = carousel.querySelectorAll('.hero-slide').length;
     const randomStart = Math.floor(Math.random() * slidesCount);
+    // eslint-disable-next-line no-console
     console.log('[carousels] heroWide', {
       slidesCount,
       randomStart,
